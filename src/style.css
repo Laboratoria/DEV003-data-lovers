@@ -6,15 +6,20 @@
   --kumera-color: #946520;
 }
 
+body {
+  background-image: url("./imagenes/estrellas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-image: url(https://images.pexels.com/photos/13041553/pexels-photo-13041553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   font-family: 'Inder', sans-serif;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -63,7 +68,7 @@ article {
   color: var(--text-color);
 }
 
-footer{
+footer {
   color: var(--text-color);
   padding: 30px 10%;
   background-color: var(--kumera-color);
@@ -71,22 +76,23 @@ footer{
   margin-top: auto;
 }
 
-.hat-container{
+.hat-container {
   padding: 30px 10%;
   text-align: right;
 }
 
-.hat-img{
+.hat-img {
   height: 240px;
   width: 360px;
 }
 
-.hat-text{
+.hat-text {
   color: var(--text-color);
 
 }
-.hat-text2{
-  background-color:var(--kumera-color);
+
+.hat-text2 {
+  background-color: var(--kumera-color);
   height: 50px;
   width: 100%;
   padding: 15px;
