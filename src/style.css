@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+:root {
+  --text-color: #edf0f1;
+  --kumera-color: #946520;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+  font-family: 'Inder', sans-serif;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: 'Irish Grover', cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: var(--kumera-color);
+}
+
+article {
+  padding: 30px 10%;
+  color: var(--text-color);
+}
+
+footer{
+  color: var(--text-color);
+  padding: 30px 10%;
+  background-color: var(--kumera-color);
+  text-align: right;
+  margin-top: auto;
+}
+
+.hat-container{
+  padding: 30px 10%;
+  text-align: right;
+}
+
+.hat-img{
+  height: 240px;
+  width: 360px;
+}
+
+.hat-text{
+  color: var(--text-color);
+
+}
+.hat-text2{
+  background-color:var(--kumera-color);
+  height: 50px;
+  width: 100%;
+  padding: 15px;
+}
