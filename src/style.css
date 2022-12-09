@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("./imagenes/estrellas.jpg");
+  background-image: url("./imagenes/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -93,7 +93,10 @@ footer {
 
 .hat-text2 {
   background-color: var(--kumera-color);
-  height: 50px;
-  width: 100%;
   padding: 15px;
+  float: right;
+    display: flex;
+    align-items: center;
+    word-break:break-all;
+    margin: 0 0 1em 1em;
 }
