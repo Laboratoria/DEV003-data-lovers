@@ -143,9 +143,13 @@ footer {
 .facefront h3 {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   color: white;
   background: var(--kumera-color);
   text-align: center;
+}
+
+.facefront:hover{
+  color:blue;
 }
