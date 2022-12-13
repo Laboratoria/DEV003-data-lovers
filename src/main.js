@@ -31,6 +31,7 @@ const showBooks = () => {
     modalContainer.style.display = "none";
     modalTitle.innerText = book.title;
     modalDescription.innerText = book.description;
+    modalDescription.className = "modal-description";
     modalAuthor.innerText = book.author;
     modalReleaseDay.innerText = book.releaseDay;
     section.className = "books";
