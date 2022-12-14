@@ -85,9 +85,12 @@ footer {
   margin-top: auto;
 }
 
+a:hover{
+  color: #333;
+}
+
 .hat-container {
   padding: 30px 10%;
-  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -106,7 +109,7 @@ footer {
 .hat-text2 {
   background-color: var(--kumera-color);
   padding: 15px;
-  float: right;
+  width: 458px;
   display: flex;
   align-items: center;
   word-break: break-all;
