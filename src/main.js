@@ -6,7 +6,7 @@ import data from "./data/harrypotter/data.js";
 
 //console.log(example, data);
 //const books = getBooks(data)
-//console.log(data);
+//console.log(data);//
 //console.log(books);
 const showModalBooks = (title, description, author, releaseDay) => {
   const modalContainer = document.getElementById("modalContainer");
@@ -54,3 +54,5 @@ const showBooks = () => {
 if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
   showBooks()
 }
+
+
