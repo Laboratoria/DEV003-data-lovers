@@ -8,6 +8,26 @@ import data from "./data/harrypotter/data.js";
 //const books = getBooks(data)
 //console.log(data);
 //console.log(books);
+const showModalBooks = (title, description, author, releaseDay) => {
+  const modalContainer = document.getElementById("modalContainer");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalAuthor = document.getElementById("modalAuthor");
+  const modalReleaseDay = document.getElementById("modalReleaseDay");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+
+  modalTitle.innerText = title;
+  modalDescription.innerText = description;
+  modalAuthor.innerText = author;
+  modalReleaseDay.innerText = releaseDay;
+
+  modalContainer.style.display = "flex"
+
+  modalCloseBtn.addEventListener("click", function () {
+    modalContainer.style.display = "none";
+  })
+}
+
 const showBooks = () => {
   const books = getBooks(data);
   const booksContainer = document.getElementById("booksContainer");
@@ -15,44 +35,18 @@ const showBooks = () => {
 
   for (let i = 0; i < books.length; i++) {
     const book = books[i];
-    const modalContainer = document.createElement("div");
-    const modalCloseBtn = document.createElement("button");
-    const modalTitle = document.createElement("h3");
-    const modalDescription = document.createElement("p");
-    const modalAuthor = document.createElement("span");
-    const modalReleaseDay = document.createElement("span");
     const section = document.createElement("section");
-    const newFaceFront = document.createElement("div");
     const bookTitle = document.createElement("h3");
 
-    modalContainer.className = "modal";
-    modalCloseBtn.className = "modal-btn";
-    modalCloseBtn.innerText = "Close";
-    modalContainer.style.display = "none";
-    modalTitle.innerText = book.title;
-    modalDescription.innerText = book.description;
-    modalDescription.className = "modal-description";
-    modalAuthor.innerText = book.author;
-    modalReleaseDay.innerText = book.releaseDay;
-    section.className = "books";
-    newFaceFront.className = "facefront";
+    section.className = "card-book";
     bookTitle.innerText = book.title;
+    bookTitle.className = "titulo"
 
     booksContainer.appendChild(section);
-    section.appendChild(newFaceFront);
-    newFaceFront.appendChild(bookTitle);
-    modalContainer.appendChild(modalTitle);
-    modalContainer.appendChild(modalDescription);
-    modalContainer.appendChild(modalAuthor);
-    modalContainer.appendChild(modalReleaseDay);
-    booksContainer.appendChild(modalContainer);
-    modalContainer.appendChild(modalCloseBtn);
+    section.appendChild(bookTitle);
 
     section.addEventListener("click", function () {
-      modalContainer.style.display = "block";
-    })
-    modalCloseBtn.addEventListener("click", function () {
-      modalContainer.style.display = "none";
+      showModalBooks(book.title, book.description, book.author, book.releaseDay);
     })
   }
 }

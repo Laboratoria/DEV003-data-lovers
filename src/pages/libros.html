@@ -10,19 +10,29 @@
 <body>
   <div id="root">
     <header>
-      <h2 class="title">Libros</h2>
+      <h2 class="title">Books</h2>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="../pages/personajes.html">Personajes</a></li>
-          <li><a href="#">Hechizos</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/personajes.html">Characters</a></li>
+          <li><a href="#">Spells</a></li>
         </ul>
       </nav>
-
     </header>
-    <br>
+
+    <div id="modalContainer" class="modal-container">
+      <div class="modal">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription" class="modal-description"></p>
+        <span id="modalAuthor"></span>
+        <span id="modalReleaseDay"></span>
+        <button id="modalCloseBtn" class="modal-btn">Close</button>
+      </div>
+    </div>
+
     <main id="booksContainer">
     </main>
+
     <footer>
       texto
     </footer>
