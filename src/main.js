@@ -6,7 +6,7 @@ import data from "./data/harrypotter/data.js";
 
 //console.log(example, data);
 //const books = getBooks(data)
-//console.log(data);
+//console.log(data);//
 //console.log(books);
 const showBooks = () => {
   const books = getBooks(data);
@@ -59,3 +59,5 @@ const showBooks = () => {
 if (location.pathname === '/pages/libros') {
   showBooks()
 }
+
+
