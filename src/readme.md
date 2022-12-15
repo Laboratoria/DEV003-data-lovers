@@ -1,4 +1,4 @@
-###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campaones del popular juego MOBA "Legue of Leyends"
+###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campeones del popular juego MOBA "Legue of Leyends"
 
 En la primera etapa del proyecto nos dedicamos a revisar la documentación e investigar para así crear un primer prototipo.
 
@@ -16,7 +16,7 @@ El objetivo es poder observar la data relevante de varios campeones al mismo tie
 - En los filtros estaria bien que hubiera inputs tipo text para agilizar el filtrado
 
 **Definición de terminado:**
-Cuando la interfaz despliegue la data, y esta pueda ser filtrada y ordenada desde la misma interfaz
+Cuando la interfaz despliegue la data ademas esta pueda ser filtrada y ordenada desde la misma interfaz, y tengamos las pruebas unitarias realizadas, los errores solucionados y el codigo optimizado.
 
 #### Como jugador de LOL quiero poder calcular el daño recibido en un combate de un campeon vs otro para encontrar a los campeones que me den ventaja
 El objetivo es ver en un combate entre 2 campeones determinados por el usuario quien tendría la ventaja.
@@ -28,7 +28,7 @@ El objetivo es ver en un combate entre 2 campeones determinados por el usuario q
 - Seria bueno que se mostrara que tanto daño recibio el campeon victorioso
 
 **Definición de terminado:**
-Cuando dentro de la interfaz se pueda ver el resultado de una batalla entre 2 campeones, que a su vez puedan ser seleccionados por el usuario.
+Cuando dentro de la interfaz se pueda ver el resultado de una batalla entre 2 campeones, que a su vez puedan ser seleccionados por el usuario, y tengamos las pruebas unitarias realizadas, los errores solucionados y el codigo optimizado.
 
 #### Como jugador de LOL quiero recomendaciones de campeones segun mi estilo de juego para no perder tiempo investigando
 El usuario debe poder ingresar ciertos datos sobre como prefiere jugar y combatir, y en base esto se le debe devolver recomendaciones de campeones con determinadas caracteristicas.
@@ -40,4 +40,14 @@ El usuario debe poder ingresar ciertos datos sobre como prefiere jugar y combati
 - Debe haber un boton de recomendaciones, que al ser pulsado compute los datos ingresados por el usuario y le arroje un resultado
 
 **Definición de terminado:**
-Cuando al pulsar el boton de recomendaciones, obtengamos en la interfaz un resultado coherente a la data ingresada por el usuario
+Cuando al pulsar el boton de recomendaciones, obtengamos en la interfaz un resultado coherente a la data ingresada por el usuario, y tengamos las pruebas unitarias realizadas, los errores solucionados y el codigo optimizado.
+
+
+#### Como jugador de LOL quiero quiero poder navegar en una interfaz agradable y familiar, para sentirme poder navegar facilmente.
+
+**Criterios de aceptación:**
+- El diseño debe tener como tema el juego
+- Los colores usados deben ser similares a los del juego
+
+**Definición de terminado:**
+Cuando tengamos un diseño que al usuario le evoque facilmente al juego, y cumplamos con los principios basicos de diseño visual.
