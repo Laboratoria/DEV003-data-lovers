@@ -1,4 +1,4 @@
-***###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campaones del popular juego MOBA "Legue of Leyends"*******
+###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campaones del popular juego MOBA "Legue of Leyends"
 
 En la primera etapa del proyecto nos dedicamos a revisar la documentación e investigar para así crear un primer prototipo.
 
