@@ -85,7 +85,7 @@ footer {
   margin-top: auto;
 }
 
-a:hover{
+a:hover {
   color: #333;
 }
 
@@ -116,9 +116,8 @@ a:hover{
   margin: 0 0 1em 1em;
 }
 
-
-
 .card-book {
+  padding: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -139,9 +138,7 @@ a:hover{
 
 .titulo {
   text-align: center;
-  padding: 20px;
   color: white;
-
 }
 
 .modal-container {

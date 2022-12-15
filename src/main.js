@@ -37,12 +37,17 @@ const showBooks = () => {
     const book = books[i];
     const section = document.createElement("section");
     const bookTitle = document.createElement("h3");
+    const bookIcon = document.createElement("img");
 
+    bookIcon.src = "../imagenes/book-icon.png";
+    bookIcon.width = 64;
+    bookIcon.height = 64;
     section.className = "card-book";
     bookTitle.innerText = book.title;
     bookTitle.className = "titulo"
 
     booksContainer.appendChild(section);
+    section.appendChild(bookIcon)
     section.appendChild(bookTitle);
 
     section.addEventListener("click", function () {
@@ -54,5 +59,3 @@ const showBooks = () => {
 if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
   showBooks()
 }
-
-
