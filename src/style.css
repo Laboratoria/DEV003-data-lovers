@@ -26,14 +26,30 @@ nav li{
     width:4%;
     height: 55px;
     padding:5px 10px;
-    background-color:white;
-    border:1px solid black;
-    border-radius:5px;
-    text-align:center;
-    color:#fff;
+    text-align:center; /* La letra cambia su tamaño*/
     }
 
 .button_image{
     width: 70%;
     height: 70%;
 }
+
+#introduction{
+        display: none; /* Por defecto, estará oculto */
+        position: fixed; /* Posición fija */
+        z-index: 1; /* Se situará por encima de otros elementos de la página*/
+        padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+        left: 0;
+        top: 0;
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Algura completa */
+        overflow: auto; /* Se activará el scroll si es necesario */
+        background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */  
+}
+
+#footer {  /* Queremos fijarlo al final en bottom */
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;  
+ }
