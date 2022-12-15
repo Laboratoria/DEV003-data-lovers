@@ -7,7 +7,7 @@ Para crear el wireframe nos basamos en las paginas similares, comentarios de usu
 
 De acuerdo a lo investigado podemos concluir que la pagina debe ser sencilla, amigable, debe mostrar la información relevante para los jugadores de forma rapida, y tambien debe permitir acceder a otros datos no tan relevantes para usuarios mas experimentados.
 
-#### Como jugador de LOL quiero una tabla para comparar campeones.
+#### Como jugador de LOL quiero una tabla para ver campeones.
 El objetivo es poder observar la data relevante de varios campeones al mismo tiempo, ya sea mediante una tabla o otros metodos, para poder comparar los mismos datos
 
 **Criterios de aceptación:**
