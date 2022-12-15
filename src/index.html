@@ -14,30 +14,55 @@
 
     <nav class="menu">
       <ul>
-        <li><a href="#"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </a></li>
-        <li><a href="#"> <img src="./Media/Images/pokedex1.png" class="button_image"> <br> Pokedex </a></li>
-        <li><a href="#"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search </a></li>
-        <li><a href="#"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution </a></li>
-        <li><a href="#"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate </a></li>
+        <li><button  id = "btnHome"> <img src="./Media/Images/pokebola2.png" class="button_image" > <br> Home </button></li>
+        <li><button  id="btnPokedex"> <img src="./Media/Images/pokedex1.png" class="button_image"> <br> Pokedex </button></li>
+        <li><button > <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search </button></li>
+        <li><button > <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution </button></li>
+        <li><button > <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate </button></li>
       </ul>
     </nav>
     <main>
+      <section id="scIntroduction">
+        <p>
+          Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y 
+          ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año"
+           por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon" y pueden:
+          Los principales objetivos de Pokemon GO son los siguientes:
+        </p>
+      
+      <figure>
+      <img src="./media/images/001.png" alt="Pokemon" width="200">
+      </figure>
+    </section>
+  
+    <section id="scPokedex">
       <p>
-        Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y 
-        ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año"
-         por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon" y pueden:
-        Los principales objetivos de Pokemon GO son los siguientes:
+        <label>¿Quién es ese Pokémon</label><br>
+        <input type="radio" name="rdOptionShow" unselected value="1"> <label type="text" id="lblOpAsc"> Ascendente </label>
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="2"> Descendente
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="3"> A-Z
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="4" /> Z-A
       </p>
+    </section>
 
-    </main>
-    <section id="sec_pokedex">
+    <section id="scListPokemon">
+      <figure>
+        <img>
+        <figcaption></figcaption>
+      </figure>
 
 
     </section>
+
+    </main>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
-  <footer>
-        <p>© 2022 Creado por Chris y Fernanda</p>
+  <footer> 
+        <p> © 2022 Creado por Chris y Fernanda </p>
     </footer>
 </html>
