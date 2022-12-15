@@ -23,13 +23,17 @@ font-size: medium;
 }*/
 nav li{
     display:inline-block;
-    width:10%;
+    width:4%;
+    height: 55px;
     padding:5px 10px;
-    background-color:#000;
-    border:1px solid #000;
+    background-color:white;
+    border:1px solid black;
+    border-radius:5px;
     text-align:center;
     color:#fff;
-    display:inline-block;
     }
 
-
+.button_image{
+    width: 70%;
+    height: 70%;
+}
