@@ -1,11 +1,20 @@
-import { pokemon } from './data.js';
-// import data from './data/lol/lol.js'; No estamos usando esta data
+//import  {pokemon}  from "./data.js";
+
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js'; No estamos usando esta data
-console.log(example, data);
-const paginaPrincipal = document.getElementById("introduction");
+
+//console.log(example, data);
+//const paginaPrincipal = document.getElementById("scIntroduction");
 const buttonHome = document.getElementById("btnHome")
+const buttonPokedex = document.getElementById("btnPokedex")
 
 buttonHome.addEventListener("click", function(){
-    document.getElementById("introduction").style.display = "block";
+    document.getElementById("scIntroduction").style.display = "block";
+    document.getElementById("scPokedex").style.display = "none";
   });
+
+  buttonPokedex.addEventListener("click", function(){
+  document.getElementById("scPokedex").style.display = "block";
+  document.getElementById("scIntroduction").style.display = "none";
+});
+
+

@@ -3,6 +3,7 @@ body {
 background-color: #C4F0DF;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align: center;
+margin: 0 auto;
 font-size: medium;
 
 }
@@ -34,20 +35,38 @@ nav li{
     height: 70%;
 }
 
-#introduction{
+#scIntroduction{
         display: none; /* Por defecto, estará oculto */
-        position: fixed; /* Posición fija */
+        position: relative;
+        /*position: fixed; /* Posición fija */
         z-index: 1; /* Se situará por encima de otros elementos de la página*/
-        padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
-        left: 0;
-        top: 0;
-        width: 100%; /* Ancho completo */
-        height: 100%; /* Algura completa */
+        padding-top: 50px; /* El contenido estará situado a 200px de la parte superior */
+        /*left: 0;
+        top: 0;*/
+        margin: 0 auto;
+        box-align:center;
+        text-align: center;
+        width: 50%; /* Ancho completo */
+        height: 50%; /* Algura completa */
         overflow: auto; /* Se activará el scroll si es necesario */
-        background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */  
+        background-color: C4F0DF(0,0,0,0.5); /* Color negro con opacidad del 50% */  
 }
 
-#footer {  /* Queremos fijarlo al final en bottom */
+#scPokedex{
+    display: none; /* Por defecto, estará oculto */
+    position: relative;
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 50px; /* El contenido estará situado a 200px de la parte superior */
+    margin: 0 auto;
+    box-align:center;
+    text-align: center;
+    width: 50%; /* Ancho completo */
+    height: 50%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: C4F0DF(0,0,0,0.5); /* Color negro con opacidad del 50% */  
+}
+
+.footer {  /* Queremos fijarlo al final en bottom */
     position:absolute;
     bottom:0;
     width:100%;
