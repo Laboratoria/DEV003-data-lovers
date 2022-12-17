@@ -1,0 +1,39 @@
+header{
+    text-align: center;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #cd2f0c;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a{
+ text-decoration: none;
+ color: white;  
+ padding: 20px;
+ display: block; 
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #ef8354;
+}
+
+footer{
+    text-align: center;
+}
+
+.Introduccion{
+    display: block;
+}
+
+.pokemon{
+    display: none;
+}
