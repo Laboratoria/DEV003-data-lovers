@@ -195,3 +195,11 @@ a:hover {
 .modal-btn:hover {
   background-color: var(--kumera-color);
 }
+
+
+/* Characters styles */
+.character-name {
+  color: white;
+}
+
+/* End Characters styles */

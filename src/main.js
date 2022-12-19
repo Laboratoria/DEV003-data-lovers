@@ -6,6 +6,8 @@ import { getBooks, getCharacters, searchCharacterByName } from './data.js';
 import data from "./data/harrypotter/data.js";
 
 
+
+
 //const characters = [getCharacters]
 //for (let i = 0; i < characters.length; i++){
 //console.log(characters[i])
@@ -51,7 +53,7 @@ const showBooks = () => {
     bookIcon.height = 64;
     section.className = "card-book";
     bookTitle.innerText = book.title;
-    bookTitle.className = "titulo"
+    bookTitle.className = "titulo";
 
     booksContainer.appendChild(section);
     section.appendChild(bookIcon)
@@ -62,6 +64,7 @@ const showBooks = () => {
     })
   }
 }
+
 
 if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
   showBooks()
