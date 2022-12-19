@@ -1,13 +1,20 @@
-import { getBooks } from './data.js';
+import { getBooks, getCharacters, searchCharacterByName } from './data.js';
+
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import data from "./data/harrypotter/data.js";
 
+
+//const characters = [getCharacters]
+//for (let i = 0; i < characters.length; i++){
+//console.log(characters[i])
+//}
 //console.log(example, data);
-//const books = getBooks(data)
-//console.log(data);//
-//console.log(books);
+//const characters = getCharacters(data);
+/*console.log(data);
+//console.log(characters);*/
+
 const showModalBooks = (title, description, author, releaseDay) => {
   const modalContainer = document.getElementById("modalContainer");
   const modalTitle = document.getElementById("modalTitle");
@@ -59,3 +66,69 @@ const showBooks = () => {
 if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
   showBooks()
 }
+
+
+//const characters = getCharacters(data);
+//console.log(data);//
+//console.log(characters);
+
+
+/*const showCharacters = () => {
+  const characters = getCharacters(data);
+  characters.forEach((character) => console.log(character.name));  
+}
+
+if (location.pathname === '/pages/personajes') {
+  showCharacters()
+}*/
+
+/*const character = getCharacters[data];
+const list = document.querySelector('.list')
+const addList = () => {
+  character.forEach((character) => console.log(character.name)); 
+  const li = document.createElement ('li')
+  li.textContent = character.name
+  getCharacters.appendChild(li)
+
+  console.log(data)
+
+};
+
+
+addList(character, list)*/
+
+const showCharacters = () => {
+  const characters = getCharacters(data);
+  const charactersContainer = document.getElementById("charactersContainer");
+  const form = document.getElementById("charactersSearchForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    charactersContainer.innerHTML = "";
+    const searchVal = form.querySelector('.search').value;
+    const charactersFound = searchCharacterByName(searchVal, characters);
+  
+    if (charactersFound.length > 0) {
+      charactersFound.forEach(function (character) {
+        const nameEl = document.createElement('h3');
+        nameEl.className = "character-name";
+        nameEl.innerText = character.name;
+        charactersContainer.appendChild(nameEl);
+      });
+    } else {
+      const notFoundEl = document.createElement('h3');
+      notFoundEl.className = "character-name";
+      notFoundEl.innerText = "We have not found any character with: " + '"' + searchVal + '"';
+      charactersContainer.appendChild(notFoundEl);
+    }
+    console.log(charactersFound)
+  })
+  
+
+
+}
+
+if (location.pathname === '/pages/personajes' || location.pathname === '/DEV003-data-lovers/pages/personajes.html') {
+  showCharacters()
+}
+
+
