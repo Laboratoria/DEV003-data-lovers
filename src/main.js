@@ -1,6 +1,19 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/harrypotter/data.js';
 
-console.log(example, data);
+function getTheName() {
+const name = document.getElementById("informationbox")
+}
+console.log(getTheName);
+
+function getTheHouse() {
+const house = document.getElementById("informationbox")
+}
+    console.log(getTheName);
+
+//console.log(example, data);
+
+//const personaje = data.characters
+//console.log(personaje,data)
+
+
