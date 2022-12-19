@@ -8,8 +8,10 @@
 //  return 'OMG';
 //};
 
+export const name = (data) => {
+return 'name';
+};
 
-//import pokemon from "./data/pokemon/pokemon";
 
 //export const atributo = element.getAttribute(pokemon.num);
 
