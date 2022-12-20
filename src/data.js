@@ -21,3 +21,11 @@ export const getDataPokemon = () => {
   return showDataPokemon;
 }
 
+
+//comentario fer usar filterData(data, condition):   ,   sortData(data, sortBy, sortOrder):    ,   computeStats(data):
+//arr.sort((a, b) => a - b);  // WILL SORT ASC 
+
+//data.pokemon.sort((a, b) => a - .name);  // WILL SORT ASC 
+
+//arr.sort((a, b) => b - a);  // WILL SORT DESC
+//arr.sort()                  // WILL SORT STRINGS ASC 
