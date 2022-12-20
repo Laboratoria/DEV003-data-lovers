@@ -6,10 +6,7 @@ const name = document.getElementById("informationbox")
 }
 console.log(getTheName);
 
-function getTheHouse() {
-const house = document.getElementById("informationbox")
-}
-    console.log(getTheName);
+
 
 //console.log(example, data);
 

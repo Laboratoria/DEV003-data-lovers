@@ -1,0 +1,20 @@
+body {
+    padding: 60px 460px;
+    background-image: url("https://i.pinimg.com/originals/d9/35/17/d9351755a84d0170f1126b69b9025f56.jpg")
+}
+
+input{
+    background-position: center;
+    text-align: center;
+    height: 50px;
+    width: 310px;
+    font-size: 20px ;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+
+}
