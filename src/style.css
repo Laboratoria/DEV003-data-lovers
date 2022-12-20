@@ -83,7 +83,7 @@ a:hover{ /*ancor con hover le cambian el color a los botones y el texto al posic
     box-align:center;
     text-align: center;
     width: 50%; /* Ancho completo NO VEO NINGUN CAMBIO*/
-    height: 50%; /* Algura completa */
+    height: 50%; /* Altura completa */
     overflow: auto; /* Se activará el scroll si es necesario */
     background-color: C4F0DF(0,0,0,0.5); /* Color negro con opacidad del 50% */  
 }
