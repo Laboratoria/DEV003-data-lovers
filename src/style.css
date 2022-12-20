@@ -200,6 +200,7 @@ a:hover {
 /* Characters styles */
 .character-name {
   color: white;
+  cursor: pointer;
 }
 
 /* End Characters styles */

@@ -16,6 +16,7 @@ export const getCharacters = (data) => {
 
 }
 
+
 export const searchCharacterByName = (name, characters) => {
   if (name === '') return []
         
