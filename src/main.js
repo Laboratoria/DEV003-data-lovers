@@ -1,5 +1,5 @@
 import {getDataPokemon} from './data.js';
-import data from './data/pokemon/pokemon.js';
+
 
 //console.log(data); //todo el objeto
 //console.log(data.pokemon[0]); //el pokemon con indice 0
@@ -18,6 +18,11 @@ import data from './data/pokemon/pokemon.js';
   orderByNum,
 } from "./data.js";*/
 
+//console.log();
+const showPokemons = (pokemonList) => {
+  const allPokemons = showData(pokemonList);
+  printData(allPokemons);
+};
 
 
 const buttonHome = document.getElementById("btnHome")
@@ -34,8 +39,8 @@ buttonHome.addEventListener("click", function(){
   document.getElementById("scPokedex").style.display = "block";
   //document.getElementById("scShowAllPokemon").style.display = "block";
   document.getElementById("scIntroduction").style.display = "none";
-  const allDataPokemon = getDataPokemon(data);
-  document.getElementById("myModal").innerHTML= allDataPokemon;
+  const allDataPokemon = getDataPokemon();
+  //document.getElementById("myModal").innerHTML= allDataPokemon;
   
   //document.getElementById("scShowAllPokemon").innerHTML= allDataPokemon;
   //console.log(data);
@@ -44,13 +49,9 @@ buttonHome.addEventListener("click", function(){
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
 
-
-// When the user clicks on <span> (x), close the modal
-
-
-
 });
 
+// When the user clicks on <span> (x), close the modal
 const span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
