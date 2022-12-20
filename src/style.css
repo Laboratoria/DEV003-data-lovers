@@ -45,7 +45,7 @@ a{ /*etiqueta ancor - incluye texto */
     font-size: 20px;
 }
 
-a:hover{ /*ancor con hover le cambian el color a los botones y el texto al posicionarse arriba*/
+.li:hover{ /*ancor con hover le cambian el color a los botones y el texto al posicionarse arriba*/
     background:#F2E41B;
     color: #E30000;
 }

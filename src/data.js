@@ -1,45 +1,23 @@
-// estas funciones son de ejemplo
+import data from './data/pokemon/pokemon.js';
 
-//export const example = () => {
-//  return 'example';
-//};
-
-//export const anotherExample = () => {
-//  return 'OMG';
-//};
-
-export const getDataPokemon=(data)=>{
-
-if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data ===''){ 
-  throw new TypeError('data is not an object');
-}
-
-//Variable que guarda la data Pokémon
-const pokemonList = data.pokemon;
-const allDataPokemon = (pokemonList) => {
-const pokeCard = document.getElementById("myModal");
-//ForEach recorre cada elemento del array.
-// Función para mostrar todos los pokémon, se utiliza innerHTML para mostrar la información en pantalla.
-pokemonList.forEach((elem) => {
- 
-     //  console.log(elem); <img class="picture" src="${elem.img}"></img>
-     pokeCard.innerHTML+= `
-    
-     <div>
-     <div id="card">
-       <div id="front" > 
-          <div > ${elem.name.toUpperCase()}</div>
-          <div >#${elem.num}</div>
-          
-       </div>
- `;
-
+export const getDataPokemon = () => {
+  const pokemonList = data.pokemon;
+  alert(pokemonList);
   
-});
-};
-  
-return allDataPokemon;
 
-    
+  if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data === '') {
+    throw new TypeError('data is not an object');
+  }
+
+  let showDataPokemon ={};
+
+  pokemonList.forEach(elem)={
+    showDataPokemon['numP'] = elem.num,
+    showDataPokemon['nameP'] =elem.name,
+    showDataPokemon['nameI'] = elem.img,
+  }
+
+
+  return showDataPokemon;
 }
 
