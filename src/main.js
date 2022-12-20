@@ -6,16 +6,7 @@ import { getBooks, getCharacters, searchCharacterByName } from './data.js';
 import data from "./data/harrypotter/data.js";
 
 
-
-
-//const characters = [getCharacters]
-//for (let i = 0; i < characters.length; i++){
-//console.log(characters[i])
-//}
-//console.log(example, data);
-//const characters = getCharacters(data);
-/*console.log(data);
-//console.log(characters);*/
+//console.log(data.characters)
 
 const showModalBooks = (title, description, author, releaseDay) => {
   const modalContainer = document.getElementById("modalContainer");
@@ -65,45 +56,41 @@ const showBooks = () => {
   }
 }
 
-
 if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
   showBooks()
 }
 
+const showModalCharacters = (name, birth , death, species, ancestry, gender, house) => {
+  const modalContainer = document.getElementById("modalContainer");
+  const modalName = document.getElementById("modalName");
+  const modalBirth = document.getElementById("modalBirth");
+  const modalDeath = document.getElementById("modalDeath");
+  const modalSpecies = document.getElementById("modalSpecies");
+  const modalAncestry = document.getElementById("modalAncestry");
+  const modalGender = document.getElementById("modalGender");
+  const modalHouse = document.getElementById("modalHouse");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
 
-//const characters = getCharacters(data);
-//console.log(data);//
-//console.log(characters);
+  modalName.innerText = name;
+  modalBirth.innerText = birth;
+  modalDeath.innerText = death;
+  modalSpecies.innerText = species;
+  modalAncestry.innerText = ancestry;
+  modalGender.innerText = gender;
+  modalHouse.innerText = house;
 
+  modalContainer.style.display = "flex"
 
-/*const showCharacters = () => {
-  const characters = getCharacters(data);
-  characters.forEach((character) => console.log(character.name));  
+  modalCloseBtn.addEventListener("click", function () {
+    modalContainer.style.display = "none";
+  })
 }
-
-if (location.pathname === '/pages/personajes') {
-  showCharacters()
-}*/
-
-/*const character = getCharacters[data];
-const list = document.querySelector('.list')
-const addList = () => {
-  character.forEach((character) => console.log(character.name)); 
-  const li = document.createElement ('li')
-  li.textContent = character.name
-  getCharacters.appendChild(li)
-
-  console.log(data)
-
-};
-
-
-addList(character, list)*/
 
 const showCharacters = () => {
   const characters = getCharacters(data);
   const charactersContainer = document.getElementById("charactersContainer");
   const form = document.getElementById("charactersSearchForm");
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     charactersContainer.innerHTML = "";
@@ -116,6 +103,9 @@ const showCharacters = () => {
         nameEl.className = "character-name";
         nameEl.innerText = character.name;
         charactersContainer.appendChild(nameEl);
+        nameEl.addEventListener("click", function () {
+          showModalCharacters(character.name, character.birth, character.death, character.species, character.ancestry, character.gender, character.house);
+        })
       });
     } else {
       const notFoundEl = document.createElement('h3');
@@ -123,15 +113,10 @@ const showCharacters = () => {
       notFoundEl.innerText = "We have not found any character with: " + '"' + searchVal + '"';
       charactersContainer.appendChild(notFoundEl);
     }
-    console.log(charactersFound)
+    console.log(characters)
   })
-  
-
-
 }
 
 if (location.pathname === '/pages/personajes' || location.pathname === '/DEV003-data-lovers/pages/personajes.html') {
   showCharacters()
 }
-
-
