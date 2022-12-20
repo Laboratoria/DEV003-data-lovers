@@ -1,8 +1,8 @@
-body{
+.containerPrinc{
     background-color: #6D7078;
 }
 
-h1{
+.cardsTittle{
     font-family:Arial, Helvetica, sans-serif;
     color:#7AD605;
     font-size: 38px;
@@ -33,7 +33,7 @@ h1{
     padding: 10px;
 }
 
-img{
+.cardsImgs{
     width: 300px;
     height: 200px;
 }
