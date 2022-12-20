@@ -1,9 +1,6 @@
 import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-//console.log(example, data);
 
 const btnPokemon = document.querySelector("#btnPokemones")
 const sectionPage1 = document.querySelector("#page1");
@@ -17,3 +14,24 @@ btnPokemon.addEventListener("click", function(){
   sectionPage3.style.display= "none";
   sectionPage4.style.display= "none";
 })
+
+const dataPokemones = data;
+
+const catalogoPokemones = `
+<div class ="dataPokemones">
+<h2>
+  ${dataPokemones.name}
+</h2>
+<p class="img">${dataPokemones.img}</p>
+<p class="info">${dataPokemones.about}</p>
+<p class="altura">${dataPokemones.height}</p>
+<p class="peso">${dataPokemones.weight}</p>
+<p class="fortalezas">${dataPokemones.resistant}</p>
+<p class="debilidades">${dataPokemones.weaknesses}</p>
+</div>`;
+
+document.getElementById('page2').innerHTML = catalogoPokemones;
+
+
+
+
