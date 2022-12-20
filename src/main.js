@@ -60,7 +60,7 @@ if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data
   showBooks()
 }
 
-const showModalCharacters = (name, birth , death, species, ancestry, gender, house) => {
+const showModalCharacters = (name, birth, death, species, ancestry, gender, house) => {
   const modalContainer = document.getElementById("modalContainer");
   const modalName = document.getElementById("modalName");
   const modalBirth = document.getElementById("modalBirth");
@@ -96,7 +96,7 @@ const showCharacters = () => {
     charactersContainer.innerHTML = "";
     const searchVal = form.querySelector('.search').value;
     const charactersFound = searchCharacterByName(searchVal, characters);
-  
+
     if (charactersFound.length > 0) {
       charactersFound.forEach(function (character) {
         const nameEl = document.createElement('h3');
