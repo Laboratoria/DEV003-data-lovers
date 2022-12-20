@@ -203,3 +203,33 @@ a:hover {
 }
 
 /* End Characters styles */
+
+.search-btn{
+    background-color: #946520;
+    color: #edf0f1;
+    border-radius: 10px;
+    padding: 10px ;
+    margin-bottom: 5%;
+}
+
+.search{
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    color: #946520;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+.titulo-characaters{
+    color: #edf0f1;
+    font-size: 20px;
+    margin-left: 20%;
+
+}
+
+video{
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}

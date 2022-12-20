@@ -16,15 +16,6 @@ export const getCharacters = (data) => {
 
 }
 
-const searchCharacterByName = (name, characters) => {
-  if(name === "") return []
-
-  const charactersFound = characters.filter(function(character){
-    const characterName = character.name.toLowerCase();
-    return characterName.includes(name.toLowerCase());
-  })
-  return charactersFound
-}
 export const searchCharacterByName = (name, characters) => {
   if (name === '') return []
         
