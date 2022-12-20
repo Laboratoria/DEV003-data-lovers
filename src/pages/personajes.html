@@ -31,13 +31,32 @@
         <button id="modalCloseBtn" class="modal-btn">Close</button>
       </div>
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3vUtg20L7LM?start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+
+    <div class="carousel">
+        <div class="carousel__item carousel__item--visible">
+          <img src="../img/24c266e104842cc1a035cdcb41b31031.jpg" />
+        </div>
+        <div class="carousel__item">
+          <img src="../img/24c266e104842cc1a035cdcb41b31031-removebg-preview.png" />
+        </div>
+        <div class="carousel__item">
+          <img src="../img/Bz4cSkio_400x400-removebg-preview (1).png" />
+    </div>
+  
+        <div class="carousel__actions">
+          <button id="carousel__button--prev" aria-label="Previous slide"></button>
+          <button id="carousel__button--next" aria-label="Next slide">></button>
+        </div>
+      </div>
+  
+    <br>
     <h2 class="titulo-characaters">Let us help you find the character you are looking for:</h2>
     <form id="charactersSearchForm">
       <input class="search" placeholder="Text here the character name:" type="text">
       <button type="submit" class="search-btn">Search</button>
     </form>
+    <br>
+    <br>
     <div id="charactersContainer">
     </div>
     <footer>
