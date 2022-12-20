@@ -222,8 +222,6 @@ a:hover {
 }
 
 
-/* End Characters styles */
-
 .search-btn{
   background-color: #946520;
   color: #edf0f1;
@@ -320,3 +318,27 @@ iframe{
       transform: opacity linear;
     }
   }
+/*End characters styles*/
+/*spells styles*/
+.spells-container{
+  margin-top: 80px;
+  display:grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-auto-rows: 50px;
+  grid-gap: 50px;
+}
+
+.letters{
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+  text-decoration-color: var(--kumera-color);
+  cursor: pointer;
+}
+.letters:hover{
+  transform: scale(1.02);
+  color: var(--kumera-color);
+  text-decoration-color: var(--text-color);
+}
+
+/*end spells styles*/
