@@ -1,0 +1,23 @@
+
+header{
+    background-color: black;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+/*    padding: 0px;
+    border: 0;
+    margin: 0;*/
+}
+.buscador{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    max-height: 50px;
+}
+
+.btnLupa{
+    max-height: 20px;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+}
