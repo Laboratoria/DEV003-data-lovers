@@ -99,12 +99,12 @@ a:hover {
 .hat-img {
   height: 240px;
   width: 360px;
-  
+  transition: all 0.2s;
 }
 
 .hat-img:hover {
-    transform: scale(1.3);
-  }
+  transform: scale(1.3);
+}
 
 .hat-text {
   color: var(--text-color);
@@ -130,9 +130,9 @@ a:hover {
   transition: all 0.3s;
   background: var(--kumera-color);
   opacity: 0.7;
-  flex-direction:column;
+  flex-direction: column;
   border-radius: 10px;
- 
+
 }
 
 .card-book:hover {
@@ -150,11 +150,10 @@ a:hover {
   text-align: center;
   color: white;
   justify-content: center;
-  
 }
 
-.titulo:hover{
-    color: black;
+.titulo:hover {
+  color: black;
 }
 
 .modal-container {
@@ -196,7 +195,6 @@ a:hover {
   background-color: var(--kumera-color);
 }
 
-
 /* Characters styles */
 .character-name {
   color: white;
@@ -211,46 +209,46 @@ a:hover {
   margin: 20px;
   justify-content: center;
   align-content: center;
-  
-  
 }
+
 .character-name:hover {
-    color: black;
-    opacity: 0.5;
-    transform: scale(1.02);
- 
+  color: black;
+  opacity: 0.5;
+  transform: scale(1.02);
 }
 
-
-.search-btn{
+.search-btn {
   background-color: #946520;
   color: #edf0f1;
   border-radius: 10px;
-  padding: 10px ;
+  padding: 10px;
   margin-bottom: 5%;
 }
 
-.search-btn:hover{
-    background-color: white;
-    color:  #946520;
-    
+.search-btn:hover {
+  background-color: white;
+  color: #946520;
+  cursor: pointer;
 }
 
-.search{
+.search {
   background: transparent;
   border-radius: 10px;
   padding: 10px;
   color: #946520;
+  margin-top: 20px;
   margin-left: 40%;
   margin-bottom: 5%;
+  width: 216px;
 }
 
-.titulo-characaters{
+.titulo-characaters {
+  margin-top: 20px;
   color: #edf0f1;
   font-size: 20px;
-  margin-left: 20%;
-
+  text-align: center;
 }
+
 /*En caso de que se use el vieo 
 iframe{
     border-radius: 20px;
@@ -261,81 +259,88 @@ iframe{
 /* carrusel styles */
 
 .carousel {
-    overflow: hidden;
-    max-width: 600px;
-    position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+  display: none;
+  text-align: center;
+}
+
+.carousel .carousel__item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.carousel .carousel__item--visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #946520;
+}
+
+.carousel .carousel__actions button#carousel__button--prev {
+  margin-left: 20px;
+}
+
+.carousel .carousel__actions button#carousel__button--next {
+  margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
   }
-  
-  .carousel .carousel__item,
-  .carousel .carousel__item--hidden {
-    display: none;
+
+  100% {
+    opacity: 1;
+    transform: opacity linear;
   }
-  
-  .carousel .carousel__item img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
-  
-  .carousel .carousel__item--visible {
-    display: block;
-    animation: fadeVisibility 0.5s;
-  }
-  
-  .carousel .carousel__actions {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .carousel .carousel__actions button {
-    border-radius: 50px;
-    border: 0;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    color: #946520;
-  }
-  
-  .carousel .carousel__actions button#carousel__button--prev {
-    margin-left: 20px;
-  }
-  
-  .carousel .carousel__actions button#carousel__button--next {
-    margin-right: 20px;
-  }
-  
-  @keyframes fadeVisibility {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      transform: opacity linear;
-    }
-  }
+}
+
 /*End characters styles*/
 /*spells styles*/
-.spells-container{
+.spells-container {
   margin-top: 80px;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(13, 1fr);
   grid-auto-rows: 50px;
   grid-gap: 50px;
 }
 
-.letters{
+.letters {
   text-align: center;
   font-size: 50px;
   text-decoration: underline;
   text-decoration-color: var(--kumera-color);
   cursor: pointer;
 }
-.letters:hover{
+
+.letters:hover {
   transform: scale(1.02);
   color: var(--kumera-color);
   text-decoration-color: var(--text-color);

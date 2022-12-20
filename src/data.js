@@ -13,17 +13,15 @@ export const getBooks = (data) => {
 
 export const getCharacters = (data) => {
   return data.characters;
-
 }
-
 
 export const searchCharacterByName = (name, characters) => {
   if (name === '') return []
-        
+
   const charactersFound = characters.filter(function (character) {
     const characterName = character.name.toLowerCase();
     return characterName.includes(name.toLowerCase());
   })
-        
+
   return charactersFound;
 }

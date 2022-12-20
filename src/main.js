@@ -32,7 +32,6 @@ const showBooks = () => {
   const books = getBooks(data);
   const booksContainer = document.getElementById("booksContainer");
 
-
   for (let i = 0; i < books.length; i++) {
     const book = books[i];
     const section = document.createElement("section");
@@ -56,7 +55,7 @@ const showBooks = () => {
   }
 }
 
-if (location.pathname === '/pages/libros' || location.pathname === '/DEV003-data-lovers/pages/libros.html') {
+if (location.pathname === '/pages/books' || location.pathname === '/DEV003-data-lovers/pages/books.html') {
   showBooks()
 }
 
@@ -113,55 +112,57 @@ const showCharacters = () => {
       notFoundEl.innerText = "We have not found any character with: " + '"' + searchVal + '"';
       charactersContainer.appendChild(notFoundEl);
     }
-    console.log(characters)
   })
 }
 
-if (location.pathname === '/pages/personajes' || location.pathname === '/DEV003-data-lovers/pages/personajes.html') {
+// function carrusel
+const carousel = () => {
+  let slidePosition = 0;
+  const slides = document.getElementsByClassName('carousel__item');
+  const totalSlides = slides.length;
+
+  document.
+    getElementById('carousel__button--next')
+    .addEventListener("click", function () {
+      moveToNextSlide();
+    });
+  document.
+    getElementById('carousel__button--prev')
+    .addEventListener("click", function () {
+      moveToPrevSlide();
+    });
+
+  function updateSlidePosition() {
+    for (const slide of slides) {
+      slide.classList.remove('carousel__item--visible');
+      slide.classList.add('carousel__item--hidden');
+    }
+
+    slides[slidePosition].classList.add('carousel__item--visible');
+  }
+
+  function moveToNextSlide() {
+    if (slidePosition === totalSlides - 1) {
+      slidePosition = 0;
+    } else {
+      slidePosition++;
+    }
+
+    updateSlidePosition();
+  }
+
+  function moveToPrevSlide() {
+    if (slidePosition === 0) {
+      slidePosition = totalSlides - 1;
+    } else {
+      slidePosition--;
+    }
+
+    updateSlidePosition();
+  }
+}
+
+if (location.pathname === '/pages/characters' || location.pathname === '/DEV003-data-lovers/pages/characters.html') {
   showCharacters()
-}
-
-// function arrusel
-let slidePosition = 0;
-const slides = document.getElementsByClassName('carousel__item');
-const totalSlides = slides.length;
-
-document.
-  getElementById('carousel__button--next')
-  .addEventListener("click", function() {
-    moveToNextSlide();
-  });
-document.
-  getElementById('carousel__button--prev')
-  .addEventListener("click", function() {
-    moveToPrevSlide();
-  });
-
-function updateSlidePosition() {
-  for (const slide of slides) {
-    slide.classList.remove('carousel__item--visible');
-    slide.classList.add('carousel__item--hidden');
-  }
-
-  slides[slidePosition].classList.add('carousel__item--visible');
-}
-
-function moveToNextSlide() {
-  if (slidePosition === totalSlides - 1) {
-    slidePosition = 0;
-  } else {
-    slidePosition++;
-  }
-
-  updateSlidePosition();
-}
-
-function moveToPrevSlide() {
-  if (slidePosition === 0) {
-    slidePosition = totalSlides - 1;
-  } else {
-    slidePosition--;
-  }
-
-  updateSlidePosition();
+  carousel()
 }
