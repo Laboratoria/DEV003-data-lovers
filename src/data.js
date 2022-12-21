@@ -11,25 +11,28 @@ export const getDataPokemon = () => {
 
 const pokeCard = document.getElementById("scShowAllPokemon");
  pokemonList.forEach((elem) => {
-  //  console.log(elem); 
+  //  console.log(elem);  
   pokeCard.innerHTML += `
  
- <div id="card">
-      <label > Nombre: ${elem.name.toUpperCase()}</label>
-      <label >  Numero: ${elem.num}</label>
-      <img src="${elem.img}"></img>
-</div>
+ 
+ 
+ <div class="card">
+ <div class="card_body">
+ 
+      <h3 class="card_title"> ${elem.num}</h3>
+      <img src="${elem.img}"></img><br>
+      <label > ${elem.name.toUpperCase()}</label> 
+    
+</div>      
+</div>   
+<br>   
+
     `;
 });
 
 
- 
-    
-
-
-
  //document.body.innerHTML = markup;
-  return showDataPokemon;
+  return allDataPokemon;
 }
 
 
