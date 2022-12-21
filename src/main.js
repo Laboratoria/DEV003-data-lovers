@@ -1,7 +1,4 @@
-import {getDataPokemon} from './data.js';
-
-
-
+import {getDataPokemon, orderByName} from './data.js';
 /*import {
   filterByGeneration,
   filterByType,
@@ -10,6 +7,11 @@ import {getDataPokemon} from './data.js';
   orderByNum,
 } from "./data.js";*/
 
+const optionOrder = document.getElementsByName("rdOptionShow",function(){
+  if (optionOrder.checked){
+    const showAscendente = orderByName();
+  }
+});
 
 //console.log();
 const showPokemons = (pokemonList) => {
@@ -17,9 +19,8 @@ const showPokemons = (pokemonList) => {
   printData(allPokemons);
 };
 
-
-const buttonHome = document.getElementById("btnHome")
-const buttonPokedex = document.getElementById("btnPokedex")
+const buttonHome = document.getElementById("btnHome");
+const buttonPokedex = document.getElementById("btnPokedex");
 //const divCards = document.getElementById("list-cards");
 
 buttonHome.addEventListener("click", function(){
@@ -57,6 +58,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
 
 /*const containerScShowAllPokemon = (num,name,img) =>{
   const containerId = document.getElementById("lblIdPokemon");

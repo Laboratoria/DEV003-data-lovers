@@ -17,6 +17,11 @@ font-size: 20px;
     height: 150px;
 }
 
+.img_pokebola {
+    display: flex;
+    padding: 25px;
+}
+
 ul{ /*Contenedor del Menu*/
     list-style: none;
     padding: 0;
@@ -123,9 +128,8 @@ a{ /*etiqueta ancor - incluye texto */
     cursor: pointer;
   }
 
-  .scCards{
-    justify-content: center;
-    Display:flex;
+  scCards{
+    display:flex;
     padding: 10%;
     width: 95%;
   }
@@ -134,12 +138,13 @@ a{ /*etiqueta ancor - incluye texto */
   
     .card{
     Width: 20ch;
-    Border:solid #333 1px;
+    /*Border:solid #333 1px;*/
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     Background: white;
     Border-radius: 5px;
     Height:250px;
     margin:0px auto;
-    }
+   }
 
     .card_body{
     Padding:10px;
