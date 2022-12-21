@@ -122,4 +122,30 @@ a{ /*etiqueta ancor - incluye texto */
     text-decoration: none;
     cursor: pointer;
   }
- 
+
+  .scCards{
+    justify-content: center;
+    Display:flex;
+    padding: 10%;
+    width: 95%;
+  }
+
+
+  
+    .card{
+    Width: 20ch;
+    Border:solid #333 1px;
+    Background: white;
+    Border-radius: 5px;
+    Height:250px;
+    margin:0px auto;
+    }
+
+    .card_body{
+    Padding:10px;
+    }
+
+    .card_title{
+    Text-align:center;
+    }
+    
