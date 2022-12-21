@@ -5,12 +5,28 @@ import data from './data/harrypotter/data.js';
 
 console.log(example, data);
 
-const personaje = data.characters
-console.log(personaje, data)
+const personajes = data.characters
 
+document.getElementById("search").addEventListener("click", buscar)
 
-//function getName() {
-    const name= document.getElementById("informationbox").value
+function buscar() {
+  const name = getName()
+  console.log(name)
+  for (let i = 0; i < personajes.length; i++) {
+    if (personajes[i].name === name) {
+      const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house
+      // alert(mensaje)
 
+      getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
 
-//console.log(getName)
+    }
+  }
+}
+
+function getDivMensajeUsuario() {
+  return document.getElementById("mensajeUsuario")
+}
+
+function getName() {
+  return document.getElementById("informationbox").value
+}
