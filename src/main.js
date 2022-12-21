@@ -9,7 +9,7 @@ import {getDataPokemon, orderByName} from './data.js';
 
 const optionOrder = document.getElementsByName("rdOptionShow",function(){
   if (optionOrder.checked){
-    const showAscendente = orderByName();
+    const showAscennding = orderByName();
   }
 });
 
@@ -58,6 +58,18 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//TODO: hacer funcion que, dado un arreglo de objetos (pokemones) devuelva un arreglo de 'tarjetas'
+
+window.addEventListener('load', ()=>{
+
+  //hacer el llenado inicial de las tarjetas
+  getCards(getDataPokemon()).forEach((item)=>{
+    //TODO limpiar el contenedor
+    // appendChild de cada item al contenedor
+  })
+
+})
 
 
 /*const containerScShowAllPokemon = (num,name,img) =>{

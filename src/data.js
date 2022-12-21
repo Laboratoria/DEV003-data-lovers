@@ -6,28 +6,28 @@ export const getDataPokemon = () => {
   if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data === '') {
     throw new TypeError('data is not an object');
   }
-const pokeCard = document.getElementById("scShowAllPokemon");
- pokemonList.forEach((elem) => {
-  //  console.log(elem);  
-  pokeCard.innerHTML += `
- <div class="card">
- <div class="card_body">
- 
-      <h3 class="card_title"> ${elem.num}</h3>
-      <img src="${elem.img}"></img><br>
-      <label > ${elem.name.toUpperCase()}</label> 
-</div>      
-</div>   
-<br>   
+  const pokeCard = document.getElementById("scShowAllPokemon");
+  pokemonList.forEach((elem) => {
+    //  console.log(elem);  
+    pokeCard.innerHTML += `
+      <div class="card">
+      <div class="card_body">
+      
+            <h3 class="card_title"> ${elem.num}</h3>
+            <img src="${elem.img}"></img><br>
+            <label > ${elem.name.toUpperCase()}</label> 
+      </div>      
+      </div>   
+      <br>   
     `;
-});
-  return allDataPokemon;
+  });
+  return pokemonList;
 }
 
 export const orderByName = (data, valor) => {
   if (valor === "3") {
     data.sort((a, b) => a.name.localeCompare(b.name));
-  } 
+  }
   else if (valor === "4") {
     data.sort((a, b) => b.name.localeCompare(a.name));
   }
