@@ -1,0 +1,90 @@
+body{
+    background-image: url("img/fondo4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+}
+section.Introduccion{
+    background-color: rgba(139, 212, 232, 0.575);
+    color: black;
+    text-shadow: #f1f0ef;
+    font-size: 25px;
+    background-size: 170px 170px;
+    padding: 0%;
+    text-align: center;
+}
+section.Introduccion a{
+    color: white;
+}
+section.Introduccion h3{
+    color: white;
+    text-align: center;
+}
+
+
+section.pokemon{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #1b7fb5;
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    text-align: center;
+}
+
+.menu li a{
+ text-decoration: none;
+ color: white;  
+ padding: 20px;
+ display: block; 
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #402dbc;
+}
+#btnPokemones{
+    text-align: center;
+    color: black;
+    background-color: #1b7fb5;
+    font-size: medium;
+    border-bottom: #1b7fb5;
+    }
+#btnPokemones:hover{
+    color: black;
+    width: 200px;
+    height: 40px;
+}
+footer{
+    text-align: center;
+    color: white;
+}
+
+footer a img{
+    width: 28px;
+    height: 28px;
+}
+
+.Introduccion{
+    display: block;
+}
+
+.pokemon{
+    display: none;
+    text-align: left;
+}
+.filtro{
+    display: none;
+}
+.Multiplicador{
+    display: none;
+}
