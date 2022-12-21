@@ -9,7 +9,6 @@ import {getDataPokemon} from './data.js';
 //console.log(data.pokemon[0]['evolution']['next-evolution'][0].name); // el nombre de la evolucion del indice 0 del pokemon con indice 0
 //console.log(data.pokemon[0].evolution['next-evolution'][0].name); // lo mismo que la linea anterior
 
-
 /*import {
   filterByGeneration,
   filterByType,
@@ -18,7 +17,6 @@ import {getDataPokemon} from './data.js';
   orderByNum,
 } from "./data.js";*/
 
-//console.log();
 const showPokemons = (pokemonList) => {
   const allPokemons = showData(pokemonList);
   printData(allPokemons);

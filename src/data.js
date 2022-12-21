@@ -11,11 +11,11 @@ export const getDataPokemon = () => {
 
   let showDataPokemon ={};
 
-  pokemonList.forEach(elem)={
-    showDataPokemon['numP'] = elem.num,
-    showDataPokemon['nameP'] =elem.name,
-    showDataPokemon['nameI'] = elem.img,
-  }
+ // pokemonList.forEach(elem)={
+   // showDataPokemon['numP'] = elem.num,
+    //showDataPokemon['nameP'] =elem.name,
+    //showDataPokemon['nameI'] = elem.img,
+  //}
 
 
   return showDataPokemon;
