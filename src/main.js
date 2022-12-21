@@ -1,22 +1,7 @@
 import {getDataPokemon} from './data.js';
 
 
-//console.log(data); //todo el objeto
-//console.log(data.pokemon[0]); //el pokemon con indice 0
-//console.log(data.pokemon[0].name); //el nombre del pokemon con indice 0
-//console.log(data.pokemon[0].generation.name); //el nombre de la generacion del pokemon con indice 0
-//console.log(data.pokemon[0].evolution.candy); //el nombre del caramelo de la evolucion del pokemon con indice 0
-//console.log(data.pokemon[0]['evolution']['next-evolution'][0].name); // el nombre de la evolucion del indice 0 del pokemon con indice 0
-//console.log(data.pokemon[0].evolution['next-evolution'][0].name); // lo mismo que la linea anterior
 
-
-/*import {
-  filterByGeneration,
-  filterByType,
-  orderByName,
-  filterByResistant,
-  orderByNum,
-} from "./data.js";*/
 
 //console.log();
 const showPokemons = (pokemonList) => {
@@ -32,17 +17,18 @@ const buttonPokedex = document.getElementById("btnPokedex")
 buttonHome.addEventListener("click", function(){
     document.getElementById("scIntroduction").style.display = "block";
     document.getElementById("scPokedex").style.display = "none";
-    document.getElementById("myModal").style.display = "none";
+    document.getElementById("scShowAllPokemon").style.display = "none";
+    //document.getElementById("myModal").style.display = "none";
   });
 
   buttonPokedex.addEventListener("click", function(){
   document.getElementById("scPokedex").style.display = "block";
-  //document.getElementById("scShowAllPokemon").style.display = "block";
+  document.getElementById("scShowAllPokemon").style.display = "block";
   document.getElementById("scIntroduction").style.display = "none";
   const allDataPokemon = getDataPokemon();
   //document.getElementById("myModal").innerHTML= allDataPokemon;
   
-  //document.getElementById("scShowAllPokemon").innerHTML= allDataPokemon;
+  document.getElementById("scShowAllPokemon").innerHTML= allDataPokemon;
   //console.log(data);
   // Get the modal
 
