@@ -1,3 +1,27 @@
+header{
+    background-color: black;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+/*    padding: 0px;
+    border: 0;
+    margin: 0;*/
+}
+
+.btnLupa{
+    max-height: 20px;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buscador{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    max-height: 50px;
+}
+
 .containerPrinc{
     background-color: #6D7078;
 }
@@ -13,12 +37,12 @@
 
 .cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .cardsDesign{
     background-color: black;
-    color:#7AD605;
+    color: #7AD605;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     text-align: justify;
@@ -29,9 +53,6 @@
     height: 520px;
 }
 
-.cardsTxt{
-    padding: 10px;
-}
 
 .cardsImgs{
     width: 300px;
@@ -49,3 +70,4 @@
     bottom: 0;
     left: 0;
 }
+
