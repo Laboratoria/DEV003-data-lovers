@@ -1,23 +1,34 @@
 import data from './data/pokemon/pokemon.js';
 
 export const getDataPokemon = () => {
-  const pokemonList = data.pokemon;
-  alert(pokemonList);
+  const pokemonList = data['pokemon'];
+  //alert("entro");
   
 
   if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data === '') {
     throw new TypeError('data is not an object');
   }
 
-  let showDataPokemon ={};
+const pokeCard = document.getElementById("scShowAllPokemon");
+ pokemonList.forEach((elem) => {
+  //  console.log(elem); 
+  pokeCard.innerHTML += `
+ 
+ <div id="card">
+      <label > Nombre: ${elem.name.toUpperCase()}</label>
+      <label >  Numero: ${elem.num}</label>
+      <img src="${elem.img}"></img>
+</div>
+    `;
+});
 
- // pokemonList.forEach(elem)={
-   // showDataPokemon['numP'] = elem.num,
-    //showDataPokemon['nameP'] =elem.name,
-    //showDataPokemon['nameI'] = elem.img,
-  //}
+
+ 
+    
 
 
+
+ //document.body.innerHTML = markup;
   return showDataPokemon;
 }
 
