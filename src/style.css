@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Italiana');
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-family: 'Italiana';
+    background-color: rgb(42, 92, 99);
+    padding: 30px;
+    margin-bottom: 15px;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+.boton-inicio{
+    background-color:rgb(42, 92, 99);
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    margin: 10px;
+    color:#fff;
+}
+.select-year,
+.select-character,
+.select-director
+{
+    color: #fff;;
+    background-color:rgb(42, 92, 99);
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    margin: 10px;
+}
+/*
+.select-character
+.select-director
+*/

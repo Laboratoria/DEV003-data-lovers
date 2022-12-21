@@ -6,6 +6,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>Universo Ghibli</header>
+    <h1></h1>
+    <div class="caja-opciones">
+      <button class="boton-inicio"> Menu principal</button>
+      <button class="boton-inicio"> Elige al azar</button>
+      <!--div para generar nav-->
+      <select id="orderYear" class="select-year">
+        <option value="all">Ordenar por año de emisión</option>
+        <option value="upward">Ascendente</option>
+        <option value="downward">Descendente</option>
+      </select>
+
+      <select id="orderDirector" class="select-director">
+        <option value="all">Ordenar por Director</option>
+        <option value="Miyazaki">Hayao Miyazaki</option>
+        <option value="Takahata">Isao Takahata</option>
+      </select>
+      <select id="orderCharacter" class="select-character">
+        <option value="all">Ordenar por especie</option>
+        <option value="">A</option>
+        <option value=""><b></b></option>
+      </select>
+
+
+    </div>
+    
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
