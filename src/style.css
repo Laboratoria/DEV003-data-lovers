@@ -1,4 +1,3 @@
-
 header{
     background-color: black;
     background-size: 100%;
@@ -8,12 +7,6 @@ header{
     border: 0;
     margin: 0;*/
 }
-.buscador{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    max-height: 50px;
-}
 
 .btnLupa{
     max-height: 20px;
@@ -21,3 +14,60 @@ header{
     display: flex;
     justify-content: center;
 }
+
+.buscador{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    max-height: 50px;
+}
+
+.containerPrinc{
+    background-color: #6D7078;
+}
+
+.cardsTittle{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#7AD605;
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 10px;
+    text-shadow: white; 
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardsDesign{
+    background-color: black;
+    color: #7AD605;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: justify;
+    text-shadow: 10px;
+    text-shadow: white;
+    border-radius: 6px;
+    width: 300px;
+    height: 520px;
+}
+
+
+.cardsImgs{
+    width: 300px;
+    height: 200px;
+}
+
+.total{
+    background-color: #525457;
+    color: #7AD605;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
