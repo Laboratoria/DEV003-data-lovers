@@ -48,8 +48,7 @@ a{ /*etiqueta ancor - incluye texto */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-
-.li:hover{ /*ancor con hover le cambian el color a los botones y el texto al posicionarse arriba*/
+li:hover{ /*ancor con hover le cambian el color a los botones y el texto al posicionarse arriba*/
     background:#F2E41B;
     color: #E30000;
 }
@@ -111,6 +110,7 @@ a{ /*etiqueta ancor - incluye texto */
 .footer {  /* Queremos fijarlo al final en bottom */
     display: table-row;
     height: 0;
+    padding: 10px;
  }
 
 /* The Close Button */

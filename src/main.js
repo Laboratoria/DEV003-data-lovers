@@ -1,4 +1,4 @@
-import {getDataPokemon,orderByOpcion} from './data.js';
+import {getDataPokemon,orderByOpcion, filterData} from './data.js';
 
 const buttonHome = document.getElementById("btnHome");
 const buttonPokedex = document.getElementById("btnPokedex");
@@ -106,12 +106,45 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
     newCardBody.appendChild(newLabel);
     
     });
-
-//alert(optionOrder.value);
 }
 ))
 
+buttonSearch.addEventListener("click", function(){
+  document.getElementById("scSearch").style.display = "block";
+  document.getElementById("scIntroduction").style.display = "none";
+  document.getElementById("scPokedex").style.display = "none";
+  document.getElementById("scShowAllPokemon").style.display = "none";
+  //document.getElementById("myModal").style.display = "none";
+
+    const values = getDataPokemon();
+    const item = values[0].num['type'];
+    console.log(item);
+    const select = document.createElement("select");
+    select.name = "pokemontypes";
+
+  const result = values.reduce((acc,item)=>{
+    if(!acc.includes(item)){
+      acc.push(item);
+    }
+    return acc;
+  },[])
+
+  console.log(result); 
+
+    for (const val of result)
+    {
+        const option = document.createElement("option");
+        option.value = val;
+        option.textContent = values.type;
+       // option.text = result.value;
+        select.appendChild(option);
+    }
  
+    document.getElementById("filterContainer").appendChild(select);
+})
+
+
+
  /*
 // When the user clicks on <span> (x), close the modal
 const span = document.getElementsByClassName("close")[0];

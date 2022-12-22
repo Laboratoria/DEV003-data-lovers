@@ -11,7 +11,7 @@ export const getDataPokemon = () => {
 
 export const orderByOpcion = (valor) => {
 const pokemonSortBy = data['pokemon'];
-//comentario  filterData(data, condition)
+// funcion de ordenar por sortBy
   if (valor === "3") {
     pokemonSortBy.sort((a, b) => a.name.localeCompare(b.name));
   }
@@ -27,4 +27,8 @@ const pokemonSortBy = data['pokemon'];
   return pokemonSortBy;
 };
 
+//funcion de filtrar data  filterData(data, condition)
+export const filterData = (valor) => {
+  
+};
 
