@@ -13,9 +13,6 @@ describe('example', () => {
   });
 });
 
-describe('anotherExample', () => {
-
-
   
 describe('getcharacters', () => {
   it('is a function', () => {
