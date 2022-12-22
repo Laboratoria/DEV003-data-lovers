@@ -128,29 +128,30 @@ a{ /*etiqueta ancor - incluye texto */
     cursor: pointer;
   }
 
-  scCards{
+  .scCards{
     display:flex;
-    padding: 10%;
+    padding: 2%;
     width: 95%;
+    flex-wrap: wrap;
+    
   }
 
 
-  
-    .card{
+.card{
     Width: 20ch;
-    /*Border:solid #333 1px;*/
+    Border:solid #333 1px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     Background: white;
     Border-radius: 5px;
     Height:250px;
-    margin:0px auto;
+    margin:5px auto;
    }
 
-    .card_body{
+.card_body{
     Padding:10px;
     }
 
-    .card_title{
+.card_title{
     Text-align:center;
     }
     
