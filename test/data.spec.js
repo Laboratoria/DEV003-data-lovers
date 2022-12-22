@@ -2,6 +2,7 @@ import { example, anotherExample, getCharacters } from '../src/data.js';
 import data from '../src/data/harrypotter/data.js';
 
 
+
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
@@ -11,6 +12,8 @@ describe('example', () => {
     expect(example()).toBe('example');
   });
 });
+
+describe('anotherExample', () => {
 
 
   
