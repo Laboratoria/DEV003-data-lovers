@@ -1,4 +1,4 @@
-import {getDataPokemon, orderByName} from './data.js';
+import {getDataPokemon,orderByOpcion} from './data.js';
 /*import {
   filterByGeneration,
   filterByType,
@@ -7,17 +7,9 @@ import {getDataPokemon, orderByName} from './data.js';
   orderByNum,
 } from "./data.js";*/
 
-const optionOrder = document.getElementsByName("rdOptionShow",function(){
-  if (optionOrder.checked){
-    const showAscennding = orderByName();
-  }
-});
+
 
 //console.log();
-const showPokemons = (pokemonList) => {
-  const allPokemons = showData(pokemonList);
-  printData(allPokemons);
-};
 
 const buttonHome = document.getElementById("btnHome");
 const buttonPokedex = document.getElementById("btnPokedex");
@@ -31,21 +23,102 @@ buttonHome.addEventListener("click", function(){
   });
 
   buttonPokedex.addEventListener("click", function(){
+
   document.getElementById("scPokedex").style.display = "block";
-  document.getElementById("scShowAllPokemon").style.display = "block";
+  document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
-  const allDataPokemon = getDataPokemon();
-  //document.getElementById("myModal").innerHTML= allDataPokemon;
   
-  document.getElementById("scShowAllPokemon").innerHTML= allDataPokemon;
+  const getCards = getDataPokemon();
+  
+
+ getCards.forEach((item)=>{
+
+const cardBox=document.querySelector(".scCards");
+
+const newCard = document.createElement("div");
+newCard.className= "card";
+
+const newCardBody=document.createElement("div");
+newCardBody.className= "card_body";
+
+const newH3= document.createElement("h3");
+newH3.className= "card_title";
+newH3.innerText= item.num;
+
+const newImg=document.createElement("img");
+newImg.src=item.img;
+
+const nextEspace=document.createElement("br");
+
+
+const newLabel=document.createElement("label");
+newLabel.innerText=item.name.toUpperCase();
+newLabel.className="card_title";
+
+cardBox.appendChild(newCard);
+newCard.appendChild(newCardBody);
+newCardBody.appendChild(newH3);
+newCardBody.appendChild(newImg);
+newCardBody.appendChild(nextEspace);
+newCardBody.appendChild(newLabel);
+
+})
   //console.log(data);
   // Get the modal
-
+/*
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
+*/
+})
 
-});
 
+const optionOrder = document.querySelector('input[name="rdOptionShow"]');
+
+  optionOrder.addEventListener("click", function(){
+alert("entro");
+  document.getElementById("scPokedex").style.display = "block";
+  document.getElementById('scShowAllPokemon').innerHTML = '';
+  document.getElementById("scShowAllPokemon").style.display = "flex";
+  document.getElementById("scIntroduction").style.display = "none";
+  const orderPokemon = document.querySelector(optionOrder).value;
+  
+  const getCardsOrderBy = orderByOpcion(orderPokemon);
+
+  getCardsOrderBy.forEach((item)=>{
+
+    const cardBox=document.querySelector(".scCards");
+    
+    const newCard = document.createElement("div");
+    newCard.className= "card";
+    
+    const newCardBody=document.createElement("div");
+    newCardBody.className= "card_body";
+    
+    const newH3= document.createElement("h3");
+    newH3.className= "card_title";
+    newH3.innerText= item.num;
+    
+    const newImg=document.createElement("img");
+    newImg.src=item.img;
+    
+    const nextEspace=document.createElement("br");
+    
+    
+    const newLabel=document.createElement("label");
+    newLabel.innerText=item.name.toUpperCase();
+    newLabel.className="card_title";
+    
+    cardBox.appendChild(newCard);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newH3);
+    newCardBody.appendChild(newImg);
+    newCardBody.appendChild(nextEspace);
+    newCardBody.appendChild(newLabel);
+    
+    })
+
+})
+/*
 // When the user clicks on <span> (x), close the modal
 const span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
@@ -58,18 +131,20 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+}*/
 
+
+  //document.getElementById("myModal").innerHTML= allDataPokemon;
+  
+ // document.getElementById("scShowAllPokemon").innerHTML= allDataPokemon;
 //TODO: hacer funcion que, dado un arreglo de objetos (pokemones) devuelva un arreglo de 'tarjetas'
 
-window.addEventListener('load', ()=>{
+//window.addEventListener('load', ()=>{
 
   //hacer el llenado inicial de las tarjetas
-  getCards(getDataPokemon()).forEach((item)=>{
+  
     //TODO limpiar el contenedor
     // appendChild de cada item al contenedor
-  })
-
-})
 
 
 /*const containerScShowAllPokemon = (num,name,img) =>{
@@ -81,7 +156,6 @@ window.addEventListener('load', ()=>{
   containerId.innerText= name;
 
 }*/
-
 
 
 

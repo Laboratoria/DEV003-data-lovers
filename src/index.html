@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers - Pokemon </title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="boxHeader"> <!-- Imagen de Pokemon con pokebolas -->
-      <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
-      <img src="./media/images/logo_p.png" alt="Titulo Pokemon" width="300">
-      <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
-    </header> 
 
-    <nav class="menu">
-      <ul>
-        <li ><button  id = "btnHome"> <img src="./Media/Images/pokebola2.png" class="button_image" > <br> Home </button></li>
-        <li><button  id="btnPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button></li>
-        
-        <li><button  id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search </button></li>
-        <li><button  id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution </button></li>
-        <li>
-          <button  id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate </button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers - Pokemon </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="boxHeader"> <!-- Imagen de Pokemon con pokebolas -->
+    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
+    <img src="./media/images/logo_p.png" alt="Titulo Pokemon" width="300">
+    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li><button id="btnHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button></li>
+      <li><button id="btnPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button>
+      </li>
+
+      <li><button id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search
+        </button></li>
+      <li><button id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution
+        </button></li>
+      <li>
+        <button id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate </button>
       </li>
       <li>
         <a href="https://pokemongolive.com/">
-          <button  id="buttonPokemonGo"> <img src="./Media/Images/pokemon_go.png" class="button_image"> <br>Pokemon Go </button>
-        </a> 
+          <button id="buttonPokemonGo"> <img src="./Media/Images/pokemon_go.png" class="button_image"> <br>Pokemon Go
+          </button>
+        </a>
       </li>
-      </ul>
-    </nav>
-    <main>
-      <section id="scIntroduction">
-        <p>
-          Pokémon GO is an experience is an international gaming experience that has over a billion downloads and 
-          has been named " The Best Mobile Game" by the Game Developers Choice Awards and "Best App of the Year" 
-          by TechCrunch (taken from Google Play). Game users are set to "Pokémon Masters/Trainers". <br><br>
-          
-          The main objectives of Pokemon GO are the following:
-          Discover the world of Pokémon: Explore and discover new Pokémon wherever you go.
-          Catch different Pokémon to complete your Pokédex.
-          Fight against Pokémon from other trainers and conquer a gym.
-          Compete in epic battles against other trainers.
-          Team up with other trainers to catch powerful Pokémon during raids. <br><br>
-
-          This website was created with the main objective of helping gamers improve their game in Pokémon Go, any gamer 
-          can find important information here and can research specific information in our menu. Please do not hesitate to 
-          visit all our tabs in the navigation menu to find more information about Pokedex, Evolutions, Candies, Spawn Rate, and also to play Pokemon Go. 
-        </p>
-      <figure>
-      <img src="./media/images/001.png" alt="Pokemon" width="200">
+    </ul>
+  </nav>
+  <main>
+    <section id="scIntroduction">
       <p>
-        POKEMON OF THE DAY "NAME"
+        Pokémon GO is an experience is an international gaming experience that has over a billion downloads and
+        has been named " The Best Mobile Game" by the Game Developers Choice Awards and "Best App of the Year"
+        by TechCrunch (taken from Google Play). Game users are set to "Pokémon Masters/Trainers". <br><br>
+
+        The main objectives of Pokemon GO are the following:
+        Discover the world of Pokémon: Explore and discover new Pokémon wherever you go.
+        Catch different Pokémon to complete your Pokédex.
+        Fight against Pokémon from other trainers and conquer a gym.
+        Compete in epic battles against other trainers.
+        Team up with other trainers to catch powerful Pokémon during raids. <br><br>
+
+        This website was created with the main objective of helping gamers improve their game in Pokémon Go, any gamer
+        can find important information here and can research specific information in our menu. Please do not hesitate to
+        visit all our tabs in the navigation menu to find more information about Pokedex, Evolutions, Candies, Spawn
+        Rate, and also to play Pokemon Go.
       </p>
+      <figure>
+        <img src="./media/images/001.png" alt="Pokemon" width="200">
+        <p>
+          POKEMON OF THE DAY "NAME"
+        </p>
       </figure>
     </section>
 
     <section id="scPokedex">
-      
-      <label><h1> Who's this Pokémon? </h1>  </label><br>
-      <p> 
+
+      <label>
+        <h1> Who's this Pokémon? </h1>
+      </label><br>
+      <p>
         Order Pokémons by: <br>
-      <input type="radio" name="rdOptionShow" checked value="1"> Ascendente
-      <br>
-      <input type="radio" name="rdOptionShow" unselected value="2"> Descendente
-      <br>
-      <input type="radio" name="rdOptionShow" unselected value="3"> A-Z
-      <br>
-      <input type="radio" name="rdOptionShow" unselected value="4" /> Z-A
+        <input type="radio" name="rdOptionShow" checked value="1"> Ascendente
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="2"> Descendente
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="3"> A-Z
+        <br>
+        <input type="radio" name="rdOptionShow" unselected value="4" /> Z-A
       </p>
 
-    </section >
-<!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
+    </section>
+    <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
   <div id="myModal" >
   <span class="close">&times;</span>
   
 </div>
 -->
-<section id="scShowAllPokemon" class="scCards">
+    <section id="scShowAllPokemon" class="scCards">
 
-</section>
-
-
+    </section>
 
 
 
@@ -97,12 +104,13 @@
       <p>SPAW RATEEEE</p>
     </section>
 
-    </main>
+  </main>
 
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
-  <footer> 
-        <p> © January 2023 Developed by Chris and Fernanda </p>
-    </footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+<footer>
+  <p> © January 2023 Developed by Chris and Fernanda </p>
+</footer>
+
 </html>
