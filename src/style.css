@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.titulo {
+  /*position: absolute;*/
+  margin-top: 100px;
+  width: 528px;
+  height: 155px;
+}
+
+body {
+  background-image: url(./images/fondo2.jpg);
+  background-size: cover;
+}
+
+.sombrero {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  left: 406px;
+  top: 500px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 62px;
+
+  position: absolute;
+  width: 881px;
+  height: 57px;
+  left: 199px;
+  top: 633px;
+}
