@@ -1,22 +1,22 @@
-###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campeones del popular juego MOBA "Legue of Leyends"
+###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campeones del popular juego MOBA "League of Legends"
 
 En la primera etapa del proyecto nos dedicamos a revisar la documentación e investigar para así crear un primer prototipo.
 
 Para crear el wireframe nos basamos en las paginas similares, comentarios de usuarios en foros del juego (facebook), y la data con la que trabajaremos.
-[Primer protitpo Figma](https://www.figma.com/file/9WYEj7znzqiSGsiTdSUJXa/Prototipo-legue-Data-lovers-LOL?node-id=0%3A1&t=SEiM0CA6IK0gdcTy-0 "Primer protitpo Figma")
+[Primer protitpo Figma](https://www.figma.com/file/JspFSwjUEA95EtDKXyeMxo/Untitled?t=HJX1C5XfInIiAfpn-0 "Primer protitpo Figma")
 
 De acuerdo a lo investigado podemos concluir que la pagina debe ser sencilla, amigable, debe mostrar la información relevante para los jugadores de forma rapida, y tambien debe permitir acceder a otros datos no tan relevantes para usuarios mas experimentados.
 
 #### Como jugador de LOL quiero una tabla para ver campeones.
-El objetivo es poder observar la data relevante de varios campeones al mismo tiempo, ya sea mediante una tabla o otros metodos, para poder comparar los mismos datos
+El objetivo es poder observar la data relevante de varios campeones al mismo tiempo, ya sea mediante una tabla o otros métodos, para poder comparar los mismos datos
 
 **Criterios de aceptación:**
 - Debe haber varios filtros que puedan ser manipulados por el usuario
 - La data debe poder ordenarse de forma ascendente o de forma descendente
-- En los filtros estaria bien que hubiera inputs tipo text para agilizar el filtrado
+- En los filtros estaría bien que hubiera inputs tipo texto para agilizar el filtrado
 
 **Definición de terminado:**
-Cuando la interfaz despliegue la data ademas esta pueda ser filtrada y ordenada desde la misma interfaz, y tengamos las pruebas unitarias realizadas, los errores solucionados y el codigo optimizado.
+Cuando la interfaz despliegue la data además esta pueda ser filtrada y ordenada desde la misma interfaz, y tengamos las pruebas unitarias realizadas, los errores solucionados y el código optimizado.
 
 #### Como jugador de LOL quiero poder calcular el daño recibido en un combate de un campeon vs otro para encontrar a los campeones que me den ventaja
 El objetivo es ver en un combate entre 2 campeones determinados por el usuario quien tendría la ventaja.
@@ -43,11 +43,11 @@ El usuario debe poder ingresar ciertos datos sobre como prefiere jugar y combati
 Cuando al pulsar el boton de recomendaciones, obtengamos en la interfaz un resultado coherente a la data ingresada por el usuario, y tengamos las pruebas unitarias realizadas, los errores solucionados y el codigo optimizado.
 
 
-#### Como jugador de LOL quiero quiero poder navegar en una interfaz agradable y familiar, para sentirme poder navegar facilmente.
+#### Como jugador de LOL quiero quiero poder navegar en una interfaz agradable y familiar, para sentirme poder navegar fácilmente.
 
 **Criterios de aceptación:**
 - El diseño debe tener como tema el juego
 - Los colores usados deben ser similares a los del juego
 
 **Definición de terminado:**
-Cuando tengamos un diseño que al usuario le evoque facilmente al juego, y cumplamos con los principios basicos de diseño visual.
+Cuando tengamos un diseño que al usuario le evoque fácilmente al juego, y cumplamos con los principios básicos de diseño visual.
