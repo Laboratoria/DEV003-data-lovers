@@ -77,10 +77,8 @@ footer a img{
 .Introduccion{
     display: block;
 }
-
 .pokemon{
-    display: none;
-    text-align: left;
+    display: none; 
 }
 .filtro{
     display: none;
@@ -88,3 +86,23 @@ footer a img{
 .Multiplicador{
     display: none;
 }
+.TarjetasPokemon{
+    display: none;
+    height: 100 vh;
+    background: #333;
+    padding: 10px;
+    display: flex;
+  }
+  .tarjetas{
+    width 35ch;
+    border: solid #333 1px;
+    background: white;
+    border-radius: 5px;
+    height: 250px;
+  }
+  .cuerpoTarjetas{
+    padding: 10px;
+  }
+  .nombrePokemon{
+    text-align: center;
+  }
