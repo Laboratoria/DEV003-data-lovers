@@ -1,4 +1,4 @@
-import { example, anotherExample, getBooks } from '../src/data.js';
+import { example, anotherExample, getBooks, getCharacters } from '../src/data.js';
 import data from '../src/data/harrypotter/data.js';
 
 
@@ -32,5 +32,15 @@ describe('getbooks', () => {
   it('returns harry potter books', () => {
     const books = getBooks(data);
     expect(books).toBe(data.books)
+  });
+});
+describe('getCharacters', () => {
+  it('is a function', () => {
+    expect(typeof getCharacters).toBe('function');
+  });
+
+  it('returns harry potter data characters', () => {
+    const characters = getCharacters(data);
+    expect(characters).toBe(data.characters);
   });
 });
