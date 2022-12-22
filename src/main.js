@@ -1,6 +1,5 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import { example } from "./data.js";
 
-console.log(example, data);
+//document.querySelector("#root").innerHTML = example(89);
+//document.querySelector("#root").innerHTML =
+//  "<ol><li>Hola</li><li>Adios</li></ol>";
