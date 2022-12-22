@@ -1,11 +1,11 @@
 // estas funciones son de ejemplo
-// export const example = () => {
-//   return 'example';
-// };
+export const example = () => {
+  return 'example';
+};
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+export const anotherExample = () => {
+  return 'OMG';
+};
 
 export const getBooks = (data) => {
   return data.books;
@@ -16,7 +16,7 @@ export const getCharacters = (data) => {
 }
 
 export const searchCharacterByName = (name, characters) => {
-  if (name === '') return []
+  if (name === '') return [];
 
   const charactersFound = characters.filter(function (character) {
     const characterName = character.name.toLowerCase();
