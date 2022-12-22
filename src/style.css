@@ -3,9 +3,13 @@ header{
     background-size: 100%;
     display: flex;
     justify-content: center;
-/*    padding: 0px;
-    border: 0;
+/*    padding: 10px;
+    /*border: 0;
     margin: 0;*/
+}
+
+.headerImg{
+    height: 150px;
 }
 
 .btnLupa{
@@ -13,6 +17,8 @@ header{
     max-width: 20px;
     display: flex;
     justify-content: center;
+    
+
 }
 
 .buscador{
@@ -20,10 +26,12 @@ header{
     display: flex;
     justify-content: center;
     max-height: 50px;
+    padding-bottom: 2px;
 }
 
 .containerPrinc{
     background-color: #6D7078;
+    margin: 0;
 }
 
 .cardsTittle{
@@ -36,8 +44,10 @@ header{
 }
 
 .cards{
+    padding-top: 12px;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 100px; 
 }
 
 .cardsDesign{
@@ -59,6 +69,10 @@ header{
     height: 200px;
 }
 
+.cardsTxt{
+    padding: 10px;
+}
+
 .total{
     background-color: #525457;
     color: #7AD605;
@@ -69,5 +83,6 @@ header{
     width: 100%;
     bottom: 0;
     left: 0;
+    
 }
 
