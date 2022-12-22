@@ -1,25 +1,63 @@
+
 body {
     background: linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65)),
-    url(./media/fondo.jpg) no-repeat center center fixed;
+    url(./media/ghibli.jpg) no-repeat center center fixed;
     background-size: cover;
 }
-
  header {
     background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
     margin: 10px;
     font-family: fantasy;
     text-align: center;
     font-size: 1.5em;
  }
-
  aside {
     background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
     display: flex;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     margin: 10px;
     justify-content: space-around;
-    
  }
+
+ .card{
+    background: #e2e0dc;
+    padding: 10px;
+    border-radius: 15px;
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+
+/*.container{
+    margin-top: 50px;;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+ */  
+  .container {
+    margin-top: 70px;
+    padding: 1em;
+    margin: 15px auto;
+    text-align: center;
+    -webkit-perspective: 250px;
+    perspective: 250px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
