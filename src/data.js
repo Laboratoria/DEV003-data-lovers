@@ -18,6 +18,7 @@ const pokemonOrderBy = data['pokemon'];
   else if (valor === "4") {
     pokemonOrderBy.sort((a, b) => b.name.localeCompare(a.name));
   }
+  return pokemonOrderBy;
 };
 
 //comentario fer usar filterData(data, condition):   ,   sortData(data, sortBy, sortOrder):    ,   computeStats(data):

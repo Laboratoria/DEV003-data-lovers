@@ -72,52 +72,71 @@ newCardBody.appendChild(newLabel);
 })
 
 
-const optionOrder = document.querySelector('input[name="rdOptionShow"]');
+const optionOrder = document.querySelector('input[name="rdOptionShow"]:checked');
 
-  optionOrder.addEventListener("click", function(){
-alert("entro");
-  document.getElementById("scPokedex").style.display = "block";
-  document.getElementById('scShowAllPokemon').innerHTML = '';
-  document.getElementById("scShowAllPokemon").style.display = "flex";
-  document.getElementById("scIntroduction").style.display = "none";
-  const orderPokemon = document.querySelector(optionOrder).value;
+
+      optionOrder.addEventListener("click", function(){
+        alert("entro");
+          document.getElementById("scPokedex").style.display = "block";
+          document.getElementById('scShowAllPokemon').innerHTML = '';
+          document.getElementById("scShowAllPokemon").style.display = "flex";
+          document.getElementById("scIntroduction").style.display = "none";
+
+          //const orderPokemon = document.querySelector('input[name="rdOptionShow"]:checked').value;
+          const orderPokemon= document.getElementsByName("rdOptionShow");
+          const optionOrder=document.querySelector('input[name="rdOptionShow"]:checked')
+          //option.optionOrderforEach(elem => {
+
+            //Compara si es la rpta correcta y si esta seleccionada
+          
+             if (optionOrder) {
+          
+       
+          
+          const getCardsOrderBy = orderByOpcion(optionOrder.value);
+        
+          getCardsOrderBy.forEach((item)=>{
+        
+            const cardBox=document.querySelector(".scCards");
+            
+            const newCard = document.createElement("div");
+            newCard.className= "card";
+            
+            const newCardBody=document.createElement("div");
+            newCardBody.className= "card_body";
+            
+            const newH3= document.createElement("h3");
+            newH3.className= "card_title";
+            newH3.innerText= item.num;
+            
+            const newImg=document.createElement("img");
+            newImg.src=item.img;
+            
+            const nextEspace=document.createElement("br");
+            
+            
+            const newLabel=document.createElement("label");
+            newLabel.innerText=item.name.toUpperCase();
+            newLabel.className="card_title";
+            
+            cardBox.appendChild(newCard);
+            newCard.appendChild(newCardBody);
+            newCardBody.appendChild(newH3);
+            newCardBody.appendChild(newImg);
+            newCardBody.appendChild(nextEspace);
+            newCardBody.appendChild(newLabel);
+            
+            })
+        
+        }
+   }) 
+ // })
   
-  const getCardsOrderBy = orderByOpcion(orderPokemon);
 
-  getCardsOrderBy.forEach((item)=>{
 
-    const cardBox=document.querySelector(".scCards");
-    
-    const newCard = document.createElement("div");
-    newCard.className= "card";
-    
-    const newCardBody=document.createElement("div");
-    newCardBody.className= "card_body";
-    
-    const newH3= document.createElement("h3");
-    newH3.className= "card_title";
-    newH3.innerText= item.num;
-    
-    const newImg=document.createElement("img");
-    newImg.src=item.img;
-    
-    const nextEspace=document.createElement("br");
-    
-    
-    const newLabel=document.createElement("label");
-    newLabel.innerText=item.name.toUpperCase();
-    newLabel.className="card_title";
-    
-    cardBox.appendChild(newCard);
-    newCard.appendChild(newCardBody);
-    newCardBody.appendChild(newH3);
-    newCardBody.appendChild(newImg);
-    newCardBody.appendChild(nextEspace);
-    newCardBody.appendChild(newLabel);
-    
-    })
 
-})
+
+
 /*
 // When the user clicks on <span> (x), close the modal
 const span = document.getElementsByClassName("close")[0];
