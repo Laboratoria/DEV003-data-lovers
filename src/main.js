@@ -1,19 +1,8 @@
 import {getDataPokemon,orderByOpcion} from './data.js';
-/*import {
-  filterByGeneration,
-  filterByType,
-  orderByName,
-  filterByResistant,
-  orderByNum,
-} from "./data.js";*/
-
-
-
-//console.log();
 
 const buttonHome = document.getElementById("btnHome");
 const buttonPokedex = document.getElementById("btnPokedex");
-//const divCards = document.getElementById("list-cards");
+
 
 buttonHome.addEventListener("click", function(){
     document.getElementById("scIntroduction").style.display = "block";
@@ -71,73 +60,59 @@ newCardBody.appendChild(newLabel);
 */
 })
 
+ 
 
-const optionOrder = document.querySelector('input[name="rdOptionShow"]:checked');
 
+const optionOrder = document.querySelectorAll('input[type=radio][name="rdOptionShow"]');
 
-      optionOrder.addEventListener("click", function(){
-        alert("entro");
-          document.getElementById("scPokedex").style.display = "block";
-          document.getElementById('scShowAllPokemon').innerHTML = '';
-          document.getElementById("scShowAllPokemon").style.display = "flex";
-          document.getElementById("scIntroduction").style.display = "none";
+optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => {
 
-          //const orderPokemon = document.querySelector('input[name="rdOptionShow"]:checked').value;
-          const orderPokemon= document.getElementsByName("rdOptionShow");
-          const optionOrder=document.querySelector('input[name="rdOptionShow"]:checked')
-          //option.optionOrderforEach(elem => {
+  document.getElementById("scPokedex").style.display = "block";
+  document.getElementById('scShowAllPokemon').innerHTML = '';
+  document.getElementById("scShowAllPokemon").style.display = "flex";
+  document.getElementById("scIntroduction").style.display = "none";
 
-            //Compara si es la rpta correcta y si esta seleccionada
-          
-             if (optionOrder) {
-          
-       
-          
-          const getCardsOrderBy = orderByOpcion(optionOrder.value);
+  const getCardsOrderBy = orderByOpcion(optionOrder.value);
         
-          getCardsOrderBy.forEach((item)=>{
-        
-            const cardBox=document.querySelector(".scCards");
-            
-            const newCard = document.createElement("div");
-            newCard.className= "card";
-            
-            const newCardBody=document.createElement("div");
-            newCardBody.className= "card_body";
-            
-            const newH3= document.createElement("h3");
-            newH3.className= "card_title";
-            newH3.innerText= item.num;
-            
-            const newImg=document.createElement("img");
-            newImg.src=item.img;
-            
-            const nextEspace=document.createElement("br");
-            
-            
-            const newLabel=document.createElement("label");
-            newLabel.innerText=item.name.toUpperCase();
-            newLabel.className="card_title";
-            
-            cardBox.appendChild(newCard);
-            newCard.appendChild(newCardBody);
-            newCardBody.appendChild(newH3);
-            newCardBody.appendChild(newImg);
-            newCardBody.appendChild(nextEspace);
-            newCardBody.appendChild(newLabel);
-            
-            })
-        
-        }
-   }) 
- // })
-  
+  getCardsOrderBy.forEach((item)=>{
 
+    const cardBox=document.querySelector(".scCards");
+    
+    const newCard = document.createElement("div");
+    newCard.className= "card";
+    
+    const newCardBody=document.createElement("div");
+    newCardBody.className= "card_body";
+    
+    const newH3= document.createElement("h3");
+    newH3.className= "card_title";
+    newH3.innerText= item.num;
+    
+    const newImg=document.createElement("img");
+    newImg.src=item.img;
+    
+    const nextEspace=document.createElement("br");
+    
+    
+    const newLabel=document.createElement("label");
+    newLabel.innerText=item.name.toUpperCase();
+    newLabel.className="card_title";
+    
+    cardBox.appendChild(newCard);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newH3);
+    newCardBody.appendChild(newImg);
+    newCardBody.appendChild(nextEspace);
+    newCardBody.appendChild(newLabel);
+    
+    });
 
+//alert(optionOrder.value);
+}
+))
 
-
-
-/*
+ 
+ /*
 // When the user clicks on <span> (x), close the modal
 const span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
