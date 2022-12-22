@@ -13,25 +13,31 @@ btnPokemon.addEventListener("click", function(){
   sectionPage2.style.display= "block";
   sectionPage3.style.display= "none";
   sectionPage4.style.display= "none";
-})
 
-const dataPokemones = data;
+});
 
-const catalogoPokemones = `
-<div class ="dataPokemones">
-<h2>
-  ${dataPokemones.name}
-</h2>
-<p class="img">${dataPokemones.img}</p>
-<p class="info">${dataPokemones.about}</p>
-<p class="altura">${dataPokemones.height}</p>
-<p class="peso">${dataPokemones.weight}</p>
-<p class="fortalezas">${dataPokemones.resistant}</p>
-<p class="debilidades">${dataPokemones.weaknesses}</p>
-</div>`;
+// se trae la data y se especifica el elemento
+const dataPokemons = data.pokemon;
 
-document.getElementById('page2').innerHTML = catalogoPokemones;
+//se declara una constante de la seccion de la pagina donde se visualizara el catalogo o biblioteca de pokemons
+const catalogo =document.getElementById("page2");
 
+// Se toma la constante de la data y la recorremos con el metodo .foreach que tiene la funcion de callback y el parametro es la data (archivo pokemon.js)
+dataPokemons.forEach(function(data){ 
+// se crea un cuerpo html a la seccion declarada como catalogo y se traen los datos ya declarados con template strings
+  catalogo.innerHTML += `
+  <div class="TarjetasPokemon">
+    <div class="tarjetas">
+    <div class="cuerpoTarjetas">
+    <h3 class="nombrePokemon"> ${data.name}</h3>
+    <img src="${data.img}"/>
+    <p class="about"> ${data.about}</p>
+    <p class=""></p>
+  </div>
+  </div>
+  </div>
+  `;
+});
 
 
 
