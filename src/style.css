@@ -13,3 +13,23 @@ nav li {
     justify-content: space-between;
     padding: 1rem 3rem 1rem 1rem;
 }
+.wellcome {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+footer {
+    background-color: #32C2B9;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.copyrighttext  {
+    text-align: center;
+    text-shadow: slategrey;
+}
+/*.socialfooter { 
+    display: inline;
+    
+}*/
