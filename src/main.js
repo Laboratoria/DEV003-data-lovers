@@ -123,37 +123,71 @@ buttonSearch.addEventListener("click", function(){
   document.getElementById("scShowAllPokemon").style.display = "none";
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("scEvolution").style.display = "none";
+  document.getElementById("filterContainer").innerHTML='';
   //document.getElementById("myModal").style.display = "none";
   //cardBox.appendChild(searchBox);
 
-  const values = getDataPokemon();
-   const item = [];
-   for (let i=0 ; i< values.length ; i++){
-    item.push(values[i].type)
-   }
-  // console.log(item) // ya imprime todos los types
+  const newDataP = getDataPokemon();
+//Array qu contiene los  tipos de Pokemon
+const newArray = newDataP.map(function(newData){
+ return newData.type
+})
 
+
+
+   const item = [];
+   for (let i=0 ; i< newArray.length ; i++){
+    item.push(newArray[i])
+   }
+const str=item.toString();
+//console.log(str);
+
+const strArray= str.split(',');
+//console.log(strArray);
+
+const unicos = [];
+
+for(var i = 0; i < strArray.length; i++) {
+ 
+  const elemento = strArray[i];
+ 
+  if (!unicos.includes(strArray[i])) {
+    unicos.push(elemento);
+  }
+}
+
+//console.log(unicos);
+  
+//Crea el listbox y agrega los datos del array
    const select = document.createElement("select");
    select.name = "pokemontypes";
-
-   const result = values.reduce((acc,item)=>{
-   if(!acc.includes(item)){
-     acc.push(item);
+/*
+   const result = unicos.reduce((acc,item2)=>{
+   if(!acc.includes(item2)){
+     acc.push(item2);
    }
    return acc;
  },[])
+ */
+ //console.log(result);
+ const sortUnicos= unicos.sort();
  
- console.log(result);
- 
-   for (const val of result)
-   {
-       const option = document.createElement("option");
-       option.value = val;
-       option.textContent = values.type;
-      // option.text = result.value;
-       select.appendChild(option);
-   }
-   document.getElementById("filterContainer").appendChild(select);
+ document.getElementById("filterContainer").appendChild(select);
+ sortUnicos.forEach((val)=>{
+
+  const searchContainer=document.querySelector(".scSearch");
+
+  const searchListBox=document.createElement("option");
+  searchListBox.text=val.charAt(0).toUpperCase() + val.slice(1);
+//str.charAt(0).toUpperCase() + str.slice(1);
+  
+
+  select.appendChild(searchListBox);
+  
+    
+    });
+
+   
 })
 
 
