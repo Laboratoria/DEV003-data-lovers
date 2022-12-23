@@ -1,4 +1,4 @@
-import {getDataPokemon,orderByOpcion, filterData} from './data.js';
+import {getDataPokemon, orderByOpcion, filterData} from './data.js';
 
 const buttonHome = document.getElementById("btnHome");
 const buttonPokedex = document.getElementById("btnPokedex");
@@ -8,6 +8,9 @@ buttonHome.addEventListener("click", function(){
     document.getElementById("scIntroduction").style.display = "block";
     document.getElementById("scPokedex").style.display = "none";
     document.getElementById("scShowAllPokemon").style.display = "none";
+    document.getElementById("scSpawRate").style.display = "none";
+    document.getElementById("scEvolution").style.display = "none";
+    document.getElementById("scSearch").style.display = "none";
     //document.getElementById("myModal").style.display = "none";
   });
 
@@ -16,7 +19,10 @@ buttonHome.addEventListener("click", function(){
   document.getElementById("scPokedex").style.display = "block";
   document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
-  
+  document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("scEvolution").style.display = "none";
+  document.getElementById("scSearch").style.display = "none";
+
   const getCards = getDataPokemon();
   
 
@@ -109,40 +115,69 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
 }
 ))
 
+//funciones dentro de la pagina de Search
 buttonSearch.addEventListener("click", function(){
   document.getElementById("scSearch").style.display = "block";
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
+  document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("scEvolution").style.display = "none";
   //document.getElementById("myModal").style.display = "none";
+  //cardBox.appendChild(searchBox);
 
-    const values = getDataPokemon();
-    const item = values[0].num['type'];
-    console.log(item);
-    const select = document.createElement("select");
-    select.name = "pokemontypes";
+  const values = getDataPokemon();
+   const item = [];
+   for (let i=0 ; i< values.length ; i++){
+    item.push(values[i].type)
+   }
+  // console.log(item) // ya imprime todos los types
 
-  const result = values.reduce((acc,item)=>{
-    if(!acc.includes(item)){
-      acc.push(item);
-    }
-    return acc;
-  },[])
+   const select = document.createElement("select");
+   select.name = "pokemontypes";
 
-  console.log(result); 
-
-    for (const val of result)
-    {
-        const option = document.createElement("option");
-        option.value = val;
-        option.textContent = values.type;
-       // option.text = result.value;
-        select.appendChild(option);
-    }
+   const result = values.reduce((acc,item)=>{
+   if(!acc.includes(item)){
+     acc.push(item);
+   }
+   return acc;
+ },[])
  
-    document.getElementById("filterContainer").appendChild(select);
+ console.log(result);
+ 
+   for (const val of result)
+   {
+       const option = document.createElement("option");
+       option.value = val;
+       option.textContent = values.type;
+      // option.text = result.value;
+       select.appendChild(option);
+   }
+   document.getElementById("filterContainer").appendChild(select);
 })
 
+
+
+
+//funciones dentro de la pagina de Evolutions
+buttonEvolution.addEventListener("click", function(){
+  document.getElementById("scEvolution").style.display = "block";
+  document.getElementById("scSearch").style.display = "none";
+  document.getElementById("scIntroduction").style.display = "none";
+  document.getElementById("scPokedex").style.display = "none";
+  document.getElementById("scShowAllPokemon").style.display = "none";
+})
+
+
+//funciones dentro de la pagina de SpawRate
+buttonSpawRate.addEventListener("click", function(){
+  document.getElementById("scSpawRate").style.display = "block";
+  document.getElementById("scEvolution").style.display = "none";
+  document.getElementById("scSearch").style.display = "none";
+  document.getElementById("scIntroduction").style.display = "none";
+  document.getElementById("scPokedex").style.display = "none";
+  document.getElementById("scShowAllPokemon").style.display = "none";
+})
 
 
  /*
@@ -151,7 +186,6 @@ const span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 const modal = document.getElementById("myModal");
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -181,12 +215,4 @@ window.onclick = function(event) {
  // console.log(containerName);
   containerId.innerText= num;
   containerId.innerText= name;
-
 }*/
-
-
-
-
-
-
-
