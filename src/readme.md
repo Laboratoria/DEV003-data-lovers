@@ -1,9 +1,9 @@
-###### En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campeones del popular juego MOBA "League of Legends"
+# En este repositorio realizamos una interfaz para que el usuario pueda acceder a una base de datos de los campeones del popular juego MOBA "League of Legends"
 
 En la primera etapa del proyecto nos dedicamos a revisar la documentación e investigar para así crear un primer prototipo.
 
-Para crear el wireframe nos basamos en las paginas similares, comentarios de usuarios en foros del juego (facebook), y la data con la que trabajaremos.
-[Primer protitpo Figma](https://www.figma.com/file/JspFSwjUEA95EtDKXyeMxo/Untitled?t=HJX1C5XfInIiAfpn-0 "Primer protitpo Figma")
+Para crear el wireframe nos basamos en las paginas similares, comentarios de usuarios en foros del juego (facebook), la data con la que trabajaremos y en base a eso creamos historias de usuario, con las cuales nos apoyamos para los diseños.
+[Protitpos Figma](https://www.figma.com/file/gxCEhyp29jhMQXTKlFcNjK/LOL-DATA-LOVERS?node-id=0%3A1&t=fx7mvI94WnFML9iI-0 "Prototipos Figma")
 
 De acuerdo a lo investigado podemos concluir que la pagina debe ser sencilla, amigable, debe mostrar la información relevante para los jugadores de forma rapida, y tambien debe permitir acceder a otros datos no tan relevantes para usuarios mas experimentados.
 
@@ -51,3 +51,6 @@ Cuando al pulsar el boton de recomendaciones, obtengamos en la interfaz un resul
 
 **Definición de terminado:**
 Cuando tengamos un diseño que al usuario le evoque fácilmente al juego, y cumplamos con los principios básicos de diseño visual.
+
+
+Una vez terminados los diseños, pasamos al maquetado simple de los mismos, el objetivo es tener los elementos en html y css, para despues darles funcionalidad con js. Planeamos entregar para el siguiente sprint la interfaz visual de nuestro proyecto ya desplegada.
