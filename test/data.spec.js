@@ -11,13 +11,15 @@ describe('example', () => {
   });
 });
 
-describe('anotherExample', () => {
+  
+describe('getcharacters', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof getCharacters).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns harry potter characters', () => {
+    const characters = getCharacters(data);
+    expect(characters).toBe(data.characters);
   });
 });
 describe('getbooks', () => {
