@@ -1,4 +1,4 @@
-import {getDataPokemon, orderByOpcion, filterData} from './data.js';
+import {getDataPokemon, orderByOption, filterData} from './data.js';
 
 const buttonHome = document.getElementById("btnHome");
 const buttonPokedex = document.getElementById("btnPokedex");
@@ -67,8 +67,6 @@ newCardBody.appendChild(newLabel);
 })
 
  
-
-
 const optionOrder = document.querySelectorAll('input[type=radio][name="rdOptionShow"]');
 
 optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => {
@@ -78,7 +76,7 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
   document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
 
-  const getCardsOrderBy = orderByOpcion(optionOrder.value);
+  const getCardsOrderBy = orderByOption(optionOrder.value);
         
   getCardsOrderBy.forEach((item)=>{
 
@@ -128,86 +126,81 @@ buttonSearch.addEventListener("click", function(){
   //cardBox.appendChild(searchBox);
 
   const newDataP = getDataPokemon();
-//Array qu contiene los  tipos de Pokemon
+//Array que contiene los  tipos de Pokemon
 const newArray = newDataP.map(function(newData){
  return newData.type
 })
-
+//array donde guardamos solo los tipos de pokemon
    const item = [];
    for (let i=0 ; i< newArray.length ; i++){
     item.push(newArray[i])
    }
+//convertimos a string para poder filtrar la data   
 const str=item.toString();
-//console.log(str);
 
+// convertimos a array nuevamente y dividimos por comas para poder comparar
 const strArray= str.split(',');
 //console.log(strArray);
 
+//recorremos nuestro array para eliminar los repetidos
 const unicos = [];
 for(var i = 0; i < strArray.length; i++) {
   const elemento = strArray[i];
- 
+ //obtenemos nuestros elementos a filtrar sin repeticiones
   if (!unicos.includes(strArray[i])) {
     unicos.push(elemento);
   }
 }
-
 //console.log(unicos);
   
 //Crea el listbox y agrega los datos del array
    const select = document.createElement("select");
    select.name = "pokemontypes";
-   
-/*
-   const result = unicos.reduce((acc,item2)=>{
-   if(!acc.includes(item2)){
-     acc.push(item2);
-   }
-   return acc;
- },[])
- */
- //console.log(result);
- const sortUnicos= unicos.sort();
 
+ // los organizamos por orden alfabetico  
+ const sortUnicos= unicos.sort();
+// creamos la lista con las opciones de filtrado
  const labelTitle=document.createElement("label");
  labelTitle.textContent="Type of Pokemon";
  document.getElementById("filterContainer").appendChild(labelTitle);
  document.getElementById("filterContainer").appendChild(select);
  sortUnicos.forEach((val)=>{
 
-  const searchContainer=document.querySelector(".scSearch");
-
+  //const searchContainer=document.querySelector(".scSearch");
   const searchListBox=document.createElement("option");
+  // pone en mayuscula la primer letra
   searchListBox.text=val.charAt(0).toUpperCase() + val.slice(1);
-  searchListBox.value=val.toLowerCase;
-//str.charAt(0).toUpperCase() + str.slice(1);
-  
-
+  // regresamos a minusculas para poder comparar posteriormente
+  searchListBox.value=val.toLowerCase();
+  searchListBox.id = "listOptions";
+  searchListBox.name = "listOptions";
   select.appendChild(searchListBox);
-  
-    
     });
 
-   
-})//Fin boton Pokedek
+// Traer funcion para mostrar la data
+select.addEventListener('change', (e) => {
 
-
-//generateOptions.addEventListener("click", function(){
-  
-//alert("hola");
-const optionFilter = document.querySelector('input[type=select][name="pokemontypes"]');
-
-
-optionFilter.forEach(optionFilter => optionFilter.addEventListener('change', () => {
 document.getElementById("scShowAllPokemon").style.display = "flex";
 
-const resultado = document.querySelector('.scCards');
-resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+  const pokemonTypeList = document.getElementById('listOptions');
+  const typeSelected = pokemonTypeList.select[pokemonTypeList.selectedIndex].value;
+  const filterDataBy = filterPokemons('type',typeSelected);
+});
 
-console.log(optionFilter.value);
-const filterDataBy = filterData(optionFilter.value);
+ const filterPokemons = (filterBy, condition) => {
+  const allPokemons = filterData(filterBy, condition);
+  console.log("entro");
+  // printData(allPokemons);
+}
 
-//Array qu contiene los  tipos de Pokemon
+
+
+//const result = document.querySelector('.scCards');
+
+//const filterDataBy = filterData(select.value);
+
+//Array que contiene los  tipos de Pokemon
+/*
 filterDataBy.forEach((item)=>{
 
   const cardBox=document.querySelector(".scCards");
@@ -239,21 +232,31 @@ filterDataBy.forEach((item)=>{
   newCardBody.appendChild(nextEspace);
   newCardBody.appendChild(newLabel);
   
-  });
-}))
+  });*/
+})
+
+
+
+//})//Fin boton Pokedek
+
+
 
 
 //funciones dentro de la pagina de Evolutions
+
 buttonEvolution.addEventListener("click", function(){
   document.getElementById("scEvolution").style.display = "block";
   document.getElementById("scSearch").style.display = "none";
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
+  document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("filterContainer").innerHTML='';
 })
 
 
 //funciones dentro de la pagina de SpawRate
+
 buttonSpawRate.addEventListener("click", function(){
   document.getElementById("scSpawRate").style.display = "block";
   document.getElementById("scEvolution").style.display = "none";
@@ -261,6 +264,7 @@ buttonSpawRate.addEventListener("click", function(){
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
+  document.getElementById("filterContainer").innerHTML='';
 })
 
 
