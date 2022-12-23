@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -9,24 +10,24 @@
     <header>Universo Ghibli</header>
     <h1></h1>
     <div class="caja-opciones">
-      <button class="boton-inicio"> Menu principal</button>
-      <button class="boton-inicio"> Elige al azar</button>
-      <!--div para generar nav-->
+      <button class="button-inicio" id="Main"> Menu principal</button>
+      <button class="button-inicio" id="RandomBtn"> Elige al azar</button>
+      <!--div para generar nav, definir id o value?-->
       <select id="orderYear" class="select-year">
-        <option value="all">Ordenar por año de emisión</option>
-        <option value="upward">Ascendente</option>
-        <option value="downward">Descendente</option>
+        <option id="allYear">Ordenar por año de emisión</option>
+        <option id="upward">Ascendente</option>
+        <option id="downward">Descendente</option>
       </select>
 
       <select id="orderDirector" class="select-director">
-        <option value="all">Ordenar por Director</option>
-        <option value="Miyazaki">Hayao Miyazaki</option>
-        <option value="Takahata">Isao Takahata</option>
+        <option id="allDirector">Ordenar por Director</option>
+        <option id="Miyazaki">Hayao Miyazaki</option>
+        <option id="Takahata">Isao Takahata</option>
       </select>
       <select id="orderCharacter" class="select-character">
-        <option value="all">Ordenar por especie</option>
-        <option value="">A</option>
-        <option value=""><b></b></option>
+        <option id="allCharacter">Ordenar por especie</option>
+        <option id="">A</option>
+        <option id="">b<b></b></option>
       </select>
 
 

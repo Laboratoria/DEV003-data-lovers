@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 header{
     font-family: 'Italiana';
@@ -12,13 +14,14 @@ header{
     text-align: center;
     color: #fff;
 }
-.boton-inicio{
+.button-inicio{
     background-color:rgb(42, 92, 99);
     padding: 20px;
     border-radius: 15px;
     border: none;
     margin: 10px;
     color:#fff;
+    font-family: 'Roboto';
 }
 .select-year,
 .select-character,
@@ -30,8 +33,5 @@ header{
     border-radius: 15px;
     border: none;
     margin: 10px;
+    font-family: 'Roboto';
 }
-/*
-.select-character
-.select-director
-*/
