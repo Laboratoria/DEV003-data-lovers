@@ -1,4 +1,4 @@
-import { example } from './data.js';
+
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -25,12 +25,16 @@ const catalogo =document.getElementById("page2");
 // Se toma la constante de la data y la recorremos con el metodo .foreach que tiene la funcion de callback y el parametro es la data (archivo pokemon.js)
 dataPokemons.forEach(function(data){ 
 // se crea un cuerpo html a la seccion declarada como catalogo y se traen los datos ya declarados con template strings
+ 
   catalogo.innerHTML += `
   <div class="TarjetasPokemon">
     <div class="tarjetas">
     <div class="cuerpoTarjetas">
-    <h3 class="nombrePokemon"> ${data.name}</h3>
     <img src="${data.img}"/>
+    <h3 class="idPokemon">${data.num}</h3><h3 class="nombrePokemon">${data.name.toUpperCase()}</h3>
+    <h4 class="peso">Peso: ${data.size.weight}</h4>
+    <h4 class="altura">Altura: ${data.size.height}</h4>
+    <h4 class="tipo">Tipo: ${data.type}</h4>
     <p class="about"> ${data.about}</p>
     <p class=""></p>
   </div>

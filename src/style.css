@@ -1,46 +1,33 @@
 body{
     background-image: url("img/fondo4.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: left;
+    background-size: cover; /*mantiene la proporcion de la imagen para completar todo el contenedor*/
 }
-section.Introduccion{
-    background-color: rgba(139, 212, 232, 0.575);
+
+/*section descripcion pokemon go*/
+.introduccion{
+    background-color: #8bd4e893;
     color: black;
-    text-shadow: #f1f0ef;
     font-size: 25px;
-    background-size: 170px 170px;
-    padding: 0%;
-    text-align: center;
-}
-section.Introduccion a{
-    color: white;
-}
-section.Introduccion h3{
-    color: white;
-    text-align: center;
 }
 
-
-section.pokemon{
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+section.introduccion a{
+    color: white;
 }
+section.introduccion h3{
+    color: white;
+}
+
+/*barra de opciones(inicio, filtrar, etc)*/
 .menu{
-    list-style: none;
-    padding: 0;
     background: #1b7fb5;
-    width: 90%;
-    max-width: 2000px;
-    margin: auto;
-    text-align: center;
+    width: 100%;
 }
 
 .menu li a{
  text-decoration: none;
  color: white;  
- padding: 20px;
+ padding: 25px;
  display: block; 
 }
 
@@ -52,18 +39,22 @@ section.pokemon{
 .menu li a:hover{
     background: #402dbc;
 }
+
+/*boton ver pokemones*/
 #btnPokemones{
-    text-align: center;
+    margin-left: 40%;
     color: black;
     background-color: #1b7fb5;
     font-size: medium;
-    border-bottom: #1b7fb5;
-    }
+}
+
 #btnPokemones:hover{
     color: black;
     width: 200px;
     height: 40px;
 }
+
+/*links redes sociales*/
 footer{
     text-align: center;
     color: white;
@@ -74,31 +65,34 @@ footer a img{
     height: 28px;
 }
 
-.Introduccion{
+/*mostrar y ocultar*/
+.introduccion{
     display: block;
 }
 .pokemon{
     display: none; 
 }
 .filtro{
-    display: none;
+    display: block;
 }
 .Multiplicador{
     display: none;
 }
-.TarjetasPokemon{
+.TarjetasPokemon{ 
     display: none;
-    height: 100 vh;
     background: #333;
     padding: 10px;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
   }
-  .tarjetas{
-    width 35ch;
+  .tarjetas{ 
+    width: 300px; 
     border: solid #333 1px;
     background: white;
     border-radius: 5px;
-    height: 250px;
+    height: 500px; 
+    
+    
   }
   .cuerpoTarjetas{
     padding: 10px;
@@ -106,3 +100,4 @@ footer a img{
   .nombrePokemon{
     text-align: center;
   }
+
