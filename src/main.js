@@ -133,8 +133,6 @@ const newArray = newDataP.map(function(newData){
  return newData.type
 })
 
-
-
    const item = [];
    for (let i=0 ; i< newArray.length ; i++){
     item.push(newArray[i])
@@ -146,9 +144,7 @@ const strArray= str.split(',');
 //console.log(strArray);
 
 const unicos = [];
-
 for(var i = 0; i < strArray.length; i++) {
- 
   const elemento = strArray[i];
  
   if (!unicos.includes(strArray[i])) {
@@ -161,6 +157,7 @@ for(var i = 0; i < strArray.length; i++) {
 //Crea el listbox y agrega los datos del array
    const select = document.createElement("select");
    select.name = "pokemontypes";
+   
 /*
    const result = unicos.reduce((acc,item2)=>{
    if(!acc.includes(item2)){
@@ -171,7 +168,10 @@ for(var i = 0; i < strArray.length; i++) {
  */
  //console.log(result);
  const sortUnicos= unicos.sort();
- 
+
+ const labelTitle=document.createElement("label");
+ labelTitle.textContent="Type of Pokemon";
+ document.getElementById("filterContainer").appendChild(labelTitle);
  document.getElementById("filterContainer").appendChild(select);
  sortUnicos.forEach((val)=>{
 
@@ -179,6 +179,7 @@ for(var i = 0; i < strArray.length; i++) {
 
   const searchListBox=document.createElement("option");
   searchListBox.text=val.charAt(0).toUpperCase() + val.slice(1);
+  searchListBox.value=val.toLowerCase;
 //str.charAt(0).toUpperCase() + str.slice(1);
   
 
@@ -188,9 +189,58 @@ for(var i = 0; i < strArray.length; i++) {
     });
 
    
-})
+})//Fin boton Pokedek
 
 
+//generateOptions.addEventListener("click", function(){
+  
+//alert("hola");
+const optionFilter = document.querySelector('input[type=select][name="pokemontypes"]');
+
+
+optionFilter.forEach(optionFilter => optionFilter.addEventListener('change', () => {
+document.getElementById("scShowAllPokemon").style.display = "flex";
+
+const resultado = document.querySelector('.scCards');
+resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+
+console.log(optionFilter.value);
+const filterDataBy = filterData(optionFilter.value);
+
+//Array qu contiene los  tipos de Pokemon
+filterDataBy.forEach((item)=>{
+
+  const cardBox=document.querySelector(".scCards");
+  
+  const newCard = document.createElement("div");
+  newCard.className= "card";
+  
+  const newCardBody=document.createElement("div");
+  newCardBody.className= "card_body";
+  
+  const newH3= document.createElement("h3");
+  newH3.className= "card_title";
+  newH3.innerText= item.num;
+  
+  const newImg=document.createElement("img");
+  newImg.src=item.img;
+  
+  const nextEspace=document.createElement("br");
+  
+  
+  const newLabel=document.createElement("label");
+  newLabel.innerText=item.name.toUpperCase();
+  newLabel.className="card_title";
+  
+  cardBox.appendChild(newCard);
+  newCard.appendChild(newCardBody);
+  newCardBody.appendChild(newH3);
+  newCardBody.appendChild(newImg);
+  newCardBody.appendChild(nextEspace);
+  newCardBody.appendChild(newLabel);
+  
+  });
+}))
 
 
 //funciones dentro de la pagina de Evolutions

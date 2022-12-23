@@ -82,22 +82,24 @@
 
     </section>
 
-    <section id="scShowAllPokemon" class="scCards">
-    <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
-  <div id="myModal" >
-  <span class="close">&times;</span>
-</div> -->
-    </section>
-
+  
     <section id="scSearch">
       <p>Search your favorite pokemon by filters:</p>
       <div id="filterContainer"></div>
-      <br>
       <div>
-        <button id="generateOptions">Filter</button>
+
+        <label>Region of Pokemon</label>
+      <select name="slRegion" id="regionPokemon">
+        <option value="kanto">Kanto</option>
+
+        <option value="johto">Johto</option>
+      </select>
+
         <form action="" onsubmit="searchPokemon(event)">
-          <input type="text" name="pokemon" autocomplete="off" placeholder="🔍 buscar pokemon" id="searchBox"> </input>
+          <input type="text" name="pokemon" autocomplete="off" placeholder="🔍 Search pokemon" id="searchBox"> 
         </form>
+
+        <button id="generateOptions">Filter</button>
       </div>
     </section>
 
@@ -108,6 +110,13 @@
     <section id="scSpawRate">
       <p>SPAW RATEEEE</p>
     </section>
+
+    <section id="scShowAllPokemon" class="scCards">
+      <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
+    <div id="myModal" >
+    <span class="close">&times;</span>
+  </div> -->
+      </section>
 
   </main>
 
