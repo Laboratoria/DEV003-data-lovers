@@ -2,7 +2,9 @@
 import data from './data/ghibli/ghibli.js'
 //dom
 
-//console.log(data.films) //funciona tomando las peliculas 
+//console.log(data.films) //funciona tomando las peliculas
+
+
 const dataMovies = data.films
 dataMovies.forEach(function(film) 
 {
