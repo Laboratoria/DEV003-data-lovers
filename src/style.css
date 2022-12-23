@@ -92,6 +92,27 @@ nav li a:hover {
     width: 10%;
     margin: 10px 30px 10px 0;
 }
+.wellcome {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+footer {
+    background-color: #32C2B9;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.copyrighttext  {
+    text-align: center;
+    text-shadow: slategrey;
+}
+/*.socialfooter { 
+    display: inline;
+    
+}*/
+
 
 /* info completa por película */
 .tituloPelicula {
