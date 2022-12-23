@@ -27,13 +27,13 @@ const pokemonSortBy = data['pokemon'];
 
 //funcion de filtrar data  filterData(data, condition)
 export const filterData = (valor) => {
-const pokemonFilter = data['pokemon'];
+const pokemonFilter = data['pokemon'].type;
   let result = [];
-  if(filterBy === 'type'){
-    result = pokemonArray.filter(pokemon => pokemon.type.includes(condition));
-  }else {
+  if(pokemonFilter === valor){
+    result = pokemonArray.filter(pokemon => pokemon.type.includes(valor));
+  }/*else {
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-  }
+  }*/
   console.log(result)
   return result;
 };
