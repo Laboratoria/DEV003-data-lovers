@@ -11,6 +11,15 @@ describe('example', () => {
   });
 });
 
+describe('anotherExample', () => {
+  it('is a function', () => {
+    expect(typeof anotherExample).toBe('function');
+  });
+  
+  it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });
+});
   
 describe('getcharacters', () => {
   it('is a function', () => {
