@@ -3,16 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Metatag para hacer responsive -->
   <title>Data Lovers - Pokemon </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="boxHeader"> <!-- Imagen de Pokemon con pokebolas -->
-    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
+    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_header">
     <img src="./media/images/logo_p.png" alt="Titulo Pokemon" width="300">
-    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_pokebola">
+    <img src="./media/images/pokebola.png" alt="Titulo Pokemon" class="img_header">
   </header>
 
   <nav class="menu">
@@ -58,7 +58,8 @@
       <figure>
         <img src="./media/images/001.png" alt="Pokemon" width="200">
         <p>
-          POKEMON OF THE DAY "NAME"
+          Pokemon of the day! <br><br>
+          "BULBASAUR"
         </p>
       </figure>
     </section>
@@ -72,33 +73,32 @@
         Order Pokémons by: <br>
         <input type="radio" name="rdOptionShow" default checked value="1"> Ascendente
         <br>
-        <input type="radio" name="rdOptionShow"  value="2"> Descendente
+        <input type="radio" name="rdOptionShow" value="2"> Descendente
         <br>
-        <input type="radio" name="rdOptionShow"  value="3"> A-Z
+        <input type="radio" name="rdOptionShow" value="3"> A-Z
         <br>
-        <input type="radio" name="rdOptionShow"  value="4" /> Z-A
+        <input type="radio" name="rdOptionShow" value="4" /> Z-A
       </p>
 
     </section>
+
+    <section id="scShowAllPokemon" class="scCards">
     <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
   <div id="myModal" >
   <span class="close">&times;</span>
-  
-</div>
--->
-    <section id="scShowAllPokemon" class="scCards">
-
+</div> -->
     </section>
-
-
 
     <section id="scSearch">
       <p>Search your favorite pokemon by filters:</p>
-    <div id="filterContainer"></div>
-    <br>
-    <div>
-    <button id="generateOptions">Filter</button>
-    </div>
+      <div id="filterContainer"></div>
+      <br>
+      <div>
+        <button id="generateOptions">Filter</button>
+        <form action="" onsubmit="searchPokemon(event)">
+          <input type="text" name="pokemon" autocomplete="off" placeholder="🔍 buscar pokemon" id="searchBox"> </input>
+        </form>
+      </div>
     </section>
 
     <section id="scEvolution">
