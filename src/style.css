@@ -14,7 +14,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
 }
 
 /* menú */
@@ -46,75 +45,98 @@ header {
 /* revisar esto */
 
 /* lista de categorías */
+.lista {
+    height: 100%;
+    display: flex;
+}
+
 nav li {
-    display: inline;
-    justify-content: space-between;
-    padding: 15px 15px 15px 15px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav li a {
+    width: 100%;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-nav li a:hover {
-    color: #FF9915;
+nav.categorias li:hover {
+    background-color: #FF9915;
     text-decoration: none;
 }
 
 .categorias {
     overflow: hidden;
     width: 80%;
+    height: 65px;
 }
 
 .categorias a {
-    /* float: left; */
     color: #f2f2f2;
     text-align: center;
-    /* padding: 5px 0px 5px 0px; */
     text-decoration: none;
     font-size: 17px;
-
 }
-
-.categorias a:hover {
-    background-color: #FF9915;
-    color: #FFFFFF;
-}
-
-/* .categorias a.active {
-    background-color: #FF9915;
-    color: white;
-  } */
 
 /* logo superior */
 .logoTop {
-    width: 10%;
+    width: 160px;
     margin: 10px 30px 10px 0;
 }
-.wellcome {
+
+/* página de bienvenida */
+.welcome {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
+    background-image: url(https://www.theilluminerdi.com/wp-content/uploads/2021/01/studio_ghibli.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: #00686C;
 }
+
+#fondoBienvenida {
+    background: rgba(255, 255, 255, 0.66);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px); 
+    padding: 3rem 4rem 3rem 4rem;
+}
+
+#fondoBienvenida h1 {
+    font-size: 35px;
+    max-width: 50ch;
+    margin-bottom: 3rem;
+}
+
+#fondoBienvenida p {
+    font-size: 20px;
+    max-width: 60ch;
+    /* font-weight: 600; */
+}
+
 h3 {
     text-align: center;
 }
-footer {
-    background-color: #32C2B9;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-.copyrighttext  {
-    text-align: center;
-    text-shadow: slategrey;
-}
-/*.socialfooter { 
-    display: inline;
-    
-}*/
-
 
 /* info completa por película */
+.parteSuperior {
+    display: block;
+    width: 100%;
+    /* justify-content: center; */
+    align-content: flex-end;
+    /* margin: 80px 80px 80px 80px; */
+}
+
 .tituloPelicula {
     color: #00686C;
     display: flex;
@@ -126,8 +148,76 @@ footer {
 }
 
 /* .barraPelicula {
-    background: ;
+    background: #FAD928;
     width: 250px;
     height: 20px;
     margin: 0 auto;
 } */
+
+/* botón regresar */
+.backButton {
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 5rem;
+}
+
+.backButton:hover {
+    background-color: #FF9915
+}
+
+.flecha {
+    width: 60%;
+}
+
+.imgDetalle {
+    display: flex;
+    align-items: center;
+    margin: 80px 80px 80px 80px;
+}
+
+.portadaPelicula {
+    width: 20%;
+}
+
+.dosParrafos {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    tab-size: 40%;
+}
+
+.estadisticas {
+    display: inline;
+}
+
+.medalla {
+    width: 3%;
+}
+
+/* footer */
+footer {
+    background-color: #32C2B9;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.copyrighttext {
+    text-align: center;
+    text-shadow: slategrey;
+}
+
+/*.socialfooter { 
+    display: inline;
+    
+}*/
