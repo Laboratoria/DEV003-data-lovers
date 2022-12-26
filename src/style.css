@@ -1,0 +1,103 @@
+body{
+    background-image: url("img/fondo4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /*mantiene la proporcion de la imagen para completar todo el contenedor*/
+}
+
+/*section descripcion pokemon go*/
+.introduccion{
+    background-color: #8bd4e893;
+    color: black;
+    font-size: 25px;
+}
+
+section.introduccion a{
+    color: white;
+}
+section.introduccion h3{
+    color: white;
+}
+
+/*barra de opciones(inicio, filtrar, etc)*/
+.menu{
+    background: #1b7fb5;
+    width: 100%;
+}
+
+.menu li a{
+ text-decoration: none;
+ color: white;  
+ padding: 25px;
+ display: block; 
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #402dbc;
+}
+
+/*boton ver pokemones*/
+#btnPokemones{
+    margin-left: 40%;
+    color: black;
+    background-color: #1b7fb5;
+    font-size: medium;
+}
+
+#btnPokemones:hover{
+    color: black;
+    width: 200px;
+    height: 40px;
+}
+
+/*links redes sociales*/
+footer{
+    text-align: center;
+    color: white;
+}
+
+footer a img{
+    width: 28px;
+    height: 28px;
+}
+
+/*mostrar y ocultar*/
+.introduccion{
+    display: block;
+}
+.pokemon{
+    display: none; 
+}
+.filtro{
+    display: block;
+}
+.Multiplicador{
+    display: none;
+}
+.TarjetasPokemon{ 
+    display: none;
+    background: #333;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .tarjetas{ 
+    width: 300px; 
+    border: solid #333 1px;
+    background: white;
+    border-radius: 5px;
+    height: 500px; 
+    
+    
+  }
+  .cuerpoTarjetas{
+    padding: 10px;
+  }
+  .nombrePokemon{
+    text-align: center;
+  }
+

@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"><p>mensaje de prueba</p></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--menu de opciones-->
+  <header>
+        <img src="img/pokrmonGo.png" alt="imagen Pokemon Go">
+    <nav class="menu">
+      <ul> 
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Pokemones</a></li>
+        <li><a href="#">Filtrar</a></li>
+        <li><a href="#">Multiplicador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--descripcion de pokemon go-->
+    <section class="introduccion" id="page1">
+      <h3>Pokèmon Go</h3>
+      <p> ¿Que es Pokemon go?, es un videojuego de <a
+          href="https://es.wikipedia.org/wiki/Realidad_aumentada">realidad aumentada.</a> Se necesita conecion a internet para jugar, es un videojuego gratuito pero contiene
+        microtransacciones. El juego consiste en buscar y capturar personajes de la saga <a
+          href="https://es.wikipedia.org/wiki/Pok%C3%A9mon">Pokémon</a> escondidos en ubicaciones del mundo real y
+        luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar.
+        ¿Como funciona pokemon Go?, completa tu Pokédex, fortalécete y combate online con otros entrenadores durante PvP combates de
+        Raid. Evoluciona tus Pokémon para hacerlos más fuertes en este juego.</p>
+
+   <!--enlace para descargar aplicacion-->
+      <p> Deseas descargar la aplicacion sigue el enlace <a
+          href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_CO&gl=US&pli=1">Descarga
+          la app</a></p>
+
+
+   <!--boton que lleva a page2 y muestra los pokemones-->
+      <button id="btnPokemones">Conoce los Pokemones</button>
+    </section>
+
+    <!--pagina donde muestra todos los pokemones-->
+    <section class="pokemon" id="page2">
+      </select>
+    </section>
+    
+    <!--filtro por tipo-->
+    <section class="filtro" id="page3">
+      <label>filtro tipo: </label><select id="filtroTipo">
+        <option>Bug</option>
+        <option>Dark</option>
+        <option>Dragon</option>
+        <option>Electric</option>
+        <option>Fairy</option>
+        <option>Fighting</option>
+        <option>Fire</option>
+        <option>Flyng</option>
+        <option>Ghost</option>
+        <option>Grass</option>
+        <option>Ground</option>
+        <option>Ice</option>
+        <option>Normal</option>
+        <option>Poison</option>
+        <option>Psichi</option>
+        <option>Rock</option>
+        <option>Steel</option>
+        <option>Water</option>
+      </select>
+
+      <!--pagina del multiplicador-->
+    </section>
+    <section class="Multiplicador" id="page4">
+      <p>Multiplicador</p>
+    </section>
+
+
+  </main>
+
+  <!--links redes sociales-->
+  <footer>Proyecto Data Lovers by Sara Sierra y Rossanna Ariza
+<a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a>
+</footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
