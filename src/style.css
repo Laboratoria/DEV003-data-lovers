@@ -17,8 +17,20 @@ i {
 }
 .nav {
   color: rgba(224, 226, 219, 1);
+  font-weight: 600;
 }
-
+.nav:hover {
+  background-color: rgb(73, 73, 73);
+  cursor: pointer;
+  width:100%;
+  height: 35px;
+  border-radius: 15px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: 900;
+  text-shadow: 0px 0px 4px rgba(230, 175, 46, 1);
+  ;
+}
 #nav-Bar {
   grid-row: 1/2;
   background-color: rgba(15, 14, 14, 1);
@@ -37,15 +49,24 @@ i {
   background: rgba(8, 164, 189, 1);
   color: rgba(15, 14, 14, 1);
   height: 45.607975006103516px;
-  width: 155px;
+  width: 175px;
   border-radius: 15px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
-  text-decoration: none;
   margin-right: 30px;
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
   line-height: 48px;
+}
+#login:hover {
+  cursor: pointer;
+  background-color: rgba(57, 67, 183, 1);
+  text-shadow: 0px 4px 4px rgba(230, 175, 46, 1);
+}
+nav > div > i {
+  font-size: 23px;
+  color: rgba(15, 14, 14, 0.8);
 }
 #search {
   width: 200px;
@@ -119,4 +140,9 @@ padding-top: 3px;
 
 footer > div > i {
   padding-right: 30px;
+}
+
+footer > div > i:hover {
+  cursor: pointer;
+  text-shadow: 0px 4px 4px rgba(230, 175, 46, 1);
 }
