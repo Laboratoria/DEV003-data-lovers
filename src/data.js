@@ -1,9 +1,13 @@
 import data from './data/ghibli/ghibli.js'
-
-// estas funciones son de ejemplo
+const dataMovies = data.films;
+//funciona pero toma todos los elementos del array, RandomBtn
+export function randomMovie(dataMovies){
+  return dataMovies[Math.floor(Math.random()* dataMovies.length)]
+}
 
 /*
-export const example = () {
-  return 'example';
-};
-*/
+
+/*const Miyazaki = dataMovies.filter((dataMovies) => dataMovies.director === 'Hayao Miyazaki'
+); 
+console.log(Miyazaki)
+funcionando, retorna solo peliculas de miyazaki pero el array  */
