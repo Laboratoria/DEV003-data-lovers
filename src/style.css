@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: relative;
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: auto;
@@ -34,7 +34,6 @@ i {
   justify-items: center;
 }
 #login {
-   /*display: inline-block;*/
   background: rgba(8, 164, 189, 1);
   color: rgba(15, 14, 14, 1);
   height: 45.607975006103516px;
@@ -82,11 +81,42 @@ color: rgba(224, 226, 219, 0.5);
   color: rgba(224, 226, 219, 0.5);
   }
 
-#champions-list{
+#champions-list {
   position: relative;
   grid-row: 2/3;
-  min-height: 700px;
+  min-height: 600px;
 }
-#social-media{
+#social-media {
   grid-row: 3/4;
+  align-self: center;
+  justify-self: center;
+  background: rgba(15, 14, 14, 1);
+  color: rgba(224, 226, 219, 1);
+  height: 64px;
+  width: 90%;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+}
+.text-social {
+  font-size: 18px;
+  text-align: end;
+  line-height: 65px;
+}
+.icons {
+text-align: start;
+font-size: 43px;
+padding-top: 3px;
+
+}
+.separator-3 {
+  font-weight: 30;
+  font-size: 60px;
+  color: rgba(224, 226, 219, 0.5);
+  line-height: 53px;
+  text-align: center;
+}
+
+footer > div > i {
+  padding-right: 30px;
 }
