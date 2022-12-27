@@ -89,14 +89,14 @@
       <div>
 
         <label>Region of Pokemon</label>
-        <select name="slRegion" id="regionPokemon">
+        <select name="regionPokemon" id="regionPokemon">
           <option value="kanto">Kanto</option>
           <option value="johto">Johto</option>
         </select>
 
-        <form action="" onsubmit="searchPokemon(event)">
+        <div action="" onsubmit="searchPokemon(event)">
           <input type="text" name="pokemon" autocomplete="off" placeholder="🔍 Search pokemon" id="searchBox">
-        </form>
+        </div>
       </div>
     </section>
 
@@ -109,10 +109,12 @@
     </section>
 
     <section id="scShowAllPokemon" class="scCards">
-      <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon
-    <div id="myModal" >
-    <span class="close">&times;</span>
-  </div> -->
+      <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon-->
+    <div id="scPopUp" class="cPopUp">
+    <!--  <button id="btnClose" class="close">X</button>
+    <span id="spanClose" class="close">&times;</span>-->
+    
+  </div> 
     </section>
 
   </main>

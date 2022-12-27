@@ -140,26 +140,16 @@ button:hover {
     display: none;
 }
 
+#scPopUp {
+    display: none;
+    
+}
+
 .footer {
     /* Fijar al final */
     display: table-row;
     height: 0;
     padding: 10px;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .scCards {
@@ -185,4 +175,46 @@ button:hover {
 
 .card_title {
     Text-align: center;
+}
+
+.cPopUp {
+    margin:auto;
+    position:absolute;
+    display:none;
+    border:#000;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+
+    width: 400px;
+    height: 500px;
+    right: 25%;
+    left: 25%;
+    padding: 2%;
+    Border-radius: 5px;
+    text-align: center;
+    box-align: center;
+/*
+    padding-top: 50px;
+    background-color: C4F0DF(0, 0, 0, 0.5);
+    
+    text-align: center;*/
+
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
