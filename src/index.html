@@ -4,10 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Wiki Ghibli</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="container">
+<body class="">
   <!--<div id="root"></div>!-->
   <header>
 
@@ -20,7 +24,7 @@
 
     <!--Categorías header-->
     <nav class="categorias">
-      <ul>
+      <ul class="lista">
         <li><a class="" href="">Títulos</a></li>
         <li><a href="#personajes">Personajes</a></li>
         <li><a href="#directores">Directores</a></li>
@@ -29,18 +33,27 @@
     </nav>
 
     <!--Logo superior-->
-    <img class="logoTop" src="studio ghibli letras.png" alt="logo">
+    <img class="logoTop" src="img/studio ghibli letras.png" alt="logo">
   </header>
+
+  <!-- banner
+  <section>
+    <img class="banner" src="img/studio_ghibli.jpg" alt="banner">
+  </section> -->
 
   <!-- BIENVENIDA-->
 
-  <section class="wellcome">
-    <img src="" alt="brujita">
-    <h1> ¡BIENVENIDA/O A WIKI GHIBLI!</h1>
-    <p>Acá encontrarás toda la información que necesitas conocer si quieres adentrarte en el Mundo de Studio Ghibli.</p>
-    <p>Studio Ghibli es un estudio de animación japonés, considerado por la crítica especializada y muchos cinéfilos como
-      uno de los mejores estudios de animación del mundo en la actualidad.</p>
-    <img src="" alt="totoro">
+  <section class="welcome">
+    <container id="fondoBienvenida">
+      <h1> ¡BIENVENIDA/O A WIKI GHIBLI!</h1>
+      <p>Acá encontrarás toda la información que necesitas conocer si quieres adentrarte en el Mundo de Studio Ghibli.
+        <br>
+        <br>
+        Studio Ghibli es un estudio de animación japonés, considerado por la crítica especializada y muchos cinéfilos
+        como
+        uno de los mejores estudios de animación del mundo en la actualidad.
+      </p>
+    </container>
   </section>
 
   <!--TITULOS DESTACADOS-->
@@ -93,34 +106,74 @@
     </li>
   </ul>
 
-  <!--botón de regreso-->
-  <button>Regresar</button>
+
 
   <!--INFO COMPLETA POR PELÍCULA-->
 
-  <section>
-    <h2></h2>
-    <div> <!--modificar etiqueta-->
-      <img src="" alt="pelicula">
-      <p>reseña</p>
+  <section class="infoPelicula">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="tituloPelicula">TÍTULO PELÍCULA</h2>
+        <div class="barraPelicula">_________________________</div>
+      </div>
+
+      <!--botón de regreso-->
+      <div>
+        <button class="backButton" onclick="">
+          <img class="flecha" src="img/flecha.png" alt="">
+        </button>
+      </div>
     </div>
-    <aside>
-      <img src="" alt="medalla">
-      <h4>Ranking: #1 lugar</h4>
-      <img src="" alt="estadisticas"> <!--modificar-->
-      <p>Conclusiones</p>
-    </aside>
+
+    <section class="peliculaEnDetalle">
+      <div class="imgDetalle"> <!--modificar etiqueta-->
+        <img class="portadaPelicula" src="img/mononoke.jpg" alt="pelicula">
+        <article class="dosParrafos">
+          <p class="detalles">1997 / 133 min
+            Director: Hayao Miyazaki
+            Productor: Toshio Suzuki</p>
+          <br>
+          <p class="descripcion">Herido por una maldición mortal, el joven guerrero Ashitaka se dirige al oeste en busca
+            de una cura. Allí se topa con un amargo conflicto entre Lady Eboshi, el orgulloso pueblo de Iron Town, y la
+            enigmática princesa Mononoke, una joven criada por lobos que no se detendrá ante nada para evitar que los
+            humanos destruyan su hogar y a los espíritus del bosque y dioses animales que lo habitan.</p>
+        </article>
+      </div>
+      <div class="estadisticas">
+        <div class="medallaRanking">
+          <img class="medalla" src="img/medalla.jpg" alt="medalla">
+          <h4 class="ranking">Ranking: #1 lugar</h4>
+        </div>
+        <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas"> <!--modificar-->
+        <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra cuantitativa
+          de participantes.
+          Tal vez mencionar premios ganados.</p>
+      </div>
+    </section>
   </section>
 
   <!--LISTA DE PERSONAJES POR TÍTULO-->
 
-  <section>
-    <h3>PERSONAJES</h3>
-    <button>A-Z</button>
-    <ul>
-      <li>
-        <img src="" alt="personajes por título">
-        <p>descripcion</p>
+  <section class="personajesPorPelicula">
+    <div class="tituloYBoton">
+      <h3 class="tituloPersonajes">PERSONAJES</h3>
+      <button class="botonAZ">
+        <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+      </button>
+      <p class="AZ">A - Z</p>
+    </div>
+    <ul class="columnaPersonajes">
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+        <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+        <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+        <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
       </li>
     </ul>
   </section>
@@ -190,13 +243,13 @@
   
   <footer>
 <!--Logo foot-->
-    <img class="logobottom" src="Logo foot.png" alt="logo">
+    <img class="logobottom" src="/img/Logo foot.png" alt="logo">
 <!--Copyright foot-->
     <p class= "copyrighttext">&copy; 2022 Studio Ghibli. All Rights Reserved</p>
 <!--Iconos Redes foot-->    
   <ul class="socialfooter">
-      <li><img src="insta.png" alt="instagram"></li>
-      <li><img src="twitter.png" alt="twitter"></li>
+      <li><img src="/img/insta.png" alt="instagram"></li>
+      <li><img src="/img/twitter.png" alt="twitter"></li>
    </ul>
   </footer>
 
