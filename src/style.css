@@ -42,8 +42,6 @@ header {
     background-color: #00686C;
 }
 
-/* revisar esto */
-
 /* lista de categorías */
 .lista {
     height: 100%;
@@ -77,7 +75,7 @@ nav.categorias li:hover {
 }
 
 .categorias a {
-    color: #f2f2f2;
+    color: #FFFFFF;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
@@ -101,6 +99,8 @@ nav.categorias li:hover {
     align-content: center;
     justify-content: center;
     color: #00686C;
+    line-height: 30px;
+    margin-bottom: 40px;
 }
 
 #fondoBienvenida {
@@ -108,7 +108,7 @@ nav.categorias li:hover {
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.7px);
-    -webkit-backdrop-filter: blur(6.7px); 
+    -webkit-backdrop-filter: blur(6.7px);
     padding: 3rem 4rem 3rem 4rem;
 }
 
@@ -121,38 +121,43 @@ nav.categorias li:hover {
 #fondoBienvenida p {
     font-size: 20px;
     max-width: 60ch;
-    /* font-weight: 600; */
 }
 
 h3 {
     text-align: center;
+    color: #00686C;
 }
 
 /* info completa por película */
 .parteSuperior {
     display: block;
     width: 100%;
-    /* justify-content: center; */
     align-content: flex-end;
-    /* margin: 80px 80px 80px 80px; */
 }
 
 .tituloPelicula {
     color: #00686C;
     display: flex;
     justify-content: center;
-    text-decoration: underline;
+    /* text-decoration: underline;
     text-decoration-color: #FAD928;
-    text-decoration-thickness: 15px;
+    text-decoration-thickness: 15px; */
     /* text-decoration-line: line-through; */
 }
 
-/* .barraPelicula {
+.barraPelicula {
+    display: flex;
+    justify-content: center;
+    color: #FAD928;
     background: #FAD928;
-    width: 250px;
-    height: 20px;
+    width: 270px;
+    height: 18px;
     margin: 0 auto;
-} */
+}
+
+.contenedorTitulo {
+    line-height: 3px;
+}
 
 /* botón regresar */
 .backButton {
@@ -179,29 +184,132 @@ h3 {
     width: 60%;
 }
 
+/* info pelicula superior */
+.peliculaEnDetalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px 50px 50px;
+}
+
 .imgDetalle {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    margin: 80px 80px 80px 80px;
+    margin-right: 50px;
 }
 
 .portadaPelicula {
-    width: 20%;
+    width: 300px;
 }
 
 .dosParrafos {
+    color: #00686C;
     display: flex;
     flex-direction: column;
-    margin: 30px;
-    tab-size: 40%;
+    margin-left: 50px;
+    line-height: 25px;
 }
 
+.dosParrafos p {
+    width: 50vh;
+}
+
+/* estadísticas laterales */
 .estadisticas {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
 }
 
+.medallaRanking {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
 .medalla {
-    width: 3%;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.ranking {
+    color: #00686C;
+}
+
+.imgEstadisticas {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.conclusiones {
+    color: #00686C;
+    line-height: 25px;
+    width: 80vh;
+}
+
+/* personajes de película en detalle*/
+.tituloYBoton {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.tituloPersonajes {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.botonAZ {
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.botonAZ:hover {
+    background-color: #FF9915;
+}
+
+.AZ {
+    color: #00686C;
+}
+
+.columnaPersonajes {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniaturaDescripcion {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.miniatura {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.descripcionPersonaje {
+    color: #00686C;
+    width: 60vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
 }
 
 /* footer */
