@@ -101,7 +101,7 @@ buttonSearch.addEventListener("click", function () {
   const sortUnicos = unicos.sort();
   // creamos la lista con las opciones de filtrado
   const labelTitle = document.createElement("label");
-  labelTitle.textContent = "Type of Pokemon  ";
+  labelTitle.textContent = "Type of Pokemon ";
   document.getElementById("filterContainer").appendChild(labelTitle);
   document.getElementById("filterContainer").appendChild(select);
   sortUnicos.forEach((val) => {
@@ -154,10 +154,13 @@ buttonSearch.addEventListener("click", function () {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
 
+    const writenPokemon = value.toLowerCase();
+    const filterDataBy = filterPokemons(writenPokemon);
     //    fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
     //        .then(data => data.json())
     //        .then(response => renderPokemonData(response))
     //        .catch(err => renderNotFound())
+
   }
 
 
