@@ -36,6 +36,8 @@ export const filterData = (filterBy, condition ) => {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   }else if(filterBy === 'johto') {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+  }if(filterBy === 'id') {
+    result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   }
  // console.log(result)
   return result;
