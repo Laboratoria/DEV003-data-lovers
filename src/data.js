@@ -22,21 +22,21 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
   return pokemonSortBy;
 };
 
-//funcion de filtrar data  filterData(data, condition)
-
-export const filterData = (filterBy, condition) => { // traer el valor de la lista de tipos
-  const pokemonArray = data['pokemon']; // recorrer la data completa
-  let result = []; // creando nuevo array para devolver las cards
-  if (filterBy === 'type') { // comparar que types de la data cumplen con el select de la lista y filtrarlos
+//funcion de filtrar data  filterData(dato a comparar, condition)
+  //1 traer el valor de la lista de tipos
+    //2 recorrer la data completa
+    //3 comparar que items de la data cumplen con el select de la lista
+    //4 crear array para devolver las cards
+export const filterData = (filterBy, condition ) => {
+  const pokemonArray = data['pokemon'];
+  let result = [];
+  if(filterBy === 'type'){
     result = pokemonArray.filter(pokemon => pokemon.type.includes(condition));
   } else if (filterBy === 'kanto') { // filtrando por region kanto
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   } else if (filterBy === 'johto') { // filtrando por region johto
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  } else if (filterBy === 'name') {// filtrando por nombre
-    result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-  }
-  if (filterBy === 'id') {
+  }if(filterBy === 'id') {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   }
   return result; // devolvemos el resultado del filtrado de datos

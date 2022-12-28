@@ -37,6 +37,13 @@ figure {
     .img_header {
         display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
     }
+    .cPopUp {
+        overflow: auto;
+        right: 0%;
+        left: 0%;
+        padding: 1%;
+        width:100%;
+    }
 }
 
 ul { /*Contenedor del Menu*/
@@ -158,8 +165,9 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     top: 10%;
     border: #000;
     background: #fff;
-    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
-    transition: all 500ms ease; /* transicion en milisegundos*/
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+
     width: 400px;
     height: 500px;
     right: 25%;
@@ -168,7 +176,13 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     border-radius: 5px; 
     text-align: center;
     box-align: center;
+
 }
+
+
+
+
+
 
 /* The Close Button */
 .close {
@@ -183,5 +197,12 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
 .close:focus { /* al pasar por arriba del close */
     color: #000;
     text-decoration: none;
+    cursor: pointer;
+}
+
+
+table{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer; /* cambiar cursor a un pointer */
 }
