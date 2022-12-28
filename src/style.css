@@ -3,14 +3,8 @@ header{
     background-size: 100%;
     display: flex;
     justify-content: center;
-/*    padding: 10px;
-    /*border: 0;
-    margin: 0;*/
-}
 
-/*.headerImg{
-    height: 150px;
-}*/
+}
 
 .btnLupa{
     max-height: 20px;
