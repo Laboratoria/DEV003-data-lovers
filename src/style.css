@@ -37,6 +37,13 @@ figure {
     .img_header {
         display: none;
     }
+    .cPopUp {
+        overflow: auto;
+        right: 0%;
+        left: 0%;
+        padding: 1%;
+        width:100%;
+    }
 }
 
 ul {  
@@ -189,21 +196,19 @@ button:hover {
     box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
     transition: all 500ms ease;
 
-    width: 400px;
-    height: 500px;
+   /* width: 400px;
+    height: 500px;*/
+    width:40%;
+    height: 70%;
     right: 25%;
     left: 25%;
     padding: 2%;
     Border-radius: 5px;
     text-align: center;
     box-align: center;
-/*
-    padding-top: 50px;
-    background-color: C4F0DF(0, 0, 0, 0.5);
-    
-    text-align: center;*/
 
 }
+
 
 
 
@@ -222,4 +227,10 @@ button:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+table{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
 }

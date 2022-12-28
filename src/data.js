@@ -22,7 +22,7 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
   return pokemonSortBy;
 };
 
-//funcion de filtrar data  filterData(data, condition)
+//funcion de filtrar data  filterData(dato a comparar, condition)
   //1 traer el valor de la lista de tipos
     //2 recorrer la data completa
     //3 comparar que items de la data cumplen con el select de la lista
@@ -36,10 +36,10 @@ export const filterData = (filterBy, condition ) => {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   }else if(filterBy === 'johto') {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  }if(filterBy === 'id') {
-    result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+  }else if(filterBy === 'num') {
+    result = pokemonArray.filter(pokemon => pokemon.num.includes(condition));
   }
- // console.log(result)
+// console.log(result)
   return result;
 };
 
