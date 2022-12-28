@@ -168,8 +168,8 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
     transition: all 500ms ease;
 
-    width: 400px;
-    height: 500px;
+    width: 40%;
+    height: 70%;
     right: 25%;
     left: 25%;
     padding: 2%;
