@@ -1,3 +1,5 @@
+/*.nombre es para CLASS y #nombre para ID, etiquetas se escriben directo*/
+/* en boby le podemos dar formato general a toda la pagina */
 body {
     background-color: #C4F0DF;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -6,13 +8,12 @@ body {
     font-size: 20px;
 }
 
-.boxHeader {  
-    /*.nombre es para CLASS*/
-    box-sizing: border-box;
+.boxHeader {
+    box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
     width: 100%;
-    display: flex;
+    display: flex; /* se va a mostrar con flexibilidad en la pagina o dispositivo*/
     justify-content: center;
-    padding: 5px;
+    padding: 5px; /* es el espacio entre el contenido y el borde */
     background: #E30000;
     height: 150px;
 }
@@ -20,47 +21,44 @@ body {
 figure {
     Width: 200px;
     Border: solid #333 1px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
     Background: white;
-    Border-radius: 5px;
+    Border-radius: 5px; /* radio del borde */
     Height: 300px;
     margin: 5px auto;
 }
 
 .img_header {
-    padding: 25px;
+    padding: 25px; /* espacio entre el contenido y el borde */
     display: flex;
 }
 
-@media (max-width: 767px) {  
-    /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
+@media (max-width: 767px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
     .img_header {
-        display: none;
+        display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
     }
 }
 
-ul {  
-    /*Contenedor del Menu*/
-    list-style: none;
+ul { /*Contenedor del Menu*/
+    list-style: none; /* quita el estilo de mostrarlo como lista */
     padding: 5px;
     margin: 0;
     background-color: #35AAF2;
-    line-height: 35px;
+    line-height: 35px; /* altura dentro del line-box */
     text-align: center;
 }
 
 li {
-    outline: 2px solid black;
+    outline: 2px solid black; /* borde de la caja en pixeles y color*/
     background: whitesmoke;
     width: 100px;
-    display: inline-block;
+    display: inline-block; /* se muestra uno trs otro */
     text-align: center;
     margin-left: 30px;
-    margin-left: 30px;
+    margin-left: 30px; 
 }
 
-a { 
-    /*etiqueta ancor - incluye texto */
+a { /*etiqueta ancor - incluye texto */
     text-decoration: none;
     display: block;
     color: black;
@@ -68,60 +66,36 @@ a {
     font-size: 20px;
 }
 
-button:hover {
+button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     background: #F2E41B;
     color: #E30000;
 }
 
-.button_image {
+.button_image { /* imagenes dentro del boton */
     margin: 2px;
     width: 70%;
     height: 70%;
 }
 
 #scIntroduction {
-    /* display: none; /* Por defecto, estará oculto */
-    position: relative;
-    /*position: fixed; /* Posición fija */
-    z-index: 1;
-    /* Se situará por encima de otros elementos de la página*/
-    padding-top: 50px;
-    /* El contenido estará situado a 200px de la parte superior */
-    /*left: 0;
-        top: 0;*/
+    position: relative; /*posicion relativa */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 25px; /* El contenido estará situado a 25px de la parte superior */
     margin: 0 auto;
     box-align: center;
     text-align: center;
-    font-size: large;
-    width: 50%;
-    /* Ancho completo */
-    height: 50%;
-    /* Algura completa */
-    overflow: auto;
-    /* Se activará el scroll si es necesario */
-    background-color: C4F0DF(0, 0, 0, 0.5);
-    /* Color negro con opacidad del 50% */
+    width: 75%; /* ocupa el 75% del ancho de la pagina */
+    overflow: auto; /* Se activará el scroll si es necesario */
 }
 
 #scPokedex {
-    display: none;
-    /*Por defecto, estará oculto */
+    display: none; /*Por defecto, estará oculto */
     position: relative;
-    z-index: 1;
-    /* Se situará por encima de otros elementos de la página*/
-    padding-top: 50px;
-    /* El contenido estará situado a 200px de la parte superior */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
     margin: 0 auto;
     box-align: center;
     text-align: center;
-    width: 50%;
-    /* Ancho completo NO VEO NINGUN CAMBIO*/
-    height: 50%;
-    /* Altura completa */
-    overflow: auto;
-    /* Se activará el scroll si es necesario */
-    background-color: C4F0DF(0, 0, 0, 0.5);
-    /* Color negro con opacidad del 50% */
+    overflow: auto; /* Se activará el scroll si es necesario */
 }
 
 #scListPokemon {
@@ -142,84 +116,72 @@ button:hover {
 
 #scPopUp {
     display: none;
-    
+
 }
 
 .footer {
-    /* Fijar al final */
-    display: table-row;
+    display: table-row; /* Fijar al final */
     height: 0;
     padding: 10px;
 }
 
-.scCards {
+.scCards { /* seccion que muestra las cards una tras otra */
     display: flex;
-    padding: 2%;
+    padding: 2%; 
     width: 95%;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* los elementos hijos de flex se mostraran uno tras otro */
 }
 
-.card {
-    Width: 20ch;
-    Border: solid #333 1px;
+.card { /* nuestra card */
+    width: 20ch;
+    border: solid #333 1px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-    Background: white;
-    Border-radius: 5px;
-    Height: 250px;
+    background: white;
+    border-radius: 5px;
+    height: 275px;
     margin: 5px auto;
 }
 
-.card_body {
-    Padding: 10px;
+.card_body { /* cuerpo de nuestra card */
+    padding: 10px; /* espacio entre el contenido y el borde */
 }
 
-.card_title {
-    Text-align: center;
+.card_title { /* titulo dentro de nuestra card */
+    text-align: center; 
 }
 
 .cPopUp {
-    display:none;
-    margin:auto;
-    position:fixed;
-    z-index: 1;
+    display: none;
+    margin: auto;
+    position: fixed; /* posicion fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
     top: 10%;
-    
-    border:#000;
+    border: #000;
     background: #fff;
-    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
-    transition: all 500ms ease;
-
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transition: all 500ms ease; /* transicion en milisegundos*/
     width: 400px;
     height: 500px;
     right: 25%;
     left: 25%;
     padding: 2%;
-    Border-radius: 5px;
+    border-radius: 5px; 
     text-align: center;
     box-align: center;
-/*
-    padding-top: 50px;
-    background-color: C4F0DF(0, 0, 0, 0.5);
-    
-    text-align: center;*/
-
 }
 
-
-
 /* The Close Button */
-
 .close {
     color: #aaaaaa;
-    float: right;
+    float: right; /* Fijar a la derecha */
     font-size: 15px;
     font-weight: bold;
     margin-top: 0%;
 }
 
 .close:hover,
-.close:focus {
+.close:focus { /* al pasar por arriba del close */
     color: #000;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer; /* cambiar cursor a un pointer */
 }
