@@ -27,20 +27,24 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
     //2 recorrer la data completa
     //3 comparar que items de la data cumplen con el select de la lista
     //4 crear array para devolver las cards
-export const filterData = (filterBy, condition ) => {
-  const pokemonArray = data['pokemon'];
-  let result = [];
-  if(filterBy === 'type'){
-    result = pokemonArray.filter(pokemon => pokemon.type.includes(condition));
-  } else if (filterBy === 'kanto') { // filtrando por region kanto
-    result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  } else if (filterBy === 'johto') { // filtrando por region johto
-    result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  }if(filterBy === 'id') {
-    result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  }
-  return result; // devolvemos el resultado del filtrado de datos
-};
+    export const filterData = (filterBy, condition ) => {
+      const pokemonArray = data['pokemon'];
+      let result = [];
+      if(filterBy === 'type'){
+        result = pokemonArray.filter(pokemon => pokemon.type.includes(condition));
+      }else if(filterBy === 'kanto') {
+        result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+      }else if(filterBy === 'johto') {
+        result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+      }if(filterBy === 'id') {
+        result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+      }else if(filterBy === 'num') {
+        result = pokemonArray.filter(pokemon => pokemon.num.includes(condition));
+      }
+     // console.log(result)
+    // console.log(result)
+      return result;
+    };
 
 
 
