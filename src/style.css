@@ -318,14 +318,15 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
+    font-size: 12px;
+    align-items: center;
 }
-
-.copyrighttext {
+.copyrighttext  {
     text-align: center;
     text-shadow: slategrey;
 }
-
-/*.socialfooter { 
-    display: inline;
-    
-}*/
+.socialfooter { 
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+}
