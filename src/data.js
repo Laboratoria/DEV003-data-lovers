@@ -36,12 +36,14 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
         result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
       }else if(filterBy === 'johto') {
         result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
+      }else if(filterBy === 'name') {
+        result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
       }if(filterBy === 'id') {
         result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
       }else if(filterBy === 'num') {
         result = pokemonArray.filter(pokemon => pokemon.num.includes(condition));
       }
-     // console.log(result)
+     console.log(result);
     // console.log(result)
       return result;
     };
