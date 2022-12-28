@@ -296,44 +296,65 @@ const infoPokemon=infoPokemonAll[0];
   }
 
 
-  let container = "";
+  let container="";
   container = document.getElementById("scPopUp");
   container.style.display = "block";
-
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
 
-  const newLabel = document.createElement("label");
-  newLabel.innerText = "hola";
 
-  const newLabelPokeName = document.createElement("label");
-  newLabelPokeName.innerText = "Poke Name"+idPokemon;
+
+
+
+
+
+
+  //Creando la Card con toda la info del pokemon seleccionado
+//creando tabla
+  const tableInfo = document.createElement("table");
+  tableInfo.id="tableInfoPokemon";
+//header de la tabla
+  const tableHeader = document.createElement("theader");
+  const headerTr = document.createElement("tr");
+  const headerTh1 = document.createElement("th");
+  headerTh1.innerText = infoPokemon['pokemon-rarity'].toUpperCase();
+  //trHeader1.innerText = infoPokemon.name + " " + infoPokemon.num;
+  const headerTh2 = document.createElement("th");
+  headerTh2.innerText = infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
+  const headerTh3 = document.createElement("th");
+  headerTh3.innerText = "HP " +infoPokemon.stats['max-hp'];
 
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
   btnClosePopUp.id = "btnClose";
+  btnClosePopUp.textContent = "Cerrar";
   btnClosePopUp.textContent = "X";
+
+  container.appendChild(popUp);
+  popUp.appendChild(btnClosePopUp);
 
 const headerTh4 = document.createElement("th");
 headerTh4.contains = btnClosePopUp;
-  
+
 // cuerpo de la tabla tbody
 const tbodyTable= document.createElement("tbody");
 const bodytrdetail1 = document.createElement("tr");
 const bodytd1 = document.createElement("td");
 
+//  console.log(popUp.id);
   const imagenP = document.createElement("img");
   imagenP.src = infoPokemon.img;
   imagenP.id="imgPokemon";
 
   const nextEspace1 = document.createElement("br");
 
+  // const allPokemons = filterData('id', idPokemon).sort();
   const labelType = document.createElement("label");
   labelType.innerText = "Type: " +infoPokemon.type[0];
   if(infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null){
     labelType.innerText += " - " + infoPokemon.type[1] ;
   }
-  
+
   labelType.id="lblTypePokemon";
 
   const bodytd2 = document.createElement("td");
@@ -341,7 +362,7 @@ const bodytd1 = document.createElement("td");
   const nextEspace2 = document.createElement("br");
   const labelGeneration = document.createElement("label");
   labelGeneration.innerText =  "Generation: " +infoPokemon.generation.num +" Region " +infoPokemon.generation.name;
-  
+
   const nextEspace3 = document.createElement("br");
   const labelHeight =document.createElement("label");
   labelHeight.innerText = "Height : " +infoPokemon.size.height;
@@ -352,6 +373,8 @@ const bodytd1 = document.createElement("td");
   const bodytrdetail2 = document.createElement("tr");
   const bodytd3 = document.createElement("td");
 
+  //console.log("entro");
+  //  createCard(allPokemons);
 
 
 
