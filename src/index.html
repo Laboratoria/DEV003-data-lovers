@@ -18,8 +18,8 @@
   <nav class="menu"> <!-- navegador de menu con botones  -->
     <ul> <!-- Contenedor del Menu -->
       <!-- li es la lista del Menu -->
-      <li><button id="btnHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button></li>
-      <li><button id="btnPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button></li>
+      <li><button id="buttonHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button></li>
+      <li><button id="buttonPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button></li>
       <li><button id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search </button></li>
       <li><button id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution </button></li>
       <li><button id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate </button></li>
@@ -82,9 +82,10 @@
         </select>
       </div><br>  
       <!-- crea un input de texto que al dar enter crea un evento y llama a una funcion  -->
-      <form action="" onsubmit="searchPokemon(event)">
-        <input type="text" name="pokemon" autocomplete="off" placeholder="🔍 Search pokemon">
-      </form><br>
+      <div>
+        <input type="text" id="pokemon" autocomplete="off" placeholder="🔍 Search pokemon" >
+       <button id="nameButton"> Search! </button>
+      </div><br>
     </section>
 
     <section id="scEvolution"> <!-- 4to boton pagina de evoluciones -->
