@@ -102,10 +102,22 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
+    font-size: 12px;
+    align-items: center;
+
 }
 .copyrighttext  {
-    text-align: center;
-    text-shadow: slategrey;
+    align-self: flex-end;
+}
+.socialfooter {
+    display: flex;
+    text-decoration: none;
+}
+
+ /*  cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    padding: 15px 15px 15px 15px;
 }
 /*.socialfooter { 
     display: inline;
