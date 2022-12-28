@@ -178,9 +178,12 @@ button:hover {
 }
 
 .cPopUp {
-    margin:auto;
-    position:absolute;
     display:none;
+    margin:auto;
+    position:fixed;
+    z-index: 1;
+    top: 10%;
+    
     border:#000;
     background: #fff;
     box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
@@ -201,6 +204,8 @@ button:hover {
     text-align: center;*/
 
 }
+
+
 
 /* The Close Button */
 

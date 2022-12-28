@@ -11,7 +11,6 @@ buttonHome.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("scSearch").style.display = "none";
-  //document.getElementById("scPopUP").style.display = "none";
 });
 
 buttonPokedex.addEventListener("click", function () {
@@ -23,10 +22,10 @@ buttonPokedex.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("scSearch").style.display = "none";
-  //document.getElementById("scPopUP").style.display = "none";
+ 
 
-//aca deberia mandar el valor de opcion 1 para que cuando de click al pokedex ordene siempre ascendente
-//y deberia aparecer ese radio button marcado (POR HACER)
+  //aca deberia mandar el valor de opcion 1 para que cuando de click al pokedex ordene siempre ascendente
+  //y deberia aparecer ese radio button marcado (POR HACER)
   const option1 = "1";
   const getCards = orderByOption(option1);
 
@@ -47,7 +46,7 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
   document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
 
- 
+
   const getCardsOrderBy = orderByOption(optionOrder.value);
 
   createCard(getCardsOrderBy);
@@ -64,9 +63,7 @@ buttonSearch.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("filterContainer").innerHTML = '';
-  //document.getElementById("scPopUP").style.display = "none";
-  //document.getElementById("myModal").style.display = "none";
-  //cardBox.appendChild(searchBox);
+
 
   const newDataP = getDataPokemon();
   //Array que contiene los  tipos de Pokemon
@@ -109,7 +106,7 @@ buttonSearch.addEventListener("click", function () {
   document.getElementById("filterContainer").appendChild(select);
   sortUnicos.forEach((val) => {
 
-    //const searchContainer=document.querySelector(".scSearch");
+
     const searchListBox = document.createElement("option");
     // pone en mayuscula la primer letra
     searchListBox.text = val.charAt(0).toUpperCase() + val.slice(1);
@@ -119,22 +116,14 @@ buttonSearch.addEventListener("click", function () {
     searchListBox.name = "listOptions";
     select.appendChild(searchListBox);
 
-
-  
   });
 
-  
+
   // funcion para mostrar la data del filtro por type
   select.addEventListener('change', (e) => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    //document.getElementById("scPopUP").style.display = "none";
 
-
-    //document.getElementById("searchListBoxW").style.display = "block";
-
-
-    //const indiceSelect = select.selectedIndex;
     //traemos el contenido de la lista (text)
     const typeSelect = select.options[select.selectedIndex].text;
     //lo pasamos a minusculas para buscar igual como esta en la data
@@ -144,12 +133,12 @@ buttonSearch.addEventListener("click", function () {
     //alert (filterDataBy);
 
 
-    
-    
+
+
   })
 
 
-  
+
 
   // Traer funcion para mostrar la data del filtro por type
   regionPokemon.addEventListener('change', (e) => {
@@ -168,12 +157,12 @@ buttonSearch.addEventListener("click", function () {
 
   })
 
-  
+
 
   //funcion que a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
-    
+
     //console.log("entro");
     createCard(allPokemons);
 
@@ -209,10 +198,6 @@ buttonSpawRate.addEventListener("click", function () {
 
 
 
-
-
-//window.addEventListener('load', ()=>{
-
 //cuando de click al card para mostrar data completa
 //1 debe tomar el card.id
 //2 ir a buscar el data por ese id y traer la info
@@ -228,21 +213,21 @@ const createCard = (element) => {
 
     const newCard = document.createElement("div");
     newCard.className = "card";
-    newCard.id=item.num;
-    
+    newCard.id = item.num;
+
     const newCardBody = document.createElement("div");
     newCardBody.className = "card_body";
-    newCardBody.id=item.num;
+    newCardBody.id = item.num;
 
     const newH3 = document.createElement("h3");
     newH3.className = "card_title";
     newH3.innerText = item.num;
-    newH3.id=item.num;
+    newH3.id = item.num;
 
     const newImg = document.createElement("img");
     newImg.src = item.img;
     //newImg.textContent=item.num;
-    newImg.id=item.num;
+    newImg.id = item.num;
 
     const nextEspace = document.createElement("br");
 
@@ -250,7 +235,7 @@ const createCard = (element) => {
     const newLabel = document.createElement("label");
     newLabel.innerText = item.name.toUpperCase();
     newLabel.className = "card_title";
-    newLabel.id=item.num;
+    newLabel.id = item.num;
 
     cardBox.appendChild(newCard);
     newCard.appendChild(newCardBody);
@@ -263,70 +248,73 @@ const createCard = (element) => {
 }
 
 //slecciona contenedor paddre
-const eventClick= document.getElementById("scShowAllPokemon");
+const eventClick = document.getElementById("scShowAllPokemon");
 //al enocntrar un evento click valida de que elemento fue
-eventClick.addEventListener("click", (e)=>{
+eventClick.addEventListener("click", (e) => {
 
 
-if (e.target.nodeName == 'DIV' || e.target.nodeName == 'IMG' || e.target.nodeName == 'H3' || e.target.nodeName == 'LABEL'){
-//console.log(e.target.nodeName);
-let idCardSelect= '';
-idCardSelect= e.target.id;
-//console.log(idCardSelect);
+  if (e.target.nodeName == 'DIV' || e.target.nodeName == 'IMG' || e.target.nodeName == 'H3' || e.target.nodeName == 'LABEL') {
+    //console.log(e.target.nodeName);
+    let idCardSelect = '';
+    idCardSelect = e.target.id;
+    //console.log(idCardSelect);
 
-showInfoPokemon(idCardSelect);
-}
-//console.log(e);  
+    showInfoPokemon(idCardSelect);
+  }
+  //console.log(e);  
 
 })
 
 
-const showInfoPokemon=(idPokemon)=>{
+const showInfoPokemon = (idPokemon) => {
   //document.getElementById("scPopUP").style.display = "block";
   console.log(idPokemon);
 
   //const cardBox = document.querySelector(".scCards");
-  const container = document.querySelector(".cPopUp");
-
-  //resultado = node.hasChildNodes();
+  const containerFirts = document.getElementById("scPopUp");
   
+  //resultado = node.hasChildNodes();
+
   if (document.getElementById('divPopUp') !== null) {
     //const container = document.querySelector('.popUpInfo');
-    container.removeChild(document.getElementById('divPopUp'));
-    
-
-}
-
-container.style.display="block"
-  const popUp= document.createElement("div");
-  //popUp.className = "scPopUp";
-  popUp.id="divPopUp";
+    containerFirts.removeChild(document.getElementById('divPopUp'));
   
+  }
+
+
+  let container="";
+  container = document.getElementById("scPopUp");
+  container.style.display = "block";
+
+  const popUp = document.createElement("div");
+  popUp.id = "divPopUp";
+
   const newLabel = document.createElement("label");
-  newLabel.innerText ="hola"
-  
+  newLabel.innerText = "hola";
+
+  const newLabelPokeName = document.createElement("label");
+  newLabelPokeName.innerText = "Poke Name"+idPokemon;
+
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
-  btnClosePopUp.id="btnClose";
-  btnClosePopUp.textContent="X"
-  
+  btnClosePopUp.id = "btnClose";
+  btnClosePopUp.textContent = "Cerrar";
 
-  
   container.appendChild(popUp);
   popUp.appendChild(btnClosePopUp);
   popUp.appendChild(newLabel);
+  popUp.appendChild(newLabelPokeName);
 
-  
-  console.log(popUp.id);
+//  console.log(popUp.id);
 
 
- // const allPokemons = filterData('id', idPokemon).sort();
-    
+  // const allPokemons = filterData('id', idPokemon).sort();
+
   //console.log("entro");
-//  createCard(allPokemons);
+  //  createCard(allPokemons);
 
-     //console.log("entro");
-     //console.log(idPokemon);
+  //console.log("entro");
+  //console.log(idPokemon);
 
 }
 
@@ -334,79 +322,19 @@ container.style.display="block"
 // When the user clicks on  (x), close 
 
 //slecciona contenedor paddre
-const popUpClick= document.querySelector(".cPopUp");
+const popUpClick = document.querySelector(".cPopUp");
+//console.log(popUpClick);
 //al enocntrar un evento click valida de que elemento fue
-popUpClick.addEventListener("click", (e)=>{
-
-  if ( e.target.nodeName == 'BUTTON' ) {
-    const container = document.querySelector('.cPopUp');
-    container.removeChild(document.getElementById('divPopUp'));
-    container.style.display="none";
-}
+popUpClick.addEventListener("click", (e) => {
+console.log(e);
+  if (e.target.nodeName == 'BUTTON') {
+    const containerClose = document.querySelector('.cPopUp');
+    containerClose.removeChild(document.getElementById('divPopUp'));
+    containerClose.style.display = "none";
+  }
   //const container = document.querySelector(".popUpInfo");
-  
+
 })
 
 
 
-/***************************************************** 
-
-
-const newDataW = getDataPokemon();
-  //Array que contiene los  tipos de Pokemon
-  const newArrayW = newDataW.map(function (newDataW) {
-    return newDataW.weaknesses
-    console.log(newDataW.weaknesses);
-  })
-  //array donde guardamos solo los tipos de pokemon
-  const itemW = [];
-  for (let i = 0; i < newArrayW.length; i++) {
-    itemW.push(newArrayW[i])
-  }
-  //convertimos a string para poder filtrar la data   
-  const strW = itemW.toString();
-
-  // convertimos a array nuevamente y dividimos por comas para poder comparar
-  const strArrayW = strW.split(',');
-  //console.log(strArray);
-
-  //recorremos nuestro array para eliminar los repetidos
-  const unicosW = [];
-  for (var i = 0; i < strArrayW.length; i++) {
-    const elementoW = strArrayW[i];
-    //obtenemos nuestros elementos a filtrar sin repeticiones
-    if (!unicosW.includes(strArrayW[i])) {
-      unicosW.push(elementoW);
-    }
-  }
-  //console.log(unicos);
-
-  //Crea el listbox y agrega los datos del array
-  
-  const selectW = document.createElement("select");
-  selectW.name = "weaknessesW";
-
-  // los organizamos por orden alfabetico  
-  const sortUnicosW = unicosW.sort();
-  // creamos la lista con las opciones de filtrado
-  const labelTitleW = document.createElement("label");
-  labelTitleW.textContent = "Weaknesses of Pokemon";
-  document.getElementById("filterContainer").appendChild(labelTitleW);
-  document.getElementById("filterContainer").appendChild(selectW);
-  sortUnicosW.forEach((valW) => {
-
-    
-
-    const searchListBoxW = document.createElement("option");
-    // pone en mayuscula la primer letra
-    searchListBoxW.text = valW.charAt(0).toUpperCase() + valW.slice(1);
-    // regresamos a minusculas para poder comparar posteriormente
-    searchListBoxW.value = valW.toLowerCase();
-    searchListBoxW.id = "listW";
-    searchListBoxW.name = "listW";
-   
-    const espaceW = document.createElement("br");
-    selectW.appendChild(searchListBoxW);
-    document.getElementById("searchListBoxW").style.display = "none";
-  });
-  ************************************ */
