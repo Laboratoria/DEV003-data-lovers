@@ -58,9 +58,6 @@ figure {
 
 
 @media (max-width: 768px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
-    .img_header {
-        display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
-    }
     .cPopUp {
         right: 10%;
         left: 10%;
@@ -71,6 +68,9 @@ figure {
 }
 
 @media (max-width: 415px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 415px*/
+    .img_header {
+        display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
+    }
     .cPopUp {
         right: 5%;
         left: 5%;
