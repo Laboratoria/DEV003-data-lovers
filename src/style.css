@@ -24,8 +24,8 @@ figure {
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
     Background: white;
     Border-radius: 5px; /* radio del borde */
-    Height: 300px;
-    margin: 5px auto;
+    Height: 280px;
+    margin: 10px auto;
 }
 
 .img_header {
@@ -33,16 +33,51 @@ figure {
     display: flex;
 }
 
-@media (max-width: 767px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
+.cPopUp {
+    display: none;
+    margin: auto;
+    position: fixed; /* posicion fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    top: 10%;
+    border: #000;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    font-family: 'Roboto Mono';font-size: medium;
+    transition: all 500ms ease;
+    width: 40%;
+    height: 45%;
+    right: 25%;
+    left: 25%;
+    padding: 3%;
+    line-height: 25px;
+    border-radius: 8px; 
+    text-align: center;
+    box-align: center;
+    overflow: auto;
+}
+
+
+@media (max-width: 768px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
+    .cPopUp {
+        right: 10%;
+        left: 10%;
+        padding: 2%;
+        width: 60%;
+        height: 30%;
+    }
+}
+
+@media (max-width: 415px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 415px*/
     .img_header {
         display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
     }
     .cPopUp {
-        overflow: auto;
-        right: 0%;
-        left: 0%;
-        padding: 1%;
-        width:100%;
+        right: 5%;
+        left: 5%;
+        padding: 2%;
+        width: 80%;
+        height: 65%;
+        font-size: small;
     }
 }
 
@@ -157,33 +192,6 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     text-align: center; 
 }
 
-.cPopUp {
-    display: none;
-    margin: auto;
-    position: fixed; /* posicion fija */
-    z-index: 1; /* Se situará por encima de otros elementos de la página*/
-    top: 10%;
-    border: #000;
-    background: #fff;
-    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
-    transition: all 500ms ease;
-
-    width: 40%;
-    height: 70%;
-    right: 25%;
-    left: 25%;
-    padding: 2%;
-    border-radius: 5px; 
-    text-align: center;
-    box-align: center;
-
-}
-
-
-
-
-
-
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -202,7 +210,7 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
 
 
 table{
-    font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-size: medium;
+    font-family: 'Roboto Mono';*/
     cursor: pointer; /* cambiar cursor a un pointer */
 }

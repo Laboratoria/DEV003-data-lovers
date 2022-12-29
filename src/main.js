@@ -132,10 +132,10 @@ buttonSearch.addEventListener("click", () => {
     
     const value = document.getElementById("pokemon").value;
 
-    //const writenPokemon = value.toLowerCase();
-    console.log(value);
+    //console.log(value);
     const dataname = "name";
-    const filtername = filterPokemons(dataname, value).sort();
+    const filtername = filterPokemons(dataname, value);
+    //borrar letras de la busqueda
     document.getElementById("pokemon").value = '';
 //  }
 })
