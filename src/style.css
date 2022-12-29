@@ -103,11 +103,11 @@ color: rgba(224, 226, 219, 0.5);
   color: rgba(224, 226, 219, 0.5);
   }
 
-#champions-list {
+#champions-list1 {
   position: relative;
   grid-row: 2/3;
   min-height: 600px;
-  background-color: rgba(15, 14, 14, 1);
+
 }
 #social-media {
   grid-row: 3/4;
@@ -155,6 +155,9 @@ footer > div > i:hover {
   /*videos*/
 #champions-list{
   position: relative;
+  grid-row: 2/3;
+  min-height: 600px;
+  background-color: rgba(15, 14, 14, 1);
   display: grid;
   grid-template-columns: repeat(20 5%);
   grid-template-rows: repeat(20 5%);
