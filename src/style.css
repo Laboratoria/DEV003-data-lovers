@@ -1,3 +1,5 @@
+/*estilos y grillas generales*/
+
 body {
     margin: 0;
     padding: 0;
@@ -38,8 +40,6 @@ i {
   position: relative;
   width: 100%;
   height: 90px;
-  left: 0px;
-  top: 0px;
   display: grid;
   grid-template-columns: 15% repeat(7, 10%) 15%;
   grid-template-rows: 90px;
@@ -107,6 +107,7 @@ color: rgba(224, 226, 219, 0.5);
   position: relative;
   grid-row: 2/3;
   min-height: 600px;
+  background-color: rgba(15, 14, 14, 1);
 }
 #social-media {
   grid-row: 3/4;
@@ -115,7 +116,7 @@ color: rgba(224, 226, 219, 0.5);
   background: rgba(15, 14, 14, 1);
   color: rgba(224, 226, 219, 1);
   height: 64px;
-  width: 90%;
+  width: 100%;
   font-weight: 700;
   display: grid;
   grid-template-columns: 45% 10% 45%;
@@ -146,4 +147,28 @@ footer > div > i {
 footer > div > i:hover {
   cursor: pointer;
   text-shadow: 0px 4px 4px rgba(230, 175, 46, 1);
+}
+
+
+
+/*estilos pagina principal*/
+  /*videos*/
+#champions-list{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(20 5%);
+  grid-template-rows: repeat(20 5%);
+}
+#video-1 {
+  position: relative;
+  grid-column: 1/21;
+  grid-row: 1/21;
+}
+
+#video-2 {
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  grid-column: 2/20;
+  grid-row: 2/20;
 }
