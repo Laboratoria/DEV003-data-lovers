@@ -135,7 +135,7 @@ buttonSearch.addEventListener("click", () => {
     //const writenPokemon = value.toLowerCase();
     console.log(value);
     const dataname = "name";
-    const filtername = filterPokemons(dataname, value);
+    const filtername = filterPokemons(dataname, value).sort();
     document.getElementById("pokemon").value = '';
 //  }
 })
@@ -238,6 +238,7 @@ const createCard = (element) => {
   });
 }
 
+
 //slecciona contenedor padre
 const eventClick = document.getElementById("scShowAllPokemon");
 //al enocntrar un evento click valida de que elemento fue
@@ -251,30 +252,20 @@ eventClick.addEventListener("click", (e) => {
 })
 
 
+
 const showInfoPokemon = (idPokemon) => {
  // console.log(idPokemon);
 const filterByP='num';
-
 //console.log(filterByP);
 
-const infoPokemonAll = filterData(filterByP, idPokemon).sort();
+const infoPokemonAll = filterData(filterByP, idPokemon);
 const infoPokemon=infoPokemonAll[0];
-
-  //console.log("entro");
-
-
-
-  console.log(infoPokemon);
-  //  createCard(allPokemons);
-
+  //console.log(infoPokemon);
+/*
   const containerFirst = document.getElementById("scPopUp");
-  
-  //resultado = node.hasChildNodes();
-
   if (document.getElementById('divPopUp') !== null) {
     containerFirst.removeChild(document.getElementById('divPopUp'));
-
-  }
+  }*/
 
 
   let container="";
@@ -282,12 +273,6 @@ const infoPokemon=infoPokemonAll[0];
   container.style.display = "block";
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
-
-
-
-
-
-
 
 
 //Creando la Card con toda la info del pokemon seleccionado
@@ -303,7 +288,7 @@ const infoPokemon=infoPokemonAll[0];
   const headerTh2 = document.createElement("th");
   headerTh2.innerText = infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
   const headerTh3 = document.createElement("th");
-  headerTh3.innerText = "HP " +infoPokemon.stats['max-hp'];
+  headerTh3.innerText = "HP "+infoPokemon.stats['max-hp'];
 
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
@@ -329,7 +314,7 @@ const bodytd1 = document.createElement("td");
 
   const nextEspace1 = document.createElement("br");
 
-  // const allPokemons = filterData('id', idPokemon).sort();
+ 
   const labelType = document.createElement("label");
   labelType.innerText = "Type: " +infoPokemon.type[0];
   if(infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null){
@@ -353,14 +338,19 @@ const bodytd1 = document.createElement("td");
 
   const bodytrdetail2 = document.createElement("tr");
   const bodytd3 = document.createElement("td");
+  const labelWeaknessesTitle = document.createElement("label");
+  labelWeaknessesTitle.innerText="Weaknesses";
+  const labelweaknesses = document.createElement("label");
+//no salen los weaknesses
+  infoPokemon.weaknesses.forEach((item) => {
+    labelweaknesses.innerText = "- "+ infoPokemon.weaknesses[0]
+    bodytd3.appendChild(labelweaknesses);
+  })
 
-  //console.log("entro");
-  //  createCard(allPokemons);
+  
 
-
-
-  container.appendChild(popUp);
-  popUp.appendChild(tableInfo);
+ container.appendChild(popUp);
+ popUp.appendChild(tableInfo);
  tableInfo.appendChild(tableHeader);
  tableInfo.appendChild(headerTr);
  headerTr.appendChild(headerTh1);
@@ -384,6 +374,7 @@ const bodytd1 = document.createElement("td");
 
  tbodyTable.appendChild(bodytrdetail2);
  bodytrdetail2.appendChild(bodytd3);
+
 
  // popUp.appendChild(newImg);
  // popUp.appendChild(newLblType);
