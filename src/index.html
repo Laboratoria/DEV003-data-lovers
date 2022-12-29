@@ -113,8 +113,8 @@
   <section class="infoPelicula">
     <div class="parteSuperior">
       <div class="contenedorTitulo">
-        <h2 class="tituloPelicula">TÍTULO PELÍCULA</h2>
-        <div class="barraPelicula">_________________________</div>
+        <h2 class="titulos">TÍTULO PELÍCULA</h2>
+        <div class="barra">_________________________</div>
       </div>
 
       <!--botón de regreso-->
@@ -127,7 +127,7 @@
 
     <section class="peliculaEnDetalle">
       <div class="imgDetalle"> <!--modificar etiqueta-->
-        <img class="portadaPelicula" src="img/mononoke.jpg" alt="pelicula">
+        <img class="portadaTDP" src="img/mononoke.jpg" alt="pelicula">
         <article class="dosParrafos">
           <p class="detalles">1997 / 133 min
             Director: Hayao Miyazaki
@@ -193,35 +193,137 @@
     </ul>
   </section>
 
-  <!--DIRECTORES-->
+ <!--INFO COMPLETA POR DIRECTORES-->
 
-  <section>
-    <h2>DIRECTORES</h2>
-    <p>numero de resultados</p>
-    <button>A-Z</button>
-    <ul>
-      <li>
-        <img src="" alt="imagen de director">
-        <h4>nombre</h4>
-        <p>películas realizadas</p>
-      </li>
-    </ul>
+<section class="infoPelicula">
+  <div class="parteSuperior">
+    <div class="contenedorTitulo">
+      <h2 class="titulos">DIRECTORES</h2>
+      <div class="barra">_________________________</div>
+    </div>
+
+    <!--botón de regreso Directores-->
+    <div>
+      <button class="backButton" onclick="">
+        <img class="flecha" src="img/flecha.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <section class="dirproEnDetalle">
+    <div class="imgDetalle"> <!--ok -modificar etiqueta-->
+      <img class="portadaTDP" src="/img/Hayao_Miyazaki.jpg" alt="director"> <!--ok-->
+      <article class="dosParrafos"> <!--ok-->
+        <p class="detalles">
+          Director: Hayao Miyazaki</p>
+        <br>
+        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </article>
+    </div>
+    <div class="estadisticas">
+      <div class="medallaRanking">
+        <img class="medalla" src="img/medalla.jpg" alt="medalla">
+        <h4 class="ranking">Ranking: #1 lugar</h4>
+      </div>
+      <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas"> <!--modificar-->
+      <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra cuantitativa
+        de participantes.
+        Tal vez mencionar premios ganados.</p>
+    </div>
   </section>
+</section>
 
-  <!--PRODUCTORES-->
+<!--LISTA DE DIRECTORES-->
 
-  <section>
-    <h2>PRODUCTORES</h2>
-    <p>numero de resultados</p>
-    <button>A-Z</button>
-    <ul>
-      <li>
-        <img src="" alt="imagen de director">
-        <h4>nombre</h4>
-        <p>películas realizadas</p>
-      </li>
-    </ul>
+<section class="peliculasPorDirector">
+  <div class="tituloYBoton">
+    <h3 class="tituloPeliculas">DIRECTORES GHIBLI</h3>
+    <button class="botonAZ">
+      <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+    </button>
+    <p class="AZ">A - Z</p>
+  </div>
+  <ul class="columnaDirPro">
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+  </ul>
+</section>
+
+<!--INFO COMPLETA POR PRODUCTORES-->
+
+<section class="infoProductores"> <!--Sin css -->
+  <div class="parteSuperior"> <!-- ok -->
+    <div class="contenedorTitulo"> <!--ok -->
+      <h2 class="titulos">PRODUCTORES</h2>  <!-- ok -->
+      <div class="barra">_________________________</div>  <!-- ok -->
+    </div>
+
+    <!--botón de regreso Productores-->
+    <div>
+      <button class="backButton" onclick="">
+        <img class="flecha" src="img/flecha.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <section class="dirproEnDetalle"> <!--ok -->
+    <div class="imgDetalle"> <!--modificar etiqueta-->
+      <img class="portadaTDP" src="/img/Isao_Takahata.jpg" alt="Productor">
+      <article class="dosParrafos">
+        <p class="detalles">
+          Productor: Isao_Takahata</p>
+        <br>
+        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </article>
+    </div>
+    <div class="estadisticas">
+      <div class="medallaRanking">
+        <img class="medalla" src="img/medalla.jpg" alt="medalla">
+        <h4 class="ranking">Ranking: #1 lugar</h4>
+      </div>
+      <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas"> <!--modificar-->
+      <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra cuantitativa
+        de participantes.
+        Tal vez mencionar premios ganados.</p>
+    </div>
   </section>
+</section>
+
+<!--LISTA DE PRODUCTORES-->
+
+<section class="listaProductores">
+  <div class="tituloYBoton">
+    <h3 class="tituloPeliculas">PRODUCTORES GHIBLI O PELÍCULAS PRODUCIDAS</h3>
+    <button class="botonAZ">
+      <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+    </button>
+    <p class="AZ">A - Z</p>
+  </div>
+  <ul class="columnaDirPro">
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+    <li class="miniaturaDescripcion">
+      <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+      <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+    </li>
+  </ul>
+</section>
 
   <!--PERSONAJES GENERALES-->
 
