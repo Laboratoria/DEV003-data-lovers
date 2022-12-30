@@ -103,12 +103,7 @@ color: rgba(224, 226, 219, 0.5);
   color: rgba(224, 226, 219, 0.5);
   }
 
-#champions-list1 {
-  position: relative;
-  grid-row: 2/3;
-  min-height: 600px;
 
-}
 #social-media {
   grid-row: 3/4;
   align-self: center;
@@ -175,3 +170,45 @@ footer > div > i:hover {
   grid-column: 2/20;
   grid-row: 2/20;
 }
+
+
+/*estilos pagina campeones*/
+#champions-list1 {
+  position: relative;
+  grid-row: 2/3;
+  margin: 20px 30px;
+  padding: 10px;
+  min-height: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+  /*tarjetas*/
+.card {
+  margin: 12.5px;
+  width: 220px;
+  height: 290px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 83% 18%;
+}
+  .image-card {
+    background-color: crimson; /*visual solo para pruebas*/
+  }
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  } 
+  .card:hover > .name-card {
+    background-color:rgb(20, 90, 131);
+    padding-left: 30px;
+  }
+  .name-card {
+    background-color: rgb(18, 22, 36);
+    color: rgba(224, 226, 219, 1);
+    line-height: 45px;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: oblique;
+    padding-left: 20px;
+  }
