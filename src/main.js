@@ -121,32 +121,42 @@ buttonSearch.addEventListener("click", () => {
     const filterDataBy = filterPokemons(typeSelected, typeSelected);
     //alert (filterDataBy);
   })
- 
-  //const textpokemon = document.getElementById('pokemon');
-  //funcion que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
+
+//funcion con Enter que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
+const nameTextBox = document.getElementById("pokemon");
+  nameTextBox.addEventListener("keyup",function(e){
+    const keycode = (e.key);
+    if(keycode =='13' || keycode =='Enter'){
+//NO SE SI ES NECESARIO ESTE IF
+      /*if(nameTextBox.value==''){
+        alert('Enter the name of the pokemon you want to see');
+      }else{*/
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "flex";
+        const value = document.getElementById("pokemon").value.toLowerCase();
+        const dataname = "name";
+        const filtername = filterPokemons(dataname, value);
+        //borrar letras de la busqueda
+        document.getElementById("pokemon").value = '';
+      //}
+    }
+  })
+
+  //funcion con boton que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
   nameButton.addEventListener('click', (event) => {
-    //if (e.key === 'Enter' || e.keyCode === 13) {
-   
+      
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    
-    const value = document.getElementById("pokemon").value;
-
-    //console.log(value);
+    const value = document.getElementById("pokemon").value.toLowerCase();
     const dataname = "name";
     const filtername = filterPokemons(dataname, value);
     //borrar letras de la busqueda
     document.getElementById("pokemon").value = '';
-//  }
 })
-
-
-
 })//Fin boton Search
 
 
-
-  //funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
+//funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
     createCard(allPokemons);
@@ -163,6 +173,42 @@ buttonEvolution.addEventListener("click", function () {
   document.getElementById("filterContainer").innerHTML = '';
   //document.getElementById("scPopUP").style.display = "none";
 
+  //funcion con Enter que va a mostrar las evoluciones del pokemon
+  const evolutionTextBox = document.getElementById("evolutionP");
+  evolutionTextBox.addEventListener("keyup",function(e){
+    const keycode = (e.key);
+    if(keycode =='13' || keycode =='Enter'){
+    /*  if(evolutionTextBox.value==''){
+        alert('Enter the name of the pokemon you want to see the evolutions');
+      }else{*/
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "flex";
+        const value = document.getElementById("evolutionP").value.toLowerCase();
+        const dataname = "name";
+        const filterNameEvolution = filterPokemons(dataname, value);
+        
+        //borrar letras de la busqueda
+        document.getElementById("evolutionP").value = '';
+        console.log(filterNameEvolution);
+        createCard3(filterNameEvolution);
+
+
+      //}
+    }
+  })
+
+  //funcion con boton que va a a mostrar las evoluciones del pokemon
+  evolutionButton.addEventListener('click', (event) => {
+    document.getElementById("scShowAllPokemon").innerHTML = '';
+    document.getElementById("scShowAllPokemon").style.display = "flex";
+    const value = document.getElementById("evolutionP").value.toLowerCase();
+    const dataname = "name";
+    const filterNameEvolution = filterPokemons(dataname, value);
+    //borrar letras de la busqueda
+    document.getElementById("evolutionP").value = '';
+    console.log(filterNameEvolution);
+    createCard3(filterNameEvolution);
+})
 
 })
 
@@ -235,7 +281,7 @@ selectNamePokemon.addEventListener('change', (e) => {
  // console.log (typeSelectedName);
   const byName = "name";
   const filternameP = filterData(byName, typeSelectedName);
-  console.log(filternameP)  ;
+  console.log(filternameP);
   createCard2(filternameP);
 
 })
@@ -351,6 +397,52 @@ const createCard2 = (element) => {
     newCardBody.appendChild(labelFleeRate);
     newCardBody.appendChild(nextEspace2);
     newCardBody.appendChild(labelCaptureRate);
+
+  });
+}
+
+// Card 3 de Evolution !
+const createCard3 = (element) => {
+  element.forEach((item) => {
+    const cardBox = document.querySelector(".scCards");
+
+    const newCard = document.createElement("div");
+    newCard.className = "card";
+    newCard.id = item.num;
+
+    const newCardBody = document.createElement("div");
+    newCardBody.className = "card_body";
+    newCardBody.id = item.num;
+
+    const newH3 = document.createElement("h3");
+    newH3.className = "card_title";
+    newH3.innerText = item.name.toUpperCase();
+    newH3.id = item.num;
+
+    const newImg = document.createElement("img");
+    newImg.src = item.img;
+    newImg.id = item.num;
+
+    const nextEspace = document.createElement("br");
+    const labelCandy = document.createElement("label");
+    labelCandy.innerText = "Candy for next evolution  " + item.evolution["candy"];
+    labelCandy.id = item.num;
+    labelCandy.className= "labelCard3";
+
+    const nextEspace2 = document.createElement("br");
+    const labelCandyCost = document.createElement("label");
+    labelCandyCost.innerText = "Number of candies for next evolution  " + item.evolution["candy-cost"];
+    labelCandyCost.id = item.num;
+    labelCandyCost.className= "labelCard3";
+
+    cardBox.appendChild(newCard);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newH3);
+    newCardBody.appendChild(newImg);
+    newCardBody.appendChild(nextEspace);
+    newCardBody.appendChild(labelCandy);
+    newCardBody.appendChild(nextEspace2);
+    newCardBody.appendChild(labelCandyCost);
 
   });
 }

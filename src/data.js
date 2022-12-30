@@ -44,7 +44,6 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
         result = pokemonArray.filter(pokemon => pokemon.num.includes(condition));
       }
      //console.log(result);
-    // console.log(result)
       return result;
     };
 
