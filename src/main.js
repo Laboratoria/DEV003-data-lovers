@@ -140,29 +140,17 @@ buttonSearch.addEventListener("click", () => {
 //  }
 })
 
-  /*const searchPokemon = (event) => {
-    event.preventDefault();
-    console.log(event);
-    const { value } = event.target.pokemon;
-    document.getElementById("scShowAllPokemon").innerHTML = '';
-    document.getElementById("scShowAllPokemon").style.display = "flex";
 
-    const writenPokemon = value.toLowerCase();
-    const dataname = "name";
-    const filtername = filterPokemons(dataname, writenPokemon);
-    //    fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
-    //        .then(data => data.json())
-    //        .then(response => renderPokemonData(response))
-    //        .catch(err => renderNotFound())
-  }*/
+
+})//Fin boton Search
+
+
 
   //funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
     createCard(allPokemons);
   }
-
-})//Fin boton Search
 
 //funciones dentro de la pagina de Evolutions
 buttonEvolution.addEventListener("click", function () {
@@ -174,6 +162,8 @@ buttonEvolution.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("filterContainer").innerHTML = '';
   //document.getElementById("scPopUP").style.display = "none";
+
+
 })
 
 
@@ -185,10 +175,90 @@ buttonSpawRate.addEventListener("click", function () {
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
-  document.getElementById("filterContainer").innerHTML = '';
-  //document.getElementById("scPopUP").style.display = "none";
+  document.getElementById("scSpawRate").innerHTML = '';
+ 
+
+  const NameP = getDataPokemon();
+  //Array que contiene los  tipos de Pokemon
+  const arrayName = NameP.map(function (NameP) {
+    return NameP.name
+  })
+  //array donde guardamos solo los tipos de pokemon
+  const itemName = [];
+  for (let i = 0; i < arrayName.length; i++) {
+    itemName.push(arrayName[i])
+  }
+  
+//console.log(itemName);
+   // Cargar los nombres de los Pokemons en la lista desplegable
+   const spaceEnter = document.createElement("br");
+   document.getElementById("scSpawRate").appendChild(spaceEnter);
+   const selectNamePokemon = document.createElement("select");
+   selectNamePokemon.id = "pokemonNameList";
+   const namePokemonSort = itemName.sort();
+
+   // creamos la lista con las opciones de filtrado
+   const labelNameP = document.createElement("label");
+   labelNameP.textContent = "Select a Pokemon ";
+   document.getElementById("scSpawRate").appendChild(labelNameP);
+   document.getElementById("scSpawRate").appendChild(selectNamePokemon);
+   namePokemonSort.forEach((val) => {
+     const searchListName = document.createElement("option");
+     // sacamos la primera letra y la pone en mayuscula la primer letra
+     searchListName.text = val.charAt(0).toUpperCase() + val.slice(1);
+     // regresamos a minusculas para poder comparar posteriormente
+     searchListName.value = val.toLowerCase();
+     searchListName.id = "listOptions";
+     searchListName.name = "listOptions";
+     selectNamePokemon.appendChild(searchListName);
+     
+   });
+
+   
+
+//const space = document.createElement("&nbsp;"); 
+//document.getElementById("scSpawRate").appendChild(space);
+const buttonTop = document.createElement("button");
+buttonTop.id="btntop";
+buttonTop.innerText="Top 10";
+document.getElementById("scSpawRate").appendChild(buttonTop);
+
+
+
+selectNamePokemon.addEventListener('change', (e) => {
+  document.getElementById("scShowAllPokemon").innerHTML = '';
+  document.getElementById("scShowAllPokemon").style.display = "flex";
+  //traemos el contenido de la lista (text)
+  const typeSelectName = selectNamePokemon.options[selectNamePokemon.selectedIndex].text;
+  //lo pasamos a minusculas para buscar igual como esta en la data
+  const typeSelectedName = typeSelectName.toLowerCase();
+ // console.log (typeSelectedName);
+  const byName = "name";
+  const filternameP = filterData(byName, typeSelectedName);
+  console.log(filternameP)  ;
+  createCard2(filternameP);
+
 })
 
+})
+
+/* al darle enter en el textbox
+const txtboxFindPokemon = document.getElementById("txtFindPokemon");
+
+txtboxFindPokemon.addEventListener("keyup",function(e){
+  console.log(e);
+  const keycode = (e.key);
+  if(keycode == '13' || keycode=='Enter'){
+    if (txtboxFindPokemon.value==''){
+      alert('Enter the name of pokemon to find');
+      txtboxFindPokemon.focus;
+    }else{
+        alert('You pressed a "enter" key in textbox  ' +  txtboxFindPokemon.value);
+
+
+  }  
+  }
+});*/
 
 
 //cuando de click al card para mostrar data completa
@@ -238,6 +308,53 @@ const createCard = (element) => {
   });
 }
 
+const createCard2 = (element) => {
+
+  element.forEach((item) => {
+    const cardBox = document.querySelector(".scCards");
+
+    const newCard = document.createElement("div");
+    newCard.className = "card";
+    newCard.id = item.num;
+
+    const newCardBody = document.createElement("div");
+    newCardBody.className = "card_body";
+    newCardBody.id = item.num;
+
+    const newH3 = document.createElement("h3");
+    newH3.className = "card_title";
+    newH3.innerText = item.name.toUpperCase();
+    newH3.id = item.num;
+
+    const newImg = document.createElement("img");
+    newImg.src = item.img;
+    //newImg.textContent=item.num;
+    newImg.id = item.num;
+
+    const nextEspace = document.createElement("br");
+    const labelFleeRate = document.createElement("label");
+    labelFleeRate.innerText = "Base flee rate  " + item.encounter["base-flee-rate"];
+    labelFleeRate.id = item.num;
+    labelFleeRate.className= "labelCard2";
+
+    const nextEspace2 = document.createElement("br");
+    const labelCaptureRate = document.createElement("label");
+    labelCaptureRate.innerText = "Base Capture rate  " + item.encounter["base-capture-rate"];
+    labelCaptureRate.id = item.num;
+    labelCaptureRate.className= "labelCard2";
+
+    cardBox.appendChild(newCard);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newH3);
+    newCardBody.appendChild(newImg);
+    newCardBody.appendChild(nextEspace);
+    newCardBody.appendChild(labelFleeRate);
+    newCardBody.appendChild(nextEspace2);
+    newCardBody.appendChild(labelCaptureRate);
+
+  });
+}
+
 //slecciona contenedor padre
 const eventClick = document.getElementById("scShowAllPokemon");
 //al enocntrar un evento click valida de que elemento fue
@@ -251,30 +368,15 @@ eventClick.addEventListener("click", (e) => {
 })
 
 
+
 const showInfoPokemon = (idPokemon) => {
  // console.log(idPokemon);
 const filterByP='num';
-
 //console.log(filterByP);
 
-const infoPokemonAll = filterData(filterByP, idPokemon).sort();
+const infoPokemonAll = filterData(filterByP, idPokemon);
 const infoPokemon=infoPokemonAll[0];
-
-  //console.log("entro");
-
-
-
-  console.log(infoPokemon);
-  //  createCard(allPokemons);
-
-  const containerFirst = document.getElementById("scPopUp");
-  
-  //resultado = node.hasChildNodes();
-
-  if (document.getElementById('divPopUp') !== null) {
-    containerFirst.removeChild(document.getElementById('divPopUp'));
-
-  }
+  //console.log(infoPokemon);
 
 
   let container="";
@@ -282,12 +384,6 @@ const infoPokemon=infoPokemonAll[0];
   container.style.display = "block";
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
-
-
-
-
-
-
 
 
 //Creando la Card con toda la info del pokemon seleccionado
@@ -303,7 +399,7 @@ const infoPokemon=infoPokemonAll[0];
   const headerTh2 = document.createElement("th");
   headerTh2.innerText = infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
   const headerTh3 = document.createElement("th");
-  headerTh3.innerText = "HP " +infoPokemon.stats['max-hp'];
+  headerTh3.innerText = "HP "+infoPokemon.stats['max-hp'];
 
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
@@ -329,7 +425,7 @@ const bodytd1 = document.createElement("td");
 
   const nextEspace1 = document.createElement("br");
 
-  // const allPokemons = filterData('id', idPokemon).sort();
+ 
   const labelType = document.createElement("label");
   labelType.innerText = "Type: " +infoPokemon.type[0];
   if(infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null){
@@ -338,12 +434,6 @@ const bodytd1 = document.createElement("td");
 
   labelType.id="lblTypePokemon";
 
-  const bodytd2 = document.createElement("td");
-  bodytd2.innerText = infoPokemon.about;
-  const nextEspace2 = document.createElement("br");
-  const labelGeneration = document.createElement("label");
-  labelGeneration.innerText =  "Generation: " +infoPokemon.generation.num +" Region " +infoPokemon.generation.name;
-
   const nextEspace3 = document.createElement("br");
   const labelHeight =document.createElement("label");
   labelHeight.innerText = "Height : " +infoPokemon.size.height;
@@ -351,16 +441,63 @@ const bodytd1 = document.createElement("td");
   const labelWeight =document.createElement("label");
   labelWeight.innerText = "Weight : " + infoPokemon.size.weight;
 
+  const bodytd2 = document.createElement("td");
+  bodytd2.innerText = infoPokemon.about;
+  bodytd2.colSpan="3";
+  const nextEspace2 = document.createElement("br");
+  const labelGeneration = document.createElement("label");
+  labelGeneration.innerText =  "Generation: " +infoPokemon.generation.num +" Region " +infoPokemon.generation.name;
+
+  
   const bodytrdetail2 = document.createElement("tr");
   const bodytd3 = document.createElement("td");
+  const labelWeaknessesTitle = document.createElement("label");
+  labelWeaknessesTitle.innerText="Weaknesses";
+  const nextEspace5 = document.createElement("br");
+  
+  const labelweaknesses = document.createElement("label");
+  labelweaknesses.innerText="";
+  
+  infoPokemon.weaknesses.forEach((item) => {
+  labelweaknesses.innerText += "- "+ item  ;
+    
+    //console.log(item);
+  })
 
-  //console.log("entro");
-  //  createCard(allPokemons);
+  const bodytd4 = document.createElement("td");
+  bodytd4.colSpan="2";
+ // bodytd4.rowSpan="2";
+  const labelResistantTitle = document.createElement("label");
+  labelResistantTitle.innerText="Resistant";
+  const nextEspace6 = document.createElement("br");
+  
+  const labelResistant = document.createElement("label");
+  labelResistant.innerText="";
+  
+  infoPokemon.resistant.forEach((item) => {
+    labelResistant.innerText += "- "+ item  ;
+   
+    
+    //console.log(item);
+  })
 
+/*   "egg": "2 km",
+    "buddy-distance-km": "3",*/
+    const bodytrdetail3 = document.createElement("tr");
+    const bodytd5 = document.createElement("td");
+    bodytd5.colSpan="4";
+    const labelExtra = document.createElement("label");
+    labelExtra.innerText="Extra Information:";
+    const nextEspace7 = document.createElement("br");
+    
+    const labelEggs = document.createElement("label");
+    labelEggs.innerText="Eggs: "+ infoPokemon.egg;
+    const nextEspace8 = document.createElement("br");
+    const labelCandy = document.createElement("label");
+    labelCandy.innerText="Candy distance km: "+ infoPokemon['buddy-distance-km'];
 
-
-  container.appendChild(popUp);
-  popUp.appendChild(tableInfo);
+ container.appendChild(popUp);
+ popUp.appendChild(tableInfo);
  tableInfo.appendChild(tableHeader);
  tableInfo.appendChild(headerTr);
  headerTr.appendChild(headerTh1);
@@ -377,29 +514,30 @@ const bodytd1 = document.createElement("td");
  bodytrdetail1.appendChild(bodytd2);
  bodytd2.appendChild(nextEspace2);
  bodytd2.appendChild(labelGeneration);
- bodytd2.appendChild(nextEspace3);
- bodytd2.appendChild(labelHeight);
- bodytd2.appendChild(nextEspace4);
- bodytd2.appendChild(labelWeight);
+ bodytd1.appendChild(nextEspace3);
+ bodytd1.appendChild(labelHeight);
+ bodytd1.appendChild(nextEspace4);
+ bodytd1.appendChild(labelWeight);
 
  tbodyTable.appendChild(bodytrdetail2);
  bodytrdetail2.appendChild(bodytd3);
+ bodytd3.appendChild(labelWeaknessesTitle);
+ bodytd3.appendChild(nextEspace5);
+ bodytd3.appendChild(labelweaknesses);
 
- // popUp.appendChild(newImg);
- // popUp.appendChild(newLblType);
+ bodytrdetail2.appendChild(bodytd4);
+ bodytd4.appendChild(labelResistantTitle);
+ bodytd4.appendChild(nextEspace6);
+ bodytd4.appendChild(labelResistant);
 
+ tbodyTable.appendChild(bodytrdetail3);
+ bodytrdetail3.appendChild(bodytd5);
+ bodytd5.appendChild(labelExtra);
+ bodytd5.appendChild(nextEspace7);
+ bodytd5.appendChild(labelEggs);
+ bodytd5.appendChild(nextEspace8);
+ bodytd5.appendChild(labelCandy);
 
-
-//  console.log(popUp.id);
-
-
-  // const allPokemons = filterData('id', idPokemon).sort();
-
-  //console.log("entro");
-  //  createCard(allPokemons);
-
-  //console.log("entro");
-  //console.log(idPokemon);
 
 }
 
