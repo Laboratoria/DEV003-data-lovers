@@ -48,7 +48,7 @@ figure {
     height: 68%;
     right: 25%;
     left: 25%;
-    padding: 3%;
+    padding: 2%;
     line-height: 25px;
     border-radius: 8px; 
     text-align: center;
@@ -215,5 +215,9 @@ table{
     cursor: pointer; /* cambiar cursor a un pointer */
 }
 .labelCard2 {
-    font-size: small;
+    font-size:medium;
+}
+
+.card_title2{
+    font-size: larger;
 }

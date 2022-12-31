@@ -7,24 +7,27 @@ buttonHome.addEventListener("click", function () {
   document.getElementById("scIntroduction").style.display = "block";
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
+  document.getElementById("scShowAllPokemon").innerHTML = '';
   document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("scSpawRate").innerHTML = '';
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("scSearch").style.display = "none";
 });
 
 buttonPokedex.addEventListener("click", function () {
   document.getElementById("scPokedex").style.display = "block";
-  document.getElementById("scShowAllPokemon").style.innerHTML = '';
+  document.getElementById("scShowAllPokemon").innerHTML = '';
   document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("scSpawRate").innerHTML = '';
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("scSearch").style.display = "none";
 
-
-  //aca deberia mandar el valor de opcion 1 para que cuando de click al pokedex ordene siempre ascendente
+  //al dar clikc en pokedex siempre va ordenar ascendente y va a marcar esa opcion
   const option1 = "1";
   const getCards = orderByOption(option1);
+ document.querySelector('[value="1"]').checked = true;
   createCard(getCards);
   //console.log(data);
 })
@@ -38,6 +41,7 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
   document.getElementById('scShowAllPokemon').innerHTML = '';
   document.getElementById("scShowAllPokemon").style.display = "flex";
   document.getElementById("scIntroduction").style.display = "none";
+  document.getElementById("scSpawRate").innerHTML = '';
   const getCardsOrderBy = orderByOption(optionOrder.value);
   createCard(getCardsOrderBy);
 }
@@ -52,6 +56,7 @@ buttonSearch.addEventListener("click", () => {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("filterContainer").innerHTML = '';
+  document.getElementById("scSpawRate").innerHTML = '';
 
   const newDataP = getDataPokemon();
   //Array que contiene los  tipos de Pokemon
@@ -160,6 +165,7 @@ buttonEvolution.addEventListener("click", function () {
   document.getElementById("scPokedex").style.display = "none";
   document.getElementById("scShowAllPokemon").style.display = "none";
   document.getElementById("scSpawRate").style.display = "none";
+  document.getElementById("scSpawRate").innerHTML = '';
   document.getElementById("filterContainer").innerHTML = '';
   //document.getElementById("scPopUP").style.display = "none";
 
@@ -240,7 +246,27 @@ selectNamePokemon.addEventListener('change', (e) => {
 
 })
 
+buttonTop.addEventListener('click',()=>{
+  document.getElementById("scShowAllPokemon").innerHTML = '';
+  document.getElementById("scShowAllPokemon").style.display = "flex";
+  const option5 = "5";
+  const orderByCapture = orderByOption(option5);
+  //console.log(getCardsC);
+
+ /* orderByCapture.foreach((item) => {
+    if (item.encounter["base-capture-rate"]!=='not in capture'){
+
+    }
+    
+})*/
+
+
+createCard2(orderByCapture);
+
 })
+})
+
+
 
 /* al darle enter en el textbox
 const txtboxFindPokemon = document.getElementById("txtFindPokemon");
@@ -322,7 +348,7 @@ const createCard2 = (element) => {
     newCardBody.id = item.num;
 
     const newH3 = document.createElement("h3");
-    newH3.className = "card_title";
+    newH3.className = "card_title2";
     newH3.innerText = item.name.toUpperCase();
     newH3.id = item.num;
 
@@ -354,6 +380,7 @@ const createCard2 = (element) => {
 
   });
 }
+
 
 //slecciona contenedor padre
 const eventClick = document.getElementById("scShowAllPokemon");
@@ -549,7 +576,7 @@ const popUpClick = document.querySelector(".cPopUp");
 //console.log(popUpClick);
 //al enocntrar un evento click valida de que elemento fue
 popUpClick.addEventListener("click", (e) => {
-  console.log(e);
+  //console.log(e);
   if (e.target.nodeName == 'BUTTON') {
     const containerClose = document.querySelector('.cPopUp');
     containerClose.removeChild(document.getElementById('divPopUp'));
