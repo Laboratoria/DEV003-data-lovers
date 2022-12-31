@@ -172,8 +172,9 @@ buttonEvolution.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "none";
   document.getElementById("filterContainer").innerHTML = '';
   //document.getElementById("scPopUP").style.display = "none";
-
+ 
   //funcion con Enter que va a mostrar las evoluciones del pokemon
+  
   const evolutionTextBox = document.getElementById("evolutionP");
   evolutionTextBox.addEventListener("keyup",function(e){
     const keycode = (e.key);
@@ -181,6 +182,7 @@ buttonEvolution.addEventListener("click", function () {
     /*  if(evolutionTextBox.value==''){
         alert('Enter the name of the pokemon you want to see the evolutions');
       }else{*/
+      // lo estoy omitiendo por el momento
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "flex";
         const value = document.getElementById("evolutionP").value.toLowerCase();
@@ -192,10 +194,9 @@ buttonEvolution.addEventListener("click", function () {
         console.log(filterNameEvolution);
         createCard3(filterNameEvolution);
 
-
       //}
     }
-  })
+  }) 
 
   //funcion con boton que va a a mostrar las evoluciones del pokemon
   evolutionButton.addEventListener('click', (event) => {
@@ -229,7 +230,7 @@ buttonSpawRate.addEventListener("click", function () {
   const arrayName = NameP.map(function (NameP) {
     return NameP.name
   })
-  //array donde guardamos solo los tipos de pokemon
+  //array donde guardamos solo los nombres de los pokemon
   const itemName = [];
   for (let i = 0; i < arrayName.length; i++) {
     itemName.push(arrayName[i])
