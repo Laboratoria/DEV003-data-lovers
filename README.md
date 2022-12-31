@@ -1,8 +1,8 @@
-# Data Lovera DEV003
+# Data Lovers DEV003
 
 ## Resumen del proyecto
 
-Data Lovera es un proyecto mediante el cual se construyó una página web para visualizar un conjunto de datos y ordenarlos según las necesidades del usuario. En nuestro caso, los datos corresponden al Studio Ghibli. La lógica del proyecto esta implementada a través de Vanilla Javascript, HTML y CSS. El control de versiones es con git y se desplego el proyecto en GitHub Pages.
+Data Lovers es un proyecto mediante el cual se construyó una página web para visualizar un conjunto de datos y ordenarlos según las necesidades del usuario. En nuestro caso, los datos corresponden al Studio Ghibli. La lógica del proyecto esta implementada a través de Vanilla Javascript, HTML y CSS. El control de versiones es con git y se desplego el proyecto en GitHub Pages.
 
 ## Definición del Proyecto 
 

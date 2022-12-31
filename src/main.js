@@ -1,31 +1,35 @@
 //import ghibli from './data/ghibli/ghibli.js'
-import { randomMovie } from './data.js'
 import data from './data/ghibli/ghibli.js'
-
-//console.log(data.films) //funciona tomando las peliculas//dom
+//import { randomMovie } from './data.js'
 const dataMovies = data.films;
-const showResult = document.getElementById('returnFunction');
-
-const azar = document.getElementById('RandomBtn');
-azar.addEventListener("click", randomMovie(dataMovies));
-showResult.innnerHTML= randomMovie(dataMovies);
-
-console.log(randomMovie(dataMovies))
-
-
-//forEach para recorrer el array y que retorne el elemento que seleccionamos callback, title
-dataMovies.forEach(function(film) 
+//declaramos donde se mostraran las peliculas
+const moviesList = document.getElementById('showMovies');
+//declaramos el html vacio para luego insertar con innerHtml
+let htmlCode = ``;
+//tomamos cada dato del array con un forEach, recorre el array y retorna los datos que elegimos más abajo
+dataMovies.forEach(function(singleMovieObjects) 
 {
-  //parametro title, como llamar people
-  console.log(film.title) 
+  htmlCode =
+    htmlCode +
+    `
+      <img src="${singleMovieObjects.poster}" alt="${singleMovieObjects.imageAlt}">
+      <p>title: ${singleMovieObjects.title}</p>
+      <p>description: ${singleMovieObjects.description}</p>
+      <p>director: ${singleMovieObjects.director}</p>
+      <p>producer: ${singleMovieObjects.producer}</p>
+      <p>release_date: ${singleMovieObjects.release_date}</p>
+
+      </div>
+
+  `;
+  //console.log(htmlCode);
+
 });
+moviesList.innerHTML= htmlCode
 
-
-//all-movies-cards
-
-
+/*
 //specie funcion filter para HU penelope sub categoria
 //director funcion filter HU Omar
 //title para sort? HU camila
-//release_date sort? HU camila
-
+release_date sort? HU camila
+*/
