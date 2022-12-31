@@ -1,5 +1,5 @@
 //importamos funciones de la hoja de data.js
-import { getDataPokemon, orderByOption, filterData } from './data.js'; 
+import { getDataPokemon, orderByOption, filterData, evolutions } from './data.js'; 
 import pokemon from './data/pokemon/pokemon.js';
 
 
@@ -126,32 +126,51 @@ buttonSearch.addEventListener("click", () => {
     const filterDataBy = filterPokemons(typeSelected, typeSelected);
     //alert (filterDataBy);
   })
- 
-  //const textpokemon = document.getElementById('pokemon');
-  //funcion que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
+
+
+//funcion con Enter que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
+const nameTextBox = document.getElementById("pokemon");
+  nameTextBox.addEventListener("keyup",function(e){
+    const keycode = (e.key);
+    if(keycode =='13' || keycode =='Enter'){
+//valida que no este vacio y no salgan todos sin haber filtrado
+      if(nameTextBox.value==''){
+        alert('Enter the name of the pokemon you want to see');
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "none";
+      }else{
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "flex";
+        const value = document.getElementById("pokemon").value.toLowerCase();
+        const dataname = "name";
+        const filtername = filterPokemons(dataname, value);
+        //borrar letras de la busqueda
+        document.getElementById("pokemon").value = '';
+      }
+    }
+  })
+
+  //funcion con boton que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
   nameButton.addEventListener('click', (event) => {
-    //if (e.key === 'Enter' || e.keyCode === 13) {
-   
+    //validando que ingrese nombre a buscar
+   if(nameTextBox.value==''){
+        alert('Enter the name of the pokemon you want to see');
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "none";
+      }else{   
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    
-    const value = document.getElementById("pokemon").value;
-
-    //console.log(value);
+    const value = document.getElementById("pokemon").value.toLowerCase();
     const dataname = "name";
     const filtername = filterPokemons(dataname, value);
     //borrar letras de la busqueda
     document.getElementById("pokemon").value = '';
-//  }
+      }
 })
-
-
-
 })//Fin boton Search
 
 
-
-  //funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
+//funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
     createCard(allPokemons);
@@ -168,7 +187,56 @@ buttonEvolution.addEventListener("click", function () {
   document.getElementById("scSpawRate").innerHTML = '';
   document.getElementById("filterContainer").innerHTML = '';
   //document.getElementById("scPopUP").style.display = "none";
+ 
+  //funcion con Enter que va a mostrar las evoluciones del pokemon
+  
+  const evolutionTextBox = document.getElementById("evolutionP");
+  evolutionTextBox.addEventListener("keyup",function(e){
+    const keycode = (e.key);
+    if(keycode =='13' || keycode =='Enter'){
+   
+      if(evolutionP.value==''){
+        alert('Enter the name of the pokemon you want to see the evolutions');
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "none";
+      }else{
+      // lo estoy omitiendo por el momento
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "flex";
+        const value = document.getElementById("evolutionP").value.toLowerCase();
+        const dataname = "name";
+        const filterNameEvolution = filterPokemons(dataname, value);
+        
+        //borrar letras de la busqueda
+        document.getElementById("evolutionP").value = '';
+       // console.log(filterNameEvolution);
+        createCard3(filterNameEvolution);
 
+      }
+    }
+  }) 
+
+  //funcion con boton que va a a mostrar las evoluciones del pokemon
+  evolutionButton.addEventListener('click', (event) => {
+
+        //validando que ingrese nombre a buscar
+        if(evolutionP.value==''){
+          alert('Enter the name of the pokemon you want to see the evolutions');
+          document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "none";
+        }else{  
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "flex";
+    const value = document.getElementById("evolutionP").value.toLowerCase();
+    const dataname = "name";
+   // evolutions = (filterBy, condition )
+    const filterNameEvolution = evolutions(dataname, value);
+    //borrar letras de la busqueda
+    document.getElementById("evolutionP").value = '';
+    //console.log(filterNameEvolution);
+    createCard(filterNameEvolution);
+      }
+})
 
 })
 
@@ -189,7 +257,7 @@ buttonSpawRate.addEventListener("click", function () {
   const arrayName = NameP.map(function (NameP) {
     return NameP.name
   })
-  //array donde guardamos solo los tipos de pokemon
+  //array donde guardamos solo los nombres de los pokemon
   const itemName = [];
   for (let i = 0; i < arrayName.length; i++) {
     itemName.push(arrayName[i])
@@ -241,7 +309,7 @@ selectNamePokemon.addEventListener('change', (e) => {
  // console.log (typeSelectedName);
   const byName = "name";
   const filternameP = filterData(byName, typeSelectedName);
-  console.log(filternameP)  ;
+  console.log(filternameP);
   createCard2(filternameP);
 
 })
@@ -381,6 +449,47 @@ const createCard2 = (element) => {
   });
 }
 
+// Card 3 de Evolution !
+const createCard3 = (element) => {
+  element.forEach((item) => {
+    // contenedor padre de todas las cards en seccion html que busca por clase
+        const cardBox = document.querySelector(".scCards");
+    
+        const newCard = document.createElement("div");
+        newCard.className = "card";
+        //mismo id tem.num para cuando des click responda toda la card
+        newCard.id = item.num;
+    
+        const newCardBody = document.createElement("div");
+        newCardBody.className = "card_body";
+        newCardBody.id = item.num;
+    
+        const newH3 = document.createElement("h3");
+        newH3.className = "card_title";
+        newH3.innerText = item.num;
+        newH3.id = item.num;
+    
+        const newImg = document.createElement("img");
+        newImg.src = item.img;
+        //newImg.textContent=item.num;
+        newImg.id = item.num;
+    
+        const nextEspace = document.createElement("br");
+    
+        const newLabel = document.createElement("label");
+        newLabel.innerText = item.name.toUpperCase();
+        newLabel.className = "card_title";
+        newLabel.id = item.num;
+    
+        cardBox.appendChild(newCard);
+        newCard.appendChild(newCardBody);
+        newCardBody.appendChild(newH3);
+        newCardBody.appendChild(newImg);
+        newCardBody.appendChild(nextEspace);
+        newCardBody.appendChild(newLabel);
+    
+      });
+}
 
 //slecciona contenedor padre
 const eventClick = document.getElementById("scShowAllPokemon");
