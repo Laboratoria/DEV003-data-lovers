@@ -1,3 +1,6 @@
+html {
+    font-size: 62.5%;
+}
 
 body {
     background: linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65)),
@@ -11,7 +14,7 @@ body {
     margin: 10px;
     font-family: fantasy;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 3rem;
  }
  aside {
     background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
@@ -20,9 +23,10 @@ body {
     padding: 15px;
     margin: 10px;
     justify-content: space-around;
+    font-size: 2rem;
  }
 
- .card{
+/*.card {
     background: #e2e0dc;
     padding: 10px;
     border-radius: 15px;
@@ -31,11 +35,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-}
+}*/
 
-.title{
+
+.title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.7rem;
    
 }
 
@@ -47,17 +52,101 @@ body {
     flex-wrap: wrap
 }
  */  
-  .container {
-    margin-top: 70px;
-    padding: 1em;
-    margin: 15px auto;
-    text-align: center;
-    -webkit-perspective: 250px;
-    perspective: 250px;
-    flex-wrap: wrap;
-    flex-direction: row;
+/*.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
     display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: row;
     justify-content: space-around;
-  }
-  
-  
+}
+*/
+.container {
+    margin: 10px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(max(20rem, 250px), 1fr));
+    justify-content: space-around;
+}
+.card {
+    display: flex;
+    position:relative;
+    height: 35rem;
+    
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    color: #fff;
+    background: rgba(0,0,0, .4);
+    text-align: center;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    box-shadow: 0 5px 10px #000;
+    font-size: 1.8rem;
+}
+
+.card .back p {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+    padding: 15px;    
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
+
+.description {
+    overflow-y: scroll;
+}
+
+.description::-webkit-scrollbar { 
+    width: 1rem;
+}
+
+.description::-webkit-scrollbar-thumb { 
+    background: #999;
+}
+
+.description::-webkit-scrollbar-track { 
+    background: #f1f1f1;
+}
