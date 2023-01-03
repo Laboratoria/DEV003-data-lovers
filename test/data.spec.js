@@ -1,4 +1,4 @@
-import { example, anotherExample, getBooks, getCharacters } from '../src/data.js';
+import { example, anotherExample, getBooks, getCharacters,searchCharacterByName } from '../src/data.js';
 import data from '../src/data/harrypotter/data.js';
 
 
@@ -44,3 +44,20 @@ describe('getcharacters', () => {
     expect(characters).toBe(data.characters)
   });
 });
+
+describe('searchCharacterByName', () => {
+  it('is a function', () => {
+    expect(typeof searchCharacterByName).toBe('function');
+  });
+  
+  it('returns an empty array if there is no name', () => {
+    const characters = searchCharacterByName("", data.characters);
+    expect(characters.length).toBe(0);
+  });
+  
+  it('returns harry potter character', () => {
+    const character = searchCharacterByName('harry', data.characters);
+    expect(character[0].name).toBe("Harry Potter");
+  });
+});
+  
