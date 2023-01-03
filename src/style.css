@@ -1,6 +1,44 @@
 body {
-    padding: 60px 460px;
-    background-image: url("https://i.pinimg.com/originals/d9/35/17/d9351755a84d0170f1126b69b9025f56.jpg")
+    display: block;
+    background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2016/07/landscape-1433777123-hogwarts-school-of-witchcraft-and-wizardry-harry-potter-movie-hd-wallpaper-1920x1080-4707.jpg?fit=1600%2C800&quality=50&strip=all&ssl=1);
+    background-repeat: no-repeat;
+    margin:0em;
+    font-family: 'Harry Potter', sans-s;
+    /*"https://i.pinimg.com/originals/d9/35/17/d9351755a84d0170f1126b69b9025f56.jpg*/
+}
+
+#menuInicial ul{
+    margin: 0;
+    background-color: black;
+    list-style: none;
+    background-position: center;
+    text-align: center;
+
+}
+
+#menuInicial ul li{
+    display: inline;
+}
+
+#menuInicial ul li a{
+    padding: 20px 100px;
+    display: inline-block;
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-style: normal tahoma;
+}
+
+#menuInicial ul li a:hover{
+    color: white;
+}
+#buscador{
+    color: yellow;
+    margin-left: 2rem;
+}
+
+#informacion1{
+    align-content: center;
 }
 
 input{
@@ -9,6 +47,7 @@ input{
     height: 50px;
     width: 310px;
     font-size: 20px ;
+    margin-left: 2rem;
 }
 
 button{
@@ -18,7 +57,9 @@ button{
     text-align: center;
 
 }
-
+#mensajeUsuario{
+    color: yellow;
+}
 #divmensaje{
     background-position: center;
     text-align: center;
@@ -27,3 +68,10 @@ button{
     font-size: 20px ;
 }
 
+#casas{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height: 800px;
+
+}
