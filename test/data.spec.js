@@ -23,12 +23,11 @@ describe('anotherExample', () => {
   
 describe('getcharacters', () => {
   it('is a function', () => {
-    expect(typeof getCharacters).toBe('function');
+    expect(typeof anotherExample).toBe('function');
   });
 
-  it('returns harry potter characters', () => {
-    const characters = getCharacters(data);
-    expect(characters).toBe(data.characters);
+  it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
   });
 });
 describe('getbooks', () => {
@@ -47,9 +46,9 @@ describe('getCharacters', () => {
     expect(typeof getCharacters).toBe('function');
   });
 
-  it('returns harry potter data characters', () => {
+  it('returns harry potter characters', () => {
     const characters = getCharacters(data);
-    expect(characters).toBe(data.characters);
+    expect(characters).toBe(data.characters)
   });
 });
 
