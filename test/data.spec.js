@@ -21,15 +21,7 @@ describe('anotherExample', () => {
   });
 });
   
-describe('getcharacters', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
 describe('getbooks', () => {
   it('is a function', () => {
     expect(typeof getBooks).toBe('function');
@@ -41,7 +33,7 @@ describe('getbooks', () => {
   });
 });
 
-describe('getCharacters', () => {
+describe('getcharacters', () => {
   it('is a function', () => {
     expect(typeof getCharacters).toBe('function');
   });
