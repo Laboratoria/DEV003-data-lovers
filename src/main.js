@@ -8,7 +8,7 @@ function indexFilms(index) {
     `<div class = "card">
           <div class = "face front">
             <img src = "${item.poster}" class = "poster"></img>
-            <h3 class = "title">${item.title}</h3>
+            <div class = "text"> <h3>${item.release_date} &nbsp ${item.title}</h3> </div>
           </div>
   
           <div class = "face back">
@@ -44,16 +44,16 @@ function titles (films) {
 
 
 function inicio() {
-  document.querySelector(".index").style.display = "block";
+  document.querySelector(".dataFilms").style.display = "block";
   document.querySelector(".titles").style.display = "none";
   indexFilms(dataGhibli);
 }
 
 function title() {
-  document.querySelector(".index").style.display = "none";
+  document.querySelector(".dataFilms").style.display = "none";
   document.querySelector(".titles").style.display = "block";
   titles(dataGhibli);
 }
 
-document.getElementById("index").addEventListener("click",inicio)
-document.getElementById("titles").addEventListener("click",title)
+document.getElementById("titles").addEventListener("click",inicio)
+document.getElementById("direcprod").addEventListener("click",title)
