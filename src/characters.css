@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(./images/fondo2.jpg);
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  margin: 2rem;
+  padding: 2rem;
+  width: 42.8rem;
+  height: 14rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  padding: 1rem 3.5rem 1rem 3.5rem;
+  font-family: "Purple 3";
+  font-size: 3.2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0.1rem solid #c5a227;
+  border-radius: 1rem;
+  width: 80vw;
+}
+
+.navbar a {
+  color: #c5a227;
+  margin: 5%;
+}
+
+.potions {
+  text-decoration: none;
+}
+
+.funfacts {
+  text-decoration: none;
+}
+
+.spells {
+  text-decoration: none;
+}
+
+.books {
+  text-decoration: none;
+}
