@@ -212,3 +212,70 @@ footer > div > i:hover {
     font-style: oblique;
     padding-left: 20px;
   }
+
+  /*estilos pagina informacion*/
+#body-information {
+  background-color: rgba(6, 6, 6, 1);
+}
+#champion-information {
+  min-height: 1200px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  margin: 0px 160px;
+}
+#information-card{
+color: white;
+font-weight: 900;
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 25% 75%;
+}
+#title {
+  display: grid;
+  justify-items: center;
+}
+#title-name {
+  font-size: 100px;
+}
+#title-title {
+  font-size: 30px;
+}
+
+#resume {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: 100%;
+  align-items: center;
+}
+#statistics {
+  font-size: 18px;
+}
+.container1{
+display: inline-block;
+height: 20.99px;
+width: 26px;
+background: #3943B7;
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: skewX(-50deg);
+}
+#description {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.statistical-data {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+}
+.difficulty {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.level {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
