@@ -21,8 +21,8 @@ header{
 }
 
 .btnLupa{
-    max-height: 20px;
-    max-width: 20px;
+    max-height: 30px;
+    width: 40px;
     display: flex;
     justify-content: center;
     
@@ -33,7 +33,7 @@ header{
     background-color: black;
     display: flex;
     justify-content: center;
-    max-height: 50px;
+    max-height: 110px;
     padding-bottom: 2px;
 }
 
@@ -108,4 +108,22 @@ header{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+label{
+    color: #7AD605;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    display:flex;
+}
 
+.rdBtns {
+    display: flex;
+}
+
+.rdContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#idk{
+    color: white;
+}
