@@ -21,7 +21,7 @@ for (let character of data.results){
     cardImg.appendChild(img); //Anida img en cardImg
     cardMold.appendChild(cardImg); //Anida en cardMold
 
-    document.getElementById("cards").appendChild(cardMold); //Anida en cards
+    
 
     //Mostrando nombre
     //Creando div para contenedor de nombre
@@ -34,7 +34,47 @@ for (let character of data.results){
 
     container.appendChild(charName);
 
+    //Especie
+    let species=document.createElement("h2");
+    species.classList.add("species")
+    species.innerText= "Especie: " + character.species;
+    container.appendChild(species);
+
+    //Género
+    let gender=document.createElement("h2");
+    gender.classList.add("gender")
+    gender.innerText= "Género: " + character.gender;
+    container.appendChild(gender);
+
+    //Estatus
+    let status=document.createElement("h2");
+    status.classList.add("status")
+    status.innerText= "Status: " + character.status;
+    container.appendChild(status);
+    
+    //Lugar de origen
+    let origin=document.createElement("h2");
+    origin.classList.add("origin")
+    origin.innerText= "Origen: " + character.origin.name;
+    container.appendChild(origin);
+
+    //Locaciones
+    let locations=document.createElement("h2");
+    locations.classList.add("location")
+    locations.innerText= "Última ubicación: " + character.location.name;
+    container.appendChild(locations);
+
+
+    //Episodios
+    let episodes=document.createElement("h2");
+    episodes.classList.add("episodes")
+    //episodes.innerText=character.episode; Es un arreglo, hay que iterar sobre cada elemento y usar .split para recuperar el núm del episodio
+    container.appendChild(episodes);
+
+    
+
     cardMold.appendChild(container);
+    document.getElementById("cards").appendChild(cardMold); //Anida en cards
 }
 
 //const characters=data.results;
