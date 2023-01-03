@@ -135,7 +135,7 @@ const nameTextBox = document.getElementById("pokemon");
     if(keycode =='13' || keycode =='Enter'){
 //valida que no este vacio y no salgan todos sin haber filtrado
       if(nameTextBox.value==''){
-        alert('Enter the name of the pokemon you want to see');
+       // alert('Enter the name of the pokemon you want to see');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
       }else{
@@ -154,7 +154,7 @@ const nameTextBox = document.getElementById("pokemon");
   nameButton.addEventListener('click', (event) => {
     //validando que ingrese nombre a buscar
    if(nameTextBox.value==''){
-        alert('Enter the name of the pokemon you want to see');
+       // alert('Enter the name of the pokemon you want to see');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
       }else{   
@@ -196,7 +196,7 @@ buttonEvolution.addEventListener("click", function () {
     if(keycode =='13' || keycode =='Enter'){
    
       if(evolutionP.value==''){
-        alert('Enter the name of the pokemon you want to see the evolutions');
+       // alert('Enter the name of the pokemon you want to see the evolutions');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
       }else{
@@ -210,7 +210,7 @@ buttonEvolution.addEventListener("click", function () {
         //borrar letras de la busqueda
         document.getElementById("evolutionP").value = '';
        // console.log(filterNameEvolution);
-        createCard3(filterNameEvolution);
+        createCard(filterNameEvolution);
 
       }
     }
@@ -221,7 +221,7 @@ buttonEvolution.addEventListener("click", function () {
 
         //validando que ingrese nombre a buscar
         if(evolutionP.value==''){
-          alert('Enter the name of the pokemon you want to see the evolutions');
+         // alert('Enter the name of the pokemon you want to see the evolutions');
           document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
         }else{  
@@ -309,7 +309,7 @@ selectNamePokemon.addEventListener('change', (e) => {
  // console.log (typeSelectedName);
   const byName = "name";
   const filternameP = filterData(byName, typeSelectedName);
-  console.log(filternameP);
+ // console.log(filternameP);
   createCard2(filternameP);
 
 })

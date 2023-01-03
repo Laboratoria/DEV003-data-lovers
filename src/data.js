@@ -20,13 +20,10 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
     pokemonSortBy.sort((a, b) => a.name.localeCompare(b.name)); //ordena A-Z
   } else if (valor === "4") {
     pokemonSortBy.sort((a, b) => b.name.localeCompare(a.name)); // ordena Z-A
-  }else if (valor === "5") {  
+  }else if (valor === "5") {  //top10
     pokemonSortBy.sort((a, b) => b.encounter["base-capture-rate"].localeCompare(a.encounter["base-capture-rate"])); 
     range = pokemonSortBy.filter(pasarDataP => pasarDataP.encounter["base-capture-rate"]!=='not in capture');
-  
-
-  pokemonSortBy = range.slice(0,10);
-    
+    pokemonSortBy = range.slice(0,10); 
      
 }
  // console.log(pokemonSortBy);
@@ -39,25 +36,52 @@ export const evolutions = (filterBy, condition ) => {
   // valida si existe prev evolutino o next evolution
   //y retona ese array
   const pokemonArray = data['pokemon'];
-  console.log(pokemonArray);
-  console.log(filterBy);
   let result = [];
-  let numEvolution='';
+  let resultPrev = [];
+  let resultNext =[];
+ let resultEvolutions =[];
+
   if(filterBy === 'name'){
+    //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-        if (pokemonArray.evolution['prev-evolution'].num!=='' || pokemonArray.evolution['prev-evolution'].num!==null || pokemonArray.evolution['prev-evolution'].num!=='undefined'){
-          numEvolution = pokemonArray.evolution['prev-evolution'].num;
-          result = pokemonArray.filter(pokemon => pokemon.num.includes(numEvolution));
-        }else if (pokemonArray.evolution['next-evolution']!=='' || pokemonArray.evolution['next-evolution'].num!==null || pokemonArray.evolution['next-evolution'].num!=='undefined'){
-          numEvolution = pokemonArray.evolution['next-evolution'].num;
-          result = pokemonArray.filter(pokemon => pokemon.num.includes(numEvolution));
-        }else{
-          numEvolution = pokemonArray.num;
-          result = pokemonArray.filter(pokemon => pokemon.num.includes(numEvolution));
-        }
+   
+    const pre = result[0]['evolution']['prev-evolution'][0].num;
+    const next = result[0]['evolution']['next-evolution'][0].num;
+
+ 
+    if (pre!=='' || pre!==null || pre!=='undefined' || pre.length!==0 ){
+      resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
+     console.log(resultPrev);
+    }
+    if (next!=='' || next!==null || next!=='undefined' || next.length!==0){
+      resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
+     // console.log(resultNext);
+    }
+ 
+ // console.log(resultPrev);
+ //Object.entries(resultPrev).length === 0
+ /*
+if (Object.entries(resultPrev).length!==0 & Object.entries(resultNext).length!==0){
+  resultEvolutions =[].concat(resultPrev, result, resultNext); 
+}else if( Object.entries(resultPrev).length===0 ){
+  resultEvolutions =[].concat(result, resultNext); 
+}else if(Object.entries(resultNext).length===0){
+  resultEvolutions =[].concat(resultPrev, result); 
+}else{
+  resultEvolutions=result;
+}*/
+ resultEvolutions =[].concat(resultPrev, result, resultNext); 
+  
+ 
+// console.log(resultEvolutions);
+
+    //console.log(pre); 
+    //console.log(next); 
+
+
 }
-    // console.log(result);
-     return result;
+  
+     return resultEvolutions;
 };
 
 
