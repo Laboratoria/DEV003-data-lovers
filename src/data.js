@@ -1,5 +1,4 @@
 import data from "./data/harrypotter/data.js";
-<<<<<<< HEAD
 
 const {characters}= data;
 
@@ -17,8 +16,7 @@ export const personajes = () => {
 
 
 console.log(characters.sort());
-=======
-const { characters } = data;
+//const { characters } = data;
 const { spells } = data;
 
 export const example = (id) => {
@@ -84,4 +82,3 @@ for (let i = 0; i < spells.length; i++) {
 }
 
 console.log(spellType.sort());
->>>>>>> cecbeb2685bc77063fd7a6722fd7fde99a2367d9

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import { characters } from './data.js';
 //import harrypotter from './data/pokemon/pokemon.js';
 // import data from './data/lol/lol.js';
@@ -31,10 +30,3 @@ let especiesU = especies.filter((item,index)=>{
   console.log(especiesU);
 
   console.log(especiesU.length)
-=======
-import { example } from "./data.js";
-
-//document.querySelector("#root").innerHTML = example(89);
-//document.querySelector("#root").innerHTML =
-//  "<ol><li>Hola</li><li>Adios</li></ol>";
->>>>>>> cecbeb2685bc77063fd7a6722fd7fde99a2367d9
