@@ -102,3 +102,10 @@ header{
     gap: 35px;
 }
 
+.container h1{
+    color: #7AD605;
+    font-size: 38px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
