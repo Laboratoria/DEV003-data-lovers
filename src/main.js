@@ -14,6 +14,7 @@ function buscar() {
   console.log(name)
   for (let i = 0; i < personajes.length; i++) {
     if (personajes[i].name === name) {
+
       const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house
       // alert(mensaje)
 
@@ -30,3 +31,8 @@ function getDivMensajeUsuario() {
 function getName() {
   return document.getElementById("informationbox").value
 }
+=======
+      alert("Este personaje es:" + personajes[i].house)
+
+    }
+  }
