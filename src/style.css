@@ -14,6 +14,9 @@ header{
     text-align: center;
     color: #fff;
 }
+.general-box{
+    justify-content: center;
+}
 .button-inicio{
     background-color:rgb(42, 92, 99);
     padding: 20px;
@@ -34,4 +37,26 @@ header{
     border: none;
     margin: 10px;
     font-family: 'Roboto';
+}
+.all-movies-cards{
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3%;
+    padding: 3%;
+}
+.show-cards{
+    font-family: 'Roboto';
+    flex-wrap: wrap;
+    background-color: rgb(42, 92, 99);
+    color: #fff;
+    margin-bottom: 3%;
+    text-align: center;
+    align-items: stretch;
+}
+.tarjetas{
+    margin-bottom: 3%;
+    padding: 3%;
+}
+img {
+    padding: 3%;
 }
