@@ -18,7 +18,7 @@ header{
   margin: 20px;
   padding: 20px;
   width: 428px;
-  height: 130px;
+  height: 140px;
 
 }
 
@@ -61,9 +61,11 @@ header{
 .btn-home {
   display: flex;
   justify-content: center;
+  
 
 }
-.btn {
+.btn{
+
   margin: 10px;
   padding: 10px 40px;
   background: rgba(0, 0, 0, 0.8);
@@ -73,7 +75,8 @@ header{
   font-size: 32px;
   line-height: 33px;
   text-decoration: none;
-
   color: #c5a227;
   
+  
 }
+
