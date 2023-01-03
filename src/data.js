@@ -1,4 +1,4 @@
-import DataGlibli  from './data/ghibli/ghibli.js';
+//import DataGlibli  from './data/ghibli/ghibli.js';
 
 // estas funciones son de ejemplo
 
@@ -9,7 +9,7 @@ import DataGlibli  from './data/ghibli/ghibli.js';
 export const anotherExample = () => {
   return 'OMG';
 };*/
-
+/*
 function ChargeGhibli(){
   //console.log(DataGlibli.films[1]);
   const container = document.querySelector(".container");
@@ -39,13 +39,8 @@ function ChargeGhibli(){
     divCard.append(divCardFront, divCardBack);
     divCardFront.append(img, title);
     divCardBack.append(description);
-    
-    divCard.addEventListener("click", function() {
-      this.classList.toggle("card");
-    });
   }
-  // Handle click on touchscreens
-  //const flip_card = document.querySelector(".");
 }
 
 ChargeGhibli();
+*/

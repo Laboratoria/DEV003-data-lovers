@@ -3,68 +3,69 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(5, 7, 12, 0.65), rgba(5, 7, 12, 0.65)),
-    url(./media/ghibli.jpg) no-repeat center center fixed;
+    background: 
+    url(./media/fondo_inicio.jpg) no-repeat center center fixed;
     background-size: cover;
 }
  header {
     background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
     border-radius: 10px;
-    padding: 25px;
-    margin: 10px;
-    font-family: fantasy;
+    padding: 1rem;
+    margin: 3rem;
+    font-family:'Arial Narrow Bold';
     text-align: center;
     font-size: 3rem;
+ }
+ header h1 {
+    color: #1172c4;
+    font-size: 5rem;
  }
  aside {
     background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
     display: flex;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
+    padding: 1rem;
+    margin: 3rem;
     justify-content: space-around;
     font-size: 2rem;
  }
+/*inicio boton*/
+ button {
+    cursor: pointer;
+    outline: none;
+  }
+  button.outline {
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    color: #1172c4;
+    font-size: 14px;
+    border-color: #1172c4;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+  }
+  button.outline a {
+    text-decoration: none;
+  }
+  button.outline:hover {
+    color: white;
+    background: #1172c4;
+    border-color: white;
+    transition: all 0.2s linear;
+  }
+  button.outline:active {
+    border-radius: 22px;
+  }
 
-/*.card {
-    background: #e2e0dc;
-    padding: 10px;
-    border-radius: 15px;
-    width: 20%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}*/
+/* fin boton*/
 
-
-.title {
-    font-weight: bold;
-    font-size: 1.7rem;
-   
-}
-
-/*.container{
-    margin-top: 50px;;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap
-}
- */  
-/*.container {
-    max-width: 1200px;
-    min-height: 100vh;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    flex-wrap:wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-*/
+/*inicio css index*/
 .container {
-    margin: 10px;
+    margin: 3rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(max(20rem, 250px), 1fr));
@@ -103,10 +104,11 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 45px;
+    height: 2.2rem;
     color: #fff;
     background: rgba(0,0,0, .4);
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .card .back {
@@ -120,8 +122,19 @@ body {
     font-size: 1.8rem;
 }
 
+.card .back h3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    color: black;
+    background: rgba(249, 249, 249, 0.4);
+    text-align: center;
+}
+
 .card .back p {
     display: flex;
+    margin-top: 5rem;
     align-items: flex-start;
     padding-top: 0;
     padding: 15px;    
@@ -150,3 +163,49 @@ body {
 .description::-webkit-scrollbar-track { 
     background: #f1f1f1;
 }
+/*fin css titles*/
+
+/*inicio css titles*/
+ .titlesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(20rem, 500px), 1fr));
+ }
+
+ .cardTitle {
+    background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+ .blockData {
+    display: flex;
+    border-radius: 10px;
+    gap: 1rem;
+ }
+
+ .blockData img {
+    border-radius: 10px;
+    position: static;
+    width: 18rem;
+    height: 100%;
+    object-fit: fill;
+}
+
+.data {
+    background:linear-gradient(rgba(270, 250, 243, 0.85), rgba(270, 250, 243, 0.85));
+    border-radius: 10px;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.data h3 {
+    font-size: large;
+}
+
+.ds {
+    font-size: 1rem;
+}
+/*fin css titles*/
