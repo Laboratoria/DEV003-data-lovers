@@ -3,35 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers</title>
+    <title>E Universo Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Universo Ghibli</header>
-    <h1></h1>
-    <div class="caja-opciones">
-      <button class="button-inicio" id="Main"> Menu principal</button>
-      <button class="button-inicio" id="RandomBtn"> Elige al azar</button>
+    <header>
+      <h1>Universo Ghibli</h1>
+    </header>
+    <nav class="caja-opciones">
+      <a class="button-inicio mainbutton " href="http://127.0.0.1:5500/src/index.html"  id="Main"> Menú principal</a>
+      <button class="button-inicio mainbutton " id="RandomBtn"> Elige al azar</button>
       <!--div para generar nav, definir id o value?-->
-      <select id="orderYear" class="select-year">
-        <option id="allYear">Ordenar por año de emisión</option>
-        <option id="upward">Ascendente</option>
-        <option id="downward">Descendente</option>
+      <select id="orderYear" class="select-year mainbutton">
+        <option id="allYear" class="mainbutton ">Ordenar por año de emisión</option>
+        <option id="upward ">Ascendente</option>
+        <option id="downward ">Descendente</option>
       </select>
 
-      <select id="orderDirector" class="select-director">
+      <select id="orderDirector" class="select-director mainbutton">
         <option id="allDirector">Ordenar por Director</option>
         <option id="Miyazaki">Hayao Miyazaki</option>
         <option id="Takahata">Isao Takahata</option>
       </select>
-      <select id="orderCharacter" class="select-character">
+      <select id="orderCharacter" class="select-character mainbutton">
         <option id="allCharacter">Ordenar por especie</option>
         <option id="">A</option>
         <option id="">b<b></b></option>
       </select>
 
 
-    </div>
+    </nav>
+   
     
     <div id="root"></div>
     <script src="main.js" type="module"></script>
