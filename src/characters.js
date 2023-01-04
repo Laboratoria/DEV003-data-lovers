@@ -29,7 +29,7 @@ filtered.map((character) => {
 idFilter.addEventListener("change", (e) => {
   charactersDiv.replaceChildren(); //reemplaza todos los hijos por nada
   filtered = characters.filter((character) => {
-    return character.id <= e.target.value;
+    return character.gender === e.target.value;
   });
   filtered.map((character) => {
     createCharEl(character);

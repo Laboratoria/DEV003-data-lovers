@@ -64,7 +64,7 @@ main {
 
 .showCharacters {
   width: 80vw;
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
   /* border: #abc solid 1px; */
   display: flex;
   flex-wrap: wrap;
