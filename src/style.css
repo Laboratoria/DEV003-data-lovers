@@ -1,0 +1,473 @@
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+/* header */
+header {
+    background-color: #32C2B9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* menú desplegable */
+.dropbtn {
+    background-color: #00686C;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #00686C;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00686C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 16;
+    height: 90vh;
+}
+
+.dropdown-content a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF9915;
+}
+
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-dropdown:hover .dropbtn {
+    background-color: #FF9915;
+}
+
+.barras {
+    width: 30px;
+    height: 5px;
+    background-color: #32C2B9;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin: 5px 5px 5px 5px;
+}
+
+.barras:hover {
+    background-color: #00686C;
+}
+
+/* lista de categorías */
+.lista {
+    height: 100%;
+    display: flex;
+}
+
+nav li {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav li a {
+    width: 100%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav.categorias li:hover {
+    background-color: #FF9915;
+    text-decoration: none;
+}
+
+.categorias {
+    overflow: hidden;
+    width: 80%;
+    height: 65px;
+}
+
+.categorias a {
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* logo superior */
+.logoTop {
+    width: 160px;
+    margin: 10px 30px 10px 0;
+}
+
+/* página de bienvenida */
+.welcome {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-image: url(https://www.theilluminerdi.com/wp-content/uploads/2021/01/studio_ghibli.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: #00686C;
+    line-height: 30px;
+    margin-bottom: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: sticky;
+    z-index: 15;
+}
+
+#fondoBienvenida {
+    background: rgba(255, 255, 255, 0.66);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    padding: 3rem 4rem 3rem 4rem;
+}
+
+#fondoBienvenida h1 {
+    font-size: 35px;
+    max-width: 50ch;
+    margin-bottom: 3rem;
+}
+
+#fondoBienvenida p {
+    font-size: 20px;
+    max-width: 60ch;
+}
+
+/* botón regresar */
+.backButton {
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 5rem;
+    position:fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.backButton:hover {
+    background-color: #FF9915
+}
+
+.flecha {
+    width: 60%;
+}
+
+/* películas destacadas */
+h3 {
+    text-align: center;
+    color: #00686C;
+}
+
+.barraDestacados {
+    display: flex;
+    justify-content: center;
+    color: #FAD928;
+    background: #FAD928;
+    width: 300px;
+    height: 18px;
+    margin: 0 auto;
+}
+
+.destacados {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.listaDestacados {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    margin: 80px 20px 60px 20px;
+}
+
+.iconoPeliculas {
+    width: 160px;
+
+}
+
+.pelicula-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #00686C;
+}
+
+h4 {
+    margin-top: 15px;
+}
+/* películas más votadas */
+.barraMasVotadas {
+    display: flex;
+    justify-content: center;
+    color: #FAD928;
+    background: #FAD928;
+    width: 350px;
+    height: 18px;
+    margin: 0 auto;
+}
+
+/* info completa por película */
+.parteSuperior {
+    display: block;
+    width: 100%;
+    align-content: flex-end;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.titulos {
+    color: #00686C;
+    display: flex;
+    justify-content: center;
+}
+
+.barra {
+    display: flex;
+    justify-content: center;
+    color: #FAD928;
+    background: #FAD928;
+    width: 270px;
+    height: 18px;
+    margin: 0 auto;
+}
+
+.contenedorTitulo {
+    line-height: 3px;
+}
+
+/* info pelicula superior */
+.peliculaEnDetalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px 50px 50px;
+}
+
+.dirproEnDetalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px 50px 50px;
+}
+
+.imgDetalle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.portadaTDP {
+    width: 300px;
+    border-radius: 20px;
+}
+
+.dosParrafos {
+    color: #00686C;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    line-height: 25px;
+}
+
+.dosParrafos p {
+    width: 50vh;
+}
+
+/* estadísticas laterales */
+.estadisticas {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+}
+
+.medallaRanking {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.medalla {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.ranking {
+    color: #00686C;
+}
+
+.imgEstadisticas {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.conclusiones {
+    color: #00686C;
+    line-height: 25px;
+    width: 80vh;
+}
+
+/* personajes de película en detalle*/
+.tituloYBoton {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.tituloPersonajes {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.botonAZ {
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.botonAZ:hover {
+    background-color: #FF9915;
+}
+
+.AZ {
+    color: #00686C;
+}
+
+.columnaPersonajes {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnaDirPro {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniaturaDescripcion {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.miniatura {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.descripcionPersonaje {
+    color: #00686C;
+    width: 60vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.descripcionDirPro {
+    color: #00686C;
+    width: 60vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.marchando {
+    display: flex;
+    width: 300px;
+    margin: auto;
+}
+/* personajes generales */
+#personajes {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.resultados {
+    color: #00686C;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.dosColumnas {
+    column-count: 2;
+    column-gap: 30px;
+}
+
+/* footer */
+footer {
+    background-color: #32C2B9;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 3px;
+    position: sticky;
+    z-index: 15;
+}
+
+.copyrighttext {
+    text-align: center;
+    text-shadow: slategrey;
+    margin-top: 40px;
+}
+
+.socialfooter {
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
