@@ -10,7 +10,7 @@ html {
 
 body {
   background-image: url(./images/fondo2.jpg);
-  background-size: cover;
+  background-size: auto;
 }
 
 header {
@@ -27,7 +27,8 @@ header {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
@@ -59,4 +60,29 @@ main {
 
 .books {
   text-decoration: none;
+}
+
+.showCharacters {
+  width: 80vw;
+  /* background-color: blueviolet; */
+  /* border: #abc solid 1px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character-card {
+  background-color: #c5a227;
+  width: 10vw;
+  height: 200px;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+.character-info li {
+  list-style: none;
+  font-size: medium;
+  font-family: "Purple 3";
+  margin: 0.5rem;
 }
