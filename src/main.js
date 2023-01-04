@@ -190,42 +190,48 @@ sortUnicos1.forEach((val) => {
   
 
 //funcion con Enter que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
-const nameTextBox = document.getElementById("pokemon");
-  nameTextBox.addEventListener("keyup",function(e){
+const searchPokemon = document.getElementById("txtSearch");
+searchPokemon.addEventListener("keyup",function(e){
     const keycode = (e.key);
     if(keycode =='13' || keycode =='Enter'){
 //valida que no este vacio y no salgan todos sin haber filtrado
-      if(nameTextBox.value==''){
-       // alert('Enter the name of the pokemon you want to see');
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "none";
-      }else{
+      if(searchPokemon.value!==''){
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "flex";
-        const value = document.getElementById("pokemon").value.toLowerCase();
+        const value = document.getElementById("txtSearch").value.toLowerCase();
         const dataname = "name";
         const filtername = filterPokemons(dataname, value);
         //borrar letras de la busqueda
-        document.getElementById("pokemon").value = '';
+        document.getElementById("txtSearch").value = '';
+      }else{
+           // alert('Enter the name of the pokemon you want to see');
+           document.getElementById("scShowAllPokemon").innerHTML = '';
+           document.getElementById("scShowAllPokemon").style.display = "none";
+           document.getElementById("txtSearch").value = '';
+           document.getElementById("txtSearch").focus;
       }
     }
   })
 
   //funcion con boton que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
-  nameButton.addEventListener('click', (event) => {
+  btnSearchPokemon.addEventListener('click', (event) => {
     //validando que ingrese nombre a buscar
-   if(nameTextBox.value==''){
-       // alert('Enter the name of the pokemon you want to see');
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "none";
-      }else{   
+   if(txtSearch.value!==''){
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    const value = document.getElementById("pokemon").value.toLowerCase();
+    const value = document.getElementById("txtSearch").value.toLowerCase();
     const dataname = "name";
+    document.getElementById("txtSearch").value = '';
+    document.getElementById("txtSearch").focus;
     const filtername = filterPokemons(dataname, value);
     //borrar letras de la busqueda
-    document.getElementById("pokemon").value = '';
+    
+      }else{   
+       // alert('Enter the name of the pokemon you want to see');
+       document.getElementById("scShowAllPokemon").innerHTML = '';
+       document.getElementById("scShowAllPokemon").style.display = "none";
+       document.getElementById("txtSearch").value = '';
+       document.getElementById("txtSearch").focus;
       }
 })
 })//Fin boton Search
@@ -234,9 +240,11 @@ const nameTextBox = document.getElementById("pokemon");
 //funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
-    createCard(allPokemons);
-  }
+    if(allPokemons !== null){
+      createCard(allPokemons);
+    }
 
+  }
 
 //funciones dentro de la pagina de Evolutions
 buttonEvolution.addEventListener("click", function () {
@@ -257,20 +265,32 @@ buttonEvolution.addEventListener("click", function () {
     const keycode = (e.key);
     if(keycode =='13' || keycode =='Enter'){
    
-      if(evolutionTextBox.value==''){
-       // alert('Enter the name of the pokemon you want to see the evolutions');
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "none";
-      }else{
-
+      if(evolutionTextBox.value!==''){
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "flex";
         const value = document.getElementById("evolutionP").value.toLowerCase();
         const dataname = "name";
         const filterNameEvolution = evolutions(dataname, value);
-        
+  
+        if(filterNameEvolution !== null || filterNameEvolution !==undefined || filterNameEvolution!==[] || filterNameEvolution !=='' || filterNameEvolution !==0 || filterNameEvolution !==NaN){
+          createCard(filterNameEvolution);
+          document.getElementById("evolutionP").value = '';
+          document.getElementById("evolutionP").focus;
+        }else{
+          document.getElementById("evolutionP").value = '';
+          document.getElementById("evolutionP").focus;
+        }
+
+
+
+      }else{
         document.getElementById("evolutionP").value = '';
         createCard3(filterNameEvolution);
+       // alert('Enter the name of the pokemon you want to see the evolutions');
+        document.getElementById("scShowAllPokemon").innerHTML = '';
+        document.getElementById("scShowAllPokemon").style.display = "none";
+        document.getElementById("evolutionP").value = '';
+        document.getElementById("evolutionP").focus;
       }
     }
   }) 
@@ -279,19 +299,31 @@ buttonEvolution.addEventListener("click", function () {
   evolutionButton.addEventListener('click', () => {
 
         //validando que ingrese nombre a buscar
-        if(evolutionP.value==''){
-         // alert('Enter the name of the pokemon you want to see the evolutions');
+        if(evolutionP.value!==''){
           document.getElementById("scShowAllPokemon").innerHTML = '';
-          document.getElementById("scShowAllPokemon").style.display = "none";
-        }else{  
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "flex";
-        const value = document.getElementById("evolutionP").value.toLowerCase();
-        const dataname = "name";
+          document.getElementById("scShowAllPokemon").style.display = "flex";
+          const value = document.getElementById("evolutionP").value.toLowerCase();
+          const dataname = "name";
+  
+          const filterNameEvolution = evolutions(dataname, value);
+          console.log(filterNameEvolution);
+          if(filterNameEvolution !== null || filterNameEvolution !=='undefined' || filterNameEvolution!==[]){
+            createCard(filterNameEvolution);
+            document.getElementById("evolutionP").value = '';
+            document.getElementById("evolutionP").focus;
+          }else{
+            document.getElementById("evolutionP").value = '';
+            document.getElementById("evolutionP").focus;
+          }
+          
 
-        const filterNameEvolution = evolutions(dataname, value);
-        document.getElementById("evolutionP").value = '';
-        createCard3(filterNameEvolution);
+        }else{  
+         // alert('Enter the name of the pokemon you want to see the evolutions');
+         document.getElementById("scShowAllPokemon").innerHTML = '';
+         document.getElementById("scShowAllPokemon").style.display = "none";
+         document.getElementById("evolutionP").value = '';
+         document.getElementById("evolutionP").focus;
+        
         }
 })
 
@@ -378,14 +410,6 @@ buttonTop.addEventListener('click',()=>{
   const orderByCapture = orderByOption(option5);
   //console.log(getCardsC);
 
- /* orderByCapture.foreach((item) => {
-    if (item.encounter["base-capture-rate"]!=='not in capture'){
-
-    }
-    
-})*/
-
-
 createCard2(orderByCapture);
 
 })
@@ -441,6 +465,7 @@ const createCard = (element) => {
 
   });
 }
+
 
 const createCard2 = (element) => {
 
@@ -521,7 +546,13 @@ const createCard3 = (element) => {
 
     const nextEspace2 = document.createElement("br");
     const labelCandyCost = document.createElement("label");
-    labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution["candy-cost"];
+    if (item[0]['evolution']['prev-evolution']!==undefined){
+      labelCandyCost.innerText = "Candy Cost for evolution: " + item[0]['evolution']['prev-evolution'][0]['prev-evolution'][0]['candy-cost'];
+    }
+    if (item[0]['evolution']['next-evolution']!==undefined){
+      labelCandyCost.innerText = "Candy Cost for evolution: " + item[0]['evolution']['next-evolution'][0]['next-evolution'][0]['candy-cost'];
+    }
+    
     labelCandyCost.id = item.num;
     labelCandyCost.className= "labelCard3";
 
@@ -747,5 +778,23 @@ popUpClick.addEventListener("click", (e) => {
   //const container = document.querySelector(".popUpInfo");
 })
 
+
+//onclick="topFunction()"
+myBtn.addEventListener('click',()=>{
+  // When the user clicks on the button, scroll to the top of the document
+  document.body.scrollTop = 0; // Para safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+
+})
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
 
 

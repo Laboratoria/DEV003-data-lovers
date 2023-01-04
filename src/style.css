@@ -238,5 +238,23 @@ table{
     font-size: small;
 }
 
-
+#myBtn {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Coloque el botón en la parte inferior de la página. */
+    right: 30px; /* Coloca el botón 30px de la derecha. */
+    z-index: 99; /* Asegúrese de que no se superponga */
+    border: none; /* Quitar bordes */
+    outline: none; /* Quitar contorno*/
+    background-color: black; /* Establecer un color de fondo */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Añadir un puntero del ratón en el hover */
+    padding: 15px; /* Algo de relleno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Añadir un fondo gris oscuro en el hover */
+  }
 
