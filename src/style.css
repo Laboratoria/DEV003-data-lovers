@@ -216,6 +216,7 @@ table{
     cursor: pointer; /* cambiar cursor a un pointer */
     
 }
+
 .labelCard2 {
     font-size:medium;
 }
@@ -236,6 +237,10 @@ table{
 
 .labelCard3 {
     font-size: small;
+}
+
+.aboutStyle{
+    text-align: justify;
 }
 
 #myBtn {

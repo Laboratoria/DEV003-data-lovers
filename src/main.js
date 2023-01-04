@@ -657,6 +657,7 @@ const bodytd1 = document.createElement("td");
 
   const bodytd2 = document.createElement("td");
   bodytd2.innerText = infoPokemon.about;
+  bodytd2.className="aboutStyle";
   bodytd2.colSpan="3";
   const nextEspace2 = document.createElement("br");
   const labelGeneration = document.createElement("label");
@@ -781,7 +782,7 @@ popUpClick.addEventListener("click", (e) => {
 
 //onclick="topFunction()"
 myBtn.addEventListener('click',()=>{
-  // When the user clicks on the button, scroll to the top of the document
+  // When the user clicks on the button, scroll to the top of the documentno
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 
