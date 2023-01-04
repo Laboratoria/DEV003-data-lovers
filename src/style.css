@@ -45,7 +45,7 @@ figure {
     font-family: 'Gill Sans', sans-serif;
     font-size: medium;
     transition: all 500ms ease;
-    width: 35%;
+    width: 40%;
     height: 68%;
     right: 25%;
     left: 25%;
@@ -214,6 +214,7 @@ table{
     /*font-size: medium;
     font-family: 'Roboto Mono';*/
     cursor: pointer; /* cambiar cursor a un pointer */
+    
 }
 .labelCard2 {
     font-size:medium;
@@ -226,4 +227,6 @@ table{
 .labelCard3 {
     font-size: small;
 }
+
+
 
