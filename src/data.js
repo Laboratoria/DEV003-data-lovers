@@ -83,9 +83,16 @@ export function showAllCharacters(){
   }
 }
 export function searchButton(){
-  let rad=document.querySelector('input[name="rdOpt"]:checked').value;
-  console.log(rad);
+  const filtOpt=document.getElementById("filtMain").value;
+  const inpTxt=document.getElementById("searchInp").value;
+  console.log(filtOpt);
+  console.log(inpTxt);
 }
+//Obtener valor de input txt en una variable
+//Otra funcion filterData 3 paráms: data, input, categor
+//Arriba let x const porque no se reasigna
+//filterData recibe toda la data y la regresa filtrada
+//Usar ejemplo que tngo en main.js
 
   
 

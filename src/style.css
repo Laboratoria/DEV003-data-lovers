@@ -116,15 +116,9 @@ label{
     display:flex;
 }
 
-.rdBtns {
-    display: flex;
-}
-
-.rdContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-#idk{
-    color: white;
+select{
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
 }
