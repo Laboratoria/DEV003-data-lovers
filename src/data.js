@@ -1,7 +1,6 @@
 import data from "./data/harrypotter/data.js";
 
-const {characters}= data;
-
+const { characters } = data;
 
 // estas funciones son de ejemplo
 
@@ -13,7 +12,6 @@ export const personajes = () => {
 // export const anotherExample = () => {
 //   return 'OMG';
 // };
-
 
 console.log(characters.sort());
 //const { characters } = data;
