@@ -2,9 +2,11 @@ import data from "./data/harrypotter/data.js";
 
 const { characters } = data;
 const charactersDiv = document.querySelector(".showCharacters");
-const idFilter = document.querySelector("#id-filter");
+const genderFilter = document.querySelector("#gender");
+const houseFilter = document.querySelector("#house");
+const clearFilter = document.querySelector("#limpiar");
 
-//una funcion que cree elementos
+//una funcion que crea elementos
 function createCharEl(character) {
   const personaje = document.createElement("div");
   personaje.setAttribute("class", "character-card");
@@ -26,12 +28,38 @@ filtered.map((character) => {
   createCharEl(character);
 });
 
-idFilter.addEventListener("change", (e) => {
+genderFilter.addEventListener("change", (e) => {
   charactersDiv.replaceChildren(); //reemplaza todos los hijos por nada
   filtered = characters.filter((character) => {
     return character.gender === e.target.value;
   });
   filtered.map((character) => {
+    createCharEl(character);
+  });
+});
+
+houseFilter.addEventListener("change", (e) => {
+  charactersDiv.replaceChildren();
+  filtered = characters.filter((character) => {
+    return character.house === e.target.value;
+  });
+
+  //si characters.house === null devuelve null
+  //else devuelve e.target.value
+  // if (character.house === e.target.value) {
+  //     return true;
+  //   } else {
+  //     return character.house === null;
+  //   }
+
+  filtered.map((character) => {
+    createCharEl(character);
+  });
+});
+
+clearFilter.addEventListener("click", () => {
+  charactersDiv.replaceChildren();
+  characters.map((character) => {
     createCharEl(character);
   });
 });
