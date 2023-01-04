@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 header{
     font-family: 'Italiana';
@@ -74,4 +74,26 @@ a{
             justify-content: space-evenly;
             background-color:  rgb(42, 92, 99);
             }
+}
+.all-movies-cards{
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3%;
+    padding: 3%;
+}
+.show-cards{
+    font-family: 'Roboto';
+    flex-wrap: wrap;
+    background-color: rgb(42, 92, 99);
+    color: #fff;
+    margin-bottom: 3%;
+    text-align: center;
+    align-items: stretch;
+}
+.tarjetas{
+    margin-bottom: 3%;
+    padding: 3%;
+}
+img {
+    padding: 3%;
 }
