@@ -7,7 +7,7 @@ const moviesList = document.getElementById('showMovies');
 //declaramos el html vacio para luego insertar con innerHtml
 let htmlCode = ``;
 //tomamos cada dato del array con un forEach, recorre todo el array y retorna los datos que elegimos más abajo
-dataMovies.forEach(function(singleMovieObjects) 
+dataMovies.forEach(function(singleMovieObjects)
 {
   //imagen de arriety link roto
   //elementos que se insertaran desde la data al html 
