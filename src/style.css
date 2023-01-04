@@ -238,6 +238,21 @@ table{
     font-size: small;
 }
 
+.generationStyle {
+    text-align: left;
+}
+
+.aboutStyle {
+    text-align: center;
+    white-space: wrap;
+}
+
+.resistantStyle{
+    text-align: center;
+}
+
+
+
 #myBtn {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija */
