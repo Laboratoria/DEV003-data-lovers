@@ -41,23 +41,32 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
 };
 
 export const evolutions = (filterBy, condition ) => {
-  // filtra lso datos por el name que llega del listbox
+  // filtra los datos por el name que llega del listbox
   // valida si existe prev evolutino o next evolution
   //y retona ese array
   const pokemonArray = data['pokemon'];
   let result = [];
+  let array = [];
   let resultPrev = [];
   let resultPrev2 = [];
   let resultNext =[];
   let resultNext2 =[];
- let resultEvolutions =[];
+  let resultEvolutions =[];
 
   if(filterBy === 'name'){
     //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
-    result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+    array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+
+    const arrayVacio = (arr) => !array.isArray(arr) || arr.length === 0;
+if(arrayVacio!=true){
+  result=array;
+}
+   
+    
    // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
    console.log(result);
-if (result!=='' || result!== undefined || result !==0 || result !==null){
+//if (result!=='' || result!== undefined || result !==0 || result !==null || result !==NaN || result !==[] || result.length !== 0){ 
+  if (result!=='' || result!== undefined || result !==0 || result !==null){ 
   if (result[0]['evolution']['prev-evolution']!==undefined){
     if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
       
@@ -74,8 +83,6 @@ if (result!=='' || result!== undefined || result !==0 || result !==null){
       resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
     }
   }
-
-
 
  if (result[0]['evolution']['next-evolution']!==undefined){
   if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
@@ -97,21 +104,14 @@ if (result!=='' || result!== undefined || result !==0 || result !==null){
 
 // console.log(resultPrev);
 
-
 resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
-
 
 // console.log(resultEvolutions);
 
 //console.log(pre); 
 //console.log(next); 
-
-
 }
-
 }
-    
-  
      return resultEvolutions;
 };
 
