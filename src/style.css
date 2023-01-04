@@ -8,35 +8,72 @@
 header{
     font-family: 'Italiana';
     background-color: rgb(42, 92, 99);
-    padding: 30px;
-    margin-bottom: 15px;
-    font-size: 50px;
+    padding: 10px;
+    /* margin-bottom: 15px; */
+    font-size: 30px;
     text-align: center;
     color: #fff;
 }
-.general-box{
-    justify-content: center;
+
+.main-options{
+font-size: 30px;
 }
-.button-inicio{
-    background-color:rgb(42, 92, 99);
-    padding: 20px;
-    border-radius: 15px;
-    border: none;
-    margin: 10px;
-    color:#fff;
-    font-family: 'Roboto';
-}
-.select-year,
-.select-character,
-.select-director
-{
+.mainbutton{
     color: #fff;;
-    background-color:rgb(42, 92, 99);
+    background-color:rgb(79, 118, 123);
     padding: 20px;
     border-radius: 15px;
     border: none;
     margin: 10px;
     font-family: 'Roboto';
+    margin-bottom: 15px;
+}
+
+nav{
+display: flex;
+justify-content: space-evenly;
+background-color:  rgb(42, 92, 99);
+
+
+}
+a{
+    text-decoration: none;
+}
+
+@media (max-width:500px){
+    header{
+        font-family: 'Italiana';
+        background-color: rgb(42, 92, 99);
+        padding: 10px;
+        /* margin-bottom: 15px; */
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        background-color:  rgb(42, 92, 99);
+        }
+
+        .mainbutton{
+            color: #fff;;
+            background-color:rgb(79, 118, 123);
+            padding: 20px;
+            border-radius: 15px;
+            border: none;
+            margin: 10px;
+            font-family: 'Roboto';
+            margin-bottom: 15px;
+        }
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color:  rgb(42, 92, 99);
+            }
 }
 .all-movies-cards{
     flex-wrap: wrap;

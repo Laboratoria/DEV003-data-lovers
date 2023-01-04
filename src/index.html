@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <!--tag para responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers</title>
+    <title>E Universo Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Universo Ghibli</header>
-    <div class="general-box">
-    <h1></h1>
-    <div class="caja-opciones">
-      <button class="button-inicio" id="main"> Menu principal</button> 
-      <input class="button-inicio" type="button" value="Elige al Azar" id="randomBtn">
+    <header>
+      <h1>Universo Ghibli</h1>
+    </header>
+    <nav class="caja-opciones">
+      <a class="button-inicio mainbutton " href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
+      <input class="button-inicio mainbutton " type="button" value="Elige al Azar" id="randomBtn">
       <!--div para generar nav, definir id -->
-      <select id="orderYear" class="select-year">
-        <option id="allYear">Ordenar por año de emisión</option>
-        <option id="upward">Ascendente</option>
-        <option id="downward">Descendente</option>
+      <select id="orderYear" class="select-year mainbutton">
+        <option id="allYear" class="mainbutton ">Ordenar por año de emisión</option>
+        <option id="upward ">Ascendente</option>
+        <option id="downward ">Descendente</option>
       </select>
 
-      <select id="orderDirector" class="select-director">
+      <select id="orderDirector" class="select-director mainbutton">
         <option id="allDirector">Ordenar por Director</option>
         <option id="Miyazaki">Hayao Miyazaki</option>
         <option id="Takahata">Isao Takahata</option>
@@ -31,20 +31,22 @@
         <option id="Yonebayashi">Hiromasa Yonebayashi</option>
         
       </select>
-      <select id="orderCharacter" class="select-character">
+      <select id="orderCharacter" class="select-character mainbutton">
         <option id="allCharacter">Ordenar por especie</option>
         <option id="">A</option>
         <option id="">b<b></b></option>
       </select>
-    </div>
-
+    </nav>
+    
     <div class="all-movies-cards" id="">
       <div class="show-cards">
         <!--div donde se mostrara el output del innerHtml-->
       <ol id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </ol>
     </div>
     </div>
-  </div>
+
+
+    
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
