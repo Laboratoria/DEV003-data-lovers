@@ -237,6 +237,7 @@ const nameTextBox = document.getElementById("pokemon");
     createCard(allPokemons);
   }
 
+
 //funciones dentro de la pagina de Evolutions
 buttonEvolution.addEventListener("click", function () {
   document.getElementById("scEvolution").style.display = "block";
@@ -256,7 +257,7 @@ buttonEvolution.addEventListener("click", function () {
     const keycode = (e.key);
     if(keycode =='13' || keycode =='Enter'){
    
-      if(evolutionP.value==''){
+      if(evolutionTextBox.value==''){
        // alert('Enter the name of the pokemon you want to see the evolutions');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
@@ -269,7 +270,7 @@ buttonEvolution.addEventListener("click", function () {
         const filterNameEvolution = evolutions(dataname, value);
         
         document.getElementById("evolutionP").value = '';
-        createCard(filterNameEvolution);
+        createCard3(filterNameEvolution);
       }
     }
   }) 
@@ -290,7 +291,7 @@ buttonEvolution.addEventListener("click", function () {
 
         const filterNameEvolution = evolutions(dataname, value);
         document.getElementById("evolutionP").value = '';
-        createCard(filterNameEvolution);
+        createCard3(filterNameEvolution);
         }
 })
 
@@ -488,6 +489,53 @@ const createCard2 = (element) => {
   });
 }
 
+
+
+const createCard3 = (element) => {
+
+  element.forEach((item) => {
+    const cardBox = document.querySelector(".scCards");
+
+    const newCard = document.createElement("div");
+    newCard.className = "card3";
+    newCard.id = item.num;
+
+    const newCardBody = document.createElement("div");
+    newCardBody.className = "card_body";
+    newCardBody.id = item.num;
+
+    const newH3 = document.createElement("h3");
+    newH3.className = "card_title3";
+    newH3.innerText = item.name.toUpperCase();
+    newH3.id = item.num;
+
+    const newImg = document.createElement("img");
+    newImg.src = item.img;
+    newImg.id = item.num;
+
+    const nextEspace = document.createElement("br");
+    const labelCandyName = document.createElement("label");
+    labelCandyName.innerText = "Candy:  " + item.evolution["candy"];
+    labelCandyName.id = item.num;
+    labelCandyName.className= "labelCard3";
+
+    const nextEspace2 = document.createElement("br");
+    const labelCandyCost = document.createElement("label");
+    labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution["candy-cost"];
+    labelCandyCost.id = item.num;
+    labelCandyCost.className= "labelCard3";
+
+    cardBox.appendChild(newCard);
+    newCard.appendChild(newCardBody);
+    newCardBody.appendChild(newH3);
+    newCardBody.appendChild(newImg);
+    newCardBody.appendChild(nextEspace);
+    newCardBody.appendChild(labelCandyName);
+    newCardBody.appendChild(nextEspace2);
+    newCardBody.appendChild(labelCandyCost);
+
+  });
+}
 
 
 //slecciona contenedor padre

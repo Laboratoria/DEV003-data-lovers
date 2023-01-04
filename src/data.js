@@ -32,7 +32,7 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
 };
 
 export const evolutions = (filterBy, condition ) => {
-  // filtra lso datos por el name que llega del listbox
+  // filtra los datos por el name que llega del listbox
   // valida si existe prev evolutino o next evolution
   //y retona ese array
   const pokemonArray = data['pokemon'];
@@ -41,7 +41,7 @@ export const evolutions = (filterBy, condition ) => {
   let resultPrev2 = [];
   let resultNext =[];
   let resultNext2 =[];
- let resultEvolutions =[];
+  let resultEvolutions =[];
 
   if(filterBy === 'name'){
     //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
@@ -84,6 +84,8 @@ export const evolutions = (filterBy, condition ) => {
       resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
       }
     }
+
+    
  
  // console.log(resultPrev);
 
@@ -98,6 +100,11 @@ export const evolutions = (filterBy, condition ) => {
 
 
 }
+
+//alerta de cuando no tiene evolution
+//else{
+  //alert("This pokemon doesn't have any evolutions")
+//}
   
      return resultEvolutions;
 };
