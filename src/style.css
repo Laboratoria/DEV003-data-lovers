@@ -157,7 +157,9 @@ h3 {
 
 .contenedorTitulo {
     line-height: 3px;
+    margin: 15px;
 }
+
 
 /* botón regresar */
 .backButton {
@@ -327,6 +329,69 @@ h3 {
     justify-content: flex-start;
     margin-left: 20px;
 }
+
+/*Estilos Titulos*/
+.canttituloYBoton {
+    display: flex;
+    color: #00686C;
+    justify-content: center;
+    margin-top: 10px;
+}
+.botonAZ1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    flex-wrap: wrap;
+    display: inline;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.botonAZ1:hover {
+    background-color: #FF9915;
+}
+.AZ1 {
+    margin-top: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.contenedorPeliculas {
+    margin: 3px;
+}
+
+
+.columnaPeliculas {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 47px 30px 47px;
+}
+.portadaPeli {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
+
+}
+.peli {
+    width: 30%;
+   
+}
+.parrafoPeli {
+    color: #00686C;
+    width: 60vh;
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 15px 20px 10px;
+}
+
 /* footer */
 footer {
     background-color: #32C2B9;
