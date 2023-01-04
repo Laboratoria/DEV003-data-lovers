@@ -1,4 +1,13 @@
 import data from './data/pokemon/pokemon.js'; // importamos la data de la carpeta
+/*fetch("./data/pokemon/pokemon.json")
+  .then(response => response.json())
+  .then(json => {
+    const data=json;
+  // aquí tenemos el parámetro json que contien el dato que nos ha devuelto el servicio web.
+  // podemos hacer cualquier cosa con él...
+  console.log(json)
+  });*/
+
 
 export const getDataPokemon = () => { // exportamos funcion array con toda la data
   const pokemonList = data['pokemon'];
@@ -47,57 +56,61 @@ export const evolutions = (filterBy, condition ) => {
     //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
    // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
+   console.log(result);
+if (result!=='' || result!== undefined || result !==0 || result !==null){
+  if (result[0]['evolution']['prev-evolution']!==undefined){
+    if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
+      
 
-    if (result[0]['evolution']['prev-evolution']!==undefined){
-        if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
-          
+      const pre = result[0]['evolution']['prev-evolution'][0].num;
+      resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
 
-          const pre = result[0]['evolution']['prev-evolution'][0].num;
-          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
-
-          const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
-          
-          resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));
-          
-        }else{
-          const pre = result[0]['evolution']['prev-evolution'][0].num;
-          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
-        }
-      }
-
-
- 
-     if (result[0]['evolution']['next-evolution']!==undefined){
-      if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
-          
-
-        const next = result[0]['evolution']['next-evolution'][0].num;
-        resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
-
-        const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
-        
-        resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
-        
-      }else{
-
-      const next = result[0]['evolution']['next-evolution'][0].num;
-      resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
-      }
+      const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
+      
+      resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));
+      
+    }else{
+      const pre = result[0]['evolution']['prev-evolution'][0].num;
+      resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
     }
- 
- // console.log(resultPrev);
+  }
 
 
- resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
-  
- 
+
+ if (result[0]['evolution']['next-evolution']!==undefined){
+  if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
+      
+
+    const next = result[0]['evolution']['next-evolution'][0].num;
+    resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
+
+    const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
+    
+    resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
+    
+  }else{
+
+  const next = result[0]['evolution']['next-evolution'][0].num;
+  resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
+  }
+}
+
+// console.log(resultPrev);
+
+
+resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
+
+
 // console.log(resultEvolutions);
 
-    //console.log(pre); 
-    //console.log(next); 
+//console.log(pre); 
+//console.log(next); 
 
 
 }
+
+}
+    
   
      return resultEvolutions;
 };

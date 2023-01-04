@@ -190,42 +190,42 @@ sortUnicos1.forEach((val) => {
   
 
 //funcion con Enter que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
-const nameTextBox = document.getElementById("pokemon");
-  nameTextBox.addEventListener("keyup",function(e){
+const searchPokemon = document.getElementById("txtSearch");
+searchPokemon.addEventListener("keyup",function(e){
     const keycode = (e.key);
     if(keycode =='13' || keycode =='Enter'){
 //valida que no este vacio y no salgan todos sin haber filtrado
-      if(nameTextBox.value==''){
+      if(searchPokemon.value==''){
        // alert('Enter the name of the pokemon you want to see');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
       }else{
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "flex";
-        const value = document.getElementById("pokemon").value.toLowerCase();
+        const value = document.getElementById("txtSearch").value.toLowerCase();
         const dataname = "name";
         const filtername = filterPokemons(dataname, value);
         //borrar letras de la busqueda
-        document.getElementById("pokemon").value = '';
+        document.getElementById("txtSearch").value = '';
       }
     }
   })
 
   //funcion con boton que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
-  nameButton.addEventListener('click', (event) => {
+  btnSearchPokemon.addEventListener('click', (event) => {
     //validando que ingrese nombre a buscar
-   if(nameTextBox.value==''){
+   if(txtSearch.value==''){
        // alert('Enter the name of the pokemon you want to see');
         document.getElementById("scShowAllPokemon").innerHTML = '';
         document.getElementById("scShowAllPokemon").style.display = "none";
       }else{   
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    const value = document.getElementById("pokemon").value.toLowerCase();
+    const value = document.getElementById("txtSearch").value.toLowerCase();
     const dataname = "name";
     const filtername = filterPokemons(dataname, value);
     //borrar letras de la busqueda
-    document.getElementById("pokemon").value = '';
+    document.getElementById("txtSearch").value = '';
       }
 })
 })//Fin boton Search
@@ -234,7 +234,10 @@ const nameTextBox = document.getElementById("pokemon");
 //funcion que va a enviar los datos a filtrar y retorna lo que se va a mostrar
   const filterPokemons = (filterBy, condition) => {
     const allPokemons = filterData(filterBy, condition).sort();
-    createCard(allPokemons);
+    if(allPokemons !== null){
+      createCard(allPokemons);
+    }
+
   }
 
 //funciones dentro de la pagina de Evolutions
@@ -290,7 +293,12 @@ buttonEvolution.addEventListener("click", function () {
 
         const filterNameEvolution = evolutions(dataname, value);
         document.getElementById("evolutionP").value = '';
-        createCard(filterNameEvolution);
+        if(filterNameEvolution !== null || filterNameEvolution !==undefined){
+          createCard(filterNameEvolution);
+        }else{
+          document.getElementById("evolutionP").value = '';
+        }
+        //createCard(filterNameEvolution);
         }
 })
 
