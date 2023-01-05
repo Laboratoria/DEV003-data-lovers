@@ -196,7 +196,7 @@ buttonSearch.addEventListener("click", () => {
   const searchPokemon = document.getElementById("txtSearch");
   searchPokemon.addEventListener("keyup",function(e){
     const keycode = (e.key);
-    if(keycode =='13' || keycode =='Enter'){
+    if(keycode ==='13' || keycode ==='Enter'){
       //valida que no este vacio y no salgan todos sin haber filtrado
       if(searchPokemon.value!==''){
         document.getElementById("scShowAllPokemon").innerHTML = '';
@@ -205,7 +205,7 @@ buttonSearch.addEventListener("click", () => {
         const dataname = "name";
         const filtername = filterPokemons(dataname, value);
         //borrar letras de la busqueda
-        document.getElementById("txtSearch").value = '';
+       // document.getElementById("txtSearch").value = '';
       }else{
         // alert('Enter the name of the pokemon you want to see');
         document.getElementById("scShowAllPokemon").innerHTML = '';
@@ -217,14 +217,17 @@ buttonSearch.addEventListener("click", () => {
   })
 
   //funcion con boton que va a buscar el pokemon por nombre y lo va a filtrar para retornar lo que se va a mostrar
+  const btnSearchPokemon = document.getElementById('btnSearchPokemon');
+  const txtSearch = document.getElementById('txtSearch');
   btnSearchPokemon.addEventListener('click', (event) => {
+    document.getElementById("txtSearch").value = '';
     //validando que ingrese nombre a buscar
     if(txtSearch.value!==''){
       document.getElementById("scShowAllPokemon").innerHTML = '';
       document.getElementById("scShowAllPokemon").style.display = "flex";
       const value = document.getElementById("txtSearch").value.toLowerCase();
       const dataname = "name";
-      document.getElementById("txtSearch").value = '';
+      
       document.getElementById("txtSearch").focus;
       const filtername = filterPokemons(dataname, value);
       //borrar letras de la busqueda
@@ -233,7 +236,7 @@ buttonSearch.addEventListener("click", () => {
       // alert('Enter the name of the pokemon you want to see');
       document.getElementById("scShowAllPokemon").innerHTML = '';
       document.getElementById("scShowAllPokemon").style.display = "none";
-      document.getElementById("txtSearch").value = '';
+      // document.getElementById("txtSearch").value = '';
       document.getElementById("txtSearch").focus;
     }
   })
@@ -266,7 +269,7 @@ buttonEvolution.addEventListener("click", function () {
   const evolutionTextBox = document.getElementById("evolutionP");
   evolutionTextBox.addEventListener("keyup",function(e){
     const keycode = (e.key);
-    if(keycode =='13' || keycode =='Enter'){
+    if(keycode ==='13' || keycode ==='Enter'){
    
       if(evolutionTextBox.value!==''){
         document.getElementById("scShowAllPokemon").innerHTML = '';
@@ -276,7 +279,7 @@ buttonEvolution.addEventListener("click", function () {
         const filterNameEvolution = evolutions(dataname, value);
   
         if(filterNameEvolution !== null || filterNameEvolution !==undefined || filterNameEvolution!==[] || filterNameEvolution !=='' || filterNameEvolution !==0 || filterNameEvolution !==NaN){
-          createCard(filterNameEvolution);
+          createCard3(filterNameEvolution);
           document.getElementById("evolutionP").value = '';
           document.getElementById("evolutionP").focus;
         }else{
@@ -311,7 +314,7 @@ buttonEvolution.addEventListener("click", function () {
       const filterNameEvolution = evolutions(dataname, value);
       console.log(filterNameEvolution);
       if(filterNameEvolution !== null || filterNameEvolution !=='undefined' || filterNameEvolution!==[]){
-        createCard(filterNameEvolution);
+        createCard3(filterNameEvolution);
         document.getElementById("evolutionP").value = '';
         document.getElementById("evolutionP").focus;
       }else{
@@ -549,13 +552,16 @@ const createCard3 = (element) => {
 
     const nextEspace2 = document.createElement("br");
     const labelCandyCost = document.createElement("label");
-    if (item[0]['evolution']['prev-evolution']!==undefined){
-      labelCandyCost.innerText = "Candy Cost for evolution: " + item[0]['evolution']['prev-evolution'][0]['prev-evolution'][0]['candy-cost'];
+    if (item.evolution['prev-evolution']!==undefined){
+      labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['prev-evolution'][0]['candy-cost'];
     }
-    if (item[0]['evolution']['next-evolution']!==undefined){
-      labelCandyCost.innerText = "Candy Cost for evolution: " + item[0]['evolution']['next-evolution'][0]['next-evolution'][0]['candy-cost'];
+    if (item.evolution['next-evolution']!==undefined){
+      labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['next-evolution'][0]['candy-cost'];
     }
-    
+    if (item.evolution['next-evolution']===undefined){
+      labelCandyCost.innerText = "No more evolutions";
+    }
+    //labelCandyCost.innerText="Candy Cost: " + item.evolution['next-evolution'][0]['candy-cost'];
     labelCandyCost.id = item.num;
     labelCandyCost.className= "labelCard3";
 
@@ -576,7 +582,7 @@ const createCard3 = (element) => {
 const eventClick = document.getElementById("scShowAllPokemon");
 //al enocntrar un evento click valida de que elemento fue
 eventClick.addEventListener("click", (e) => {
-  if (e.target.nodeName == 'DIV' || e.target.nodeName == 'IMG' || e.target.nodeName == 'H3' || e.target.nodeName == 'LABEL') {
+  if (e.target.nodeName === 'DIV' || e.target.nodeName === 'IMG' || e.target.nodeName === 'H3' || e.target.nodeName === 'LABEL') {
     //console.log(e.target.nodeName);
     let idCardSelect = '';
     idCardSelect = e.target.id;
@@ -777,7 +783,7 @@ const popUpClick = document.querySelector(".cPopUp");
 //al enocntrar un evento click valida de que elemento fue
 popUpClick.addEventListener("click", (e) => {
   //console.log(e);
-  if (e.target.nodeName == 'BUTTON') {
+  if (e.target.nodeName === 'BUTTON') {
     const containerClose = document.querySelector('.cPopUp');
     containerClose.removeChild(document.getElementById('divPopUp'));
     containerClose.style.display = "none";

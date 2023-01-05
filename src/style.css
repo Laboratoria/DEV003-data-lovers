@@ -28,7 +28,7 @@ figure {
     Border: solid #333 1px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
     Background: white;
-    Border-radius: 5px; /* radio del borde */
+    Border-radius: 10px; /* radio del borde */
     Height: 280px;
     margin: 10px auto;
 }
@@ -256,7 +256,6 @@ table{
 .resistantStyle{
     text-align: center;
 }
-
 
 
 .cbtnUpShow {
