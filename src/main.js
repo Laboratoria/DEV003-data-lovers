@@ -1,4 +1,4 @@
-import { getBooks, getCharacters, searchCharacterByName } from './data.js';
+import { getBooks, getCharacters, searchCharacterByName, getSpells, searchSpellsByLetter } from './data.js';
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
@@ -6,7 +6,7 @@ import { getBooks, getCharacters, searchCharacterByName } from './data.js';
 import data from "./data/harrypotter/data.js";
 
 
-//console.log(data.characters)
+//console.log(data.spells);
 
 const showModalBooks = (title, description, author, releaseDay) => {
   const modalContainer = document.getElementById("modalContainer");
@@ -165,4 +165,69 @@ const carousel = () => {
 if (location.pathname === '/pages/characters' || location.pathname === '/DEV003-data-lovers/pages/characters.html') {
   showCharacters()
   carousel()
+}
+
+const showSpellsLetters = () => {
+  const letters = document.getElementById("lettersContainer");
+  const spellLetters = letters.children;
+  for (let i = 0; i < spellLetters.length; i++) {
+    const letter = spellLetters[i];
+    letter.addEventListener("click", function () {
+      window.location = document.URL + '?search=' + letter.id;
+    });
+  }
+}
+
+const showSpellsByLetter = (filteredSpells) => {
+  const spellsContainer = document.getElementById("spellsContainer");
+  for (let i = 0; i < filteredSpells.length; i++) {
+    const spell = filteredSpells[i];
+    const spellName = document.createElement("h2");
+    const spellPronunciation = document.createElement("h3");
+    const spellDescription = document.createElement("h3");
+    const spellMention = document.createElement("h3");
+    spellName.innerText = spell.name;
+    spellPronunciation.innerText = "🌠Pronunciation: " +  spell.pronunciation;
+    spellDescription.innerText = " 🌠Description: " + spell.description;
+    spellMention.innerText = "🌠Mention: " + spell.mention;
+    spellName.className = "spell-name";
+    spellPronunciation.className = "spell-style";
+    spellDescription.className = "spell-style";
+    spellMention.className = "spell-style";
+    spellsContainer.appendChild(spellName);
+    spellsContainer.appendChild(spellPronunciation);
+    spellsContainer.appendChild(spellDescription);
+    spellsContainer.appendChild(spellMention);
+  }
+  console.log(filteredSpells)
+}
+
+const spellsNotFound = (searchParam) => {
+  const spellNotFound = document.getElementById("spellsNotFound");
+  spellNotFound.innerText = "Spells not found with letter: " + searchParam.toUpperCase();
+  spellNotFound.style.display = "block";
+}
+
+const handleSpells = (searchParam) => {
+  const spells = getSpells(data);
+  const filteredSpells = searchSpellsByLetter(searchParam, spells)
+
+  if (filteredSpells.length === 0) {
+    spellsNotFound(searchParam);
+  } else {
+    showSpellsByLetter(filteredSpells);
+  }
+}
+
+if (location.pathname === '/pages/spells' || location.pathname === '/DEV003-data-lovers/pages/spells.html') {
+  const letters = document.getElementById("lettersContainer");
+  const params = (new URL(document.location)).searchParams;
+  const searchParam = params.get('search');
+
+  if (searchParam) {
+    letters.style.display = "none";
+    handleSpells(searchParam)
+  } else {
+    showSpellsLetters()
+  }
 }
