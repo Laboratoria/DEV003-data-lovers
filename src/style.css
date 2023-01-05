@@ -255,6 +255,10 @@ h4 {
     color: #00686C;
     display: flex;
     justify-content: center;
+    /* text-decoration: underline;
+    text-decoration-color: #FAD928;
+    text-decoration-thickness: 15px; */
+    /* text-decoration-line: line-through; */
 }
 
 .barra {
@@ -269,6 +273,33 @@ h4 {
 
 .contenedorTitulo {
     line-height: 3px;
+    margin: 15px;
+}
+
+
+/* botón regresar */
+.backButton {
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 5rem;
+}
+
+.backButton:hover {
+    background-color: #FF9915
+}
+
+.flecha {
+    width: 60%;
 }
 
 /* info pelicula superior */
@@ -278,8 +309,7 @@ h4 {
     align-items: center;
     margin: 50px 50px 50px 50px;
 }
-
-.dirproEnDetalle {
+.dirproEnDetalle{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -322,7 +352,6 @@ h4 {
     align-items: center;
     margin-bottom: 30px;
 }
-
 .medalla {
     width: 50px;
     margin-right: 20px;
@@ -421,28 +450,78 @@ h4 {
     margin-left: 20px;
 }
 
-.marchando {
+/*Estilos Titulos*/
+.canttituloYBoton {
     display: flex;
-    width: 300px;
-    margin: auto;
+    color: #00686C;
+    justify-content: center;
+    margin-top: 10px;
 }
+.botonAZ1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    flex-wrap: wrap;
+    display: inline;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.botonAZ1:hover {
+    background-color: #FF9915;
+}
+.AZ1 {
+    margin-top: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.contenedorPeliculas {
+    margin: 3px;
+}
+
 /* personajes generales */
 #personajes {
     margin-top: 40px;
     margin-bottom: 50px;
 }
 
+.columnaPeliculas {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 47px 30px 47px;
+}
 .resultados {
     color: #00686C;
     display: flex;
-    justify-content: center;
+	justify-content: center;
     margin-top: 30px;
     font-style: italic;
 }
+.portadaPeli {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
 
-.dosColumnas {
-    column-count: 2;
-    column-gap: 30px;
+}
+.peli {
+    width: 30%;
+
+}
+.parrafoPeli {
+    color: #00686C;
+    width: 60vh;
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 15px 20px 10px;
 }
 
 /* footer */
@@ -451,15 +530,14 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
     margin-top: 20px;
     padding-top: 3px;
     position: sticky;
     z-index: 15;
 }
-
-.copyrighttext {
+.copyrighttext  {
     text-align: center;
     text-shadow: slategrey;
     margin-top: 40px;
