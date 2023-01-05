@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+  width: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.pie-pagina {
+  background-color: #4000a7;
+  padding: 1em 0;
+  text-align: center;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+}
