@@ -27,8 +27,20 @@
         <a href="#" class="books">Books</a>
         </nav>
         <section class="filters">
-            <label for="id-filter">ID filter</label>
-            <input type="text" name="id-filter" id="id-filter"></input>
+            <select name="genero" id="gender">
+                <option selected=" " disabled=" ">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <select name="casas" id="house">
+                <option selected=" " disabled=" ">House</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="null">None</option>
+            </select>
+            <input type="reset" class="reset" id="limpiar"></input>
         </section>
         <section class="showCharacters"></section>
     </main>

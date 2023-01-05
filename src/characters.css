@@ -10,7 +10,7 @@ html {
 
 body {
   background-image: url(./images/fondo2.jpg);
-  background-size: auto;
+  background-size: fixed;
 }
 
 header {
@@ -85,4 +85,42 @@ main {
   font-size: medium;
   font-family: "Purple 3";
   margin: 0.5rem;
+}
+
+.filters {
+  margin: 2rem;
+}
+
+#gender {
+  width: 12.5rem;
+  height: 3rem;
+
+  font-family: "Purple 3";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-align: left;
+
+  color: #000000;
+
+  background: rgba(165, 136, 34, 0.75);
+  border: 0.1rem solid #000000;
+  border-radius: 0.8rem;
+}
+
+#house {
+  width: 12.5rem;
+  height: 3rem;
+
+  font-family: "Purple 3";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-align: left;
+
+  color: #000000;
+
+  background: rgba(165, 136, 34, 0.75);
+  border: 0.1rem solid #000000;
+  border-radius: 0.8rem;
 }
