@@ -46,7 +46,7 @@ input{
     text-align: center;
     height: 50px;
     width: 310px;
-    font-size: 20px ;
+    font-size: 20px;
     margin-left: 2rem;
 }
 
@@ -65,16 +65,12 @@ button{
     text-align: center;
     height: 50px;
     width: 310px;
-    font-size: 20px ;
+    font-size: 20px;
+    margin-top: 1rem;
 }
-<<<<<<< HEAD
-
 #casas{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   height: 800px;
-
-}
-=======
->>>>>>> 57c85f7dc75388519fae36924da1359400ead17b
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+ }
