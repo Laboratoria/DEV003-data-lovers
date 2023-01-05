@@ -1,6 +1,14 @@
-import { example } from './data.js';
+import { obtenerData } from './data.js';
 // import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+obtenerData();
+const peliculas= obtenerData();
+console.log(peliculas);
 
-console.log(example, data);
+function llenarLista(){
+    const lugarDelista = document.getElementById("idlista");
+
+//     for(...){
+//         lugarDelista.innerHTML += `<li> <h4> ${peliculas[i].title} </h4> </li>`
+//     }
+
+}
