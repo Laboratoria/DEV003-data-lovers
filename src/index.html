@@ -3,16 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" /> 
   </head>
- 
   <body>
-    <h1>Busca a tu personaje favorito</h1>
-    <input type= "text" id="informationbox" placeholder="Nombre completo de tu personaje">
-    <button id="search"> Buscar</button>
-  
-    
-    <div id="root"></div>
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <div id = "menuInicial">
+      <ul>
+        <li><a href="casas.html">Houses</a></ahref></a></li>
+        <li><a href="#">Books</a></a></li>
+        <li><a href="#">Patronus</a></a></li>
+      </ul>
+    </div>
+
+
+    <div id="informacion1">
+      <h1 id="buscador">Search for your favourite character</h1> 
+      <input type= "text" id="informationbox" placeholder="Nombre completo de tu personaje">
+      <button id="search"> Search </button>
+    </div>
+      
+      <div id="root"></div>
+      <span id="mensajeUsuario"></span>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
