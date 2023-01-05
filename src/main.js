@@ -29,6 +29,9 @@ buttonPokedex.addEventListener("click", function () {
   const getCards = orderByOption(option1);
   document.querySelector('[value="1"]').checked = true;
   createCard(getCards);
+
+  
+ // document.createElement();
   //console.log(data);
 })
 
@@ -784,20 +787,30 @@ popUpClick.addEventListener("click", (e) => {
 
 
 //onclick="topFunction()"
-myBtn.addEventListener('click',()=>{
+btnUp.addEventListener('click',()=>{
   // When the user clicks on the button, scroll to the top of the documentno
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 
 })
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = () => {
+  if (window.scrollY < 300) {
+  scrollFunction()
+  }
+};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
+const scrollFunction = () => {
+  /*if (window.scrollY < 300) {
+    btn_scrolltop.classList.remove("btn-scrolltop-on")
   } else {
-    document.getElementById("myBtn").style.display = "none";
+    btn_scrolltop.classList.add("btn-scrolltop-on")
+  }*/
+  
+  if (document.body.scrollTop >= 20 || document.documentElement.scrollTop >= 20) {
+    document.getElementById("btnUp").style.display = "block";
+  } else {
+    document.getElementById("btnUp").style.display = "none";
   }
 }
 

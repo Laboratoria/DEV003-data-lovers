@@ -8,6 +8,11 @@ body {
     font-size: 20px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 .boxHeader {
     box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
     width: 100%;
@@ -254,12 +259,12 @@ table{
 
 
 
-#myBtn {
+.cbtnUpShow {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija */
     bottom: 20px; /* Coloque el botón en la parte inferior de la página. */
     right: 30px; /* Coloca el botón 30px de la derecha. */
-    z-index: 99; /* Asegúrese de que no se superponga */
+    z-index: 1; /* Asegúrese de que no se superponga */
     border: none; /* Quitar bordes */
     outline: none; /* Quitar contorno*/
     background-color: black; /* Establecer un color de fondo */
@@ -268,9 +273,18 @@ table{
     padding: 15px; /* Algo de relleno */
     border-radius: 10px; /* Esquinas redondeadas */
     font-size: 18px; /* Aumenta el tamaño de la fuente */
+   /* transition: 0.3s;
+    transform: translateY(100px);*/
+    
   }
   
-  #myBtn:hover {
+  #btnUp:hover {
     background-color: #555; /* Añadir un fondo gris oscuro en el hover */
+  }
+
+
+  
+  .cbtnUpShowOn {
+    transform: translateY(0);
   }
 
