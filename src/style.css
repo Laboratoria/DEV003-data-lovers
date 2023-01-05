@@ -327,7 +327,7 @@ iframe{
 
 /*End characters styles*/
 /*spells styles*/
-.spells-container {
+.letters-container {
   margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(13, 1fr);
@@ -347,6 +347,21 @@ iframe{
   transform: scale(1.02);
   color: var(--kumera-color);
   text-decoration-color: var(--text-color);
+}
+
+
+.spell-style{
+color:#946520;
+background-color: white;
+border-radius: 10px;
+padding: 20px;
+margin-left: 30px;
+margin-right: 30px;
+
+}
+
+/*.spells-not-found{
+  display: none;  
 }
 
 /*end spells styles*/
