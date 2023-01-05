@@ -11,7 +11,6 @@ header{
     justify-content: center;
 
 }
-
 .search{
     background-color: transparent;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -20,16 +19,12 @@ header{
     color: #7AD605;
     width: 350px;
 }
-
 .btnLupa{
     max-height: 30px;
     width: 40px;
     display: flex;
     justify-content: center;
-    
-
 }
-
 .buscador{
     background-color: black;
     display: flex;
@@ -37,11 +32,21 @@ header{
     max-height: 130px;
     padding-bottom: 2px;
 }
+select{
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+
 
 .containerPrinc{
     background-color: #6D7078;
     margin: 0;
 }
+
+
 
 .cardsTittle{
     font-family:Arial, Helvetica, sans-serif;
@@ -51,14 +56,12 @@ header{
     text-shadow: 10px;
     text-shadow: white; 
 }
-
 .cards{
     padding-top: 12px;
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px; 
 }
-
 .cardsDesign{
     background-color: black;
     color: #7AD605;
@@ -71,16 +74,46 @@ header{
     width: 300px;
     height: 520px;
 }
-
-
 .cardsImgs{
     width: 300px;
     height: 200px;
 }
-
 .cardsTxt{
     padding: 10px;
 }
+
+
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    justify-content: center;
+    gap: 35px;
+}
+.container h1{
+    color: #534d4d;
+    font-size: 38px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+.cardMold{
+    width: 300px;
+    height: 600px;
+    background-color:#a4b88a;
+    border-radius: 4px;
+}
+h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: #706969;
+}
+
+
 
 .total{
     background-color: #525457;
@@ -92,33 +125,4 @@ header{
     width: 100%;
     bottom: 0;
     left: 0;
-    
-}
-
-#cards{
-    display: flex;
-    flex-wrap: wrap;
-    align-content:flex-start;
-    justify-content: center;
-    gap: 35px;
-}
-
-.container h1{
-    color: #7AD605;
-    font-size: 38px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-label{
-    color: #7AD605;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    display:flex;
-}
-
-select{
-    background-color: #9bf525;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    text-align: center;
 }

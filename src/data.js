@@ -1,5 +1,5 @@
 // estas funciones son de ejemplo
-import data from './data/rickandmorty/rickandmorty.js';
+//import data from './data/rickandmorty/rickandmorty.js';
 
 // export const example = () => {
 //   return 'example';
@@ -9,10 +9,9 @@ import data from './data/rickandmorty/rickandmorty.js';
 //   return 'OMG';
 // };
 
-export function showAllCharacters(){
+export function showAllCharacters(characters){
   document.getElementById("cards").innerHTML=("");
-  for (let character of data.results){
-    console.log(character.name);
+  for (let character of characters){
     //Crear card de molde para reutilizar
     let cardMold=document.createElement("div");
     //Agregando datos/categoría a mi card
@@ -42,13 +41,23 @@ export function showAllCharacters(){
     //Especie
     let species=document.createElement("h2");
     species.classList.add("species")
-    species.innerText= "Especie: " + character.species;
+    species.innerText= "Species: " + character.species;
     container.appendChild(species);
+
+    //Type
+    let type=document.createElement("h2");
+    type.classList.add("type")
+    type.innerText="Type: " + character['type'];
+    if (character.type) {
+      container.appendChild(type);
+    }
+    
+    console.log(character.type);
 
     //Género
     let gender=document.createElement("h2");
     gender.classList.add("gender")
-    gender.innerText= "Género: " + character.gender;
+    gender.innerText= "Gender: " + character.gender;
     container.appendChild(gender);
 
     //Estatus
@@ -60,13 +69,13 @@ export function showAllCharacters(){
     //Lugar de origen
     let origin=document.createElement("h2");
     origin.classList.add("origin")
-    origin.innerText= "Origen: " + character.origin.name;
+    origin.innerText= "Origin: " + character.origin.name;
     container.appendChild(origin);
 
     //Locaciones
     let locations=document.createElement("h2");
     locations.classList.add("location")
-    locations.innerText= "Última ubicación: " + character.location.name;
+    locations.innerText= "Last known location: " + character.location.name;
     container.appendChild(locations);
 
 
@@ -82,36 +91,28 @@ export function showAllCharacters(){
     document.getElementById("cards").appendChild(cardMold); //Anida en cards
   }
 }
-export function searchButton(){
-  const filtOpt=document.getElementById("filtMain").value;
-  const inpTxt=document.getElementById("searchInp").value;
-  console.log(filtOpt);
-  console.log(inpTxt);
-  filterData(data.results, inpTxt, filtOpt)
-}
 
 export function filterData(data, input, category) {
-
   const filterD=data.filter((character) => {
     console.log(character[category]); //Imprime todos los personajes
     //return character[category].toUpperCase()=="Rick"
     //return character[category].toLowerCase().includes(input.toLowerCase());
-    const dataLow=character[category].toLowerCase();
-    const ayuda=input.toLowerCase();
+    const selectOpt=character[category].toLowerCase(); //Opc seleccionada de select
+    const enteredTxt=input.toLowerCase(); //Txt ingresado en input
 
-    return dataLow.includes(ayuda);
+    return selectOpt.includes(enteredTxt);
+    //includes compara la data del select con el txt ingresado en el input
   })
-  //includes compara la data con el txt ingresado en el input
-  //data.includes(input);
-  console.log(filterD);
-}
-//Obtener valor de input txt en una variable
-//Arriba let x const porque no se reasigna
 
-//Otra funcion filterData 3 paráms: data, input, categor
-//filterData recibe toda la data y la regresa filtrada
+  console.log(filterD);
+  return filterD;
+
+}
+//Obtener valor de input txt en una variable---> Hecho
+
+//Function filterData 3 paráms: data, input, categor---> Hecho
+//filterData recibe toda la data y la regresa filtradas---> Hecho
 //Usar ejemplo que tngo en main.js
 
-  
 
-//export function filterData(data, filterType, string)
+//Agregar parám data a showCharacters, en vez de llamar data.results
