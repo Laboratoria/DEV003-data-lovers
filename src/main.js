@@ -599,6 +599,8 @@ const showInfoPokemon = (idPokemon) => {
 
   let container="";
   container = document.getElementById("scPopUp");
+  // limpiar el popup card cada que le demos click en un pokemon
+  document.getElementById("scPopUp").innerHTML = '';
   container.style.display = "block";
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
@@ -778,8 +780,6 @@ const popUpClick = document.querySelector(".cPopUp");
 //al enocntrar un evento click valida de que elemento fue
 popUpClick.addEventListener("click", (e) => {
   //console.log(e);
- // quiero bloquear la pantalla de atras
- //document.body.classList.toggle('modal-open');
   if (e.target.nodeName === 'BUTTON') {
     const containerClose = document.querySelector('.cPopUp');
     containerClose.removeChild(document.getElementById('divPopUp'));
@@ -795,11 +795,8 @@ myBtn.addEventListener('click',()=>{
   // When the user clicks on the button, scroll to the top of the document
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-
 })
-
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
