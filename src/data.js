@@ -1,13 +1,13 @@
 // estas funciones son de ejemplo
 import data from './data/rickandmorty/rickandmorty.js';
 
-export const example = () => {
-  return 'example';
-};
+// export const example = () => {
+//   return 'example';
+// };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
 
 export function showAllCharacters(){
   document.getElementById("cards").innerHTML=("");
@@ -87,10 +87,28 @@ export function searchButton(){
   const inpTxt=document.getElementById("searchInp").value;
   console.log(filtOpt);
   console.log(inpTxt);
+  filterData(data.results, inpTxt, filtOpt)
+}
+
+export function filterData(data, input, category) {
+
+  const filterD=data.filter((character) => {
+    console.log(character[category]); //Imprime todos los personajes
+    //return character[category].toUpperCase()=="Rick"
+    //return character[category].toLowerCase().includes(input.toLowerCase());
+    const dataLow=character[category].toLowerCase();
+    const ayuda=input.toLowerCase();
+
+    return dataLow.includes(ayuda);
+  })
+  //includes compara la data con el txt ingresado en el input
+  //data.includes(input);
+  console.log(filterD);
 }
 //Obtener valor de input txt en una variable
-//Otra funcion filterData 3 paráms: data, input, categor
 //Arriba let x const porque no se reasigna
+
+//Otra funcion filterData 3 paráms: data, input, categor
 //filterData recibe toda la data y la regresa filtrada
 //Usar ejemplo que tngo en main.js
 
