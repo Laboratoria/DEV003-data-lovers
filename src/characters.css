@@ -64,8 +64,6 @@ main {
 
 .showCharacters {
   width: 80vw;
-  background-color: blueviolet;
-  /* border: #abc solid 1px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,7 +86,9 @@ main {
 }
 
 .filters {
-  margin: 2rem;
+  margin: 4rem;
+  display: inline-block;
+  width: 80vw;
 }
 
 #gender {
@@ -123,4 +123,51 @@ main {
   background: rgba(165, 136, 34, 0.75);
   border: 0.1rem solid #000000;
   border-radius: 0.8rem;
+}
+
+.filtro {
+  display: none;
+}
+
+#buscador {
+  width: 17.5rem;
+  height: 3rem;
+  font-family: "Purple 3";
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+
+  color: #000000;
+
+  background: rgba(217, 217, 217, 0.9);
+  border: 0.1rem solid #000000;
+  border-radius: 0.8rem;
+}
+
+#buscador::placeholder {
+  background-image: url("./images/searchengin.svg");
+  background-size: 1.9rem 1.9rem;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+}
+
+#limpiar {
+  width: 8rem;
+  height: 3rem;
+  background-image: url("./images/borrador.png");
+  background-repeat: no-repeat;
+  background-size: 1.8rem 1.8rem;
+  background-position-y: center;
+  background-position-x: right;
+  background-color: transparent;
+  border: none;
+  font-family: "Purple 3";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #a58822;
+  margin-right: 60rem;
 }

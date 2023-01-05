@@ -72,3 +72,14 @@ function sortMe(items) {
     return 0;
   });
 }
+
+document.addEventListener("keyup", (e) => {
+  if (e.target.matches("#buscador")) {
+    if (e.key === "Escape") e.target.value = " ";
+    document.querySelectorAll(".character-card").forEach((character) => {
+      character.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+        ? character.classList.remove("filtro")
+        : character.classList.add("filtro");
+    });
+  }
+});
