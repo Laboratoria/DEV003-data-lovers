@@ -2,7 +2,7 @@ import data from './data/ghibli/ghibli.js';
 
 const dataGhibli = data.films
 
-function indexFilms(index) {
+function directorsFilms(index) {
   const container = document.querySelector(".container");
   container.innerHTML = index.map((item) =>
     `<div class = "card">
@@ -43,17 +43,45 @@ function titles (films) {
 }
 
 
-function inicio() {
+function directors() {
   document.querySelector(".dataFilms").style.display = "block";
+  document.querySelector(".homeView").style.display = "none";
   document.querySelector(".titles").style.display = "none";
-  indexFilms(dataGhibli);
+  document.querySelector("#main-content").style.display = "none";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "block";
+  document.querySelector("#main-content-directors").style.display = "none";
+  directorsFilms(dataGhibli);
 }
 
 function title() {
   document.querySelector(".dataFilms").style.display = "none";
+  document.querySelector(".homeView").style.display = "none";
+  document.querySelector("#main-content").style.display = "none";
   document.querySelector(".titles").style.display = "block";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "none";
+  document.querySelector("#main-content-directors").style.display = "block";
   titles(dataGhibli);
 }
 
-document.getElementById("titles").addEventListener("click",inicio)
-document.getElementById("direcprod").addEventListener("click",title)
+function home() {
+  document.querySelector(".dataFilms").style.display = "none";
+  document.querySelector(".titles").style.display = "none";
+  document.querySelector(".homeView").style.display = "block";
+  document.querySelector("#main-content").style.display = "flex";
+  document.querySelector(".swaying-icon").style.display = "block";
+  document.querySelector("#main-content-movies").style.display = "none";
+  document.querySelector("#main-content-directors").style.display = "none";
+}
+
+document.getElementById("titles").addEventListener("click",directors)
+document.getElementById("directors").addEventListener("click",title)
+document.getElementById("home").addEventListener("click",home)
+
+
+
+
+
+/*      ANOTHER EXTENSION   */ 
+

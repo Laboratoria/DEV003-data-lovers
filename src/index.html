@@ -6,15 +6,56 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body >
+    <div id="page-image-header"> 
+    </div>
     <header>
-      <button type="button" class="outline" id="index" value="Index">Index</button>
-      <button type="button" class="outline" id="titles" value="Titles">Titles</button>
+       <img src="./media/totoro.svg" alt="icon" class="swaying-icon">
+      <button type="button" class="outline" id="home" value="Home">Home</button>
+      <button type="button" class="outline" id="titles" value="Titles">Movies</button>
       <button type="button" class="outline" id="characters" value="Characters">Characters</button>
-      <button type="button" class="outline" id="direcprod" value="Director/Producer">Director/Producer</button>
-    </header>
+      <button type="button" class="outline" id="directors" value="Director/Producer">Director/Producer</button>
       
-    <section class = "indexView">
-      <div class="index"> </div>
+    </header>
+   
+ <!-- another extension HOME-->
+    <main id="main-content" class="page-sections">
+      <section class="page-section">
+        <h2 class="section-title" id="about">History</h2>
+        <p>Studio Ghibli was founded in 1985 in Tokyo by the three men, Isao Takahata, Toshio Suzuki and the well-known 
+          film producer Hayao Miyazaki. The name Studio Ghibli was based on the Arabic name for "hot sahara wind" because
+           the founders wanted Studio Ghibli to blow new wind through the anime industry.</p>
+        <ul>
+          <p>"I've already let go of [Spirited Away]. It was created with the support of so many people, so it doesn't belong to me. It belongs to everyone,"</p>
+          <h3>Hayao Miyazaki</h3>
+        </ul>
+      </section>
+      <div id="image-section">
+      </div>
+    </main>
+
+     <!-- another extension MOVIES -->
+     <main id="main-content-movies" class="page-sections-movies">
+      <section class="page-section-movies">
+        <h2 class="section-title" id="about-movies">Movies</h2>
+        <p>In this section youll find all the movies of the world of ghibli,
+          since the most new films that they have in their calendar.
+        </p>
+      </section>
+    </main>
+
+    <!-- another extension DIRECTORS -->
+    <main id="main-content-directors" class="page-sections-directors">
+      <section class="page-section-directors">
+        <h2 class="section-title" id="about-directors">Directors and Producers</h2>
+        <p>In this section youll find all the Directors  for each movie and producers also, take 
+          a look of all genious people who make these wonderfull films.
+        </p>
+      </section>
+    </main>
+
+<!--     bar menu sections js   -->
+    <section class = "homeView">
+      <div class="home"> </div>
     </section>
 
     <section class = "dataFilms">
@@ -29,6 +70,15 @@
       <div class="titlesContainer"> </div>
     </section>
 
+    <footer class="placeholder-section">
+      <p>
+        <a href="https://github.com/JOKI6696">JohanaGit</a>
+      </p>
+      <img class = "img-holder" src="./media/susuwatari.gif" alt="icon" >
+      <p>
+        <a href="https://github.com/JenifferVega">JenifferGit</a>
+      </p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
