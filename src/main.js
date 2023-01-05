@@ -284,8 +284,6 @@ buttonEvolution.addEventListener("click", function () {
           document.getElementById("evolutionP").focus;
         }
 
-
-
       }else{
         document.getElementById("evolutionP").value = '';
         createCard3(filterNameEvolution);
@@ -780,6 +778,8 @@ const popUpClick = document.querySelector(".cPopUp");
 //al enocntrar un evento click valida de que elemento fue
 popUpClick.addEventListener("click", (e) => {
   //console.log(e);
+ // quiero bloquear la pantalla de atras
+ //document.body.classList.toggle('modal-open');
   if (e.target.nodeName === 'BUTTON') {
     const containerClose = document.querySelector('.cPopUp');
     containerClose.removeChild(document.getElementById('divPopUp'));
@@ -790,6 +790,7 @@ popUpClick.addEventListener("click", (e) => {
 
 
 //onclick="topFunction()"
+const myBtn = document.getElementById("myBtn");
 myBtn.addEventListener('click',()=>{
   // When the user clicks on the button, scroll to the top of the document
   document.body.scrollTop = 0; // Para safari

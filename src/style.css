@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
     font-size: 20px;
 }
+/*
+body.modal-open {
+    pointer-events: none;
+  }*/
 
 .boxHeader {
     box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
@@ -23,7 +27,7 @@ figure {
     Border: solid #333 1px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
     Background: white;
-    Border-radius: 10px; /* radio del borde */
+    Border-radius: 15px; /* radio del borde */
     Height: 280px;
     margin: 10px auto;
 }
@@ -55,6 +59,7 @@ figure {
     text-align: center;
     box-align: center;
     overflow: auto;
+    pointer-events: auto;
 }
 
 
