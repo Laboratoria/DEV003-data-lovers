@@ -41,20 +41,8 @@ genderFilter.addEventListener("change", (e) => {
 houseFilter.addEventListener("change", (e) => {
   charactersDiv.replaceChildren();
   filtered = characters.filter((character) => {
-    if (!character.house && e.target.value === "null") {
-      return true;
-    } else {
-      return character.house === e.target.value;
-    }
+    return String(character.house) === e.target.value;
   });
-
-  //si characters.house === null devuelve null
-  //else devuelve e.target.value
-  // if (character.house === e.target.value) {
-  //     return true;
-  //   } else {
-  //     return character.house === null;
-  //   }
 
   filtered.map((character) => {
     createCharEl(character);
