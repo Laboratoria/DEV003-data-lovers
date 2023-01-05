@@ -9,9 +9,18 @@
   <img id="headerImg" class="headerImg" src="./img/header.PNG" width="100%" alt="">
 </header>
 <div class="buscador">
-  <input type="text" placeholder="Buscar por categoría, ej. 'Alive'" class="search">
+  <input type="text" placeholder="Buscar por categoría, ej. 'Alive'" class="search" id="searchInp">
   
-  <div class="rdContainer">
+  <select name="filterMain" id="filtMain">
+    <option value="name" selected>Name</option>
+    <option value="species">Species</option>
+    <option value="status">Status</option>
+    <option value="origin">Origin</option>
+    <option value="location">Last known location</option>
+    <option value="episode">Episodes</option>
+  </select>
+
+  <!-- <div class="rdContainer">
     <div class="rdBtns">
     <input type="radio" id="rdOptions" name="rdOpt" value="nombre">
     <label for="nombre">Nombre</label>
@@ -41,7 +50,7 @@
     <input type="radio" id="rdOptions" name="rdOpt" value="episodios">
     <label for="episodios">Episodios</label>
     </div>
-  </div>
+  </div> -->
 
   <button type="button" id="searchBtn"><img src="./img/lupa.png" alt="" class="btnLupa" id="lupa"></button>
 </div>
