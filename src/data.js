@@ -1,12 +1,40 @@
-// estas funciones son de ejemplo
-import dataPokemons from "./main.js";
-const elemento = document.getElementById("filtroTipo");
-export const filtroData = dataPokemons.filter(dataPokemons =>data.type === elemento) {
-  return filtroData;
-  console.log(filtroData)
-} 
+// funcion de ordenar para exportarla en main
+export function ordenarAlfabeto(pokemons, orden){
+  const organizadorSeleccionado = orden
+  const ordenarDataAZ = pokemons.slice().sort((a,b) =>{
+    if (a.name.toLowerCase() < b.name.toLowerCase()){ 
+      return -1;
+    }
+    if (a.name.toLowerCase() > b.name.toLowerCase()){ 
+      return 1;
+    }
+    return 0;
+  });
+  const ordenarDataZA = pokemons.slice().sort((a,b) =>{
+    if (a.name.toLowerCase() > b.name.toLowerCase()){ 
+      return -1;
+    }
+    if (a.name.toLowerCase() < b.name.toLowerCase()){ 
+      return 1;
+    }
+    return 0;
+  });
 
+  if (organizadorSeleccionado === "aZ"){
+    return ordenarDataAZ;
+  }
+  else if (organizadorSeleccionado === "zA"){
+    return ordenarDataZA;
+  }
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  else {
+    return "";
+  }
+}
+
+// funcion de filtrar
+export function filtroData (pokemons, condicion) {
+  const elementoTipo = condicion
+  const nuevaData = pokemons.filter((element) => element.type == elementoTipo);
+  return nuevaData;
+}
