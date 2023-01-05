@@ -124,3 +124,31 @@ main {
   border: 0.1rem solid #000000;
   border-radius: 0.8rem;
 }
+
+.filtro {
+  display: none;
+}
+
+#buscador {
+  width: 12.5rem;
+  height: 3rem;
+  font-family: "Purple 3";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-align: left;
+
+  color: #000000;
+
+  background: rgba(217, 217, 217, 0.9);
+  border: 0.1rem solid #000000;
+  border-radius: 0.8rem;
+}
+
+.search {
+  position: absolute;
+  left: 4.72%;
+  right: 88.19%;
+  top: 20%;
+  bottom: 20%;
+}
