@@ -25,8 +25,6 @@ export function showAllCharacters(characters){
     cardImg.appendChild(img); //Anida img en cardImg
     cardMold.appendChild(cardImg); //Anida en cardMold
 
-    
-
     //Mostrando nombre
     //Creando div para contenedor de nombre
     let container=document.createElement("div");
