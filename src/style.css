@@ -234,10 +234,7 @@ button.outline:active {
 }
 
 .data {
-  background: linear-gradient(
-    rgba(270, 250, 243, 0.85),
-    rgba(270, 250, 243, 0.85)
-  );
+  background: whitesmoke;
   border-radius: 10px;
   padding: 1.2rem;
   font-size: 1.2rem;
@@ -487,3 +484,45 @@ a{
   color: white;
   font-size: medium;
 }
+
+/*Vista Characters*/
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(18rem, 20rem), 1fr));
+    font-size: 1.5rem;
+    gap: 3rem;
+}
+.cardCharacter {
+    border-radius: 1rem 10rem 1rem 1rem;
+    background:whitesmoke;
+    margin: 2rem;
+    gap: 1rem;
+    box-shadow: 0 5px 10px #000;
+}
+.imgCharacter img {
+    border-radius: 50%;
+    width: 16rem;
+    height: 16rem;
+    object-fit: fill;
+    border: 0.2rem solid rgba(17, 116, 196, 0.874);
+}
+ .imgCharacter {
+    margin-left: 1.5rem;
+    margin-top: -1rem;
+ }
+ .dataCharacter .name {
+    font-weight: bold;
+    text-align: center;
+    position: initial;
+    width: 100%;
+    color: rgb(0, 0, 0);
+ }
+ .characterList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+ }
+ .characterList li {
+  list-style: none;
+}
+ /*End Vista Characters*/

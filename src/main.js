@@ -42,11 +42,47 @@ function titles (films) {
   ).join('')
 }
 
+//Vista Characters
+function charactersView(index) {
+  const container = document.querySelector(".characters");
+  container.innerHTML = index.map((item) =>
+    `<div class = "cardCharacter">
+          <div class = "imgCharacter">
+            <img src = "${item.img}"></img>
+          </div>
+          <div class = "dataCharacter">
+            <p class = "name">${item.name}</p>
+          </div>
+          <ul class = "characterList">
+            <li><p class = "gender"> <strong>Gender:</strong> &nbsp ${item.gender}</p></li>
+            <li><p class = "age"> <strong>Age:</strong> &nbsp ${item.age}</p></li>
+            <li><p class = "eyeColor"> <strong>Eye color:</strong> &nbsp ${item.eye_color}</p></li>
+            <li><p class = "hairColor"> <strong>Hair color:</strong> &nbsp ${item.hair_color}</p></li>
+            <li><p class = "specie"> <strong>Specie:</strong> &nbsp ${item.specie}</p></li>
+          </ul>
+      </div>`
+  ).join('')
+}
+const peopleArr = dataGhibli.map(ppl=>ppl.people).flat(1)
+
+function characters() {
+  document.querySelector(".dataFilms").style.display = "none";
+  document.querySelector(".homeView").style.display = "none";
+  document.querySelector(".titles").style.display = "none";
+  document.querySelector(".charactersView").style.display = "block";
+  document.querySelector("#main-content").style.display = "none";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "block";
+  document.querySelector("#main-content-directors").style.display = "none";
+  charactersView(peopleArr);
+}
+
 
 function directors() {
   document.querySelector(".dataFilms").style.display = "block";
   document.querySelector(".homeView").style.display = "none";
   document.querySelector(".titles").style.display = "none";
+  document.querySelector(".charactersView").style.display = "none";
   document.querySelector("#main-content").style.display = "none";
   document.querySelector(".swaying-icon").style.display = "none";
   document.querySelector("#main-content-movies").style.display = "block";
@@ -57,6 +93,7 @@ function directors() {
 function title() {
   document.querySelector(".dataFilms").style.display = "none";
   document.querySelector(".homeView").style.display = "none";
+  document.querySelector(".charactersView").style.display = "none";
   document.querySelector("#main-content").style.display = "none";
   document.querySelector(".titles").style.display = "block";
   document.querySelector(".swaying-icon").style.display = "none";
@@ -69,15 +106,17 @@ function home() {
   document.querySelector(".dataFilms").style.display = "none";
   document.querySelector(".titles").style.display = "none";
   document.querySelector(".homeView").style.display = "block";
+  document.querySelector(".charactersView").style.display = "none";
   document.querySelector("#main-content").style.display = "flex";
   document.querySelector(".swaying-icon").style.display = "block";
   document.querySelector("#main-content-movies").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "none";
 }
 
-document.getElementById("titles").addEventListener("click",directors)
-document.getElementById("directors").addEventListener("click",title)
 document.getElementById("home").addEventListener("click",home)
+document.getElementById("titles").addEventListener("click",directors)
+document.getElementById("characters").addEventListener("click",characters)
+document.getElementById("directors").addEventListener("click",title)
 
 
 
