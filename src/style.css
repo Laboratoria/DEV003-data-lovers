@@ -17,7 +17,7 @@ body.modal-open {
     width: 100%;
     display: flex; /* se va a mostrar con flexibilidad en la pagina o dispositivo*/
     justify-content: center;
-    padding: 5px; /* es el espacio entre el contenido y el borde */
+    padding: 5px; /* es el espacio entre el contenido y el borde del rectangulo */
     background: #E30000;
     height: 150px;
 }

@@ -262,7 +262,10 @@ buttonEvolution.addEventListener("click", function () {
           document.getElementById("evolutionP").value = '';
           document.getElementById("evolutionP").focus;
         }
-      } else {
+
+
+
+      }else{
         document.getElementById("evolutionP").value = '';
         createCard3(filterNameEvolution);
         // alert('Enter the name of the pokemon you want to see the evolutions');
@@ -694,15 +697,12 @@ popUpClick.addEventListener("click", (e) => {
 
 //onclick="topFunction()"
 const myBtn = document.getElementById("myBtn");
-myBtn.addEventListener('click', () => {
+myBtn.addEventListener('click',()=>{
   // When the user clicks on the button, scroll to the top of the document
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-
 })
-
-window.onscroll = function () { scrollFunction() };
-
+window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
