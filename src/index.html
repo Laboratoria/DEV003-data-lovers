@@ -16,22 +16,45 @@
       
     </header>
 
+<!-- SECCION SOMBRERITO -->
     <img src="./images/sortin hat.gif" class="sombrero">
     <img src="./images/globodialogo.png" class="globo">
     
     <span class="textoglobo"> Welcome to the Wizard World of Harry Potter, I will be with you in this journey </span>
     <div class="espacio"></div>
     
-    <div class="btn-home">
-      <a href="./potions.html" class="btn">Potions</a>
-      <a href="#" class="btn">FunFacts</a>
-      <a href="./characters.html" class="btn">Characters</a>
-      <a href="#" class="btn">Spells</a>
-      <a href="#" class="btn">Books</a>
+    <main>
+      <!-- SECCION MENU -->
+      <nav class="navbar">
+      <a href="./potions.html" class="potions">Potions</a>
+      <a href="#" class="funfacts">FunFacts</a>
+      <a href="#" class="characters">Characters</a>
+      <a href="#" class="spells">Spells</a>
+      <a href="#" class="books">Books</a>
+      </nav>
+      <!-- SECCION FILTROS -->
+      <section class="filters">
+          <select name="genero" id="gender">
+              <option selected=" " disabled=" ">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+          <select name="casas" id="house">
+              <option selected=" " disabled=" ">House</option>
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="null">None</option>
+          </select>
+          <input type="reset" class="reset" id="limpiar"></input>
+          <input type="text" id="buscador" placeholder="Search"></input>
+      </section>
+      <!-- SECCION DINAMICA -->
+      <section class="showCharacters"></section>
 
-    </div>
-    
-    <section .tarjeta></section>
-    <!-- <script src="main.js" type="module"></script> -->
+  </main>
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>
