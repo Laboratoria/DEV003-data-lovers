@@ -304,9 +304,6 @@ ul:not(.menu) {
   list-style-type: disc;
   margin-left: var(--space);
 }
-ul:not(.menu) > li + li {
-  margin-top: var(--space);
-}
 
 .nav-sections {
   position: sticky;
