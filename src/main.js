@@ -21,15 +21,15 @@ function buscar() {
 
       getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
 
-    if (personajes[i].name.toUpperCase() === name.toUpperCase()) {
-      const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house
-      // alert(mensaje)
+      if (personajes[i].name.toUpperCase() === name.toUpperCase()) {
+        const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house;
+        // alert(mensaje)
 
-      getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
+        getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
+      }
     }
   }
 }
-
 function getDivMensajeUsuario() {
   return document.getElementById("mensajeUsuario")
 }
