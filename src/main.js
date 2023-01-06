@@ -1,8 +1,8 @@
 //importamos funciones de la hoja de data.js
 import { getDataPokemon, orderByOption, filterData, evolutions } from './data.js'; 
-import pokemon from './data/pokemon/pokemon.js';
+//import pokemon from './data/pokemon/pokemon.js';
 
-
+const buttonHome = document.getElementById('buttonHome')
 buttonHome.addEventListener("click", function () {
   document.getElementById("scIntroduction").style.display = "block";
   document.getElementById("scPokedex").style.display = "none";
@@ -14,6 +14,7 @@ buttonHome.addEventListener("click", function () {
   document.getElementById("scSearch").style.display = "none";
 });
 
+const buttonPokedex = document.getElementById('buttonPokedex')
 buttonPokedex.addEventListener("click", function () {
   document.getElementById("scPokedex").style.display = "block";
   document.getElementById("scShowAllPokemon").innerHTML = '';
@@ -48,6 +49,7 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
 ))
 
 //funciones dentro de la pagina de Search
+const buttonSearch = document.getElementById('buttonSearch')
 buttonSearch.addEventListener("click", () => {
   document.getElementById("scSearch").style.display = "block";
   document.getElementById("scIntroduction").style.display = "none";
@@ -280,75 +282,8 @@ evolutionTextBox.addEventListener("keyup",function(e){
 const evolutionButton = document.getElementById('evolutionButton');
 evolutionButton.addEventListener('click', functionEvolution);
 
-
-/*
-  //funcion con Enter que va a mostrar las evoluciones del pokemon  
-  const evolutionTextBox = document.getElementById("evolutionP");
-  evolutionTextBox.addEventListener("keyup",function(e){
-    const keycode = (e.key);
-    if(keycode ==='13' || keycode ==='Enter'){
-   
-      if(evolutionTextBox.value!==''){
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "flex";
-        const value = document.getElementById("evolutionP").value.toLowerCase();
-        const dataname = "name";
-        const filterNameEvolution = evolutions(dataname, value);
-  
-        if(filterNameEvolution !== null || filterNameEvolution !==undefined || filterNameEvolution!==[] || filterNameEvolution !=='' || filterNameEvolution !==0 || filterNameEvolution !==NaN){
-          createCard3(filterNameEvolution);
-          document.getElementById("evolutionP").value = '';
-          document.getElementById("evolutionP").focus;
-        }else{
-          document.getElementById("evolutionP").value = '';
-          document.getElementById("evolutionP").focus;
-        }
-
-      }else{
-        document.getElementById("evolutionP").value = '';
-        createCard3(filterNameEvolution);
-        // alert('Enter the name of the pokemon you want to see the evolutions');
-        document.getElementById("scShowAllPokemon").innerHTML = '';
-        document.getElementById("scShowAllPokemon").style.display = "none";
-        document.getElementById("evolutionP").value = '';
-        document.getElementById("evolutionP").focus;
-      }
-    }
-  }) 
-
-  //funcion con boton que va a a mostrar las evoluciones del pokemon
-  evolutionButton.addEventListener('click', () => {
-
-    //validando que ingrese nombre a buscar
-    if(evolutionP.value!==''){
-      document.getElementById("scShowAllPokemon").innerHTML = '';
-      document.getElementById("scShowAllPokemon").style.display = "flex";
-      const value = document.getElementById("evolutionP").value.toLowerCase();
-      const dataname = "name";
-  
-      const filterNameEvolution = evolutions(dataname, value);
-      console.log(filterNameEvolution);
-      if(filterNameEvolution !== null || filterNameEvolution !=='undefined' || filterNameEvolution!==[]){
-        createCard3(filterNameEvolution);
-        document.getElementById("evolutionP").value = '';
-        document.getElementById("evolutionP").focus;
-      }else{
-        document.getElementById("evolutionP").value = '';
-        document.getElementById("evolutionP").focus;
-      }
-          
-
-    }else{  
-      // alert('Enter the name of the pokemon you want to see the evolutions');
-      document.getElementById("scShowAllPokemon").innerHTML = '';
-      document.getElementById("scShowAllPokemon").style.display = "none";
-      document.getElementById("evolutionP").value = '';
-      document.getElementById("evolutionP").focus;
-        
-    }
-  }) */
-
 //funciones dentro de la pagina de SpawRate
+const buttonSpawRate = document.getElementById('buttonSpawRate')
 buttonSpawRate.addEventListener("click", function () {
   document.getElementById("scSpawRate").style.display = "block";
   document.getElementById("scEvolution").style.display = "none";
@@ -432,10 +367,6 @@ buttonSpawRate.addEventListener("click", function () {
 
   })
 })
-
-
-
-
 
 //cuando de click al card para mostrar data completa
 //1 debe tomar el card.id

@@ -1,4 +1,5 @@
 import data from './data/pokemon/pokemon.js'; // importamos la data de la carpeta
+// hacker edition
 /*fetch("./data/pokemon/pokemon.json")
   .then(response => response.json())
   .then(json => {
@@ -33,11 +34,9 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
     pokemonSortBy.sort((a, b) => b.encounter["base-capture-rate"].localeCompare(a.encounter["base-capture-rate"])); 
     range = pokemonSortBy.filter(pasarDataP => pasarDataP.encounter["base-capture-rate"]!=='not in capture');
     pokemonSortBy = range.slice(0,10); 
-     
   }
   // console.log(pokemonSortBy);
   return pokemonSortBy;
-  
 };
 
 export const evolutions = (filterBy, condition ) => {
@@ -46,7 +45,7 @@ export const evolutions = (filterBy, condition ) => {
   //y retona ese array
   const pokemonArray = data['pokemon'];
   let result = [];
-  let array = [];
+  const array = [];
   let resultPrev = [];
   let resultPrev2 = [];
   let resultNext =[];
@@ -54,19 +53,17 @@ export const evolutions = (filterBy, condition ) => {
   let resultEvolutions =[];
 
   if(filterBy === 'name'){
-    //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
     /*array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-
     const arrayVacio = (arr) => !array.isArray(arr) || arr.length === 0;
     if(arrayVacio!==true){
       result=array;
     }*/
-   if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
-    result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-    // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
-    //console.log(result);
-    //if (result!=='' || result!== undefined || result !==0 || result !==null || result !==NaN || result !==[] || result.length !== 0){ 
-    //if (result!=='' || result!== undefined || result !==0 || result !==null){ 
+    if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
+      result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+      // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
+      //console.log(result);
+      //if (result!=='' || result!== undefined || result !==0 || result !==null || result !==NaN || result !==[] || result.length !== 0){ 
+      //if (result!=='' || result!== undefined || result !==0 || result !==null){ 
       if (result[0]['evolution']['prev-evolution']!==undefined){
         if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
       
@@ -108,7 +105,7 @@ export const evolutions = (filterBy, condition ) => {
       //console.log(pre); 
       //console.log(next); 
     }else{
-      result = [];
+      result = array;
       resultEvolutions = result ;
     }
   }

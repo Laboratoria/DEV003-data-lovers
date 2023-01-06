@@ -3,8 +3,8 @@ import { example, anotherExample } from '../src/data.js';
 
 describe('example', () => {
   //una funcion un return no funciona lo de abajo mucho
- // it('is a function', () => {
-   // expect(typeof example).toBe('function');
+  // it('is a function', () => {
+  // expect(typeof example).toBe('function');
   //});
 
   it('returns `example`', () => {
