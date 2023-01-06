@@ -19,10 +19,10 @@ header {
 }
 
 .titulo {
-  margin: 2rem;
-  padding: 2rem;
-  width: 42.8rem;
-  height: 14rem;
+  margin: 20px;
+  padding: 20px;
+  width: 428px;
+  height: 140px;
 }
 
 main {
@@ -32,12 +32,12 @@ main {
 }
 
 .navbar {
-  padding: 1rem 3.5rem 1rem 3.5rem;
+  padding: 10px 35px 10px 35px;
   font-family: "Purple 3";
   font-size: 3.2rem;
   background: rgba(0, 0, 0, 0.8);
-  border: 0.1rem solid #c5a227;
-  border-radius: 1rem;
+  border: 1px solid #c5a227;
+  border-radius: 10px;
   width: 80vw;
 }
 
@@ -46,21 +46,10 @@ main {
   margin: 5%;
 }
 
-.potions {
+.potions, .funfacts, .spells, .books {
   text-decoration: none;
 }
 
-.funfacts {
-  text-decoration: none;
-}
-
-.spells {
-  text-decoration: none;
-}
-
-.books {
-  text-decoration: none;
-}
 
 .showCharacters {
   width: 80vw;
@@ -72,57 +61,49 @@ main {
 .character-card {
   background-color: #c5a227;
   width: 10vw;
-  height: 200px;
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 0.8rem;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .character-info li {
   list-style: none;
   font-size: medium;
   font-family: "Purple 3";
-  margin: 0.5rem;
+  margin: 5px;
 }
 
 .filters {
-  margin: 4rem;
+  margin: 40px;
   display: inline-block;
   width: 80vw;
 }
 
 #gender {
-  width: 12.5rem;
-  height: 3rem;
-
+  width: 125px;
+  height: 30px;
   font-family: "Purple 3";
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.6rem;
   text-align: left;
-
   color: #000000;
-
   background: rgba(165, 136, 34, 0.75);
-  border: 0.1rem solid #000000;
-  border-radius: 0.8rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }
 
 #house {
-  width: 12.5rem;
-  height: 3rem;
-
+  width: 125px;
+  height: 30px;
   font-family: "Purple 3";
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.6rem;
   text-align: left;
-
   color: #000000;
-
   background: rgba(165, 136, 34, 0.75);
-  border: 0.1rem solid #000000;
-  border-radius: 0.8rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }
 
 .filtro {
@@ -130,34 +111,32 @@ main {
 }
 
 #buscador {
-  width: 17.5rem;
-  height: 3rem;
+  width: 175px;
+  height: 30px;
   font-family: "Purple 3";
   font-weight: 400;
   font-size: 1.5rem;
   text-align: center;
-
   color: #000000;
-
   background: rgba(217, 217, 217, 0.9);
-  border: 0.1rem solid #000000;
-  border-radius: 0.8rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }
 
 #buscador::placeholder {
   background-image: url("./images/searchengin.svg");
-  background-size: 1.9rem 1.9rem;
+  background-size: 19px 19px;
   background-repeat: no-repeat;
   background-position-y: center;
-  background-position-x: 0.5rem;
+  background-position-x: 5px;
 }
 
 #limpiar {
-  width: 8rem;
-  height: 3rem;
+  width: 85px;
+  height: 30px;
   background-image: url("./images/borrador.png");
   background-repeat: no-repeat;
-  background-size: 1.8rem 1.8rem;
+  background-size: 18px 18px;
   background-position-y: center;
   background-position-x: right;
   background-color: transparent;
@@ -165,9 +144,8 @@ main {
   font-family: "Purple 3";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1.8rem;
   text-align: center;
   color: #a58822;
-  margin-right: 60rem;
+  margin-right: 40vw;
 }
