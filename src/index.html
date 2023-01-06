@@ -13,32 +13,32 @@
     </header>
     <nav class="caja-opciones">
       <a class="button-inicio mainbutton " href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
-      <input class="button-inicio mainbutton " type="button" value="Elige al Azar" id="randomBtn">
+      <input class="button-inicio mainbutton" type="button" value="Elige al Azar" id="randomBtn">
       <!--div para generar nav, definir id -->
-      <select id="orderYear" class="select-year mainbutton">
-        <option id="allYear" class="mainbutton ">Ordenar por año de emisión</option>
-        <option id="upward ">Ascendente</option>
-        <option id="downward ">Descendente</option>
+      <select value="orderYear" class="select-year mainbutton">
+        <option value="allYear" class="mainbutton ">Ordenar por año de emisión</option>
+        <option value="upward ">Ascendente</option>
+        <option value="downward ">Descendente</option>
       </select>
 
-      <select id="orderDirector" class="select-director mainbutton">
-        <option id="allDirector">Ordenar por Director</option>
-        <option id="Miyazaki">Hayao Miyazaki</option>
-        <option id="Takahata">Isao Takahata</option>
-        <option id="Kondo">Yoshifumi Kondō</option>
-        <option id="Morita">Hiroyuki Morita</option>
-        <option id="Goro">Gorō Miyazaki</option>
-        <option id="Yonebayashi">Hiromasa Yonebayashi</option>
+      <select value="orderDirector" class="select-director mainbutton">
+        <option value="allDirector">Ordenar por Director</option>
+        <option value="Miyazaki">Hayao Miyazaki</option>
+        <option value="Takahata">Isao Takahata</option>
+        <option value="Kondo">Yoshifumi Kondo</option>
+        <option value="Morita">Hiroyuki Morita</option>
+        <option value="Goro">Gorō Miyazaki</option>
+        <option value="Yonebayashi">Hiromasa Yonebayashi</option>
         
       </select>
-      <select id="orderCharacter" class="select-character mainbutton">
-        <option id="allCharacter">Ordenar por especie</option>
-        <option id="">A</option>
-        <option id="">b<b></b></option>
+      <select value="orderCharacter" class="select-character mainbutton">
+        <option value="allCharacter">Ordenar por especie</option>
+        <option value="">A</option>
+        <option value="">b<b></b></option>
       </select>
     </nav>
 
-    <div class="all-movies-cards" id="">
+    <div class="all-movies-cards" id=""> 
       <div class="show-cards">
         <!--div donde se mostrara el output del innerHtml-->
       <ol id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </ol>

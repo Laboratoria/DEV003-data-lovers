@@ -83,7 +83,7 @@ a{
 }
 .show-cards{
     font-family: 'Roboto';
-    flex-wrap: wrap;
+    display: flex;
     background-color: rgb(42, 92, 99);
     color: #fff;
     margin-bottom: 3%;
@@ -91,9 +91,12 @@ a{
     align-items: stretch;
 }
 .tarjetas{
+/*    flex-direction: row;*/
+/*   display: flex;*/
     margin-bottom: 3%;
     padding: 3%;
 }
-img {
+.poster {
+    display: flex;
     padding: 3%;
 }

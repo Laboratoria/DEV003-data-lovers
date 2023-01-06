@@ -1,18 +1,26 @@
 import data from './data/ghibli/ghibli.js'
 const dataMovies = data.films;
-//funciona pero toma todos los elementos del array, lo muestra como un objeto 
-
-export const Miyazaki = dataMovies.filter(function(dataMovies){
-  return dataMovies.director === 'Hayao Miyazaki'
-}
-else if ()
-
-);
-
 // como mejorar la funcion para cada uno de los directores
-/* export const Miyazaki = dataMovies.filter((dataMovies) => {
-  return dataMovies.director === 'Hayao Miyazaki'
+export const Miyazaki = dataMovies.filter(function(film){
+  return film.director === 'Hayao Miyazaki'
 });
 
-//funcionando, retorna solo peliculas de miyazaki pero el array  */
+export const Takahata = dataMovies.filter(function(film){
+  return film.director === 'Isao Takahata'
+});
+export const Kondo = dataMovies.filter(function(film){
+  return film.director === 'Yoshifumi Kondo'
+});
+/*
+Hiroyuki Morita
+Goro Miyazaki
+Hiromasa Yonebayashi
+*/
 
+//funcion para ordenar años de lanzamiento asc y desc realiza la comparacion
+export function sortMoviesA (a, b){
+  if (a.release_date < b.release_date) 
+  {return -1;}
+  if (a.release_date > b.release_date) {return 1;}
+  return 0;
+};
