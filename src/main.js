@@ -1,6 +1,5 @@
 //importamos funciones de la hoja de data.js
 import { getDataPokemon, orderByOption, filterData, evolutions } from './data.js'; 
-//import pokemon from './data/pokemon/pokemon.js';
 
 const buttonHome = document.getElementById('buttonHome')
 buttonHome.addEventListener("click", function () {
@@ -106,7 +105,7 @@ buttonSearch.addEventListener("click", () => {
 
 
   // funcion para mostrar la data del filtro por type
-  select.addEventListener('change', (e) => {
+  select.addEventListener('change', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
     //traemos el contenido de la lista (text)
@@ -114,7 +113,7 @@ buttonSearch.addEventListener("click", () => {
     //lo pasamos a minusculas para buscar igual como esta en la data
     const typeSelected = typeSelect.toLowerCase();
     //llamamos la funcion filtrar y le mandamos el dato a buscar y el valor a comparar
-    const filterDataBy = filterPokemons('type', typeSelected);
+    filterPokemons('type', typeSelected);
   });       
   
   //array donde guardamos solo las debilidaes del pokemon
@@ -164,7 +163,7 @@ buttonSearch.addEventListener("click", () => {
   });
 
   // funcion para mostrar la data del filtro por weaknesses
-  selectW.addEventListener('change', (e) => {
+  selectW.addEventListener('change', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
     //traemos el contenido de la lista (text)
@@ -172,20 +171,21 @@ buttonSearch.addEventListener("click", () => {
     //lo pasamos a minusculas para buscar igual como esta en la data
     const typeSelectedW = typeSelectW.toLowerCase();
     //llamamos la funcion filtrar y le mandamos el dato a buscar y el valor a comparar
-    const filterDataByW = filterPokemons('weaknesses', typeSelectedW);
+    filterPokemons('weaknesses', typeSelectedW);
   }); 
 
 
   // Traer funcion para mostrar la data del filtro por region
-  regionPokemon.addEventListener('change', (e) => {
+  const regionP = document.getElementById('regionPokemon')
+  regionP.addEventListener('change', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
     //traemos el contenido de la lista (text)
-    const typeSelect = regionPokemon.options[regionPokemon.selectedIndex].text;
+    const typeSelect = regionP.options[regionP.selectedIndex].text;
     //lo pasamos a minusculas para buscar igual como esta en la data
     const typeSelected = typeSelect.toLowerCase();
     //llamamos la funcion filtrar y le mandamos el dato a buscar y el valor a comparar
-    const filterDataBy = filterPokemons(typeSelected, typeSelected);
+    filterPokemons(typeSelected, typeSelected);
     //alert (filterDataBy);
   })
 })//Fin boton Search
@@ -228,7 +228,6 @@ const filterPokemons = (filterBy, condition) => {
   if(allPokemons !== null){
     createCard(allPokemons);
   }
-
 }
 
 //funciones dentro de la pagina de Evolutions
@@ -281,6 +280,7 @@ evolutionTextBox.addEventListener("keyup",function(e){
 //funcion con boton que llama a functionevolution
 const evolutionButton = document.getElementById('evolutionButton');
 evolutionButton.addEventListener('click', functionEvolution);
+
 
 //funciones dentro de la pagina de SpawRate
 const buttonSpawRate = document.getElementById('buttonSpawRate')
@@ -341,7 +341,7 @@ buttonSpawRate.addEventListener("click", function () {
 
 
 
-  selectNamePokemon.addEventListener('change', (e) => {
+  selectNamePokemon.addEventListener('change', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
     //traemos el contenido de la lista (text)

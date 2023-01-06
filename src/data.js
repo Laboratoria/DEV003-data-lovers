@@ -45,7 +45,6 @@ export const evolutions = (filterBy, condition ) => {
   //y retona ese array
   const pokemonArray = data['pokemon'];
   let result = [];
-  const array = [];
   let resultPrev = [];
   let resultPrev2 = [];
   let resultNext =[];
@@ -105,7 +104,7 @@ export const evolutions = (filterBy, condition ) => {
       //console.log(pre); 
       //console.log(next); 
     }else{
-      result = array;
+      result = [];
       resultEvolutions = result ;
     }
   }
