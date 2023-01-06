@@ -22,7 +22,7 @@ function buscar() {
       getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
 
       if (personajes[i].name.toUpperCase() === name.toUpperCase()) {
-        const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house;
+        const mensaje = "This character is:" + personajes[i].name + ". Belongs to House " + personajes[i].house;
         // alert(mensaje)
 
         getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
