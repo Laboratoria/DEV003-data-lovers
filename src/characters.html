@@ -26,11 +26,30 @@
         <a href="#" class="spells">Spells</a>
         <a href="#" class="books">Books</a>
         </nav>
+        <section class="filters">
+            <select name="genero" id="gender">
+                <option selected=" " disabled=" ">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <select name="casas" id="house">
+                <option selected=" " disabled=" ">House</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="null">None</option>
+            </select>
+            <input type="reset" class="reset" id="limpiar"></input>
+            <input type="text" id="buscador" placeholder="Search"></input>
+        </section>
+        <section class="showCharacters"></section>
+ 
     </main>
 
     
 
     <section .tarjeta></section>
-    <script src="#" type="module"></script>
+    <script src="characters.js" type="module"></script>
 </body>
 </html>
