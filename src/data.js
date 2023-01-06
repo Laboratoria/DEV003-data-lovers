@@ -55,18 +55,18 @@ export const evolutions = (filterBy, condition ) => {
 
   if(filterBy === 'name'){
     //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
-    array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+    /*array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
 
     const arrayVacio = (arr) => !array.isArray(arr) || arr.length === 0;
     if(arrayVacio!==true){
       result=array;
-    }
-   
-    
+    }*/
+   if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
+    result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
-    console.log(result);
+    //console.log(result);
     //if (result!=='' || result!== undefined || result !==0 || result !==null || result !==NaN || result !==[] || result.length !== 0){ 
-    if (result!=='' || result!== undefined || result !==0 || result !==null){ 
+    //if (result!=='' || result!== undefined || result !==0 || result !==null){ 
       if (result[0]['evolution']['prev-evolution']!==undefined){
         if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
       
@@ -100,16 +100,16 @@ export const evolutions = (filterBy, condition ) => {
           const next = result[0]['evolution']['next-evolution'][0].num;
           resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
         }
+        
       }
-
-      // console.log(resultPrev);
-
       resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
-
+      // console.log(resultPrev);
       // console.log(resultEvolutions);
-
       //console.log(pre); 
       //console.log(next); 
+    }else{
+      result = [];
+      resultEvolutions = result ;
     }
   }
   return resultEvolutions;
