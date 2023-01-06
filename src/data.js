@@ -51,8 +51,6 @@ export function showAllCharacters(characters){
     if (character.type) {
       container.appendChild(type);
     }
-    
-    console.log(character.type);
 
     //Género
     let gender=document.createElement("h2");
@@ -82,7 +80,14 @@ export function showAllCharacters(characters){
     //Episodios
     let episodes=document.createElement("h2");
     episodes.classList.add("episodes")
-    //episodes.innerText=character.episode; Es un arreglo, hay que iterar sobre cada elemento y usar .split para recuperar el núm del episodio
+  //Es un arreglo, hay que iterar sobre cada elemento y usar .split para recuperar el núm del episodio
+    const epNumbs=character["episode"].map((episode)=>{//Tiene mi array de núms
+      const urlNum=episode.split("/");//Contiene array con elements separados
+      const lastNumb=urlNum[urlNum.length -1];
+      
+      return lastNumb;
+    })
+    episodes.innerText= "Episodes: " + epNumbs.join(", ");
     container.appendChild(episodes);
 
     
@@ -92,27 +97,64 @@ export function showAllCharacters(characters){
   }
 }
 
-export function filterData(data, input, category) {
-  const filterD=data.filter((character) => {
-    console.log(character[category]); //Imprime todos los personajes
-    //return character[category].toUpperCase()=="Rick"
-    //return character[category].toLowerCase().includes(input.toLowerCase());
-    const selectOpt=character[category].toLowerCase(); //Opc seleccionada de select
-    const enteredTxt=input.toLowerCase(); //Txt ingresado en input
-
-    return selectOpt.includes(enteredTxt);
-    //includes compara la data del select con el txt ingresado en el input
-  })
-
-  console.log(filterD);
+export function filterData(data, input, category){
+  //Ejecuta la función si está dentro de estas categorías
+  if (category==="name"||category==="species"||category==="type"||category==="status") {
+    const filterD=data.filter((character) => {
+      console.log(character[category]); //Imprime todos los personajes
+     
+      const selectOpt=character[category].toLowerCase(); //Opc seleccionada de select
+      const enteredTxt=input.toLowerCase(); //Txt ingresado en input
+  
+      return selectOpt.includes(enteredTxt);
+      //includes compara la data del select con el txt ingresado en el input
+    })
+    console.log(filterD);
   return filterD;
+  } else if (category==="gender") {
+    // otro filtro
+    const filtGender=data.filter((character) => {
+      const selectOpt=character[category].toLowerCase(); //Opc seleccionada de select
+      const enteredTxt=input.toLowerCase(); //Txt ingresado en input
+  
+      return selectOpt.startsWith(enteredTxt);
+      //comparar si la categoria de la data startsWith input del usuario
+      //string.startsWith('Fe');
+    })
+    console.log(filtGender);
+    return filtGender;
+  } else if (category==="origin"||category==="location"){
+    //Otro filtro
+    const filtLoc=data.filter((character) => {
+      const selectOpt=character[category].name.toLowerCase();
+      const enteredTxt=input.toLowerCase();
+      return selectOpt.includes(enteredTxt);
+    })
+    return filtLoc;
+  } else if (category==="episode"){
+    //Otro filtro
+    const filtEpi=data.filter((character) => {
+      console.log(character[category]);//contiene mis elementos en un string
+      const enteredTxt=input.toLowerCase();//Contiene txt input
+      const epNumbs=character[category].map((episode)=>{//Tiene mi array de núms
+        const urlNum=episode.split("/");//Contiene array con elements separados
+        const lastNumb=urlNum[urlNum.length -1];
+        
+        return lastNumb;
+      })
+      console.log(epNumbs);
+      
+        return epNumbs.includes(enteredTxt);
+    })
+    return filtEpi;
+  }
 
+  // console.log(filterD);
+  // return filterD;
 }
+
 //Obtener valor de input txt en una variable---> Hecho
 
 //Function filterData 3 paráms: data, input, categor---> Hecho
 //filterData recibe toda la data y la regresa filtradas---> Hecho
 //Usar ejemplo que tngo en main.js
-
-
-//Agregar parám data a showCharacters, en vez de llamar data.results
