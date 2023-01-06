@@ -72,7 +72,7 @@ select{
     text-shadow: white;
     border-radius: 6px;
     width: 300px;
-    height: 520px;
+    height: 540px;
 }
 .cardsImgs{
     width: 300px;
@@ -99,10 +99,13 @@ select{
     text-align: center;
 }
 .cardMold{
-    width: 300px;
-    height: 600px;
+    width: 350px;
+    height: 680px;
     background-color:#a4b88a;
     border-radius: 4px;
+}
+.card-img img{
+    width: 350px;
 }
 h2{
     padding-left: 10px;
@@ -113,9 +116,13 @@ h2{
     color: #706969;
 }
 
+.episodes{
+    word-break: break-all;
+}
 
 
-.total{
+
+/* .total{
     background-color: #525457;
     color: #7AD605;
     font-size: 18px;
@@ -125,4 +132,4 @@ h2{
     width: 100%;
     bottom: 0;
     left: 0;
-}
+} */
