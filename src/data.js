@@ -55,7 +55,7 @@ export const evolutions = (filterBy, condition ) => {
 
   if(filterBy === 'name'){
 
-   if(pokemonArray.filter(pokemon => !pokemon.name.includes(condition))){
+   if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
     //console.log(result);
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
