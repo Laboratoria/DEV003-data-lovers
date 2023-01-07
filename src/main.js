@@ -13,7 +13,7 @@ buttonHome.addEventListener("click", function () {
   document.getElementById("scSpawRate").innerHTML = '';
   document.getElementById("scEvolution").style.display = "none";
   document.getElementById("scSearch").style.display = "none";
-  //document.getElementById("figure").contains = '';
+ // document.getElementById("figure").contains = '';
  // document.getElementById("figure").removeChild(newImg);
  //llama a funcion imagen aleatoria: en proceso
   imgRandom();
@@ -225,6 +225,13 @@ const filterPokemons = (filterBy, condition) => {
   }
 }
 
+const filterPokemons2 = (filterBy, condition) => {
+  const allPokemons = filterData(filterBy, condition).sort();
+  if (allPokemons !== null) {
+    createCard4(allPokemons);
+  }
+}
+
 //funciones dentro de la pagina de Evolutions
 const buttonEvolution = document.getElementById('buttonEvolution');
 buttonEvolution.addEventListener("click", function () {
@@ -362,7 +369,7 @@ buttonSpawRate.addEventListener("click", function () {
 //3 mostrar card de ese pokemon con su info completa
 //Funcion que recibe la data a mostrar en las tarjetas (cards)
 const createCard = (element) => {
-  element.forEach((item) => {
+ element.forEach((item) => {
     // contenedor padre de todas las cards en seccion html que busca por clase
     const cardBox = document.querySelector(".scCards");
     const newCard = document.createElement("div");
@@ -392,7 +399,7 @@ const createCard = (element) => {
     newCardBody.appendChild(nextEspace);
     newCardBody.appendChild(newLabel);
   });
-}
+} 
 
 const createCard2 = (element) => {
   element.forEach((item) => {
@@ -478,6 +485,39 @@ const createCard3 = (element) => {
   });
 }
 
+const createCard4 = (element) => {
+  element.forEach((item) => {
+     // contenedor padre de todas las cards en seccion html que busca por clase
+     const cardBox = document.querySelector("figure");
+     const newCard = document.createElement("div");
+     newCard.className = "card";
+     //mismo id tem.num para cuando des click responda toda la card
+     newCard.id = item.num;
+     const newCardBody = document.createElement("div");
+     newCardBody.className = "card_body";
+     newCardBody.id = item.num;
+     const newH3 = document.createElement("h3");
+     newH3.className = "card_title";
+     newH3.innerText = item.num;
+     newH3.id = item.num;
+     const newImg = document.createElement("img");
+     newImg.src = item.img;
+     //newImg.textContent=item.num;
+     newImg.id = item.num;
+     const nextEspace = document.createElement("br");
+     const newLabel = document.createElement("label");
+     newLabel.innerText = item.name.toUpperCase();
+     newLabel.className = "card_title";
+     newLabel.id = item.num;
+     cardBox.appendChild(newCard);
+     newCard.appendChild(newCardBody);
+     newCardBody.appendChild(newH3);
+     newCardBody.appendChild(newImg);
+     newCardBody.appendChild(nextEspace);
+     newCardBody.appendChild(newLabel);
+   });
+ } 
+
 //slecciona contenedor padre
 const eventClick = document.getElementById("scShowAllPokemon");
 //al enocntrar un evento click valida de que elemento fue
@@ -489,6 +529,8 @@ eventClick.addEventListener("click", (e) => {
     showInfoPokemon(idCardSelect);
   }
 })
+
+
 
 const showInfoPokemon = (idPokemon) => {
   // console.log(idPokemon);
@@ -668,23 +710,24 @@ popUpClick.addEventListener("click", (e) => {
     containerClose.removeChild(document.getElementById('divPopUp'));
     containerClose.style.display = "none";
   }
-  //const container = document.querySelector(".popUpInfo");
+ 
 })
 
 
 //onclick="topFunction()"
-const myBtn = document.getElementById("myBtn");
-myBtn.addEventListener('click',()=>{
+const buttonUp = document.getElementById("btnUp");
+buttonUp.addEventListener('click',()=>{
   // When the user clicks on the button, scroll to the top of the document
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 })
+
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
+    document.getElementById("btnUp").style.display = "block";
   } else {
-    document.getElementById("myBtn").style.display = "none";
+    document.getElementById("btnUp").style.display = "none";
   }
 }
 
@@ -698,30 +741,25 @@ const imgRandom = () => {
   for (const e of images) {
       let imagen = new Image();
       imagen.num = e.num;
-      imagen.nom = e.name;
+      imagen.name = e.name;
       imagen.img = e.img;
 
       bufferImagenes.push(imagen);
   }
   //console.log(bufferImagenes);
   let indexRandon = generarEnteroAleatorio(bufferImagenes.length);
-  let imagenAleatoria = bufferImagenes[indexRandon].img;
-  //figure
-  //contFigure.removeChild(newImg);
-  const contFigure = document.querySelector("figure");
-  const newImg = document.createElement("img");
-    newImg.src = imagenAleatoria;
-    contFigure.appendChild(newImg);
+  let imagenAleatoria = bufferImagenes[indexRandon].num;
+  const contFigure = document.querySelector("figure")
+  contFigure.innerHTML='';
+    const filterbyNum = "num";
+    filterPokemons2(filterbyNum, imagenAleatoria);
 }   
-  //let nuevoElementoImagen = document.body.figure.appendChild(imagenAleatoria);
-  
-
-  //console.log(arrayImg);
 
 
 function generarEnteroAleatorio(cantidadImagenes) {
   return Math.floor(Math.random() * cantidadImagenes);
 }
+
 window.addEventListener('load',imgRandom)
 
 

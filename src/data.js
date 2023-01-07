@@ -4,8 +4,9 @@ import data from './data/pokemon/pokemon.js'; // importamos la data de la carpet
 .then((res)=>res.json())
   .then(json => {
    //const data=JSON.stringify(json) ;
-const data=(json) ;
-    console.log(data);
+const jsonP=json ;
+//const data2=JSON.parse(jsonP[0]);
+    console.log(jsonP);
 
   });*/
 

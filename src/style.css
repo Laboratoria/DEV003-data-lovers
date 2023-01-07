@@ -258,7 +258,7 @@ table{
     text-align: center;
 }
 
-#myBtn {
+#btnUp {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija */
     bottom: 20px; /* Coloque el botón en la parte inferior de la página. */
