@@ -34,7 +34,8 @@ buttonPokedex.addEventListener("click", function () {
   const option1 = "1";
   const getCards = orderByOption(option1);
   document.querySelector('[value="1"]').checked = true;
-  createCard(getCards);
+  createCardX(getCards,'1')
+ // createCard(getCards);
   //console.log(data);
 })
 const optionOrder = document.querySelectorAll('input[type=radio][name="rdOptionShow"]');
@@ -45,7 +46,8 @@ optionOrder.forEach(optionOrder => optionOrder.addEventListener('change', () => 
   document.getElementById("scIntroduction").style.display = "none";
   document.getElementById("scSpawRate").innerHTML = '';
   const getCardsOrderBy = orderByOption(optionOrder.value);
-  createCard(getCardsOrderBy);
+ // createCard(getCardsOrderBy);
+ createCardX(getCardsOrderBy,'1')
 }
 ))
 //funciones dentro de la pagina de Search
@@ -221,7 +223,8 @@ btnSearchPokemon.addEventListener('click', functionSearch);
 const filterPokemons = (filterBy, condition) => {
   const allPokemons = filterData(filterBy, condition).sort();
   if (allPokemons !== null) {
-    createCard(allPokemons);
+   // createCard(allPokemons);
+    createCardX(allPokemons,'1');
   }
 }
 
@@ -229,6 +232,7 @@ const filterPokemons2 = (filterBy, condition) => {
   const allPokemons = filterData(filterBy, condition).sort();
   if (allPokemons !== null) {
     createCard4(allPokemons);
+    
   }
 }
 
@@ -256,7 +260,8 @@ const functionEvolution = ()=>{
     const filterNameEvolution = evolutions(dataname, value);
 
    if (filterNameEvolution) {  
-   createCard3(filterNameEvolution);
+  // createCard3(filterNameEvolution);
+createCardX(filterNameEvolution,'3');
       document.getElementById("evolutionP").value = '';
       document.getElementById("evolutionP").focus;
     }else{
@@ -337,7 +342,17 @@ buttonSpawRate.addEventListener("click", function () {
   buttonTop.innerText = "Top 10";
   document.getElementById("scSpawRate").appendChild(buttonTop);
 
-
+  
+  buttonTop.addEventListener('click', () => {
+    document.getElementById("scShowAllPokemon").innerHTML = '';
+    document.getElementById("scShowAllPokemon").style.display = "flex";
+    const option5 = "5";
+    //console.log(option5);
+    let orderByCapture = orderByOption(option5);
+    
+   // createCard2(orderByCapture);
+createCardX(orderByCapture,'2');
+  })
 
   selectNamePokemon.addEventListener('change', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
@@ -350,17 +365,10 @@ buttonSpawRate.addEventListener("click", function () {
     const byName = "name";
     const filternameP = filterData(byName, typeSelectedName);
     // console.log(filternameP);
-    createCard2(filternameP);
+   // createCard2(filternameP);
+   createCardX(filternameP,'2');
   })
 
-  buttonTop.addEventListener('click', () => {
-    document.getElementById("scShowAllPokemon").innerHTML = '';
-    document.getElementById("scShowAllPokemon").style.display = "flex";
-    const option5 = "5";
-    const orderByCapture = orderByOption(option5);
-    //console.log(getCardsC);
-    createCard2(orderByCapture);
-  })
 })
 
 //cuando de click al card para mostrar data completa
@@ -368,122 +376,7 @@ buttonSpawRate.addEventListener("click", function () {
 //2 ir a buscar el data por ese id y traer la info
 //3 mostrar card de ese pokemon con su info completa
 //Funcion que recibe la data a mostrar en las tarjetas (cards)
-const createCard = (element) => {
- element.forEach((item) => {
-    // contenedor padre de todas las cards en seccion html que busca por clase
-    const cardBox = document.querySelector(".scCards");
-    const newCard = document.createElement("div");
-    newCard.className = "card";
-    //mismo id tem.num para cuando des click responda toda la card
-    newCard.id = item.num;
-    const newCardBody = document.createElement("div");
-    newCardBody.className = "card_body";
-    newCardBody.id = item.num;
-    const newH3 = document.createElement("h3");
-    newH3.className = "card_title";
-    newH3.innerText = item.num;
-    newH3.id = item.num;
-    const newImg = document.createElement("img");
-    newImg.src = item.img;
-    //newImg.textContent=item.num;
-    newImg.id = item.num;
-    const nextEspace = document.createElement("br");
-    const newLabel = document.createElement("label");
-    newLabel.innerText = item.name.toUpperCase();
-    newLabel.className = "card_title";
-    newLabel.id = item.num;
-    cardBox.appendChild(newCard);
-    newCard.appendChild(newCardBody);
-    newCardBody.appendChild(newH3);
-    newCardBody.appendChild(newImg);
-    newCardBody.appendChild(nextEspace);
-    newCardBody.appendChild(newLabel);
-  });
-} 
 
-const createCard2 = (element) => {
-  element.forEach((item) => {
-    const cardBox = document.querySelector(".scCards");
-    const newCard = document.createElement("div");
-    newCard.className = "card";
-    newCard.id = item.num;
-    const newCardBody = document.createElement("div");
-    newCardBody.className = "card_body";
-    newCardBody.id = item.num;
-    const newH3 = document.createElement("h3");
-    newH3.className = "card_title2";
-    newH3.innerText = item.name.toUpperCase();
-    newH3.id = item.num;
-    const newImg = document.createElement("img");
-    newImg.src = item.img;
-    //newImg.textContent=item.num;
-    newImg.id = item.num;
-    const nextEspace = document.createElement("br");
-    const labelFleeRate = document.createElement("label");
-    labelFleeRate.innerText = "Base flee rate  " + item.encounter["base-flee-rate"];
-    labelFleeRate.id = item.num;
-    labelFleeRate.className = "labelCard2";
-    const nextEspace2 = document.createElement("br");
-    const labelCaptureRate = document.createElement("label");
-    labelCaptureRate.innerText = "Base Capture rate  " + item.encounter["base-capture-rate"];
-    labelCaptureRate.id = item.num;
-    labelCaptureRate.className = "labelCard2";
-    cardBox.appendChild(newCard);
-    newCard.appendChild(newCardBody);
-    newCardBody.appendChild(newH3);
-    newCardBody.appendChild(newImg);
-    newCardBody.appendChild(nextEspace);
-    newCardBody.appendChild(labelFleeRate);
-    newCardBody.appendChild(nextEspace2);
-    newCardBody.appendChild(labelCaptureRate);
-  });
-}
-
-const createCard3 = (element) => {
-  element.forEach((item) => {
-    const cardBox = document.querySelector(".scCards");
-    const newCard = document.createElement("div");
-    newCard.className = "card3";
-    newCard.id = item.num;
-    const newCardBody = document.createElement("div");
-    newCardBody.className = "card_body";
-    newCardBody.id = item.num;
-    const newH3 = document.createElement("h3");
-    newH3.className = "card_title3";
-    newH3.innerText = item.name.toUpperCase();
-    newH3.id = item.num;
-    const newImg = document.createElement("img");
-    newImg.src = item.img;
-    newImg.id = item.num;
-    const nextEspace = document.createElement("br");
-    const labelCandyName = document.createElement("label");
-    labelCandyName.innerText = "Candy:  " + item.evolution["candy"];
-    labelCandyName.id = item.num;
-    labelCandyName.className = "labelCard3";
-    const nextEspace2 = document.createElement("br");
-    const labelCandyCost = document.createElement("label");
-    if (item.evolution['prev-evolution'] !== undefined) {
-      labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['prev-evolution'][0]['candy-cost'];
-    }
-    if (item.evolution['next-evolution'] !== undefined) {
-      labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['next-evolution'][0]['candy-cost'];
-    }
-    if (item.evolution['next-evolution'] === undefined) {
-      labelCandyCost.innerText = "No more evolutions";
-    }
-    //labelCandyCost.innerText="Candy Cost: " + item.evolution['next-evolution'][0]['candy-cost'];
-    labelCandyCost.id = item.num;
-    labelCandyCost.className = "labelCard3";
-    cardBox.appendChild(newCard);
-    newCard.appendChild(newCardBody);
-    newCardBody.appendChild(newH3);
-    newCardBody.appendChild(newImg);
-    newCardBody.appendChild(nextEspace);
-    newCardBody.appendChild(labelCandyName);
-    newCardBody.appendChild(nextEspace2);
-    newCardBody.appendChild(labelCandyCost);
-  });
-}
 
 const createCard4 = (element) => {
   element.forEach((item) => {
@@ -763,5 +656,106 @@ function generarEnteroAleatorio(cantidadImagenes) {
 window.addEventListener('load',imgRandom)
 
 
+//createCard
+const createCardX = (element,op) => {
+  element.forEach((item) => {
+     // contenedor padre de todas las cards en seccion html que busca por clase
+     const cardBox = document.querySelector(".scCards");
+     const newCard = document.createElement("div");
+     newCard.className = "card";
+     //mismo id tem.num para cuando des click responda toda la card
+     newCard.id = item.num;
+     const newCardBody = document.createElement("div");
+     newCardBody.className = "card_body";
+     newCardBody.id = item.num;
+     cardBox.appendChild(newCard);
+     newCard.appendChild(newCardBody);
+
+//validando que op es
+if (op==1){
+  const newH3 = document.createElement("h3");
+  newH3.className = "card_title";
+  newH3.innerText = item.num;
+  newH3.id = item.num;
+  const newImg = document.createElement("img");
+  newImg.src = item.img;
+  newImg.id = item.num;
+  const nextEspace = document.createElement("br");
+  const newLabel = document.createElement("label");
+  newLabel.innerText = item.name.toUpperCase();
+  newLabel.className = "card_title";
+  newLabel.id = item.num;
+  
+  newCardBody.appendChild(newH3);
+  newCardBody.appendChild(newImg);
+  newCardBody.appendChild(nextEspace);
+  newCardBody.appendChild(newLabel);
+
+}else if (op==2){
+  const newH3 = document.createElement("h3");
+  newH3.innerText = item.name.toUpperCase();
+  newH3.id = item.num;
+  const newImg = document.createElement("img");
+  newImg.src = item.img;
+  newImg.id = item.num;
+  const nextEspace = document.createElement("br");
+  const labelFleeRate = document.createElement("label");
+  labelFleeRate.innerText = "Base flee rate  " + item.encounter["base-flee-rate"];
+  labelFleeRate.id = item.num;
+  labelFleeRate.className = "labelCard2";
+  const nextEspace2 = document.createElement("br");
+  const labelCaptureRate = document.createElement("label");
+  labelCaptureRate.innerText = "Base Capture rate  " + item.encounter["base-capture-rate"];
+  labelCaptureRate.id = item.num;
+  labelCaptureRate.className = "labelCard2";
+
+  newCardBody.appendChild(newH3);
+  newCardBody.appendChild(newImg);
+  newCardBody.appendChild(nextEspace);
+  newCardBody.appendChild(labelFleeRate);
+  newCardBody.appendChild(nextEspace2);
+  newCardBody.appendChild(labelCaptureRate);
+
+}else if(op==3){
+  const newH3 = document.createElement("h3");
+  newH3.className = "card_title3";
+  newH3.innerText = item.name.toUpperCase();
+  newH3.id = item.num;
+  const newImg = document.createElement("img");
+  newImg.src = item.img;
+  newImg.id = item.num;
+  const nextEspace = document.createElement("br");
+  const labelCandyName = document.createElement("label");
+  labelCandyName.innerText = "Candy:  " + item.evolution["candy"];
+  labelCandyName.id = item.num;
+  labelCandyName.className = "labelCard3";
+  const nextEspace2 = document.createElement("br");
+  const labelCandyCost = document.createElement("label");
+  if (item.evolution['prev-evolution'] !== undefined) {
+    labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['prev-evolution'][0]['candy-cost'];
+  }
+  if (item.evolution['next-evolution'] !== undefined) {
+    labelCandyCost.innerText = "Candy Cost for evolution: " + item.evolution['next-evolution'][0]['candy-cost'];
+  }
+  if (item.evolution['next-evolution'] === undefined) {
+    labelCandyCost.innerText = "No more evolutions";
+  }
+  labelCandyCost.id = item.num;
+  labelCandyCost.className = "labelCard3";
+  newCardBody.appendChild(newH3);
+  newCardBody.appendChild(newImg);
+  newCardBody.appendChild(nextEspace);
+
+  newCardBody.appendChild(labelCandyName);
+  newCardBody.appendChild(nextEspace2);
+  newCardBody.appendChild(labelCandyCost);
+}
+
+
+   });
+ } 
+ 
+ 
+ 
 
 
