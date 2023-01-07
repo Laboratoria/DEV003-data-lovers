@@ -4,8 +4,9 @@ import data from './data/pokemon/pokemon.js'; // importamos la data de la carpet
 .then((res)=>res.json())
   .then(json => {
    //const data=JSON.stringify(json) ;
-const data=(json) ;
-    console.log(data);
+const jsonP=json ;
+//const data2=JSON.parse(jsonP[0]);
+    console.log(jsonP);
 
   });*/
 
@@ -46,6 +47,7 @@ export const evolutions = (filterBy, condition ) => {
   //y retona ese array
   const pokemonArray = data['pokemon'];
   let result = [];
+  let array = [];
   let resultPrev = [];
   let resultPrev2 = [];
   let resultNext =[];
@@ -53,84 +55,44 @@ export const evolutions = (filterBy, condition ) => {
   let resultEvolutions =[];
 
   if(filterBy === 'name'){
-    /*array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-    const arrayVacio = (arr) => !array.isArray(arr) || arr.length === 0;
-    if(arrayVacio!==true){
-      result=array;
-    }*/
-    //if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
-
+    //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-    if(!result[0]){
-      return
-    }
-
-    if(result[0]['evolution']['prev-evolution']!==undefined){
-      return
-    }
-
-    if(result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
-      return
-    }
-
-    if(result[0]['evolution']['next-evolution']!==undefined){
-      return
-    }
-
-    if(result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
-      return
-    }
-
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
-    //console.log(result);
-    /* if (result[0]!== undefined) {
-      //if (result!=='' || result!== undefined || result !==0 || result !==null){ 
-      if (result[0]['evolution']['prev-evolution']!==undefined){
-        if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){*/
-      
-
-    const pre = result[0]['evolution']['prev-evolution'][0].num;
-    resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
-
-    const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
-      
-    resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));
-      
-    //}else{
-    //   const pre = result[0]['evolution']['prev-evolution'][0].num;
-    //resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
-    // }
-    //  }
-
-    //   if (result[0]['evolution']['next-evolution']!==undefined){
-    //   if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
-      
-
-    const next = result[0]['evolution']['next-evolution'][0].num;
-    resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
-
-    const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
+    console.log(result);
+    if (!result[0]){ 
+      return resultEvolutions='';
+    }
     
-    resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
-    
-    //const next = result[0]['evolution']['next-evolution'][0].num;
-    //     resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
-    //   }
-    //}else{
+      if (result[0]['evolution']['prev-evolution']){
+        if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']){
+          const pre = result[0]['evolution']['prev-evolution'][0].num;
+          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
+          const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
+          resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));     
+        }else{
+          const pre = result[0]['evolution']['prev-evolution'][0].num;
+          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
+        }
+      }
 
-          
-    //  }
-    resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
-    // console.log(resultPrev);
-    // console.log(resultEvolutions);
-    //console.log(pre); 
-    //console.log(next); 
-    /*}
-  }else{
-      result = [];
-      resultEvolutions = result ;
-    }*/
-  }
+      if (result[0]['evolution']['next-evolution']){
+        if (result[0]['evolution']['next-evolution'][0]['next-evolution']){
+          const next = result[0]['evolution']['next-evolution'][0].num;
+          resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
+          const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
+          resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
+        }else{
+          const next = result[0]['evolution']['next-evolution'][0].num;
+          resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
+        }
+      }
+
+      // console.log(resultPrev);
+
+      resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
+    }
+  
+  return resultEvolutions;
 };
 
 
