@@ -15,6 +15,7 @@
 ***
 
 ## 1. Introducción
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.21.17.png?raw=true)
 
 ## 9. Checklist
 

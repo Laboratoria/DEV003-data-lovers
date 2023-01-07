@@ -21,16 +21,16 @@ body.modal-open {
     background: #E30000;
     height: 150px;
 }
-
+/*
 figure {
     Width: 200px;
     Border: solid #333 1px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto 
     Background: white;
-    Border-radius: 15px; /* radio del borde */
+    Border-radius: 15px;  radio del borde 
     Height: 280px;
     margin: 10px auto;
-}
+}*/
 
 .img_header {
     padding: 25px; /* espacio entre el contenido y el borde */

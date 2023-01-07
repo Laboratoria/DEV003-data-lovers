@@ -1,15 +1,16 @@
 import data from './data/pokemon/pokemon.js'; // importamos la data de la carpeta
+// hacker edition
 /*fetch("./data/pokemon/pokemon.json")
-  .then(response => response.json())
+.then((res)=>res.json())
   .then(json => {
-    const data=json;
-  // aquí tenemos el parámetro json que contien el dato que nos ha devuelto el servicio web.
-  // podemos hacer cualquier cosa con él...
-  console.log(json)
+   //const data=JSON.stringify(json) ;
+const data=(json) ;
+    console.log(data);
+
   });*/
 
-
 export const getDataPokemon = () => { // exportamos funcion array con toda la data
+  //const pokemonList = data['pokemon'];
   const pokemonList = data['pokemon'];
   if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data === '') {
     throw new TypeError('data is not an object');
@@ -18,6 +19,7 @@ export const getDataPokemon = () => { // exportamos funcion array con toda la da
 };
 
 export const orderByOption = (valor) => { //exportamos funcion de ordenar por opcion
+  //let pokemonSortBy = data['pokemon'];
   let pokemonSortBy = data['pokemon'];
  
   let range='';
@@ -33,11 +35,9 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
     pokemonSortBy.sort((a, b) => b.encounter["base-capture-rate"].localeCompare(a.encounter["base-capture-rate"])); 
     range = pokemonSortBy.filter(pasarDataP => pasarDataP.encounter["base-capture-rate"]!=='not in capture');
     pokemonSortBy = range.slice(0,10); 
-     
   }
   // console.log(pokemonSortBy);
   return pokemonSortBy;
-  
 };
 
 export const evolutions = (filterBy, condition ) => {
@@ -46,7 +46,6 @@ export const evolutions = (filterBy, condition ) => {
   //y retona ese array
   const pokemonArray = data['pokemon'];
   let result = [];
-  let array = [];
   let resultPrev = [];
   let resultPrev2 = [];
   let resultNext =[];
@@ -54,9 +53,9 @@ export const evolutions = (filterBy, condition ) => {
   let resultEvolutions =[];
 
   if(filterBy === 'name'){
-
-   if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+   if(result[0]!== undefined){
+    
     //console.log(result);
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
     //console.log(result);
@@ -98,6 +97,7 @@ export const evolutions = (filterBy, condition ) => {
       resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
     }else{
       result = [];
+      console.log(result);
       resultEvolutions = result ;
     }
   }
