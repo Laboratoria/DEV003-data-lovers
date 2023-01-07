@@ -544,7 +544,6 @@ const showInfoPokemon = (idPokemon) => {
   const infoPokemon=infoPokemonAll[0];
   //console.log(infoPokemon);
 
-
   let container="";
   container = document.getElementById("scPopUp");
   // limpiar el popup card cada que le demos click en un pokemon
@@ -552,6 +551,7 @@ const showInfoPokemon = (idPokemon) => {
   container.style.display = "block";
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
+
 
 
   //Creando la Card con toda la info del pokemon seleccionado
@@ -655,8 +655,8 @@ const showInfoPokemon = (idPokemon) => {
     //console.log(item);
   })
 
-  /*   "egg": "2 km",
-    "buddy-distance-km": "3",*/
+  //   "egg": "2 km",
+  //  "buddy-distance-km": "3",
   const bodytrdetail3 = document.createElement("tr");
   const bodytd5 = document.createElement("td");
   bodytd5.colSpan="4";
@@ -715,10 +715,7 @@ const showInfoPokemon = (idPokemon) => {
   bodytd5.appendChild(labelEggs);
   bodytd5.appendChild(nextEspace8);
   bodytd5.appendChild(labelCandy);
-
-
 }
-
 
 // When the user clicks on  (x), close 
 

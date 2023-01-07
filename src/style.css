@@ -169,6 +169,10 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     padding: 10px;
 }
 
+.container{
+    display: block;
+}
+
 .scCards { /* seccion que muestra las cards una tras otra */
     display: flex;
     padding: 2%; 
