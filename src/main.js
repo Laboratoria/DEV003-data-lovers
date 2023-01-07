@@ -248,8 +248,8 @@ const functionEvolution = ()=>{
     const dataname = "name";
     const filterNameEvolution = evolutions(dataname, value);
 
-    if(filterNameEvolution !== null || filterNameEvolution !== undefined || filterNameEvolution!==[] || filterNameEvolution !=='' || filterNameEvolution !==0){
-      createCard3(filterNameEvolution);
+   if (filterNameEvolution) {  
+   createCard3(filterNameEvolution);
       document.getElementById("evolutionP").value = '';
       document.getElementById("evolutionP").focus;
     }else{
@@ -345,6 +345,7 @@ buttonSpawRate.addEventListener("click", function () {
     // console.log(filternameP);
     createCard2(filternameP);
   })
+
   buttonTop.addEventListener('click', () => {
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
