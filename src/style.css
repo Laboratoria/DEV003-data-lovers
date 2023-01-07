@@ -7,31 +7,30 @@ body {
     margin: 0 auto;
     font-size: 20px;
 }
-
-html {
-    scroll-behavior: smooth;
-  }
-  
+/*
+body.modal-open {
+    pointer-events: none;
+  }*/
 
 .boxHeader {
     box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
     width: 100%;
     display: flex; /* se va a mostrar con flexibilidad en la pagina o dispositivo*/
     justify-content: center;
-    padding: 5px; /* es el espacio entre el contenido y el borde */
+    padding: 5px; /* es el espacio entre el contenido y el borde del rectangulo */
     background: #E30000;
     height: 150px;
 }
-
+/*
 figure {
     Width: 200px;
     Border: solid #333 1px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto */
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto 
     Background: white;
-    Border-radius: 10px; /* radio del borde */
+    Border-radius: 15px;  radio del borde 
     Height: 280px;
     margin: 10px auto;
-}
+}*/
 
 .img_header {
     padding: 25px; /* espacio entre el contenido y el borde */
@@ -60,8 +59,8 @@ figure {
     text-align: center;
     box-align: center;
     overflow: auto;
+    pointer-events: auto;
 }
-
 
 @media (max-width: 768px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
     .cPopUp {
@@ -164,13 +163,16 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
 
 #scPopUp {
     display: none;
-
 }
 
 .footer {
     display: table-row; /* Fijar al final */
     height: 0;
     padding: 10px;
+}
+
+.container{
+    display: block;
 }
 
 .scCards { /* seccion que muestra las cards una tras otra */
@@ -214,7 +216,6 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     cursor: pointer;
 }
 
-
 table{
     /*font-size: medium;
     font-family: 'Roboto Mono';*/
@@ -257,13 +258,12 @@ table{
     text-align: center;
 }
 
-
-.cbtnUpShow {
+#myBtn {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija */
     bottom: 20px; /* Coloque el botón en la parte inferior de la página. */
     right: 30px; /* Coloca el botón 30px de la derecha. */
-    z-index: 1; /* Asegúrese de que no se superponga */
+    z-index: 99; /* Asegúrese de que no se superponga */
     border: none; /* Quitar bordes */
     outline: none; /* Quitar contorno*/
     background-color: black; /* Establecer un color de fondo */
@@ -272,18 +272,8 @@ table{
     padding: 15px; /* Algo de relleno */
     border-radius: 10px; /* Esquinas redondeadas */
     font-size: 18px; /* Aumenta el tamaño de la fuente */
-   /* transition: 0.3s;
-    transform: translateY(100px);*/
-    
   }
   
-  #btnUp:hover {
+#myBtn:hover {
     background-color: #555; /* Añadir un fondo gris oscuro en el hover */
   }
-
-
-  
-  .cbtnUpShowOn {
-    transform: translateY(0);
-  }
-
