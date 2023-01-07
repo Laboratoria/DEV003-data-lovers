@@ -53,55 +53,84 @@ export const evolutions = (filterBy, condition ) => {
   let resultEvolutions =[];
 
   if(filterBy === 'name'){
+    /*array = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
+    const arrayVacio = (arr) => !array.isArray(arr) || arr.length === 0;
+    if(arrayVacio!==true){
+      result=array;
+    }*/
+    //if(pokemonArray.filter(pokemon => pokemon.name.includes(condition))){
+
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-   if(result[0]!== undefined){
-    
-    //console.log(result);
+    if(!result[0]){
+      return
+    }
+
+    if(result[0]['evolution']['prev-evolution']!==undefined){
+      return
+    }
+
+    if(result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
+      return
+    }
+
+    if(result[0]['evolution']['next-evolution']!==undefined){
+      return
+    }
+
+    if(result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
+      return
+    }
+
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
     //console.log(result);
+    /* if (result[0]!== undefined) {
+      //if (result!=='' || result!== undefined || result !==0 || result !==null){ 
       if (result[0]['evolution']['prev-evolution']!==undefined){
-        if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){
+        if (result[0]['evolution']['prev-evolution'][0]['prev-evolution']!==undefined){*/
       
 
-          const pre = result[0]['evolution']['prev-evolution'][0].num;
-          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
+    const pre = result[0]['evolution']['prev-evolution'][0].num;
+    resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre));
 
-          const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
+    const pre2 = result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num;
       
-          resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));
+    resultPrev2 = pokemonArray.filter(pokemon => pokemon.num.includes(pre2));
       
-        }else{
-          const pre = result[0]['evolution']['prev-evolution'][0].num;
-          resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
-        }
-      }
+    //}else{
+    //   const pre = result[0]['evolution']['prev-evolution'][0].num;
+    //resultPrev = pokemonArray.filter(pokemon => pokemon.num.includes(pre)); 
+    // }
+    //  }
 
-      if (result[0]['evolution']['next-evolution']!==undefined){
-        if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
+    //   if (result[0]['evolution']['next-evolution']!==undefined){
+    //   if (result[0]['evolution']['next-evolution'][0]['next-evolution']!==undefined){
       
 
-          const next = result[0]['evolution']['next-evolution'][0].num;
-          resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
+    const next = result[0]['evolution']['next-evolution'][0].num;
+    resultNext = pokemonArray.filter(pokemon => pokemon.num.includes(next));
 
-          const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
+    const next2 = result[0]['evolution']['next-evolution'][0]['next-evolution'][0].num;
     
-          resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
+    resultNext2 = pokemonArray.filter(pokemon => pokemon.num.includes(next2));
     
-        }else{
+    //const next = result[0]['evolution']['next-evolution'][0].num;
+    //     resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
+    //   }
+    //}else{
 
-          const next = result[0]['evolution']['next-evolution'][0].num;
-          resultNext =  pokemonArray.filter(pokemon => pokemon.num.includes(next));
-        }
-        
-      }
-      resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
-    }else{
+          
+    //  }
+    resultEvolutions =[].concat(resultPrev2,resultPrev, result,resultNext, resultNext2); 
+    // console.log(resultPrev);
+    // console.log(resultEvolutions);
+    //console.log(pre); 
+    //console.log(next); 
+    /*}
+  }else{
       result = [];
-      console.log(result);
       resultEvolutions = result ;
-    }
+    }*/
   }
-  return resultEvolutions;
 };
 
 

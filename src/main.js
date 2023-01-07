@@ -15,7 +15,9 @@ buttonHome.addEventListener("click", function () {
   document.getElementById("scSearch").style.display = "none";
   //document.getElementById("figure").contains = '';
  // document.getElementById("figure").removeChild(newImg);
+ //llama a funcion imagen aleatoria: en proceso
   imgRandom();
+
 });
 
 const buttonPokedex = document.getElementById('buttonPokedex')
@@ -502,6 +504,9 @@ const showInfoPokemon = (idPokemon) => {
   container.style.display = "block";
   const popUp = document.createElement("div");
   popUp.id = "divPopUp";
+
+
+
   //Creando la Card con toda la info del pokemon seleccionado
   //creando tabla
   const tableInfo = document.createElement("table");
@@ -647,7 +652,6 @@ const showInfoPokemon = (idPokemon) => {
   bodytd5.appendChild(nextEspace8);
   bodytd5.appendChild(labelCandy);
 }
-
 
 // When the user clicks on  (x), close 
 //slecciona contenedor paddre
