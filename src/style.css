@@ -91,7 +91,7 @@ main {
   text-decoration: none;
 }
 
-.showCharacters {
+#show-data {
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
