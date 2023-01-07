@@ -173,7 +173,7 @@ nav.categorias li:hover {
     background-color: #00686C;
     border: none;
     margin-left: 5rem;
-    position:fixed;
+    position: fixed;
     right: 30px;
     bottom: 30px;
 }
@@ -217,7 +217,7 @@ h3 {
 
 .iconoPeliculas {
     width: 160px;
-
+    border-radius: 15px;
 }
 
 .pelicula-titulo {
@@ -231,6 +231,7 @@ h3 {
 h4 {
     margin-top: 15px;
 }
+
 /* películas más votadas */
 .barraMasVotadas {
     display: flex;
@@ -242,6 +243,90 @@ h4 {
     margin: 0 auto;
 }
 
+/* titulos */
+.botonAZ {
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    background-color: #00686C;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.botonAZ:hover {
+    background-color: #FF9915;
+}
+
+.AZ {
+    color: #00686C;
+    display: flex;
+    align-self: center;
+}
+
+.columnaPeliculas {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.contenedorPeliculas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.miniaturaPeliculas {
+    width: 200px;
+    height: 290px;
+    border-radius: 10%;
+}
+
+.descripcionPeliculas {
+    color: #00686C;
+    width: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+/* directores y productores */
+.columnaDirPro {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniaturaDescripcion {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.miniatura {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.descripcionDirPro {
+    color: #00686C;
+    width: 60vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
 /* info completa por película */
 .parteSuperior {
     display: block;
@@ -251,14 +336,15 @@ h4 {
     margin-bottom: 80px;
 }
 
+.contenedorTitulo {
+    line-height: 3px;
+    margin: 15px;
+}
+
 .titulos {
     color: #00686C;
     display: flex;
     justify-content: center;
-    /* text-decoration: underline;
-    text-decoration-color: #FAD928;
-    text-decoration-thickness: 15px; */
-    /* text-decoration-line: line-through; */
 }
 
 .barra {
@@ -271,37 +357,6 @@ h4 {
     margin: 0 auto;
 }
 
-.contenedorTitulo {
-    line-height: 3px;
-    margin: 15px;
-}
-
-
-/* botón regresar */
-.backButton {
-    width: 40px;
-    height: 40px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    cursor: pointer;
-    background-color: #00686C;
-    border: none;
-    margin-left: 5rem;
-}
-
-.backButton:hover {
-    background-color: #FF9915
-}
-
-.flecha {
-    width: 60%;
-}
-
 /* info pelicula superior */
 .peliculaEnDetalle {
     display: flex;
@@ -309,7 +364,8 @@ h4 {
     align-items: center;
     margin: 50px 50px 50px 50px;
 }
-.dirproEnDetalle{
+
+.dirproEnDetalle {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -352,6 +408,7 @@ h4 {
     align-items: center;
     margin-bottom: 30px;
 }
+
 .medalla {
     width: 50px;
     margin-right: 20px;
@@ -385,53 +442,9 @@ h4 {
     justify-content: flex-start;
 }
 
-.botonAZ {
-    width: 20px;
-    height: 20px;
-    -moz-border-radius: 20%;
-    -webkit-border-radius: 20%;
-    border-radius: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    cursor: pointer;
-    background-color: #00686C;
-    border: none;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.botonAZ:hover {
-    background-color: #FF9915;
-}
-
-.AZ {
-    color: #00686C;
-}
-
 .columnaPersonajes {
     display: flex;
     flex-direction: column;
-}
-
-.columnaDirPro {
-    display: flex;
-    flex-direction: column;
-}
-
-.miniaturaDescripcion {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 50px;
-    margin-bottom: 30px;
-}
-
-.miniatura {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
 }
 
 .descripcionPersonaje {
@@ -442,86 +455,29 @@ h4 {
     margin-left: 20px;
 }
 
-.descripcionDirPro {
-    color: #00686C;
-    width: 60vh;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-}
-
-/*Estilos Titulos*/
-.canttituloYBoton {
-    display: flex;
-    color: #00686C;
-    justify-content: center;
-    margin-top: 10px;
-}
-.botonAZ1 {
-    width: 20px;
-    height: 20px;
-    border-radius: 20%;
-    flex-wrap: wrap;
-    display: inline;
-    cursor: pointer;
-    background-color: #00686C;
-    border: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.botonAZ1:hover {
-    background-color: #FF9915;
-}
-.AZ1 {
-    margin-top: 20px;
-}
-
-h4 {
-    margin-top: 20px;
-}
-
-.contenedorPeliculas {
-    margin: 3px;
-}
-
 /* personajes generales */
 #personajes {
     margin-top: 40px;
     margin-bottom: 50px;
 }
 
-.columnaPeliculas {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 47px 30px 47px;
-}
 .resultados {
     color: #00686C;
     display: flex;
-	justify-content: center;
+    justify-content: center;
     margin-top: 30px;
     font-style: italic;
 }
-.portadaPeli {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 20px 20px 20px 20px;
 
+.dosColumnas {
+    column-count: 2;
+    column-gap: 30px;
 }
-.peli {
-    width: 30%;
 
-}
-.parrafoPeli {
-    color: #00686C;
-    width: 60vh;
-    font-size: small;
+.marchando {
     display: flex;
-    justify-content: flex-start;
-    margin: 20px 15px 20px 10px;
+    width: 300px;
+    margin: auto;
 }
 
 /* footer */
@@ -537,7 +493,8 @@ footer {
     position: sticky;
     z-index: 15;
 }
-.copyrighttext  {
+
+.copyrighttext {
     text-align: center;
     text-shadow: slategrey;
     margin-top: 40px;
