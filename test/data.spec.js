@@ -1,25 +1,32 @@
 import { getDataPokemon,filterData,orderByOption,evolutions } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
+
 describe('get Data of pokemons', () => {
    it('is a function', () => {
    expect(typeof getDataPokemon).toBe('function');
+  });
+
+//data === undefined || typeof data !== 'object' || 
+//data === 0 || data === null || data.length === 0 || data === ''
+  it('should throw TypeError when invoked with wrong argument', () => {
+   // let result = getObjectDescription("");
+   //expect(post.length).toBeGreaterThanOrEqual(1);
+   //expect(post[0].id).toBe(1);
+   
+    expect(() => getDataPokemon.toBe(undefined)).toThrow(TypeError);
+    expect(() => getDataPokemon.not.objectContaining()).toThrow(TypeError);
+    expect(() => getDataPokemon.toBeempty()).toThrow(TypeError);
+    expect(() => getDataPokemon.toBeNull()).toThrow(TypeError);
+    expect(() => getDataPokemon.length).toBeGreaterThanOrEqual(1);
+    expect(() => getDataPokemon().toBeFalsy()).toThrow(TypeError);
+    expext(() => getDataPokemon[0]).toEqual(data);
   });
 
   it('returns `Data of pokemons`', () => {
     const dataPokemon = data['pokemon'];
    //const dataPokemon = pokemonData.pokemon;
     expect(getDataPokemon()).toBe(dataPokemon);
-  });
-//data === undefined || typeof data !== 'object' || 
-//data === 0 || data === null || data.length === 0 || data === ''
-  it('should throw TypeError when invoked with wrong argument', () => {
-    expect(() => getDataPokemon.toBeUndefined()).toThrow(TypeError);
-    expect(() => !getDataPokemon.objectContaining()).toThrow(TypeError);
-    expect(() => getDataPokemon.toBeempty()).toThrow(TypeError);
-    expect(() => getDataPokemon.toBeNull()).toThrow(TypeError);
-    expect(() => getDataPokemon.length(0)).toThrow(TypeError);
-   // expect(() => getDataPokemon.value(0)).toThrow(TypeError);
   });
 });
 
@@ -58,6 +65,13 @@ describe('evolutions', () => {
   it('is a function', () => {
     expect(typeof evolutions).toBe('function');
   });
+/*
+  it('should throw TypeError when invoked with wrong argument', () => {
+    expect(() => !evolutions.objectContaining()).toThrow(TypeError);
+    expect(() => evolutions[0].num).toContain('001');
+  });
+*/
+
 
   it('returns `Filter by evolutions`', () => {
     let condition ="kakuna";
