@@ -627,8 +627,7 @@ function scrollFunction() {
 
 
 const imgRandom = () => {
-  const opt1 = "1";
-  const images = orderByOption(opt1);
+  const images = orderByOption('1');
   let bufferImagenes = [];
 
   for (const e of images) {
@@ -639,7 +638,7 @@ const imgRandom = () => {
 
       bufferImagenes.push(imagen);
   }
-  //console.log(bufferImagenes);
+ // console.log(bufferImagenes);
   let indexRandon = generarEnteroAleatorio(bufferImagenes.length);
   let imagenAleatoria = bufferImagenes[indexRandon].num;
   const contFigure = document.querySelector("figure")

@@ -1,27 +1,20 @@
 import data from './data/pokemon/pokemon.js'; // importamos la data de la carpeta
-// hacker edition
-/*fetch("./data/pokemon/pokemon.json")
-.then((res)=>res.json())
-  .then(json => {
-   //const data=JSON.stringify(json) ;
-const jsonP=json ;
-//const data2=JSON.parse(jsonP[0]);
-    console.log(jsonP);
 
-  });*/
+const allDataPokemon = data['pokemon'];
 
 export const getDataPokemon = () => { // exportamos funcion array con toda la data
   //const pokemonList = data['pokemon'];
-  const pokemonList = data['pokemon'];
+  const pokemonList =allDataPokemon;   //data['pokemon'];
   if (data === undefined || typeof data !== 'object' || data === 0 || data === null || data.length === 0 || data === '') {
     throw new TypeError('data is not an object');
   }
   return pokemonList;
-};
+}
+
 
 export let orderByOption = (valor) => { //exportamos funcion de ordenar por opcion
   //let pokemonSortBy = data['pokemon'];
-  let pokemonSortBy = data['pokemon'];
+  let pokemonSortBy =allDataPokemon; // data['pokemon'];
  
   let range='';
   if (valor === "1") {
@@ -47,7 +40,7 @@ export const evolutions = (filterBy, condition ) => {
   // filtra los datos por el name que llega del listbox
   // valida si existe prev evolutino o next evolution
   //y retona ese array
-  const pokemonArray = data['pokemon'];
+  const pokemonArray = allDataPokemon;   // data['pokemon'];
   let result = [];
   let array = [];
   let resultPrev = [];
@@ -104,7 +97,7 @@ export const evolutions = (filterBy, condition ) => {
 //3 comparar que items de la data cumplen con el select de la lista
 //4 crear array para devolver las cards
 export const filterData = (filterBy, condition ) => {
-  const pokemonArray = data['pokemon'];
+  const pokemonArray = allDataPokemon  // data['pokemon'];
   let result = [];
   if(filterBy === 'type'){
     result = pokemonArray.filter(pokemon => pokemon.type.includes(condition));
@@ -114,9 +107,9 @@ export const filterData = (filterBy, condition ) => {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
   }else if(filterBy === 'name') {
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
-  }if(filterBy === 'id') {
+  }/*if(filterBy === 'id') {
     result = pokemonArray.filter(pokemon => pokemon.generation.name.includes(condition));
-  }else if(filterBy === 'num') {
+  }else*/ if(filterBy === 'num') {
     result = pokemonArray.filter(pokemon => pokemon.num.includes(condition));
   }else if(filterBy === 'weaknesses') {
     result = pokemonArray.filter(pokemon => pokemon.weaknesses.includes(condition));
