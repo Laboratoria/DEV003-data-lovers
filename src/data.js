@@ -19,7 +19,7 @@ export const getDataPokemon = () => { // exportamos funcion array con toda la da
   return pokemonList;
 };
 
-export const orderByOption = (valor) => { //exportamos funcion de ordenar por opcion
+export let orderByOption = (valor) => { //exportamos funcion de ordenar por opcion
   //let pokemonSortBy = data['pokemon'];
   let pokemonSortBy = data['pokemon'];
  
@@ -36,9 +36,11 @@ export const orderByOption = (valor) => { //exportamos funcion de ordenar por op
     pokemonSortBy.sort((a, b) => b.encounter["base-capture-rate"].localeCompare(a.encounter["base-capture-rate"])); 
     range = pokemonSortBy.filter(pasarDataP => pasarDataP.encounter["base-capture-rate"]!=='not in capture');
     pokemonSortBy = range.slice(0,10); 
-  }
-  // console.log(pokemonSortBy);
+     
+}
+ // console.log(pokemonSortBy);
   return pokemonSortBy;
+  
 };
 
 export const evolutions = (filterBy, condition ) => {
@@ -58,7 +60,7 @@ export const evolutions = (filterBy, condition ) => {
     //console.log(data.pokemon[13]['evolution']['next-evolution'][0].name); 
     result = pokemonArray.filter(pokemon => pokemon.name.includes(condition));
     // console.log(result[0]['evolution']['prev-evolution'][0]['prev-evolution'][0].num)
-    console.log(result);
+    //console.log(result);
     if (!result[0]){ 
       return resultEvolutions='';
     }
