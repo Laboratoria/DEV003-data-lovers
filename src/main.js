@@ -627,8 +627,7 @@ function scrollFunction() {
 
 
 const imgRandom = () => {
-  const opt1 = "1";
-  const images = orderByOption(opt1);
+  const images = orderByOption('1');
   let bufferImagenes = [];
 
   for (const e of images) {
@@ -639,7 +638,7 @@ const imgRandom = () => {
 
       bufferImagenes.push(imagen);
   }
-  //console.log(bufferImagenes);
+ // console.log(bufferImagenes);
   let indexRandon = generarEnteroAleatorio(bufferImagenes.length);
   let imagenAleatoria = bufferImagenes[indexRandon].num;
   const contFigure = document.querySelector("figure")
@@ -756,6 +755,168 @@ if (op==1){
  } 
  
  
- 
+ const showInfoPokemon2 = (idPokemon) => {
+  // console.log(idPokemon);
+  const filterByP = 'num';
+  //console.log(filterByP);
+  const infoPokemonAll = filterData(filterByP, idPokemon);
+  const infoPokemon = infoPokemonAll[0];
+  //console.log(infoPokemon);
+
+  let container = "";
+  container = document.getElementById("scPopUp");
+  // limpiar el popup card cada que le demos click en un pokemon
+  document.getElementById("scPopUp").innerHTML = '';
+  container.style.display = "block";
+  const popUp = document.createElement("div");
+  popUp.id = "divPopUp";
+
+
+
+  //Creando la Card con toda la info del pokemon seleccionado
+  //creando tabla
+  const tableInfo = document.createElement("table");
+  tableInfo.id = "tableInfoPokemon";
+  //header de la tabla
+  const tableHeader = document.createElement("theader");
+  const headerTr = document.createElement("tr");
+  const headerTh1 = document.createElement("th");
+  headerTh1.innerText = infoPokemon['pokemon-rarity'].toUpperCase();
+  //trHeader1.innerText = infoPokemon.name + " " + infoPokemon.num;
+  const headerTh2 = document.createElement("th");
+  headerTh2.innerText = infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
+  const headerTh3 = document.createElement("th");
+  headerTh3.innerText = "HP " + infoPokemon.stats['max-hp'];
+  const btnClosePopUp = document.createElement("button");
+  btnClosePopUp.className = "close";
+  btnClosePopUp.id = "btnClose";
+  btnClosePopUp.textContent = "Cerrar";
+  btnClosePopUp.textContent = "X";
+  container.appendChild(popUp);
+  popUp.appendChild(btnClosePopUp);
+  const headerTh4 = document.createElement("th");
+  headerTh4.contains = btnClosePopUp;
+  // cuerpo de la tabla tbody
+  const tbodyTable = document.createElement("tbody");
+  const bodytrdetail1 = document.createElement("tr");
+  const bodytd1 = document.createElement("td");
+  //  console.log(popUp.id);
+  const imagenP = document.createElement("img");
+  imagenP.src = infoPokemon.img;
+  imagenP.id = "imgPokemon";
+  const nextEspace1 = document.createElement("br");
+
+  const labelType = document.createElement("label");
+  labelType.innerText = "Type: " + infoPokemon.type[0];
+  if (infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null) {
+    labelType.innerText += " - " + infoPokemon.type[1];
+  }
+
+  labelType.id = "lblTypePokemon";
+  const nextEspace3 = document.createElement("br");
+  const labelHeight = document.createElement("label");
+  labelHeight.innerText = "Height : " + infoPokemon.size.height;
+  const nextEspace4 = document.createElement("br");
+  const labelWeight = document.createElement("label");
+  labelWeight.innerText = "Weight : " + infoPokemon.size.weight;
+  const bodytd2 = document.createElement("td");
+  const labelAbout = document.createElement("label");
+  labelAbout.className = "aboutStyle";
+  labelAbout.innerText = infoPokemon.about;
+  bodytd2.colSpan = "3";
+  const nextEspace2 = document.createElement("br");
+  const nextEspace10 = document.createElement("br");
+  const labelGeneration = document.createElement("label");
+  labelGeneration.className = "generationStyle";
+  labelGeneration.innerText = " Generation:  " + infoPokemon.generation.num
+  const nextEspace9 = document.createElement("br");
+  const labelRegion = document.createElement("label");
+  labelRegion.innerText = " Region:   " + infoPokemon.generation.name;
+
+  const bodytrdetail2 = document.createElement("tr");
+  const bodytd3 = document.createElement("td");
+  const labelWeaknessesTitle = document.createElement("label");
+  labelWeaknessesTitle.innerText = "Weaknesses";
+  const nextEspace5 = document.createElement("br");
+
+  const labelweaknesses = document.createElement("label");
+  labelweaknesses.innerText = "";
+
+  infoPokemon.weaknesses.forEach((item) => {
+    labelweaknesses.innerText += "  " + item;
+
+    //console.log(item);
+  })
+  const bodytd4 = document.createElement("td");
+  bodytd4.colSpan = "2";
+  // bodytd4.rowSpan="2";
+  const labelResistantTitle = document.createElement("label");
+  labelResistantTitle.innerText = "Resistant to:";
+  const nextEspace6 = document.createElement("br");
+
+  const labelResistant = document.createElement("label");
+  labelResistant.innerText = "";
+
+  infoPokemon.resistant.forEach((item) => {
+    labelResistant.innerText += "  " + item;
+    //console.log(item);
+  })
+  /*   "egg": "2 km",
+    "buddy-distance-km": "3",*/
+  const bodytrdetail3 = document.createElement("tr");
+  const bodytd5 = document.createElement("td");
+  bodytd5.colSpan = "4";
+  const labelExtra = document.createElement("label");
+  labelExtra.innerText = "Extra Information:";
+  const nextEspace7 = document.createElement("br");
+
+  const labelEggs = document.createElement("label");
+  labelEggs.innerText = "Eggs   " + infoPokemon.egg;
+  const nextEspace8 = document.createElement("br");
+  const labelCandy = document.createElement("label");
+  labelCandy.innerText = "Candy distance in km   " + infoPokemon['buddy-distance-km'];
+  container.appendChild(popUp);
+  popUp.appendChild(tableInfo);
+  tableInfo.appendChild(tableHeader);
+  tableInfo.appendChild(headerTr);
+  headerTr.appendChild(headerTh1);
+  headerTr.appendChild(headerTh2);
+  headerTr.appendChild(headerTh3);
+  headerTr.appendChild(headerTh4);
+  headerTh4.appendChild(btnClosePopUp);
+  tableInfo.appendChild(tbodyTable);
+  tbodyTable.appendChild(bodytrdetail1);
+  bodytrdetail1.appendChild(bodytd1);
+  bodytd1.appendChild(imagenP);
+  bodytd1.appendChild(nextEspace1);
+  bodytd1.appendChild(labelType);
+  bodytrdetail1.appendChild(bodytd2);
+  bodytd2.appendChild(labelAbout);
+  bodytd2.appendChild(nextEspace2);
+  bodytd2.appendChild(nextEspace10);
+  bodytd2.appendChild(labelGeneration);
+  bodytd2.appendChild(nextEspace9);
+  bodytd2.appendChild(labelRegion);
+  bodytd1.appendChild(nextEspace3);
+  bodytd1.appendChild(labelHeight);
+  bodytd1.appendChild(nextEspace4);
+  bodytd1.appendChild(labelWeight);
+  tbodyTable.appendChild(bodytrdetail2);
+  bodytrdetail2.appendChild(bodytd3);
+  bodytd3.appendChild(labelWeaknessesTitle);
+  bodytd3.appendChild(nextEspace5);
+  bodytd3.appendChild(labelweaknesses);
+  bodytrdetail2.appendChild(bodytd4);
+  bodytd4.appendChild(labelResistantTitle);
+  bodytd4.appendChild(nextEspace6);
+  bodytd4.appendChild(labelResistant);
+  tbodyTable.appendChild(bodytrdetail3);
+  bodytrdetail3.appendChild(bodytd5);
+  bodytd5.appendChild(labelExtra);
+  bodytd5.appendChild(nextEspace7);
+  bodytd5.appendChild(labelEggs);
+  bodytd5.appendChild(nextEspace8);
+  bodytd5.appendChild(labelCandy);
+}
 
 

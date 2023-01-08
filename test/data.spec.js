@@ -1,57 +1,135 @@
-import { getDataPokemon,filterData } from '../src/data.js';
+import { getDataPokemon,filterData,orderByOption,evolutions } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
+
 describe('get Data of pokemons', () => {
-  //una funcion un return no funciona lo de abajo mucho
-  // it('is a function', () => {
-  // expect(typeof example).toBe('function');
-  //});
+   it('is a function', () => {
+   expect(typeof getDataPokemon).toBe('function');
+  });
+
+//data === undefined || typeof data !== 'object' || 
+//data === 0 || data === null || data.length === 0 || data === ''
+  it('should throw TypeError when invoked with wrong argument', () => {
+   // let result = getObjectDescription("");
+   //expect(post.length).toBeGreaterThanOrEqual(1);
+   //expect(post[0].id).toBe(1);
+   
+    expect(() => getDataPokemon.toBe(undefined)).toThrow(TypeError);
+    expect(() => getDataPokemon.not.objectContaining()).toThrow(TypeError);
+    expect(() => getDataPokemon.toBeempty()).toThrow(TypeError);
+    expect(() => getDataPokemon.toBeNull()).toThrow(TypeError);
+    expect(() => getDataPokemon.length).toBeGreaterThanOrEqual(1);
+    expect(() => getDataPokemon().toBeFalsy()).toThrow(TypeError);
+    expext(() => getDataPokemon[0]).toEqual(data);
+  });
 
   it('returns `Data of pokemons`', () => {
     const dataPokemon = data['pokemon'];
+   //const dataPokemon = pokemonData.pokemon;
     expect(getDataPokemon()).toBe(dataPokemon);
   });
 });
 
+describe('orderByOption', () => {
+  it('is a function', () => {
+    expect(typeof orderByOption).toBe('function');
+  });
+
+  it('returns `Order data by Asc`', () => {
+  const result = orderByOption("1");
+  expect(result[0].name).toBe('bulbasaur');  
+  });
+
+  it('returns `Order data by Desc`', () => {
+    const result = orderByOption("2");
+    expect(result[0].name).toBe('celebi');
+  });
+
+  it('returns `Order data by A-Z`', () => {
+    const result = orderByOption("3");
+    expect(result[0].name).toBe('abra');  
+  });
+  it('returns `Order data by Z-A`', () => {
+    const result = orderByOption("4");
+    expect(result[0].name).toBe('zubat');  
+  });
+
+  it('returns `Order by Top10`', () => {
+    const result = orderByOption("5");
+    expect(result[0].name).toBe('mew');  
+  });
+
+});
+
+describe('evolutions', () => {
+  it('is a function', () => {
+    expect(typeof evolutions).toBe('function');
+  });
+/*
+  it('should throw TypeError when invoked with wrong argument', () => {
+    expect(() => !evolutions.objectContaining()).toThrow(TypeError);
+    expect(() => evolutions[0].num).toContain('001');
+  });
+*/
 
 
+  it('returns `Filter by evolutions`', () => {
+    let condition ="kakuna";
+    let filterBy=evolutions('name', condition);
+    expect(filterBy[0].name).toContain('weedle');
+  });
+/*
+  it('should throw TypeError when invoked with wrong argument', () => {
+    expect(() => !filterBy[0].objectContaining()).toThrow(TypeError);
+  });*/
+});
 
 describe('filterData', () => {
   it('is a function', () => {
     expect(typeof filterData).toBe('function');
   });
 
+  
   it('returns `Filter data by type`', () => {
-    const filterBy=[{type:"grass"},{type:"dark"}];
-    const condition="grass";
-    const array = [{type:"grass"}];
-    expect(filterData(filterBy, condition )).toBe(array);
+    let condition ="poison";
+    let filterBy=filterData('type', condition);
+    expect(filterBy[0].type).toContain('poison');
+  });
+
+  it('returns `Filter data by kanto`', () => {
+    //let condition="kanto";
+    let filterBy=filterData('kanto', 'kanto' );
+    expect(filterBy[0].generation.name).toBe('kanto');
+  });
+
+  it('returns `Filter data by johto`', () => {
+    //let condition="kanto";
+    let filterBy=filterData('johto', 'johto' );
+    expect(filterBy[0].generation.name).toBe('johto');
   });
 
   it('returns `Filter data by name`', () => {
-    const filterBy=[{name:"bulbasaur"},{name:"lapras"}];
-    const condition="lapras";
-    const array = [{name:"lapras"}];
-    expect(filterData(filterBy, condition )).toBe(array);
-  });
-//pokemon.generation.name.includes(condition)
-  it('returns `Filter data by kanto`', () => {
-    const filterBy=[{name:"kanto"},{name:"johto"}];
-    const condition="kanto";
-    const array = [{name:"kanto"}];
-    expect(filterData(filterBy, condition )).toBe(array);
-  });
-});
-/*
-describe('orderByOption', () => {
-  it('is a function', () => {
-    expect(typeof orderByOption).toBe('function');
+    let condition ="kakuna";
+    let filterBy=filterData('name', condition);
+    expect(filterBy[0].name).toBe('kakuna');
   });
 
-  it('returns `Order data by`', () => {
-    const filterBy=[{valor:"1"},{valor:"2"}];
-    const condition="1";
-    const array = [{valor :"grass"}];
-    expect(orderByOption(valor )).toBe(array);
+  it('returns `Filter data by num`', () => {
+    let condition ="202";
+    let filterBy=filterData('num', condition);
+    expect(filterBy[0].name).toBe('wobbuffet');
   });
-});*/
+
+  it('returns `Filter data by weaknesses`', () => {
+    let condition ="dragon";
+    let filterBy=filterData('weaknesses', condition);
+    expect(filterBy[0].name).toContain('dratini');
+  });
+
+
+});
+
+
+
+
+
