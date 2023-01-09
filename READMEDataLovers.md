@@ -39,7 +39,7 @@ Para investigar más el usuario y el producto, se creo una encuesta Pokémon con
 
 ¿Quiénes son los principales usuarios del producto?
 Se hizo una pregunta sobre el rango de edades de los usuarios, descubrimos que los principales usuarios del producto son personas entre 22 y 35 años, deducimos esta respuesta por el fácil acceso a un dispositivo móvil e internet en todo momento. 
-prototipo de baja fidelidad ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/1.png?raw=true)
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/1.png?raw=true)
 
 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 En la segunda pregunta del cuestionario preguntamos qué les gustaría encontrar en una página web de Pokémon Go, sus principales objetivos son encontrar información específica sobre los pokémon como sus fortalezas y debilidades. Las respuesta que obtuvimos en la encuesta fueron las siguientes:
