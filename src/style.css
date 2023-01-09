@@ -94,6 +94,10 @@ select{
     justify-content: center;
     gap: 35px;
 }
+
+#root{
+    display: none;
+}
 .cardMold{
     width: 350px;
     height: 680px;
