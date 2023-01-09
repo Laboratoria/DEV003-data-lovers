@@ -65,7 +65,9 @@ El producto lo utilizarían en sus ratos libres ya que la mayoría de las person
 Historia 1:
 
 Como: Jugador de Pokémon Go.
+
 Quiero: Ver información de los Pokémon.
+
 Para: Para saber su nombre, Id, tipo y otros datos.
 
 Criterios de Aceptación:
@@ -79,7 +81,9 @@ Que el usuario pueda visualizar toda la información de los pokemones.
 Historia 2:
 
 Como: Jugador de Pokémon Go.
+
 Quiero: Poder realizar búsquedas, según el tipo y debilidades y región.
+
 Para: Saber el poder y capacidad de batalla de un pokémon específico según su tipo y debilidades. 
 
 Criterios de Aceptación:
@@ -93,7 +97,9 @@ Que el usuario pueda visualizar los pokemones según sus criterios de filtrado.
 Historia 3:
 
 Como: Jugador de Pokémon Go.
+
 Quiero: Poder ver las evoluciones de un pokemon. 
+
 Para: Saber cuántos caramelos necesita para su siguiente evolución.
 
 Criterios de Aceptación:
@@ -107,7 +113,9 @@ Que el usuario pueda visualizar las evoluciones y cuantos caramelos necesita par
 Historia 4:
 
 Como: Jugador de Pokémon Go.
+
 Quiero: Poder sacar el top 10 de frecuencia de aparición. (poder ver la frecuencia de aparición de un pokémon)
+
 Para: Poder encontrar a los pokémons con mayor facilidad. 
 
 Criterios de Aceptación:
@@ -159,6 +167,7 @@ Imágenes del Prototipo de Baja Fidelidad:
 Los prototipos de alta fidelidad se realizaron en la aplicación de Figma en donde creamos 5 botones para las 5 paginas que queríamos mostrar, no se detallaron las páginas ya que iban a ser idénticas a excepción de unos pequeños cambios en el diseño, pero nos basamos en la planificación de nuestros prototipos de baja fidelidad. 
 
 Imágenes del Prototipo de Alta Fidelidad:
+
 ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/Captura%20de%20Pantalla%202022-12-28%20a%20la(s)%2022.15.35.png?raw=true)
 
  ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/figma%20flow.png?raw=true)
@@ -171,14 +180,19 @@ Paleta de Colores:
 ## 6. Áreas de Mejora
 
 Después de finalizar el proyecto, nos dimos cuenta que teníamos algunos errores y varias áreas de mejora en nuestro código, a continuación menciono cómo se resolvieron brevemente. 
+
 En la Página Home deseábamos desplegar un pokemon random cada vez que la recargamos. 
 Se resuelve usando el método estadístico Math.random()
+
 En la Página Pokédex deseábamos darle más formato a las tarjetas y organizar su información por columnas y filas.
 Se dio formato y uniformidad usando las propiedades de CSS Grid y CSS flex creando filas y columnas para facilitar el formato que queríamos dar. Asimismo usamos innerHTML para poder usar las secciones que creamos. 
+
 En la Página Pokédex deseamos bloquear la pantalla de fondo cuando aparece la tarjeta de información y que no se agregue la información continuamente.
 Se resolvió limpiando la card con un document.getElementById("scCard").innerHTML = '';
+
 En todas las páginas deseamos desplegar un botón que los regresara al principio de cada página cuando ya estabas muy abajo. 
 Se resolvió creando un botón en la sección de body para que apareciera en todas las páginas.
+
 Página Evolutions Mostrar cuántos caramelos necesita para su siguiente evolución "candy-cost".
 Se resolvió usando dot notation y corchetes sin comillas para extraer la información que deseábamos mostrar. 
 
@@ -217,7 +231,7 @@ Se resolvió usando dot notation y corchetes sin comillas para extraer la inform
 └── test
 
    └── data.spec.js
-   
+
 directory: 7 file: 11
 
 ## 8. Notas
