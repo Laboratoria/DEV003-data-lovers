@@ -9,7 +9,7 @@
 * [5. Prototipos Alta Fidelidad](#5-prototipos-alta-fidelidad)
 * [6. Áreas de Mejora](#6-áreas-de-mejora)
 * [7. Boiler Plate](#7-boiler-plate)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [8. Notas](#8-notas)
 * [9. Checklist](#9-checklist)
 
 ***
