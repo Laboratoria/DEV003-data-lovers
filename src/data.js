@@ -25,8 +25,6 @@ export function showAllCharacters(characters){
     cardImg.appendChild(img); //Anida img en cardImg
     cardMold.appendChild(cardImg); //Anida en cardMold
 
-    
-
     //Mostrando nombre
     //Creando div para contenedor de nombre
     let container=document.createElement("div");
@@ -153,6 +151,25 @@ export function filterData(data, input, category){
   // return filterD;
 }
 
+export function orderAlf(orderType, inputArray) {
+  if (orderType === "alphabetic") {
+     return inputArray.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+  }
+  if (orderType === "reverse") {
+     return inputArray.sort((a,b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0))
+  
+  }
+  return inputArray
+};
+
+export function getData(categoSelect, inpTxt, orderType, data) {
+  //const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
+  //const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
+  //const orderType = document.getElementById("order").value
+      const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
+      const orderedResult = orderAlf(orderType, filteredResult)
+      return orderedResult
+};
 //Obtener valor de input txt en una variable---> Hecho
 
 //Function filterData 3 paráms: data, input, categor---> Hecho
