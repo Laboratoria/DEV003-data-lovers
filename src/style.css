@@ -1,25 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
-.contenedor {
-  width: 100vh;
+html {
   height: 100%;
-  background-repeat: no-repeat;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container>* {
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  /*background: linear-gradient(to left, #f60505, #e8a69f);*/
+  background: -webkit-linear-gradient(left, rgb(0, 9, 130) 27%, rgba(29, 81, 238, 0) 160%);
+  padding-top: 10px;
+}
+
+.sidebar {
+  padding: 100px;
+  grid-area: sidebar;
+  background-image: url(card.jpg);
   background-size: cover;
   background-position: center;
+  /*background: linear-gradient(to left, #f6ad05, #e3df21);*/
+}
+
+.text {
+  margin-top: 30px;
+  margin-left: 400px;
+  font-size: 25px;
+  text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
+  color: black;
+}
+
+.texto {
+  margin-top: 30px;
+  margin-left: 400px;
+  font-size: 13px;
+  text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
+  color: black;
 
 }
 
-.pie-pagina {
-  background-color: #4000a7;
-  padding: 1em 0;
-  text-align: center;
-  color: #fff;
-  bottom: 0;
-  width: 100%;
-  position: relative;
+.btn {
+  margin-left: 400px;
+  border: none;
+}
+
+.footer {
+  padding-left: 70px;
+  grid-area: footer;
+  background-color: #302C78;
+  color: white;
+  font-size: 10px;
+  font-style: oblique;
+  padding-top: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "header" 150px
+    "sidebar" auto
+    "footer" 20px;
 }
