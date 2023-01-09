@@ -600,7 +600,7 @@ popUpClick.addEventListener("click", (e) => {
   //document.body.classList.toggle('modal-open');
   if (e.target.nodeName === 'BUTTON') {
     const containerClose = document.querySelector('.cPopUp');
-    containerClose.removeChild(document.getElementById('divPopUp'));
+    containerClose.removeChild(document.getElementById('secPopUp'));
     containerClose.style.display = "none";
   }
  
@@ -766,7 +766,7 @@ if (op==1){
   document.getElementById("scPopUp").innerHTML = '';
   container.style.display = "block";
   const secPopUp = document.createElement("section");
-  secPopUp.id = "divPopUp";
+  secPopUp.id = "secPopUp";
 
   const headerPopUp = document.createElement("section");
   headerPopUp.id="headerDetails";  
@@ -788,9 +788,11 @@ if (op==1){
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
   btnClosePopUp.id = "btnClose";
-  btnClosePopUp.textContent = "Cerrar";
   btnClosePopUp.textContent = "X";
 //fin header
+
+//ssection body
+const scBodydetails=document.createElement("section");
 
 //section left
 const scLeftPopUp = document.createElement("section");
@@ -816,6 +818,7 @@ const spanWeight = document.createElement("span");
 spanWeight.innerHTML =  "<strong>Weight :</strong>" + infoPokemon.size.weight;
 //fin section left
 
+
 //section rigth
 const scRigthPopUp = document.createElement("section");
 scRigthPopUp.id="scRigthDetails";
@@ -827,12 +830,9 @@ pAbout.innerText = infoPokemon.about;
 const scOtherInfo=document.createElement("section");
 scOtherInfo.id="scOtherInfoP";
 
-//const spanG = document.createElement("span");
 const spanGeneration = document.createElement("span");
 spanGeneration.innerHTML = "<strong>Generation :</strong>" + infoPokemon.generation.num;
-//spanG.innerText = "Generation : " +  (spanGeneration.innerText = infoPokemon.generation.num);
 
-//const spanR = document.createElement("span");
 const spanRegion = document.createElement("span");
 spanRegion.innerHTML = "<strong>Region :</strong>" + infoPokemon.generation.name;
 
@@ -856,7 +856,6 @@ let liResistant = document.createElement("li");
 infoPokemon.resistant.forEach((item) => {
   
   liResistant.innerText += "  " + item;
-  //console.log(item);
 })
 
 const scExtraInfo = document.createElement("section");
@@ -881,7 +880,8 @@ container.appendChild(secPopUp);
   headerPopUp.appendChild(divCloseB);
   divCloseB.appendChild(btnClosePopUp);
 
-  container.appendChild(scLeftPopUp);
+  container.appendChild(scBodydetails);
+  scBodydetails.appendChild(scLeftPopUp);
   scLeftPopUp.appendChild(figureImg);
   scLeftPopUp.appendChild(scthw);
   scthw.appendChild(spanType);
@@ -890,7 +890,7 @@ container.appendChild(secPopUp);
   //scthw.appendChild(spanW);
   scthw.appendChild(spanWeight);
 
-  container.appendChild(scRigthPopUp);
+  scBodydetails.appendChild(scRigthPopUp);
   scRigthPopUp.appendChild(scAbout); 
   scAbout.appendChild(pAbout);
   scRigthPopUp.appendChild(scOtherInfo); 
