@@ -2,68 +2,71 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>characters</title>
-  <link rel="stylesheet" href="../style.css" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../imagenes/favicon.ico">
+    <title>Characteres▪ </title>
+    <link rel="stylesheet" href="../style.css" />
+
 </head>
 
 <body>
-  <div id="root">
-    <header>
-      <h2 class="title">Characters</h2>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../pages/books.html">Books</a></li>
-          <li><a href="../pages/spells.html">Spells</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="modalContainer" class="modal-container">
-      <div class="modal">
-        <h2 id="modalName"></h2>
-        <h3 id="modalBirth" class="modal-birth"></h3>
-        <h3 id="modalDeath" class="modal-death"></h3>
-        <h3 id="modalSpecies" class="modal-species"></h3>
-        <h3 id="modalAncestry" class="modal-ancestry"></h3>
-        <h3 id="modalGender" class="modal-gender"></h3>
-        <h3 id="modalHouse" class="modal-house"></h3>
-        <button id="modalCloseBtn" class="modal-btn">Close</button>
-      </div>
-    </div>
+    <section class="contenedor">
+        <div id="root">
+            <header>
+                <h2 class="title">Characters</h2>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/books.html">Books</a></li>
+                        <li><a href="../pages/spells.html">Spells</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h2 class="titulo-characaters">Let us help you find the character you are looking for:</h2>
+                <form id="charactersSearchForm">
+                    <input class="search" placeholder="Text here the character name:" type="text">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <br>
+                <br>
+                <div id="charactersContainer">
+                </div>
+                <div id="modalContainer" class="modal-container">
+                    <div class="modal">
+                        <h2 id="modalName"></h2>
+                        <h3 id="modalBirth" class="modal-birth"></h3>
+                        <h3 id="modalDeath" class="modal-death"></h3>
+                        <h3 id="modalSpecies" class="modal-species"></h3>
+                        <h3 id="modalAncestry" class="modal-ancestry"></h3>
+                        <h3 id="modalGender" class="modal-gender"></h3>
+                        <h3 id="modalHouse" class="modal-house"></h3>
+                        <button id="modalCloseBtn" class="modal-btn">Close</button>
+                    </div>
+                </div>
 
-    <div class="carousel">
-      <div class="carousel__item carousel__item--visible">
-        <img src="../imagenes/dumbeldore.png" />
-      </div>
-      <div class="carousel__item">
-        <img src="../imagenes/Harry.png" />
-      </div>
-      <div class="carousel__item">
-        <img src="../imagenes/Hermione.png" />
-      </div>
+                <div class="carousel">
+                    <div class="carousel__item carousel__item--visible">
+                        <img src="../imagenes/dumbeldore.png" />
+                    </div>
+                    <div class="carousel__item">
+                        <img src="../imagenes/Harry.png" />
+                    </div>
+                    <div class="carousel__item">
+                        <img src="../imagenes/Hermione.png" />
+                    </div>
 
-      <div class="carousel__actions">
-        <button id="carousel__button--prev" aria-label="Previous slide">&#60;</button>
-        <button id="carousel__button--next" aria-label="Next slide">&#62;</button>
-      </div>
-    </div>
+                    <div class="carousel__actions">
+                        <button id="carousel__button--prev" aria-label="Previous slide">&#60;</button>
+                        <button id="carousel__button--next" aria-label="Next slide">&#62;</button>
+                    </div>
+                </div>
 
-    <h2 class="titulo-characaters">Let us help you find the character you are looking for:</h2>
-    <form id="charactersSearchForm">
-      <input class="search" placeholder="Text here the character name:" type="text">
-      <button type="submit" class="search-btn">Search</button>
-    </form>
-    <br>
-    <br>
-    <div id="charactersContainer">
-    </div>
-    <footer>
-      <a href="https://github.com/luzapien" target="_blank">@luzapien</a>
-      <a href="https://github.com/NicoleCondeDuque" target="_blank">@NicoleCondeDuque</a>
-    </footer>
-  </div>
-  <script src="../main.js" type="module"></script>
+
+            </main>
+            <footer></footer>
+    </section>
+    <script src="../main.js" type="module"></script>
 </body>
 
 </html>

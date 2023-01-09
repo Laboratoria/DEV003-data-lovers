@@ -1,4 +1,4 @@
-import { getBooks, getCharacters, searchCharacterByName } from './data.js';
+import { getBooks, getCharacters, searchCharacterByName, searchSpellsByLetter, getSpells  } from './data.js';
 
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
@@ -166,3 +166,68 @@ if (location.pathname === '/pages/characters' || location.pathname === '/DEV003-
   showCharacters()
   carousel()
 }
+const showSpellsLetters = () => {
+  const letters = document.getElementById("lettersContainer");
+  const spellLetters = letters.children;
+  for (let i = 0; i < spellLetters.length; i++) {
+    const letter = spellLetters[i];
+    letter.addEventListener("click", function () {
+      window.location = document.URL + '?search=' + letter.id;
+    });
+  
+  }
+}
+  
+const showSpellsByLetter = (filteredSpells) => {
+  const spellsContainer = document.getElementById("spellsContainer");
+  for (let i = 0; i < filteredSpells.length; i++) {
+    const spell = filteredSpells[i];
+    const spellName = document.createElement("h2");
+    const spellsInformation = document.createElement("div");
+    spellName.innerText = spell.name;
+    if (spell.pronunciation !== null) {
+      spellsInformation.innerHTML = "<p>🧙‍♂️Pronunciation: " + spell.pronunciation + '</p>';
+    }
+    if (spell.description !== null) {
+      spellsInformation.innerHTML += "<p>🌠Description: " + spell.description + '</p>';
+    }
+    if (spell.mention !== null) {
+      spellsInformation.innerHTML += "<p>🔤Mention: " + spell.mention + '</p>';
+    }
+    spellName.className = "spell-name";
+    spellsInformation.className = "spell-style";
+    spellsContainer.appendChild(spellName);
+    spellsContainer.appendChild(spellsInformation);
+  }
+}
+  
+const spellsNotFound = (searchParam) => {
+  const spellNotFound = document.getElementById("spellsNotFound");
+  spellNotFound.innerText = "Spells not found with letter: " + searchParam.toUpperCase();
+  spellNotFound.style.display = "block";
+}
+  
+const handleSpells = (searchParam) => {
+  const spells = getSpells(data);
+  const filteredSpells = searchSpellsByLetter(searchParam, spells)
+  if (filteredSpells.length === 0) {
+    spellsNotFound(searchParam);
+  } else {
+    showSpellsByLetter(filteredSpells);
+  }
+}
+  
+if (location.pathname === '/pages/spells' || location.pathname === '/DEV003-data-lovers/pages/spells.html') {
+  const letters = document.getElementById("lettersContainer");
+  const params = (new URL(document.location)).searchParams;
+  const searchParam = params.get('search');
+  
+  if (searchParam) {
+    letters.style.display = "none";
+    handleSpells(searchParam)
+  } else {
+    showSpellsLetters()
+  }
+  
+}
+  
