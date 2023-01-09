@@ -7,6 +7,7 @@ body {
     text-align: center;
     margin: 0 auto;
     font-size: 20px;
+   
 }
 
 .boxHeader {
@@ -18,16 +19,6 @@ body {
     background: #E30000;
     height: 150px;
 }
-/*
-figure {
-    Width: 200px;
-    Border: solid #333 1px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5); /* sombra del objeto 
-    Background: white;
-    Border-radius: 15px;  radio del borde 
-    Height: 280px;
-    margin: 10px auto;
-}*/
 
 .img_header {
     padding: 25px; /* espacio entre el contenido y el borde */
@@ -269,10 +260,11 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     background-color: #555; /* Añadir un fondo gris oscuro en el hover */
   }
 
+  /*Inicio Card All Info*/
 #secPopUp{
     display: flex;  
     flex-flow: row;
-    justify-content: space-around;
+  /*  justify-content: space-around;*/
    
   
 }
@@ -301,27 +293,58 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     
 }
 
-#scBodydetails{
+#scBodyDetail{
     display: grid;  
     flex-flow: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: start;
+   /* justify-content: space-around;*/
+   /* align-items: flex-start;*/
+    align-content: center;
+    grid-template-columns:1fr 2fr;
+    flex-wrap: nowrap;
+    
+
+   /* grid-template-rows: 1fr 1fr;*/
 }
 
-#leftDetails{
-    width: 30%;
-    height:auto;    
+#imgPokemon{
+    align-content: center;
+}
+
+#leftDetails{  
     left: 0;
-
+    align-items: center;
 }
+
+
 
 #scRigthDetails{
-    width: 60%;
-    height: auto;
     margin: 0 0 0 auto;
-    align-self:flex-start;
+   /* align-self:flex-start;*/
     left: 100%;
     top:0;
     vertical-align: top;
+
+}
+#scweaknessesDetails{
+    align-items:initial;
+   /* float: left;*/
+}
+
+#ulWeaknesses{
+    list-style-position:inside;
+    list-style-type:square;
+  /*  float:right;*/
+}
+
+#ulResistant{
+    list-style-position:inside;
+    align-items:flex-start;
+  /* float:left; */
+   list-style-type:square;
+   
+  /* padding-left: 2rem;*/
+}
+
+#scOtherInfoP{
+    grid-area: 2/1/3/3;
 }
