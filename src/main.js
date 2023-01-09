@@ -10,6 +10,8 @@ const clearFilter = document.querySelector("#limpiar");
 
 //MUESTRA TODOS LOS PERSONAJES
 charactersPageBtn.addEventListener("click", () => {
+  charactersPageBtn.setAttribute("class", "subrayado");
+  document.querySelector(".filters").style.display = "inline-block";
   characters.map((character) => {
     createCharEl(character, dataSection);
   });

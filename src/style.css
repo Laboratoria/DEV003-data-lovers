@@ -35,38 +35,50 @@ main {
   height: 140px;
 }
 
+.sombrero-globo {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
 .sombrero {
-  position: absolute;
   width: 278px;
   height: 228px;
   left: 406px;
-  top: 300px;
+  top: 200px;
+  margin-top: 150px;
 }
 
-.globo {
-  position: absolute;
-  width: 303px;
-  height: 227px;
-  left: 757px;
-  top: 245px;
+.globo-texto {
+  display: inline-block;
+  width: 280px;
+  height: 251px;
+  background-image: url(./images/globodialogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 72px;
+  padding-left: 14px;
+  padding-right: 43px;
 }
 
 .textoglobo {
-  position: absolute;
   width: 260.68px;
   left: 779.59px;
-  top: 295.29px;
+  top: 195.29px;
 
   font-family: "Purple 3";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   text-align: center;
-
+  padding: 5px;
   color: #000000;
+
+  display: flex;
+  justify-content: center;
 }
 
 .espacio {
-  margin: 400px;
+  margin: 70px;
 }
 
 .navbar {
@@ -87,8 +99,13 @@ main {
 .potions,
 .funfacts,
 .spells,
-.books {
+.books,
+.characters {
   text-decoration: none;
+}
+
+.subrayado {
+  text-decoration: underline;
 }
 
 #show-data {
@@ -100,7 +117,7 @@ main {
 
 .character-card {
   background-color: #c5a227;
-  width: 10vw;
+  width: 150px;
   height: auto;
   margin: 20px;
   padding: 10px;
@@ -116,7 +133,7 @@ main {
 
 .filters {
   margin: 40px;
-  display: inline-block;
+  display: none;
   width: 80vw;
 }
 

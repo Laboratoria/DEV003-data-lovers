@@ -17,15 +17,17 @@
     </header>
 
 <!-- SECCION SOMBRERITO -->
+  <div class="sombrero-globo">
     <img src="./images/sortin hat.gif" class="sombrero">
-    <img src="./images/globodialogo.png" class="globo">
-    
-    <span class="textoglobo"> Welcome to the Wizard World of Harry Potter, I will be with you in this journey </span>
+    <div class="globo-texto">
+      <!-- <img src="./images/globodialogo.png" class="globo"> -->
+      <span class="textoglobo"> Welcome to the Wizard World of Harry Potter, I will be with you in this journey </span>
+    </div>
+  </div>    
     <div class="espacio"></div>
-    
     <main>
       <!-- SECCION MENU -->
-      <nav class="navbar">
+      <nav class="navbar" class="">
       <a href="./potions.html" class="potions">Potions</a>
       <a href="#" class="funfacts">FunFacts</a>
       <a href="#" class="characters">Characters</a>
@@ -34,6 +36,7 @@
       </nav>
       <!-- SECCION FILTROS -->
       <section class="filters">
+        <div>
           <select name="genero" id="gender">
               <option selected=" " disabled=" ">Gender</option>
               <option value="Male">Male</option>
@@ -49,9 +52,10 @@
           </select>
           <input type="reset" class="reset" id="limpiar"></input>
           <input type="text" id="buscador" placeholder="Search"></input>
+        </div>
+        <div id="show-data"></div>
       </section>
       <!-- SECCION DINAMICA -->
-      <section id="show-data"></section>
 
   </main>
 
