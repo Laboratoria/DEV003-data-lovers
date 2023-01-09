@@ -39,21 +39,26 @@ Para investigar más el usuario y el producto, se creo una encuesta Pokémon con
 
 ¿Quiénes son los principales usuarios del producto?
 Se hizo una pregunta sobre el rango de edades de los usuarios, descubrimos que los principales usuarios del producto son personas entre 22 y 35 años, deducimos esta respuesta por el fácil acceso a un dispositivo móvil e internet en todo momento. 
-
+prototipo de baja fidelidad ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/1.png?raw=true)
 
 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 En la segunda pregunta del cuestionario preguntamos qué les gustaría encontrar en una página web de Pokémon Go, sus principales objetivos son encontrar información específica sobre los pokémon como sus fortalezas y debilidades. Las respuesta que obtuvimos en la encuesta fueron las siguientes:
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/2.png?raw=true)
 
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/3.png?raw=true)
 
 ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 Los datos más importantes que les gustaría encontrar en la interfaz según la encuesta que realizamos son su poder o fortaleza y los Puntos de Combate para poder escoger el mejor pokemon para tener una batalla. 
-
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/5.png?raw=true)
 
 Así mismo preguntamos si les gustaría comparar el poder de los pokemones en la página web o aplicación y obtuvimos que al 85% de los usuarios si les gustaría compararlo.
-
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/4.png?raw=true)
 
 ¿Cuándo utilizan o utilizarían el producto?
 El producto lo utilizarían en sus ratos libres ya que la mayoría de las personas juegan Pokemon GO por ocio, pero la podrán utilizar cuando quieran. El objetivo principal es que encuentren información relevante para poder tener un mejor juego. La información que podrán encontrar es la siguiente: tipo, debilidad, peso, fortalezas, multiplicador, evoluciones, y caramelos. También pedimos recomendaciones para poder generar una página web que les guste a los usuarios, ver sus necesidades y de qué manera podemos cubrirlas. 
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/6.png?raw=true)
+
+imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/7.png?raw=true)
 
 ## 3. Historias de Usuario
 
@@ -130,7 +135,7 @@ Los prototipos de alta fidelidad se realizaron en la aplicación de Figma en don
 Imágenes del Prototipo de Alta Fidelidad:
 imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/Captura%20de%20Pantalla%202022-12-28%20a%20la(s)%2022.15.35.png?raw=true)
 imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/figma%20flow.png?raw=true)
-imagen ![prototipo de baja fidelidad]()
+
 
 Paleta de Colores:
 imagen ![paleta de colores](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Paleta%20de%20Colores.png?raw=true)
