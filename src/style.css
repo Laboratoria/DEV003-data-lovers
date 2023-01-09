@@ -29,6 +29,7 @@ font-size: 30px;
     margin-bottom: 15px;
 }
 
+
 nav{
 display: flex;
 justify-content: space-evenly;
@@ -39,23 +40,17 @@ background-color:  rgb(42, 92, 99);
 a{
     text-decoration: none;
 }
-
+/* mobile responsive */
 @media (max-width:500px){
     header{
         font-family: 'Italiana';
         background-color: rgb(42, 92, 99);
         padding: 10px;
-        /* margin-bottom: 15px; */
         font-size: 20px;
         text-align: center;
         color: #fff;
     }
 
-    nav{
-        display: flex;
-        justify-content: space-evenly;
-        background-color:  rgb(42, 92, 99);
-        }
 
         .mainbutton{
             color: #fff;;
@@ -66,6 +61,7 @@ a{
             margin: 10px;
             font-family: 'Roboto';
             margin-bottom: 15px;
+            text-align: center;
         }
 
         nav{
@@ -74,4 +70,35 @@ a{
             justify-content: space-evenly;
             background-color:  rgb(42, 92, 99);
             }
+}
+/* tablet responsive */
+@media (max-width:800px){
+    .mainbutton{
+        color: #fff;;
+        background-color:rgb(79, 118, 123);
+        padding: 20px;
+        border-radius: 15px;
+        border: none;
+        margin: 10px;
+        font-family: 'Roboto';
+        margin-bottom: 15px;
+    }
+
+    nav{
+        width: 900px;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        background-color:  rgb(42, 92, 99);
+        }
+
+        header{
+            width: 900px;
+            font-family: 'Italiana';
+            background-color: rgb(42, 92, 99);
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+        }
 }
