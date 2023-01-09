@@ -86,7 +86,7 @@ figure {
     }
 }
 
-ul { /*Contenedor del Menu*/
+.UlMenuClass { /*Contenedor del Menu*/
     list-style: none; /* quita el estilo de mostrarlo como lista */
     padding: 5px;
     margin: 0;
@@ -95,7 +95,7 @@ ul { /*Contenedor del Menu*/
     text-align: center;
 }
 
-li {
+.liMenuClass {
     outline: 2px solid black; /* borde de la caja en pixeles y color*/
     background: whitesmoke;
     width: 100px;
@@ -105,7 +105,7 @@ li {
     margin-left: 30px; 
 }
 
-a { /*etiqueta ancor - incluye texto */
+.aMenuClass { /*etiqueta ancor - incluye texto */
     text-decoration: none;
     display: block;
     color: black;
