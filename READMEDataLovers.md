@@ -39,69 +39,81 @@ Para investigar más el usuario y el producto, se creo una encuesta Pokémon con
 
 ¿Quiénes son los principales usuarios del producto?
 Se hizo una pregunta sobre el rango de edades de los usuarios, descubrimos que los principales usuarios del producto son personas entre 22 y 35 años, deducimos esta respuesta por el fácil acceso a un dispositivo móvil e internet en todo momento. 
- ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/1.png?raw=true)
+ ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/1.png?raw=true)
 
 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 En la segunda pregunta del cuestionario preguntamos qué les gustaría encontrar en una página web de Pokémon Go, sus principales objetivos son encontrar información específica sobre los pokémon como sus fortalezas y debilidades. Las respuesta que obtuvimos en la encuesta fueron las siguientes:
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/2.png?raw=true)
+  ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/2.png?raw=true)
 
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/3.png?raw=true)
+  ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/3.png?raw=true)
 
 ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 Los datos más importantes que les gustaría encontrar en la interfaz según la encuesta que realizamos son su poder o fortaleza y los Puntos de Combate para poder escoger el mejor pokemon para tener una batalla. 
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/5.png?raw=true)
+ ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/5.png?raw=true)
 
 Así mismo preguntamos si les gustaría comparar el poder de los pokemones en la página web o aplicación y obtuvimos que al 85% de los usuarios si les gustaría compararlo.
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/4.png?raw=true)
+ ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/4.png?raw=true)
 
 ¿Cuándo utilizan o utilizarían el producto?
 El producto lo utilizarían en sus ratos libres ya que la mayoría de las personas juegan Pokemon GO por ocio, pero la podrán utilizar cuando quieran. El objetivo principal es que encuentren información relevante para poder tener un mejor juego. La información que podrán encontrar es la siguiente: tipo, debilidad, peso, fortalezas, multiplicador, evoluciones, y caramelos. También pedimos recomendaciones para poder generar una página web que les guste a los usuarios, ver sus necesidades y de qué manera podemos cubrirlas. 
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/6.png?raw=true)
+ ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/6.png?raw=true)
 
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/7.png?raw=true)
+ ![cuestionario](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Cuestionario/7.png?raw=true)
 
 ## 3. Historias de Usuario
 
 Historia 1:
+
 Como: Jugador de Pokémon Go.
 Quiero: Ver información de los Pokémon.
 Para: Para saber su nombre, Id, tipo y otros datos.
+
 Criterios de Aceptación:
 La página debe mostrar  todos los pokemons con su nombre, ID.
 La página debe mostrar el detalle completo del pokémon elegido.
 Debe correr test unitario
+
 Definición de terminado:
 Que el usuario pueda visualizar toda la información de los pokemones.
 
 Historia 2:
+
 Como: Jugador de Pokémon Go.
 Quiero: Poder realizar búsquedas, según el tipo y debilidades y región.
 Para: Saber el poder y capacidad de batalla de un pokémon específico según su tipo y debilidades. 
+
 Criterios de Aceptación:
 La página debe permitir al usuario buscar y filtrar los pokemones según su tipo y debilidad.
 Buscar cuales son los pokemones por región. 
 Debe correr test unitario
+
 Definición de terminado:
 Que el usuario pueda visualizar los pokemones según sus criterios de filtrado. 
 
 Historia 3:
+
 Como: Jugador de Pokémon Go.
 Quiero: Poder ver las evoluciones de un pokemon. 
 Para: Saber cuántos caramelos necesita para su siguiente evolución.
+
 Criterios de Aceptación:
 La página debe permitir ver las evoluciones por pokemon.
 Desplegar los caramelos necesarios para cada evolución. 
 Debe correr test unitario
+
 Definición de terminado:
 Que el usuario pueda visualizar las evoluciones y cuantos caramelos necesita para cada evolución. 
 
 Historia 4:
+
 Como: Jugador de Pokémon Go.
 Quiero: Poder sacar el top 10 de frecuencia de aparición. (poder ver la frecuencia de aparición de un pokémon)
 Para: Poder encontrar a los pokémons con mayor facilidad. 
+
 Criterios de Aceptación:
 La página debe permitir al usuario filtrar y visualizar el top 10 de pokemones con mayor frecuencia de aparición. (debe permitir ver el porcentaje de aparición del pokémon filtrado.
 Debe correr test unitario
+
 Definición de terminado:
 Que el usuario pueda visualizar el top 10 de los pokémons con mayor frecuencia de aparición. 
 
@@ -112,33 +124,49 @@ Los prototipos de baja fidelidad se crearon con lápiz y papel en primera instan
 
 Imágenes del Prototipo de Baja Fidelidad:
 
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/img_2169.jpeg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220732635~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220651703~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220524752~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220353676~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220319785~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220117023~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220051584~2.jpg?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.21.17.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.03.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.14.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.25.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.35.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.45.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.52.png?raw=true)
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/img_2169.jpeg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220732635~2.jpg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220651703~2.jpg?raw=true)
+
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220524752~2.jpg?raw=true)
+
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220353676~2.jpg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220319785~2.jpg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220117023~2.jpg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/IMG_20221213_220051584~2.jpg?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.21.17.png?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.03.png?raw=true)
+
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.14.png?raw=true)
+
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.25.png?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.35.png?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.45.png?raw=true)
+
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Captura%20de%20Pantalla%202022-12-14%20a%20la(s)%2012.23.52.png?raw=true)
 
 ## 5. Prototipos Alta Fidelidad
 
 Los prototipos de alta fidelidad se realizaron en la aplicación de Figma en donde creamos 5 botones para las 5 paginas que queríamos mostrar, no se detallaron las páginas ya que iban a ser idénticas a excepción de unos pequeños cambios en el diseño, pero nos basamos en la planificación de nuestros prototipos de baja fidelidad. 
 
 Imágenes del Prototipo de Alta Fidelidad:
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/Captura%20de%20Pantalla%202022-12-28%20a%20la(s)%2022.15.35.png?raw=true)
-imagen ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/figma%20flow.png?raw=true)
+![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/Captura%20de%20Pantalla%202022-12-28%20a%20la(s)%2022.15.35.png?raw=true)
+
+ ![prototipo de baja fidelidad](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/prototipo%20de%20alta%20fidelidad/figma%20flow.png?raw=true)
 
 
 Paleta de Colores:
-imagen ![paleta de colores](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Paleta%20de%20Colores.png?raw=true)
+
+ ![paleta de colores](https://github.com/mafcht/DEV003-data-lovers/blob/main/src/Media/Prototipo%20Baja%20Fidelidad/Paleta%20de%20Colores.png?raw=true)
 
 ## 6. Áreas de Mejora
 
@@ -157,22 +185,39 @@ Se resolvió usando dot notation y corchetes sin comillas para extraer la inform
 ## 7. Boiler Plate
 
 .
+
 ├── EXTRA.md
+
 ├── README.md
+
 ├── READMEDataLovers.md
+
 ├── package.json
+
 ├── src
+
 |  ├── data 
+
 |  |  ├── pokemon
+
 |  |  |  ├── pokemon.js
+
 |  |  |  ├── pokemon.json
+
 |  |  |  └── README.md
+
 |  ├── data.js
+
 |  ├── index.html
+
 |  ├── main.js
+
 |  └── style.css
+
 └── test
+
    └── data.spec.js
+   
 directory: 7 file: 11
 
 ## 8. Notas
