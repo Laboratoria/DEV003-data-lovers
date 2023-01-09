@@ -89,11 +89,12 @@ main {
   border: 1px solid #c5a227;
   border-radius: 10px;
   width: 80vw;
+  display: flex;
 }
 
 .navbar a {
   color: #c5a227;
-  margin: 5%;
+  margin: auto;
 }
 
 .potions,
