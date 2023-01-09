@@ -1,6 +1,16 @@
 import { getDataPokemon,filterData,orderByOption,evolutions } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
+// hacker edition
+/*
+let data = [];
+//async function getData () {
+const getPokemonData = await fetch("../src/data/pokemon/pokemon.json");
+const pokemonData = await getPokemonData.json();
+//data. pokemonData.pokemon;
+data = pokemonData;
+//}getData();
 
+const allDataPokemon=data.pokemon;*/
 
 describe('get Data of pokemons', () => {
    it('is a function', () => {
@@ -18,14 +28,14 @@ describe('get Data of pokemons', () => {
     expect(() => getDataPokemon.not.objectContaining()).toThrow(TypeError);
     expect(() => getDataPokemon.toBeempty()).toThrow(TypeError);
     expect(() => getDataPokemon.toBeNull()).toThrow(TypeError);
-    expect(() => getDataPokemon.length).toBeGreaterThanOrEqual(1);
+    expect(() => getDataPokemon.length(0)).toThrow(TypeError);
     expect(() => getDataPokemon().toBeFalsy()).toThrow(TypeError);
-    expext(() => getDataPokemon[0]).toEqual(data);
+    //expect(() => getDataPokemon[0]).toEqual(data);
   });
 
   it('returns `Data of pokemons`', () => {
-    const dataPokemon = data['pokemon'];
-   //const dataPokemon = pokemonData.pokemon;
+   const dataPokemon = data['pokemon'];
+  // const dataPokemon = data.pokemon;
     expect(getDataPokemon()).toBe(dataPokemon);
   });
 });

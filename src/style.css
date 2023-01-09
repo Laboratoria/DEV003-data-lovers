@@ -7,10 +7,6 @@ body {
     margin: 0 auto;
     font-size: 20px;
 }
-/*
-body.modal-open {
-    pointer-events: none;
-  }*/
 
 .boxHeader {
     box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
@@ -216,12 +212,6 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     cursor: pointer;
 }
 
-table{
-    /*font-size: medium;
-    font-family: 'Roboto Mono';*/
-    cursor: pointer; /* cambiar cursor a un pointer */
-    
-}
 
 .labelCard2 {
     font-size:medium;
@@ -277,3 +267,60 @@ table{
 #myBtn:hover {
     background-color: #555; /* Añadir un fondo gris oscuro en el hover */
   }
+
+#secPopUp{
+    display: flex;  
+    flex-flow: row;
+    justify-content: space-around;
+   
+  
+}
+
+#headerDetails{
+    width: 100%;
+    font-weight: bold; 
+    display: flex;  
+    flex-flow: row wrap;
+}
+
+#spPokemonRarityD{
+   align-content: left;
+   padding-right: 20%;
+
+}
+
+#spNameNumPokemonD{
+    padding-right: 15%;
+}
+
+#divCloseDetails{
+    /*la X de cerrar*/
+    align-content: right;
+    margin: 0 0 0 auto;
+    
+}
+
+#scBodydetails{
+    display: grid;  
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: start;
+}
+
+#leftDetails{
+    width: 30%;
+    height:auto;    
+    left: 0;
+
+}
+
+#scRigthDetails{
+    width: 60%;
+    height: auto;
+    margin: 0 0 0 auto;
+    align-self:flex-start;
+    left: 100%;
+    top:0;
+    vertical-align: top;
+}
