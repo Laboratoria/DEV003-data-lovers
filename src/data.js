@@ -1,14 +1,6 @@
 // estas funciones son de ejemplo
 //import data from './data/rickandmorty/rickandmorty.js';
 
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
 export function showAllCharacters(characters){
   document.getElementById("cards").innerHTML=("");
   for (let character of characters){
@@ -146,9 +138,6 @@ export function filterData(data, input, category){
     })
     return filtEpi;
   }
-
-  // console.log(filterD);
-  // return filterD;
 }
 
 export function orderAlf(orderType, inputArray) {
@@ -163,9 +152,6 @@ export function orderAlf(orderType, inputArray) {
 };
 
 export function getData(categoSelect, inpTxt, orderType, data) {
-  //const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
-  //const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
-  //const orderType = document.getElementById("order").value
       const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
       const orderedResult = orderAlf(orderType, filteredResult)
       return orderedResult
