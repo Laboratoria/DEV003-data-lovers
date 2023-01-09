@@ -99,7 +99,7 @@ window.onload = (event) => {
         const orderType = document.getElementById("order").value
         const characters = getData(categoSelect, inpTxt, orderType, data);
         showAllCharacters(characters);
-     });
+    });
 
     //.onclick=searchButton; //Ejecuta mi función al escuchar click
 
