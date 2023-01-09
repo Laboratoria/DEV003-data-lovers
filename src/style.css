@@ -93,7 +93,7 @@ select{
 }
 .container h1{
     color: #534d4d;
-    font-size: 38px;
+    font-size: 20px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
     text-align: center;
@@ -101,7 +101,7 @@ select{
 .cardMold{
     width: 300px;
     height: 600px;
-    background-color:#a4b88a;
+    background-color:#000000;
     border-radius: 4px;
 }
 h2{
@@ -109,8 +109,8 @@ h2{
     padding-right: 10px;
     text-align: justify;
     font-family:'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: #706969;
+    font-size: 18px;
+    color: #c6ed93;
 }
 
 
@@ -138,7 +138,7 @@ h2{
 
 .container h1{
     color: #7AD605;
-    font-size: 38px;
+    font-size: 28px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
