@@ -8,16 +8,16 @@ const pokemonData = await getPokemonData.json();
 //data. pokemonData.pokemon;
 data = pokemonData;
 //}getData();
-
-const allDataPokemon=data.pokemon;*/
+*/
+//const allDataPokemon=data.pokemon;
 //por que no carga el llamar imagen aleatoria en el window load con el json
 
 const allDataPokemon = data['pokemon'];
 
 export const getDataPokemon = () => { // exportamos funcion array con toda la data
   //const pokemonList = data['pokemon'];
-  const pokemonList =allDataPokemon;   //data['pokemon'];
- // if (data === undefined || typeof data !== 'object'  || data === null || data.length === 0 || data === '') {
+  const pokemonList =allDataPokemon;   //
+ 
   if (data === undefined || typeof data !== 'object'  || data === null || data.length === 0 || data === '') {
     throw new TypeError('data is not an object');
   }

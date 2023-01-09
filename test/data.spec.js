@@ -3,14 +3,14 @@ import data from '../src/data/pokemon/pokemon.js';
 // hacker edition
 /*
 let data = [];
-//async function getData () {
+
 const getPokemonData = await fetch("../src/data/pokemon/pokemon.json");
 const pokemonData = await getPokemonData.json();
 //data. pokemonData.pokemon;
 data = pokemonData;
-//}getData();
+*/
 
-const allDataPokemon=data.pokemon;*/
+
 
 describe('get Data of pokemons', () => {
    it('is a function', () => {
@@ -35,7 +35,7 @@ describe('get Data of pokemons', () => {
 
   it('returns `Data of pokemons`', () => {
    const dataPokemon = data['pokemon'];
-  // const dataPokemon = data.pokemon;
+//   const dataPokemon = data.pokemon;
     expect(getDataPokemon()).toBe(dataPokemon);
   });
 });
@@ -47,7 +47,7 @@ describe('orderByOption', () => {
 
   it('returns `Order data by Asc`', () => {
   const result = orderByOption("1");
-  expect(result[0].name).toBe('bulbasaur');  
+  expect(result[2].name).toBe('venusaur');  
   });
 
   it('returns `Order data by Desc`', () => {
@@ -76,22 +76,19 @@ describe('evolutions', () => {
     expect(typeof evolutions).toBe('function');
   });
 /*
-  it('should throw TypeError when invoked with wrong argument', () => {
-    expect(() => !evolutions.objectContaining()).toThrow(TypeError);
-    expect(() => evolutions[0].num).toContain('001');
+  it('returns `Filter by Previous Evolution`', () => {
+    let condition ="pikachu";
+    let filterBy=evolutions('name', condition);
+    //result[0]['evolution']['prev-evolution'][0].num;
+    expect(filterBy[0]['evolution']['prev-evolution'][0].num).toBe('172'); //pichu
   });
 */
-
-
   it('returns `Filter by evolutions`', () => {
     let condition ="kakuna";
     let filterBy=evolutions('name', condition);
-    expect(filterBy[0].name).toContain('weedle');
+    expect(filterBy[2].name).toContain('beedrill');
   });
-/*
-  it('should throw TypeError when invoked with wrong argument', () => {
-    expect(() => !filterBy[0].objectContaining()).toThrow(TypeError);
-  });*/
+
 });
 
 describe('filterData', () => {
