@@ -419,12 +419,12 @@ eventClick.addEventListener("click", (e) => {
     //console.log(e.target.nodeName);
     let idCardSelect = '';
     idCardSelect = e.target.id;
-    showInfoPokemon(idCardSelect);
+    showInfoPokemon2(idCardSelect);
   }
 })
 
 
-
+/*
 const showInfoPokemon = (idPokemon) => {
   // console.log(idPokemon);
   const filterByP = 'num';
@@ -531,8 +531,7 @@ const showInfoPokemon = (idPokemon) => {
     labelResistant.innerText += "  " + item;
     //console.log(item);
   })
-  /*   "egg": "2 km",
-    "buddy-distance-km": "3",*/
+
   const bodytrdetail3 = document.createElement("tr");
   const bodytd5 = document.createElement("td");
   bodytd5.colSpan = "4";
@@ -545,6 +544,7 @@ const showInfoPokemon = (idPokemon) => {
   const nextEspace8 = document.createElement("br");
   const labelCandy = document.createElement("label");
   labelCandy.innerText = "Candy distance in km   " + infoPokemon['buddy-distance-km'];
+
   container.appendChild(popUp);
   popUp.appendChild(tableInfo);
   tableInfo.appendChild(tableHeader);
@@ -587,7 +587,7 @@ const showInfoPokemon = (idPokemon) => {
   bodytd5.appendChild(labelEggs);
   bodytd5.appendChild(nextEspace8);
   bodytd5.appendChild(labelCandy);
-}
+}*/
 
 // When the user clicks on  (x), close 
 //slecciona contenedor paddre
@@ -756,167 +756,162 @@ if (op==1){
  
  
  const showInfoPokemon2 = (idPokemon) => {
-  // console.log(idPokemon);
-  const filterByP = 'num';
-  //console.log(filterByP);
-  const infoPokemonAll = filterData(filterByP, idPokemon);
+
+  const infoPokemonAll = filterData('num', idPokemon);
   const infoPokemon = infoPokemonAll[0];
   //console.log(infoPokemon);
-
   let container = "";
   container = document.getElementById("scPopUp");
   // limpiar el popup card cada que le demos click en un pokemon
   document.getElementById("scPopUp").innerHTML = '';
   container.style.display = "block";
-  const popUp = document.createElement("div");
-  popUp.id = "divPopUp";
+  const secPopUp = document.createElement("section");
+  secPopUp.id = "divPopUp";
 
+  const headerPopUp = document.createElement("section");
+  headerPopUp.id="headerDetails";  
+//header
+  const spanRarity = document.createElement("span");
+  spanRarity.id="spPokemonRarityD";
+  spanRarity.innerText=infoPokemon['pokemon-rarity'].toUpperCase();
 
+  const spanNameNum = document.createElement("span");
+  spanNameNum.id="spNameNumPokemonD";
+  spanNameNum.innerText=infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
 
-  //Creando la Card con toda la info del pokemon seleccionado
-  //creando tabla
-  const tableInfo = document.createElement("table");
-  tableInfo.id = "tableInfoPokemon";
-  //header de la tabla
-  const tableHeader = document.createElement("theader");
-  const headerTr = document.createElement("tr");
-  const headerTh1 = document.createElement("th");
-  headerTh1.innerText = infoPokemon['pokemon-rarity'].toUpperCase();
-  //trHeader1.innerText = infoPokemon.name + " " + infoPokemon.num;
-  const headerTh2 = document.createElement("th");
-  headerTh2.innerText = infoPokemon.name.toUpperCase() + " " + "#" + infoPokemon.num;
-  const headerTh3 = document.createElement("th");
-  headerTh3.innerText = "HP " + infoPokemon.stats['max-hp'];
+  const spanHp = document.createElement("span");
+  spanHp.id="spHpPokemonD";
+  spanHp.innerText= "HP " + infoPokemon.stats['max-hp'];
+
+  const divCloseB=document.createElement("div");
+  divCloseB.id="divCloseDetails";
   const btnClosePopUp = document.createElement("button");
   btnClosePopUp.className = "close";
   btnClosePopUp.id = "btnClose";
   btnClosePopUp.textContent = "Cerrar";
   btnClosePopUp.textContent = "X";
-  container.appendChild(popUp);
-  popUp.appendChild(btnClosePopUp);
-  const headerTh4 = document.createElement("th");
-  headerTh4.contains = btnClosePopUp;
-  // cuerpo de la tabla tbody
-  const tbodyTable = document.createElement("tbody");
-  const bodytrdetail1 = document.createElement("tr");
-  const bodytd1 = document.createElement("td");
-  //  console.log(popUp.id);
-  const imagenP = document.createElement("img");
-  imagenP.src = infoPokemon.img;
-  imagenP.id = "imgPokemon";
-  const nextEspace1 = document.createElement("br");
+//fin header
 
-  const labelType = document.createElement("label");
-  labelType.innerText = "Type: " + infoPokemon.type[0];
-  if (infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null) {
-    labelType.innerText += " - " + infoPokemon.type[1];
-  }
+//section left
+const scLeftPopUp = document.createElement("section");
+scLeftPopUp.id="leftDetails";
+const figureImg =document.createElement("img");
+figureImg.src = infoPokemon.img;
+figureImg.id = "imgPokemon";
 
-  labelType.id = "lblTypePokemon";
-  const nextEspace3 = document.createElement("br");
-  const labelHeight = document.createElement("label");
-  labelHeight.innerText = "Height : " + infoPokemon.size.height;
-  const nextEspace4 = document.createElement("br");
-  const labelWeight = document.createElement("label");
-  labelWeight.innerText = "Weight : " + infoPokemon.size.weight;
-  const bodytd2 = document.createElement("td");
-  const labelAbout = document.createElement("label");
-  labelAbout.className = "aboutStyle";
-  labelAbout.innerText = infoPokemon.about;
-  bodytd2.colSpan = "3";
-  const nextEspace2 = document.createElement("br");
-  const nextEspace10 = document.createElement("br");
-  const labelGeneration = document.createElement("label");
-  labelGeneration.className = "generationStyle";
-  labelGeneration.innerText = " Generation:  " + infoPokemon.generation.num
-  const nextEspace9 = document.createElement("br");
-  const labelRegion = document.createElement("label");
-  labelRegion.innerText = " Region:   " + infoPokemon.generation.name;
+const scthw = document.createElement("section");
+scthw.id="scTypeHeigthWeigth";
+const spanType = document.createElement("span");
+spanType.innerHTML= "<strong>Type :</strong>"  + infoPokemon.type[0];
 
-  const bodytrdetail2 = document.createElement("tr");
-  const bodytd3 = document.createElement("td");
-  const labelWeaknessesTitle = document.createElement("label");
-  labelWeaknessesTitle.innerText = "Weaknesses";
-  const nextEspace5 = document.createElement("br");
+if (infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null) {
+  spanType.innerHTML += " - " + infoPokemon.type[1];
+}
+//const spanH = document.createElement("span");
+const spanHeight = document.createElement("span");
+spanHeight.innerHTML = "<strong>Height :</strong>" + infoPokemon.size.height;
 
-  const labelweaknesses = document.createElement("label");
-  labelweaknesses.innerText = "";
+//const spanW = document.createElement("span");
+const spanWeight = document.createElement("span");
+spanWeight.innerHTML =  "<strong>Weight :</strong>" + infoPokemon.size.weight;
+//fin section left
 
-  infoPokemon.weaknesses.forEach((item) => {
-    labelweaknesses.innerText += "  " + item;
+//section rigth
+const scRigthPopUp = document.createElement("section");
+scRigthPopUp.id="scRigthDetails";
 
-    //console.log(item);
-  })
-  const bodytd4 = document.createElement("td");
-  bodytd4.colSpan = "2";
-  // bodytd4.rowSpan="2";
-  const labelResistantTitle = document.createElement("label");
-  labelResistantTitle.innerText = "Resistant to:";
-  const nextEspace6 = document.createElement("br");
+const scAbout = document.createElement("section");
+scAbout.id="scAboutDetails";
+const pAbout=document.createElement("p");
+pAbout.innerText = infoPokemon.about;
+const scOtherInfo=document.createElement("section");
+scOtherInfo.id="scOtherInfoP";
 
-  const labelResistant = document.createElement("label");
-  labelResistant.innerText = "";
+//const spanG = document.createElement("span");
+const spanGeneration = document.createElement("span");
+spanGeneration.innerHTML = "<strong>Generation :</strong>" + infoPokemon.generation.num;
+//spanG.innerText = "Generation : " +  (spanGeneration.innerText = infoPokemon.generation.num);
 
-  infoPokemon.resistant.forEach((item) => {
-    labelResistant.innerText += "  " + item;
-    //console.log(item);
-  })
-  /*   "egg": "2 km",
-    "buddy-distance-km": "3",*/
-  const bodytrdetail3 = document.createElement("tr");
-  const bodytd5 = document.createElement("td");
-  bodytd5.colSpan = "4";
-  const labelExtra = document.createElement("label");
-  labelExtra.innerText = "Extra Information:";
-  const nextEspace7 = document.createElement("br");
+//const spanR = document.createElement("span");
+const spanRegion = document.createElement("span");
+spanRegion.innerHTML = "<strong>Region :</strong>" + infoPokemon.generation.name;
 
-  const labelEggs = document.createElement("label");
-  labelEggs.innerText = "Eggs   " + infoPokemon.egg;
-  const nextEspace8 = document.createElement("br");
-  const labelCandy = document.createElement("label");
-  labelCandy.innerText = "Candy distance in km   " + infoPokemon['buddy-distance-km'];
-  container.appendChild(popUp);
-  popUp.appendChild(tableInfo);
-  tableInfo.appendChild(tableHeader);
-  tableInfo.appendChild(headerTr);
-  headerTr.appendChild(headerTh1);
-  headerTr.appendChild(headerTh2);
-  headerTr.appendChild(headerTh3);
-  headerTr.appendChild(headerTh4);
-  headerTh4.appendChild(btnClosePopUp);
-  tableInfo.appendChild(tbodyTable);
-  tbodyTable.appendChild(bodytrdetail1);
-  bodytrdetail1.appendChild(bodytd1);
-  bodytd1.appendChild(imagenP);
-  bodytd1.appendChild(nextEspace1);
-  bodytd1.appendChild(labelType);
-  bodytrdetail1.appendChild(bodytd2);
-  bodytd2.appendChild(labelAbout);
-  bodytd2.appendChild(nextEspace2);
-  bodytd2.appendChild(nextEspace10);
-  bodytd2.appendChild(labelGeneration);
-  bodytd2.appendChild(nextEspace9);
-  bodytd2.appendChild(labelRegion);
-  bodytd1.appendChild(nextEspace3);
-  bodytd1.appendChild(labelHeight);
-  bodytd1.appendChild(nextEspace4);
-  bodytd1.appendChild(labelWeight);
-  tbodyTable.appendChild(bodytrdetail2);
-  bodytrdetail2.appendChild(bodytd3);
-  bodytd3.appendChild(labelWeaknessesTitle);
-  bodytd3.appendChild(nextEspace5);
-  bodytd3.appendChild(labelweaknesses);
-  bodytrdetail2.appendChild(bodytd4);
-  bodytd4.appendChild(labelResistantTitle);
-  bodytd4.appendChild(nextEspace6);
-  bodytd4.appendChild(labelResistant);
-  tbodyTable.appendChild(bodytrdetail3);
-  bodytrdetail3.appendChild(bodytd5);
-  bodytd5.appendChild(labelExtra);
-  bodytd5.appendChild(nextEspace7);
-  bodytd5.appendChild(labelEggs);
-  bodytd5.appendChild(nextEspace8);
-  bodytd5.appendChild(labelCandy);
+const scWeaknesses= document.createElement("section");
+scWeaknesses.id="scweaknessesDetails";
+const ulWeaknesses = document.createElement("ul");
+ulWeaknesses.id="ulWeaknesses";
+ulWeaknesses.innerText = "Weaknesses : " 
+let liWeaknesses = document.createElement("li");
+infoPokemon.weaknesses.forEach((item) => {
+  
+  liWeaknesses.innerText += " - " + item;
+})
+
+const scResistant= document.createElement("section");
+scResistant.id="scResistantDetails"
+const ulResistant = document.createElement("ul");
+ulResistant.id="ulResistant";
+ulResistant.innerText = "Resistant : " 
+let liResistant = document.createElement("li");
+infoPokemon.resistant.forEach((item) => {
+  
+  liResistant.innerText += "  " + item;
+  //console.log(item);
+})
+
+const scExtraInfo = document.createElement("section");
+scExtraInfo.id="scExtraInfoDetails";
+const spExtraInfo =document.createElement("span");
+spExtraInfo.innerText="Extra Information:";
+
+const spanEggs = document.createElement("span");
+spanEggs.id="spEggs";
+spanEggs.innerHTML = "<strong>Eggs :</strong>" + infoPokemon.egg;
+
+const spanCandy = document.createElement("span");
+spanCandy.id="spCandy";
+spanCandy.innerHTML = "<strong>Candy distance (km) :</strong>" + infoPokemon['buddy-distance-km'];
+//fin section rigth
+
+container.appendChild(secPopUp);
+  secPopUp.appendChild(headerPopUp);
+  headerPopUp.appendChild(spanRarity);
+  headerPopUp.appendChild(spanNameNum);
+  headerPopUp.appendChild(spanHp);
+  headerPopUp.appendChild(divCloseB);
+  divCloseB.appendChild(btnClosePopUp);
+
+  container.appendChild(scLeftPopUp);
+  scLeftPopUp.appendChild(figureImg);
+  scLeftPopUp.appendChild(scthw);
+  scthw.appendChild(spanType);
+ // scthw.appendChild(spanH);
+  scthw.appendChild(spanHeight);
+  //scthw.appendChild(spanW);
+  scthw.appendChild(spanWeight);
+
+  container.appendChild(scRigthPopUp);
+  scRigthPopUp.appendChild(scAbout); 
+  scAbout.appendChild(pAbout);
+  scRigthPopUp.appendChild(scOtherInfo); 
+ // scOtherInfo.appendChild(spanG);
+  scOtherInfo.appendChild(spanGeneration);
+  //scOtherInfo.appendChild(spanR);
+  scOtherInfo.appendChild(spanRegion);
+  scOtherInfo.appendChild(scWeaknesses);
+  scWeaknesses.appendChild(ulWeaknesses); 
+  ulWeaknesses.appendChild(liWeaknesses); 
+  scResistant.appendChild(ulResistant);
+  ulResistant.appendChild(liResistant);
+  scOtherInfo.appendChild(scExtraInfo); 
+  scExtraInfo.appendChild(spExtraInfo); 
+  scExtraInfo.appendChild(spanEggs); 
+  scExtraInfo.appendChild(spanCandy); 
+  //scExtraInfo.appendChild(); 
+
+
+//************************************************************************ */ 
+
 }
 
 
