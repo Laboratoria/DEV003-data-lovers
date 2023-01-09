@@ -9,7 +9,7 @@
 </head>
 
 <body> <!-- cuerpo de la pagina web -->
-  <button  id="btnUp" >Top</button> <!-- se agrego en todo el body para que salga en todas las paginas -->
+  <button  id="myBtn" title="Go to top">Top</button> <!-- se agrego en todo el body -->
   <header class="boxHeader"> <!-- Encabezado con imagen de Pokemon con pokebolas -->
     <img src="./media/images/pokebola.png" alt="Pokebola" class="img_header">
     <img src="./media/images/logo_p.png" alt="Titulo Pokemon" width="300">
@@ -17,19 +17,19 @@
   </header>
 
   <nav class="menu"> <!-- navegador de menu con botones  -->
-    <ul class="UlMenuClass"> <!-- Contenedor del Menu -->
+    <ul> <!-- Contenedor del Menu -->
       <!-- li es la lista del Menu -->
-      <li class="liMenuClass"><button id="buttonHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button>
+      <li><button id="buttonHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button>
       </li>
-      <li class="liMenuClass"><button id="buttonPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button>
+      <li><button id="buttonPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button>
       </li>
-      <li class="liMenuClass"><button id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search
+      <li><button id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search
         </button></li>
-      <li class="liMenuClass"><button id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution
+      <li><button id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution
         </button></li>
-      <li class="liMenuClass"><button id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate
+      <li><button id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate
         </button></li>
-      <li class="liMenuClass"><a class="aMenuClass" href="https://pokemongolive.com/"> <!-- incluimos un link al boton -->
+      <li><a href="https://pokemongolive.com/"> <!-- incluimos un link al boton -->
           <button id="buttonPokemonGo"> <img src="./Media/Images/pokemon_go.png" class="button_image"> <br>Pokemon
             Go</button>
         </a></li>
@@ -57,6 +57,8 @@
       <h3>Pokemon of the day!<br>⬇️ </h3>
       </p>
       <figure> <!-- card del pokemon del dia -->
+        <img src="./media/images/001.png" alt="Pokemon" width="200">
+        <p>"BULBASAUR"</p>
       </figure>
     </section>
 
@@ -108,14 +110,8 @@
     </section>
 
     <section id="scShowPokemonDetails">
-      
-      
-        <section id="scPopUp" class="cPopUp">
-      
-          
-    </section>
-    
- 
+      <div id="scPopUp" class="cPopUp">
+      </div>
     </section>
 
     <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon-->
