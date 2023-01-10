@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+}
+body{background-color:  rgb(200, 202, 204, 0.979);
+  
+}
+header{
+    background-image: url(https://img.redbull.com/images/c_fill,g_auto,w_970,h_647/q_auto,f_auto/redbullcom/2016/09/20/1331818966444_2/pok%C3%A9mon-super-mystery-dungeon);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 1000px;
+    padding: 70px  70px ; 
+    background-size: 100%; 
+    margin: auto;
+
+   
+}
+    
+/* header .logo{
+    
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position-x: center;
+    
+}
+  */
+    
+
+ul li{
+    display: inline-flex; 
+    margin: 50px;
+    font-family:Cooper Black;
+    border: 1px solid rgb(13, 14, 2); 
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: yellow;
+    padding: 15px 20px;
+    font-family: 'Cooper Black';
+    font-size: 13px;
+
+}
+
+      
+
+
+
