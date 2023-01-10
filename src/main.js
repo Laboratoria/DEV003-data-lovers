@@ -111,15 +111,6 @@ window.onload = (event) => {
 function searchButton() {
     const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
-
-    //if (categoSelect==="allCharacters") {
-   //     document.getElementById("root").style.display="block";//Muestra cards personajes
-   //     document.querySelector(".cards").style.display="none";//Oculta cards
-   //     document.querySelector(".noSearch").style.display="none";
-   //     showAllCharacters(data.results);
-   //     return
-   // }
-
     const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
 
         showAllCharacters(filteredResult);
@@ -139,6 +130,7 @@ function searchButton() {
         document.querySelector(".noSearch").style.display="flex";
         document.querySelector(".cards").style.display="none";
     }
+    document.getElementById("order").value="relevance";
    
 };
 
