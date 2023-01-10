@@ -113,6 +113,8 @@ function searchButton() {
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
 
     if (categoSelect==="allCharacters") {
+        document.getElementById("root").style.display="block";
+        document.querySelector(".cards").style.display="none";
         showAllCharacters(data.results);
         return
     }
@@ -136,7 +138,10 @@ function searchButton() {
         document.querySelector(".noSearch").style.display="flex";
         document.querySelector(".cards").style.display="none";
     }
+   
 };
+
+
 
 document.getElementById("clear").addEventListener("click", limpiar);
 function limpiar(){
