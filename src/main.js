@@ -100,7 +100,7 @@ window.onload = (event) => {
     orderSelect.addEventListener("change", (e) => {
         const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
         const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
-        const orderType = document.getElementById("order").value
+        const orderType = document.getElementById("order").value;
         const characters = getData(categoSelect, inpTxt, orderType, data);
         showAllCharacters(characters);
      });
@@ -148,6 +148,8 @@ function limpiar(){
     document.querySelector(".cards").style.display="flex";
     document.querySelector(".noSearch").style.display="none";
     document.getElementById("searchInp").value="";
+    document.getElementById("order").value="relevance";
+    document.getElementById("filtMain").value="name";
     showAllCharacters(data.results);
 }
 
@@ -157,6 +159,9 @@ function showAll(){
     document.querySelector(".cards").style.display="none";
     document.querySelector(".noSearch").style.display="none";
     document.getElementById("searchInp").value="";
+    document.getElementById("order").value="relevance";
+    document.getElementById("filtMain").value="name";
+
     showAllCharacters(data.results);
 }
 
