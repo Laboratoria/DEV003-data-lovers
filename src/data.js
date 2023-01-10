@@ -1,16 +1,28 @@
 import ghibli from "./data/ghibli/ghibli.js"
 
-export function obtenerData()  {
-  //console.log(ghibli.films)
-  return ghibli.films;
-  }
+// lista completa de peliculas y sus datos correspondientes
+// export const obtenerData = () => {
 
-// estas funciones son de ejemplo
+//   return ghibli.films.map((movieObject) => {
+//     return movieObject.title
+//   });
+// }
+// creacion de nuevo obj con map, que se mostrara en el DOM
+export const ejemplo = () => {
+
+  return ghibli.films.map((movieObject) => {
+    return {
+      titulo: movieObject.title,
+      director: movieObject.director,
+      productor: movieObject.producer,
+      lanzamiento: movieObject.release_date,
+      poster: movieObject.poster
+    }
+  });
+}
+
+
 
 //export const example = () => {
-  //return 'example';
-//};
-
-//export const anotherExample = () => {
-//  return 'OMG';
+//return 'example';
 //};
