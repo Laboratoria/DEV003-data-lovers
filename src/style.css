@@ -78,6 +78,15 @@ select{
     align-content:flex-start;
     gap: 35px;
 }
+#order{
+    background:none;
+    border-color: #7AD605;
+    border-radius: 50px;
+    border-width: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#7AD605;
+    float: right;
+}
 .cards{
     padding-top: 12px;
     display: flex;
