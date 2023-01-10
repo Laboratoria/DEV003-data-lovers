@@ -150,7 +150,7 @@ function limpiar(){
     document.getElementById("searchInp").value="";
 }
 
-document.getElementById("allCharcts").addEventListener("click", showAll);
+document.getElementById("allCharacts").addEventListener("click", showAll);
 function showAll(){
     document.getElementById("root").style.display="flex";
     document.querySelector(".cards").style.display="none";
