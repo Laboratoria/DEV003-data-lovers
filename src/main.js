@@ -643,7 +643,7 @@ figureImg.id = "imgPokemon";
 const scthw = document.createElement("section");
 scthw.id="scTypeHeigthWeigth";
 const spanType = document.createElement("span");
-spanType.innerHTML= "<strong>Type : </strong>"  + infoPokemon.type[0] + " - ";
+spanType.innerHTML= "<strong>Type : </strong><br>"  + infoPokemon.type[0] + "<br>";
 
 if (infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null) {
   spanType.innerHTML +=  infoPokemon.type[1] +"<br>";
@@ -677,7 +677,7 @@ const pAbout=document.createElement("p");
 pAbout.innerText = infoPokemon.about;
 
 const spanGeneration = document.createElement("span");
-spanGeneration.innerHTML = "<strong>Generation :</strong>" + infoPokemon.generation.num +"<br>";
+spanGeneration.innerHTML = "<br><strong>Generation :</strong>" + infoPokemon.generation.num +"<br>";
 
 const spanRegion = document.createElement("span");
 spanRegion.innerHTML = "<strong>Region :</strong>" + infoPokemon.generation.name +"<br>";
