@@ -112,13 +112,13 @@ function searchButton() {
     const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
 
-    if (categoSelect==="allCharacters") {
-        document.getElementById("root").style.display="block";//Muestra cards personajes
-        document.querySelector(".cards").style.display="none";//Oculta cards
-        document.querySelector(".noSearch").style.display="none";
-        showAllCharacters(data.results);
-        return
-    }
+    // if (categoSelect==="allCharacters") {
+    //     document.getElementById("root").style.display="block";//Muestra cards personajes
+    //     document.querySelector(".cards").style.display="none";//Oculta cards
+    //     document.querySelector(".noSearch").style.display="none";
+    //     showAllCharacters(data.results);
+    //     return
+    // }
 
     const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
 
@@ -150,6 +150,13 @@ function limpiar(){
     document.querySelector(".cards").style.display="flex";
     document.querySelector(".noSearch").style.display="none";
     document.getElementById("searchInp").value="";
+}
+
+document.getElementById("allCharacts").addEventListener("click", allCharacts)
+function allCharacts() {
+  document.getElementById("root").style.display="block";//Muestra cards personajes
+  document.querySelector(".cards").style.display="none";//Oculta cards
+  document.querySelector(".noSearch").style.display="none";
 }
 
   //  export const ordenA = (data) => ordenAlf(data);
