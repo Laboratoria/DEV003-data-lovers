@@ -51,7 +51,7 @@ export function filterData(data, input, category){
       return epNumbs.includes(enteredTxt);
     })
     return filtEpi;
-    } 
+    }
 }
 
 export function orderAlf(orderType, inputArray) {

@@ -113,8 +113,8 @@ function searchButton() {
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
 
     if (categoSelect==="allCharacters") {
-        document.getElementById("root").style.display="block";
-        document.querySelector(".cards").style.display="none";
+        document.getElementById("root").style.display="block";//Muestra cards personajes
+        document.querySelector(".cards").style.display="none";//Oculta cards
         document.querySelector(".noSearch").style.display="none";
         showAllCharacters(data.results);
         return
