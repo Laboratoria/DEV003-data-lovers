@@ -8,9 +8,9 @@ En este proyecto se realizo prototipo de baja fidelidad en PowerPoint realizando
 ![Prototipo de baja fidelidad](maqueta.jpg)
 
 Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipò de alta fidelidad en figma
-![Prototipo de alta fidelidad](https://www.figma.com/file/TCL3Cs30AmZzoavS8lIIHq/Untitled?node-id=3%3A16&t=PzcNnvWim1oSQjHR-0)
+![Prototipo de alta fidelidad](altaFidelidad.jpg)
 Todo esto bajo un organizacion planteada en nuestro trello
-![Trello]https://trello.com/b/mu5uPjL5/segundo-proyecto-pokemon)
+![Trello](TRELLOPOKE.jpg)
 
 ##  Definición del producto
 Este producto fue diseñado para que los usuarios obtengan la información más rápida y detallada del Pokémon que desean conocer.
