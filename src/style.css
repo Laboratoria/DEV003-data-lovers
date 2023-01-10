@@ -79,12 +79,12 @@ select{
     gap: 35px;
 }
 #order{
-    background:none;
+    background:#c6ed93;
     border-color: #7AD605;
     border-radius: 50px;
     border-width: 3px;
     font-family:Arial, Helvetica, sans-serif;
-    color:#7AD605;
+    color:#000000;
     float: right;
 }
 .cards{
