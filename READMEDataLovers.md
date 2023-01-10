@@ -3,20 +3,21 @@
 ## Índice
 
 * [1. Introducción](#1-introducción)
-* [2. Definir Usuario y Producto](#2-definir-y-producto)
+* [2. Definir Usuario y Producto](#2-definir-usuario-y-producto)
 * [3. Historias de Usuario](#3-historias-de-usuario)
 * [4. Prototipos Baja Fidelidad](#4-prototipos-baja-fidelidad)
 * [5. Prototipos Alta Fidelidad](#5-prototipos-alta-fidelidad)
 * [6. Áreas de Mejora](#6-áreas-de-mejora)
-* [7. Boiler Plate](#7-boiler-plate)
-* [8. Notas](#8-notas)
-* [9. Checklist](#9-checklist)
+* [7. Test de Usabilidad](#7-test-de-usabilidad)
+* [8. Boiler Plate](#8-boiler-plate)
+* [9. Notas](#9-notas)
+* [10. Checklist](#10-checklist)
 
 ***
 
 ## 1. Introducción
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon". En este proyecto creamos una página con los pokemones de dos regiones de la app. En este readme encontrarás nuestro proceso.
+Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon". En este proyecto creamos una página con los pokemones de dos regiones de la app creando historias de usuario. En este readme encontrarás nuestro proceso y el link a nuestro proyecto, esperemos lo disfrutes. https://mafcht.github.io/DEV003-data-lovers/src/ 
 
 Los principales objetivos de Pokemon GO son los siguientes:
 Descubrir el mundo Pokémon: explorar y descubrir nuevos Pokémon allá donde vayan.
