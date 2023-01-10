@@ -8,7 +8,7 @@ import ghibli from "./data/ghibli/ghibli.js"
 //   });
 // }
 // creacion de nuevo obj con map, que se mostrara en el DOM
-export const ejemplo = () => {
+export const titleList = () => {
 
   return ghibli.films.map((movieObject) => {
     return {
