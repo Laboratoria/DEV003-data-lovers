@@ -115,6 +115,7 @@ function searchButton() {
     if (categoSelect==="allCharacters") {
         document.getElementById("root").style.display="block";
         document.querySelector(".cards").style.display="none";
+        document.querySelector(".noSearch").style.display="none";
         showAllCharacters(data.results);
         return
     }
