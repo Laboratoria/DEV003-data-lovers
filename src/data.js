@@ -16,10 +16,25 @@ export const titleList = () => {
       director: movieObject.director,
       productor: movieObject.producer,
       lanzamiento: movieObject.release_date,
-      poster: movieObject.poster
+      poster: movieObject.poster,
+      personajes: movieObject.people[0].name
     }
   });
 }
+
+// export const peopleList = () => {
+
+//   return ghibli.films.map((characterObject) => {
+//     return {
+//       nombre: characterObject.name,
+//       genero: characterObject.gender,
+//       edad: characterObject.age,
+//       colorDeOjos: characterObject.eye_color,
+//       colorDePelo: characterObject.people[0].hair_color,
+//       imagen: characterObject.people[0].img
+//     }
+//   });
+// }
 
 
 
