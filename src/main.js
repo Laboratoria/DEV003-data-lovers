@@ -148,6 +148,7 @@ function limpiar(){
     document.querySelector(".cards").style.display="flex";
     document.querySelector(".noSearch").style.display="none";
     document.getElementById("searchInp").value="";
+    showAllCharacters(data.results);
 }
 
 document.getElementById("allCharacts").addEventListener("click", showAll);
@@ -156,6 +157,7 @@ function showAll(){
     document.querySelector(".cards").style.display="none";
     document.querySelector(".noSearch").style.display="none";
     document.getElementById("searchInp").value="";
+    showAllCharacters(data.results);
 }
 
   //  export const ordenA = (data) => ordenAlf(data);
