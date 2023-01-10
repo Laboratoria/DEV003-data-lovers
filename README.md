@@ -17,7 +17,7 @@
 
 ## 1. Introducción
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon". En este proyecto creamos una página con los pokemones de dos regiones de la app creando historias de usuario. En este readme encontrarás nuestro proceso y el link a nuestro proyecto, esperemos lo disfrutes. [Viisita nuestro proyecto: ](https://mafcht.github.io/DEV003-data-lovers/src/) 
+Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon". En este proyecto creamos una página con los pokemones de dos regiones de la app creando historias de usuario. En este readme encontrarás nuestro proceso y el link a nuestro proyecto, esperemos lo disfrutes. [¡Visita nuestro proyecto aquí!](https://mafcht.github.io/DEV003-data-lovers/src/) 
 
 Los principales objetivos de Pokemon GO son los siguientes:
 Descubrir el mundo Pokémon: explorar y descubrir nuevos Pokémon allá donde vayan.
