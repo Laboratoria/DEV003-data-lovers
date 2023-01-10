@@ -179,7 +179,7 @@ Paleta de Colores:
 
 ## 6. Áreas de Mejora
 
-Después de finalizar el proyecto, nos dimos cuenta que teníamos algunos errores y varias áreas de mejora en nuestro código, a continuación menciono cómo se resolvieron brevemente. 
+Finalizando el proyecto, al realizar los tests nos dimos cuenta que teníamos que restructurar el codigo de algunas de nuestras funciones, a continuación menciono cómo se resolvieron brevemente. 
 
 En la Página Home deseábamos desplegar un pokemon random cada vez que la recargamos. 
 Se resuelve usando el método estadístico Math.random()
@@ -196,7 +196,16 @@ Se resolvió creando un botón en la sección de body para que apareciera en tod
 Página Evolutions Mostrar cuántos caramelos necesita para su siguiente evolución "candy-cost".
 Se resolvió usando dot notation y corchetes sin comillas para extraer la información que deseábamos mostrar. 
 
-## 7. Boiler Plate
+## 7. Test de Usabilidad
+
+Los problemas que detectamos a través de tests de usabilidad fueron los siguientes.
+
+Al escribir el código completo sin pensar previamente en los test nos dimos cuenta que tenemos código que no es testable, necesitamos usar el método de Test Driven Development para hacer nuestro código en base a la planeación de los tests para los próximos proyectos y lograr un 100% en las pruebas unitarias de statements, functions y lines y branches.
+
+Para no repetir código y acortarlo, así como evitar hacer test extras debemos estudiar más los métodos de objetos y usar el método REACTOR. 
+
+
+## 8. Boiler Plate
 
 .
 
@@ -234,7 +243,7 @@ Se resolvió usando dot notation y corchetes sin comillas para extraer la inform
 
 directory: 7 file: 11
 
-## 8. Notas
+## 9. Notas
 
 Como hacer una Historia de Usuario:
 
@@ -256,7 +265,7 @@ Small - Pequeña - 1 sprint
 Testable
 
 
-## 9. Checklist
+## 10. Checklist
 
 A continuación marcamos los criterios de aceptación que cumplimos de este proyecto.
 
