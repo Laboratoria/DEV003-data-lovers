@@ -196,9 +196,10 @@ const functionSearch = ()=>{
   if(searchPokemon.value!==''){
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    const value = document.getElementById("txtSearch").value.toLowerCase();
+    const value2 = document.getElementById("txtSearch").value.toLowerCase();
+    const value3=value2.trim();
     const dataname = "name";
-    filterPokemons(dataname, value);
+    filterPokemons(dataname, value3);
     //borrar letras de la busqueda
     document.getElementById("txtSearch").value = '';
   }else{
@@ -252,12 +253,15 @@ buttonEvolution.addEventListener("click", function () {
 })
 
 //funcion con Enter que va a mostrar las evoluciones del pokemon  
+
 const evolutionTextBox = document.getElementById("evolutionP");
 const functionEvolution = ()=>{
+
   if(evolutionTextBox.value!==''){
     document.getElementById("scShowAllPokemon").innerHTML = '';
     document.getElementById("scShowAllPokemon").style.display = "flex";
-    const value = evolutionTextBox.value.toLowerCase();
+    const value1 = evolutionTextBox.value.toLowerCase();
+    const value =value1.trim();
     const dataname = "name";
     const filterNameEvolution = evolutions(dataname, value);
 
