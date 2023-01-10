@@ -93,6 +93,7 @@ function showAllCharacters(characters){
   
 window.onload = (event) => {
     showAllCharacters(data.results) //No retorna nada porque solo quiero que muestre cards
+    // console.log(showAllCharacters);
 
     document.getElementById("searchBtn").onclick = searchButton; //Ejecuta mi función al escuchar click
     const orderSelect = document.getElementById("order");
@@ -102,7 +103,7 @@ window.onload = (event) => {
         const orderType = document.getElementById("order").value
         const characters = getData(categoSelect, inpTxt, orderType, data);
         showAllCharacters(characters);
-    });
+     });
 
     //.onclick=searchButton; //Ejecuta mi función al escuchar click
 
@@ -110,6 +111,18 @@ window.onload = (event) => {
 function searchButton() {
     const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
+
+    if (categoSelect==="allCharacters") {
+        showAllCharacters(data.results);
+        return
+    }
+
+    const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
+
+        showAllCharacters(filteredResult);
+        console.log(categoSelect);
+        console.log(inpTxt);
+
     if (inpTxt) { //Condiciona que el input no quede vacío
         const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
         document.getElementById("root").style.display="block";
