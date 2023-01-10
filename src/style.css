@@ -25,6 +25,22 @@ header{
     display: flex;
     justify-content: center;
 }
+.btnClear{
+    max-height: 130px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btnClear:hover{
+    background: #c6ed93;
+}
+
 .buscador{
     background-color: black;
     display: flex;
@@ -37,16 +53,13 @@ select{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: center;
+    padding: 15px;
 }
-
-
 
 .containerPrinc{
     background-color: #6D7078;
     margin: 0;
 }
-
-
 
 .cardsTittle{
     font-family:Arial, Helvetica, sans-serif;
@@ -55,6 +68,15 @@ select{
     text-align: center;
     text-shadow: 10px;
     text-shadow: white; 
+}
+.noSearch{
+    display: none;
+    padding-top: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px; 
+    align-content:flex-start;
+    gap: 35px;
 }
 .cards{
     padding-top: 12px;
@@ -75,7 +97,7 @@ select{
     text-shadow: white;
     border-radius: 6px;
     width: 300px;
-    height: 540px;
+    height: 580px;
 }
 .cardsImgs{
     width: 300px;
@@ -84,8 +106,6 @@ select{
 .cardsTxt{
     padding: 10px;
 }
-
-
 
 #cards{
     display: flex;

@@ -2,6 +2,9 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
 import { filterData, getData } from './data.js';
+
+
+
 function showAllCharacters(characters){
     document.getElementById("cards").innerHTML=("");
     for (let character of characters){
@@ -106,8 +109,6 @@ window.onload = (event) => {
 
 };
 function searchButton() {
-    document.getElementById("root").style.display="block";
-    document.querySelector(".cards").style.display="none";
     const categoSelect = document.getElementById("filtMain").value; //Llama valor del select
     const inpTxt = document.getElementById("searchInp").value; //Llama valor del input
 
@@ -124,17 +125,26 @@ function searchButton() {
 
     if (inpTxt) { //Condiciona que el input no quede vacío
         const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
-
+        document.getElementById("root").style.display="block";
+        document.querySelector(".cards").style.display="none";
+        document.querySelector(".noSearch").style.display="none";
         showAllCharacters(filteredResult);
         console.log(categoSelect);
         console.log(inpTxt);
     }
     else {
-         alert("Por favor introduce un criterio de búsqueda válido")
+        document.querySelector(".noSearch").style.display="flex";
+        document.querySelector(".cards").style.display="none";
     }
 };
 
-
+document.getElementById("clear").addEventListener("click", limpiar);
+function limpiar(){
+    document.getElementById("root").style.display="none";
+    document.querySelector(".cards").style.display="flex";
+    document.querySelector(".noSearch").style.display="none";
+    document.getElementById("searchInp").value="";
+}
 
   //  export const ordenA = (data) => ordenAlf(data);
   //  export const ordenZ= (data) => ordenA(data).reverse();
