@@ -27,30 +27,30 @@ const titulosHTML = () => {
 }
 titulosHTML();
 
-const charactersHTML = () => {
-  const datosPersonajes = peopleList();
-  let html = ''
-  datosPersonajes.forEach((itemCharacter) => {
+// const charactersHTML = () => {
+//   const datosPersonajes = peopleList();
+//   let html = ''
+//   datosPersonajes.forEach((itemCharacter) => {
 
 
-    html += `
-    <div id="characterList" class="dosColumnas">
-      <ul class="columnaPersonajes">
-        <li class="miniaturaDescripcion">
-          <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
-          <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
-          <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
-          <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
-          <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-          <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-        </li>
-      </ul>
-    </div>`
+//     html += `
+//     <div id="characterList" class="dosColumnas">
+//       <ul class="columnaPersonajes">
+//         <li class="miniaturaDescripcion">
+//           <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
+//           <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
+//           <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
+//           <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
+//           <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
+//           <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
+//         </li>
+//       </ul>
+//     </div>`
 
-  })
-  document.getElementById("characterList").innerHTML = html
-}
-charactersHTML();
+//   })
+//   document.getElementById("characterList").innerHTML = html
+// }
+// charactersHTML();
 
 
 
