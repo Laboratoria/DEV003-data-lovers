@@ -21,6 +21,20 @@ export const titleList = () => {
   });
 }
 
+// export const peopleList = () => {
+
+//   return ghibli.films.map((characterObject) => {
+//     return {
+//       nombre: characterObject.name,
+//       genero: characterObject.gender,
+//       edad: characterObject.age,
+//       colorDeOjos: characterObject.eye_color,
+//       colorDePelo: characterObject.people[0].hair_color,
+//       imagen: characterObject.people[0].img
+//     }
+//   });
+// }
+
 
 
 //export const example = () => {
