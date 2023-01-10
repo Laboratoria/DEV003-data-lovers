@@ -3,10 +3,11 @@
 ## 1. Resumen del proyecto
 
 Este proyecto se baso en crear una pagina web, para maestros de Pokémon y usuarios interesados en conocer y aprender un poco mas de los Pokémon y sus características, lo cual dentro de la interfaz encontraran un conjunto de información de cada Pokémon como sus elementos, tipo de alimentación, tamaño y mucho más. Filtrándolos o seleccionando el Pokémon que deseen conocer.
-En este proyecto se realizo prototipo de baja fidelidad en PowerPoint realizando diferentes borrador hasta llegar a un portotipo final (https://www.canva.com/design/DAFXSiPRd64/CVONimFIgQTfNm5PicwqhA/view?utm_content=DAFXSiPRd64&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+En este proyecto se realizo prototipo de baja fidelidad en PowerPoint realizando diferentes borrador hasta llegar a un portotipo final 
+![https://www.canva.com/design/DAFXSiPRd64/CVONimFIgQTfNm5PicwqhA/view?utm_content=DAFXSiPRd64&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton] 
 
-Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipò de alta fidelidad en figma (https://www.figma.com/file/TCL3Cs30AmZzoavS8lIIHq/Untitled?node-id=3%3A16&t=PzcNnvWim1oSQjHR-0)
-Todo esto bajo un organizacion planteada en nuestro trello (https://trello.com/b/mu5uPjL5/segundo-proyecto-pokemon)
+Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipò de alta fidelidad en figma ![https://www.figma.com/file/TCL3Cs30AmZzoavS8lIIHq/Untitled?node-id=3%3A16&t=PzcNnvWim1oSQjHR-0]
+Todo esto bajo un organizacion planteada en nuestro trello ![https://trello.com/b/mu5uPjL5/segundo-proyecto-pokemon]
 
 ##  Definición del producto
 Este producto fue diseñado para que los usuarios obtengan la información más rápida y detallada del Pokémon que desean conocer.
