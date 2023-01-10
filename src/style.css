@@ -132,7 +132,10 @@ main {
   margin: 5px;
 }
 
-.filters {
+.barra-filtros {
+  display: flex;
+}
+.filtros-data {
   margin: 40px;
   display: none;
   width: 80vw;
