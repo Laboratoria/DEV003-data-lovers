@@ -294,7 +294,7 @@ h4 {
 .descripcionPeliculas {
     color: #00686C;
     width: 50vh;
-    display: flex;
+    display: block;
     justify-content: flex-start;
     margin-left: 20px;
 }

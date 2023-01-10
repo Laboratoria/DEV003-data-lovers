@@ -7,7 +7,7 @@ import ghibli from "./data/ghibli/ghibli.js"
 //   });
 // }
 // creacion de nuevo obj con map, que se mostrara en el DOM
-export const ejemplo = () => {
+export const titleList = () => {
 
   return ghibli.films.map((movieObject) => {
     return {
@@ -15,7 +15,8 @@ export const ejemplo = () => {
       director: movieObject.director,
       productor: movieObject.producer,
       lanzamiento: movieObject.release_date,
-      poster: movieObject.poster
+      poster: movieObject.poster,
+      personajes: movieObject.people[0].name
     }
   });
 }

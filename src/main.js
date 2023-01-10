@@ -1,4 +1,4 @@
-import { ejemplo } from './data.js';
+import { titleList } from './data.js';
 // import data from './data/lol/lol.js';
 
 // funcionalidad del botón hacia arriba
@@ -7,33 +7,26 @@ window.topFunction = () => {
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
 }
 
-console.log(ejemplo());
+console.log(titleList());
 
-const armarHTML = () => {
-  const datosProcesados = ejemplo();
+const titulosHTML = () => {
+  const datosProcesados = titleList();
   let html = ''
-  datosProcesados.forEach((ej) => {
+  datosProcesados.forEach((itemFilm) => {
 
-    // document.getElementById("inventado").innerHTML +=
-    // html +=  `<div class="ejemplo">
-    //   <img src="${ej.poster}" alt="">
-    //   <h3>${ej.title}</h3>
-    //   <p>${ej.director}</p>
-    // </div>`
 
-    ////////////
     html += `
-  <li class="contenedorPeliculas">
-          <img class="miniaturaPeliculas"
-            src="${ej.poster}"
-            alt="Castle in the Sky">
-          <p class="descripcionPeliculas">
-            "${ej.titulo}"
-            Año de lanzamiento: "${ej.lanzamiento}"
-            Director: "${ej.director}"
-            Productor: "${ej.productor}"
-          </p>
-        </li>`
+  <div class="contenedorPeliculas">
+    <div>
+      <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
+    </div>
+    <div>
+      <p class="descripcionPeliculas">"${itemFilm.titulo}"</p>
+      <p class="descripcionPeliculas"> Año de lanzamiento: "${itemFilm.lanzamiento}"</p>
+      <p class="descripcionPeliculas"> Director: "${itemFilm.director}"</p>
+      <p class="descripcionPeliculas"> Productor: "${itemFilm.productor}"</p>
+    </div>
+  </div>`
 
   })
   document.getElementById("test").innerHTML = html
@@ -45,22 +38,10 @@ armarHTML();
 function llenarLista() {
   const lugarDelista = document.getElementById("idlista");
 
-      for(let index = 0; index < peliculas.length; index++) {
-          lugarDelista.innerHTML += `<section> <ul> ${peliculas[i].title} </ul> </section>`
-    }
-}
-
-// function llenarLista1(){
-//   const lugarDelista1 = document.getElementById("idlista1");
-
-//     for(let index = 0; index < peliculas.length; index++) {
-//         lugarDelista1.innerHTML += `<li> ${peliculas[i].title} </li>`
+  //     for(...){
+  //         lugarDelista.innerHTML += `<li> <h4> ${peliculas[i].title} </h4> </li>`
   //     }
-// }
-
-
-
-
+}
 
 
 
@@ -84,3 +65,5 @@ function llenarLista() {
 // const peopleName = people.filter(item => item.name === "Dola")
 // console.log('respuesta', peopleName);
 
+
+// console.log(example, data);
