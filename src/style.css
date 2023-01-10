@@ -301,7 +301,7 @@ button:hover { /* cambia de color cuando el mouse esta sobre el boton */
     align-content: center;
     grid-template-columns:1fr 2fr;
     flex-wrap: nowrap;
-    
+    font-family: 'Comic Sans', sans-serif;
 
    /* grid-template-rows: 1fr 1fr;*/
 }

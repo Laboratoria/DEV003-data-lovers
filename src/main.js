@@ -647,23 +647,23 @@ figureImg.id = "imgPokemon";
 const scthw = document.createElement("section");
 scthw.id="scTypeHeigthWeigth";
 const spanType = document.createElement("span");
-spanType.innerHTML= "<strong>Type : </strong><br>"  + infoPokemon.type[0] + "<br>";
+spanType.innerHTML= "<strong>Type: </strong><br>"  + infoPokemon.type[0] + "<br>";
 
 if (infoPokemon.type[1] !== undefined && infoPokemon.type[1] !== null) {
   spanType.innerHTML +=  infoPokemon.type[1] +"<br>";
 }
 
 const spanHeight = document.createElement("span");
-spanHeight.innerHTML = "<strong>Height : </strong>" + infoPokemon.size.height +"<br>";
+spanHeight.innerHTML = "<strong>Height: </strong>" + infoPokemon.size.height +"<br>";
 
 const spanWeight = document.createElement("span");
-spanWeight.innerHTML =  "<strong>Weight : </strong>" + infoPokemon.size.weight +"<br>";
+spanWeight.innerHTML =  "<strong>Weight: </strong>" + infoPokemon.size.weight +"<br>";
 
 const scWeaknesses= document.createElement("section");
 scWeaknesses.id="scweaknessesDetails";
 const ulWeaknesses = document.createElement("ul");
 ulWeaknesses.id="ulWeaknesses";
-ulWeaknesses.innerHTML = "<strong> Weaknesses : </strong>" ;
+ulWeaknesses.innerHTML = "<strong>Weaknesses: </strong>" ;
 
 infoPokemon.weaknesses.forEach((item) => {
   
@@ -681,16 +681,16 @@ const pAbout=document.createElement("p");
 pAbout.innerText = infoPokemon.about;
 
 const spanGeneration = document.createElement("span");
-spanGeneration.innerHTML = "<br><strong>Generation :</strong>" + infoPokemon.generation.num +"<br>";
+spanGeneration.innerHTML = "<br><strong>Generation: </strong>" + infoPokemon.generation.num +"<br>";
 
 const spanRegion = document.createElement("span");
-spanRegion.innerHTML = "<strong>Region :</strong>" + infoPokemon.generation.name +"<br>";
+spanRegion.innerHTML = "<strong>Region: </strong>" + infoPokemon.generation.name +"<br>";
 
 const scResistant= document.createElement("section");
 scResistant.id="scResistantDetails"
 const ulResistant = document.createElement("ul");
 ulResistant.id="ulResistant";
-ulResistant.innerHTML = "<strong>Resistant :</strong>" ;
+ulResistant.innerHTML = "<strong>Resistant: </strong>" ;
 
 infoPokemon.resistant.forEach((item) => {
   //ulResistant.innerHTML += "<li>" + item + "</li>"; //
@@ -708,11 +708,11 @@ spExtraInfo.innerHTML="<strong><ins> EXTRA INFORMATION </ins></strong><br>";
 
 const spanEggs = document.createElement("span");
 spanEggs.id="spEggs";
-spanEggs.innerHTML = "<strong>Eggs : </strong>" + infoPokemon.egg+"<br>";
+spanEggs.innerHTML = "<strong>Eggs: </strong>" + infoPokemon.egg+"<br>";
 
 const spanCandy = document.createElement("span");
 spanCandy.id="spCandy";
-spanCandy.innerHTML = "<strong>Candy distance (km) : </strong>" + infoPokemon['buddy-distance-km'];
+spanCandy.innerHTML = "<strong>Candy distance (km): </strong>" + infoPokemon['buddy-distance-km'];
 //fin section rigth
 
 container.appendChild(secPopUp);
