@@ -114,6 +114,7 @@ function searchButton() {
         const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
         document.getElementById("root").style.display="block";
         document.querySelector(".cards").style.display="none";
+        document.querySelector(".noSearch").style.display="none";
         showAllCharacters(filteredResult);
         console.log(categoSelect);
         console.log(inpTxt);
