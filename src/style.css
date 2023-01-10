@@ -134,6 +134,7 @@ main {
 
 .barra-filtros {
   display: flex;
+  justify-content: space-between;
 }
 .filtros-data {
   margin: 40px;
@@ -208,5 +209,11 @@ main {
   font-size: 1.8rem;
   text-align: center;
   color: #a58822;
-  margin-right: 40vw;
+  margin-right: 30px;
+}
+
+#calculo {
+  color: #a58822;
+  font-family: "Purple 3";
+  font-size: 1.8rem;
 }

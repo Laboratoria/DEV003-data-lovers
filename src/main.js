@@ -1,4 +1,4 @@
-import { getData, sortMe, createCharEl, charFilters } from "./data.js";
+import { getData, sortMe, createCharEl, charFilters, calculo } from "./data.js";
 
 const characters = getData("characters");
 sortMe(characters);
@@ -8,6 +8,7 @@ const dataSection = document.querySelector("#show-data");
 const genderFilterSelect = document.querySelector("#gender");
 const houseFilterSelect = document.querySelector("#house");
 const clearFilter = document.querySelector("#limpiar");
+const calculoPersonajes = document.getElementById("calculo");
 
 //MUESTRA TODOS LOS PERSONAJES
 charactersPageBtn.addEventListener("click", () => {
@@ -16,6 +17,7 @@ charactersPageBtn.addEventListener("click", () => {
   characters.map((character) => {
     createCharEl(character, dataSection);
   });
+  calculoPersonajes.innerHTML = "Hay 707 personajes";
 });
 
 //EVENTO PARA FILTROS
@@ -29,6 +31,12 @@ genderFilterSelect.addEventListener("change", () => {
   filteredChars.map((char) => {
     createCharEl(char, dataSection);
   });
+  calculo(
+    calculoPersonajes,
+    characters,
+    charFilters(characters, genderFilterSelect.value, houseFilterSelect.value),
+    genderFilterSelect.value
+  );
 });
 
 houseFilterSelect.addEventListener("change", () => {
@@ -51,6 +59,7 @@ clearFilter.addEventListener("click", () => {
   characters.map((character) => {
     createCharEl(character, dataSection);
   });
+  calculoPersonajes.innerHTML = "Hay 707 personajes";
 });
 
 //BUSCADOR

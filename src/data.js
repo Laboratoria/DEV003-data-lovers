@@ -50,3 +50,15 @@ export function sortMe(items) {
     return 0;
   });
 }
+
+export function calculo(div, characters, charFilters, filterValue) {
+  const total = characters.length;
+  const totalFilter = charFilters.length;
+  let gender = "";
+  if (filterValue === "Male") {
+    gender = "hombres";
+  } else {
+    gender = "mujeres";
+  }
+  div.innerHTML = `Hay ${totalFilter} ${gender} de ${total} personajes`;
+}

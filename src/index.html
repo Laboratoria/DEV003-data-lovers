@@ -38,20 +38,24 @@
       <!-- FILTROS -->
       <section class="filtros-data">
         <div class="barra-filtros">
-          <select name="genero" id="gender">
+          <div id="gender-house-reset">
+            <select name="genero" id="gender">
               <option selected=" " disabled=" ">Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
-          </select>
-          <select name="casas" id="house">
+            </select>
+            <select name="casas" id="house">
               <option selected disabled>House</option>
               <option value="Gryffindor">Gryffindor</option>
               <option value="Hufflepuff">Hufflepuff</option>
               <option value="Ravenclaw">Ravenclaw</option>
               <option value="Slytherin">Slytherin</option>
               <option value="null">None</option>
-          </select>
-          <input type="reset" class="reset" id="limpiar"></input>
+            </select>
+            <input type="reset" class="reset" id="limpiar"></input>
+          </div>
+          <!-- CALCULO -->
+          <div id="calculo"></div>
           <!-- BUSCADOR -->
           <input type="text" id="buscador" placeholder="Search"></input>
         </div>
