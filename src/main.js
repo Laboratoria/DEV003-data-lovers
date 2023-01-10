@@ -1,6 +1,7 @@
-import { getData, createCharEl, charFilters } from "./data.js";
+import { getData, sortMe, createCharEl, charFilters } from "./data.js";
 
 const characters = getData("characters");
+sortMe(characters);
 
 const charactersPageBtn = document.querySelector(".characters");
 const dataSection = document.querySelector("#show-data");
