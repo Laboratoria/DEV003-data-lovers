@@ -166,6 +166,8 @@ Imágenes del Prototipo de Baja Fidelidad:
 ## 5. Prototipos Alta Fidelidad
 
 Los prototipos de alta fidelidad se realizaron en la aplicación de Figma en donde creamos 5 botones para las 5 paginas que queríamos mostrar, no se detallaron las páginas ya que iban a ser idénticas a excepción de unos pequeños cambios en el diseño, pero nos basamos en la planificación de nuestros prototipos de baja fidelidad. 
+[Link a Prototipo en Figma](https://www.figma.com/file/VtOcI0Wdz782cYFSUpuWAk/Pokemon?node-id=0%3A1&t=ITdmEUfJAgcbUpiW-1)
+
 
 Imágenes del Prototipo de Alta Fidelidad:
 
@@ -281,7 +283,7 @@ A continuación marcamos los criterios de aceptación que cumplimos de este proy
   `README.md`.
 * [X] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [X] Incluye link a Zeplin en `README.md`.
+* [X] Incluye link a Figma en `README.md`.
 * [X] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [X] UI: Muestra lista y/o tabla con datos y/o indicadores.
