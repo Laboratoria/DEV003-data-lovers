@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+    </head>
   
   <body>
 
-    <div id="root"></div>
+    <div id="root">
 
     <header>
 
@@ -28,11 +33,16 @@
     <main>
       <!-- SECCION MENU -->
       <nav class="navbar" class="">
-      <a href="./potions.html" class="potions">Potions</a>
-      <a href="#" class="funfacts">FunFacts</a>
-      <a href="#" class="characters">Characters</a>
-      <a href="#" class="spells">Spells</a>
-      <a href="#" class="books">Books</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu">
+      <a href="#" class="potions" class="nav-menu-item">Potions</a>
+      <a href="#" class="funfacts" class="nav-menu-item">FunFacts</a>
+      <a href="#" class="characters" class="nav-menu-item">Characters</a>
+      <a href="#" class="spells" class="nav-menu-item">Spells</a>
+      <a href="#" class="books" class="nav-menu-item">Books</a>
+    </div>
       </nav>
       <!-- SECCION DINAMICA -->
       <!-- FILTROS -->
@@ -64,7 +74,7 @@
       </section>
       
   </main>
-
+</div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -1,23 +1,27 @@
-import { example, anotherExample } from '../src/data.js';
+import {
+  getData,
+  createCharEl,
+  charFilters,
+  sortMe,
+  calculo,
+} from "../src/data.js";
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe("getData", () => {
+  it("is a function", () => {
+    expect(typeof getData).toBe("function");
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it("returns `getData`", () => {
+    expect(getData()).toBe("getData");
   });
 });
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe("anotherExample", () => {
+  it("is a function", () => {
+    expect(typeof anotherExample).toBe("function");
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it("returns `anotherExample`", () => {
+    expect(anotherExample()).toBe("OMG");
   });
 });
