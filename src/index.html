@@ -35,6 +35,38 @@
 
      <!-- another extension MOVIES -->
      <main id="main-content-movies" class="page-sections-movies">
+      <select class="select" id="selectOrder" >
+        <option type="button" value="order" disabled selected >Order</option>
+        <option type="button" value="a-z">A-Z</option>
+        <option type="button" value="z-a">Z-A</option>
+        <option type="button" value="first">First</option>
+        <option type="button" value="last">Last</option>
+      </select>
+
+      <select class="select" id="titlesSelec">
+        <option value="" selected>Titles</option>
+        <option type="button">Castle in the Sky</option>
+        <option type="button">Grave of the Fireflies</option>
+        <option type="button">My Neighbor Totoro</option>
+        <option type="button">Kiki's Delivery Service</option>
+        <option type="button">Only Yesterday</option>
+        <option type="button">Porco Rosso</option>
+        <option type="button">Pom Poko</option>
+        <option type="button">Whisper of the Heart</option>
+        <option type="button">Princess Mononoke</option>
+        <option type="button">My Neighbors the Yamadas</option>
+        <option type="button">Spirited Away</option>
+        <option type="button">The Cat Returns</option>
+        <option type="button">Howl's Moving Castle</option>
+        <option type="button">Tales from Earthsea</option>
+        <option type="button">Ponyo on the Cliff by the Sea</option>
+        <option type="button">The Secret World of Arrietty</option>
+        <option type="button">From Up on Poppy Hill</option>
+        <option type="button">The Tale of the Princess Kaguya</option>
+        <option type="button">The Wind Rises</option>
+        <option type="button">When Marnie Was There</option>
+      </select>
+      
       <section class="page-section-movies">
         <h2 class="section-title" id="about-movies">Movies</h2>
         <p>In this section youll find all the movies of the world of ghibli,
@@ -43,8 +75,42 @@
       </section>
     </main>
 
+    <!-- another extension CHARACTERS -->
+    <main class="select" id="main-content-characters">
+      <select class="select" id="selectOrderCharacter"> 
+        <option type="button" value="order" disabled selected >Order</option>
+        <option type="button" value="a-z">A-Z</option>
+        <option type="button" value="z-a">Z-A</option>
+      </select>
+      <section class="page-section-characters">
+        <h2 class="section-title" id="about-chracters">Characters</h2>
+        <p>In this section you'll find every character and their description from all Ghibli films.
+        </p>
+      </section>
+    </main>
+
     <!-- another extension DIRECTORS -->
     <main id="main-content-directors" class="page-sections-directors">
+
+      <select class="select" id="director">
+        <option value="" selected>Director</option>
+        <option type="button">Hayao Miyazaki</option>
+        <option type="button">Yoshifumi Kondō</option>
+        <option type="button">Hiroyuki Morita</option>
+        <option type="button">Gorō Miyazaki</option>
+        <option type="button">Hiromasa Yonebayashi</option>
+        <option type="button">Isao Takahata</option>
+      </select>
+
+      <select class="select" id="producer">
+        <option value="" selected>Producer</option>
+        <option type="button">Hayao Miyazaki</option>
+        <option type="button">Isao Takahata</option>
+        <option type="button">Toru Hara</option>
+        <option type="button">Toshio Suzuki</option>
+        <option type="button">Yoshiaki Nishimura</option>
+      </select>
+
       <section class="page-section-directors">
         <h2 class="section-title" id="about-directors">Directors and Producers</h2>
         <p>In this section youll find all the Directors  for each movie and producers also, take 
@@ -59,6 +125,7 @@
     </section>
 
     <section class = "dataFilms">
+      <div class = "movieFilter"></div>
       <div class="container"> </div>
     </section>
 

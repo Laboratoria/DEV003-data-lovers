@@ -1,3 +1,4 @@
+import { orderFunc, orderCharacterFunction, filterDirector, filterProducer, filterTitles } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const dataGhibli = data.films
@@ -20,8 +21,8 @@ function directorsFilms(index) {
   ).join('')
 }
 
-function titles (films) {
-  const container = document.querySelector(".titlesContainer");
+function titles (films, contenedor) {
+  const container = document.querySelector(contenedor);
   container.innerHTML = films.map((item) =>
     `<div class = "cardTitle">
         <div class = "blockData">
@@ -71,8 +72,9 @@ function characters() {
   document.querySelector(".titles").style.display = "none";
   document.querySelector(".charactersView").style.display = "block";
   document.querySelector("#main-content").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "block";
   document.querySelector(".swaying-icon").style.display = "none";
-  document.querySelector("#main-content-movies").style.display = "block";
+  document.querySelector("#main-content-movies").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "none";
   charactersView(peopleArr);
 }
@@ -85,6 +87,7 @@ function directors() {
   document.querySelector(".charactersView").style.display = "none";
   document.querySelector("#main-content").style.display = "none";
   document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "none";
   document.querySelector("#main-content-movies").style.display = "block";
   document.querySelector("#main-content-directors").style.display = "none";
   directorsFilms(dataGhibli);
@@ -97,9 +100,10 @@ function title() {
   document.querySelector("#main-content").style.display = "none";
   document.querySelector(".titles").style.display = "block";
   document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "none";
   document.querySelector("#main-content-movies").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "block";
-  titles(dataGhibli);
+  titles(dataGhibli, ".titlesContainer");
 }
 
 function home() {
@@ -108,6 +112,7 @@ function home() {
   document.querySelector(".homeView").style.display = "block";
   document.querySelector(".charactersView").style.display = "none";
   document.querySelector("#main-content").style.display = "flex";
+  document.querySelector("#main-content-characters").style.display = "none";
   document.querySelector(".swaying-icon").style.display = "block";
   document.querySelector("#main-content-movies").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "none";
@@ -122,5 +127,53 @@ document.getElementById("directors").addEventListener("click",title)
 
 
 
-/*      ANOTHER EXTENSION   */ 
+//Ordenar películas
 
+const orderFilms = (a) =>{
+  const orderSelected = a.target.value;
+  if (orderSelected !== ""){
+    const filterOrder = orderFunc(dataGhibli, orderSelected)
+    directorsFilms(filterOrder)
+  }
+}
+
+const order = document.getElementById("selectOrder")
+order.addEventListener ("change", orderFilms)
+
+//Ordenar Personajes
+
+const orderCharacter = (a)=>{
+  const orderSelec = a.target.value;
+  if(orderSelec !== ""){
+    const filterOrder = orderCharacterFunction(peopleArr, orderSelec)
+    charactersView(filterOrder)
+  }
+}
+
+const orderPeople = document.getElementById("selectOrderCharacter")
+orderPeople.addEventListener ("change", orderCharacter)
+
+//Filtro director y productor
+
+const director = document.getElementById("director")
+director.addEventListener("change", () => {    
+  const directorSelected = director.value;
+  const directorFiltered = filterDirector(dataGhibli, directorSelected);
+  titles(directorFiltered, ".titlesContainer")
+});
+
+
+const producer = document.getElementById("producer")
+producer.addEventListener("change", () => {
+  const producerSelected = producer.value;
+  const producerFiltered = filterProducer(dataGhibli, producerSelected);
+  titles(producerFiltered, ".titlesContainer")
+});
+
+
+const filterMovie = document.getElementById("titlesSelec")
+filterMovie.addEventListener("change", () => {    
+  const titleSelected = filterMovie.value;
+  const titleFiltered = filterTitles(dataGhibli, titleSelected);
+  titles(titleFiltered,  ".movieFilter")
+})

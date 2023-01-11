@@ -425,6 +425,15 @@ ul:not(.menu) {
  
 }
 
+#main-content-characters {
+  display: none;
+  margin-top: 100px;
+  width: 50%; /* Set the width of the element */
+  margin: auto; 
+  justify-content: center;
+ 
+}
+
 /* SECTION MOVIES PRODUCES/DIRECTORS*/
 
 #main-content-directors{
