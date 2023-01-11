@@ -7,7 +7,7 @@ Este proyecto se baso en crear una pagina web, para maestros de Pokémon y usuar
 En este proyecto se realizo prototipo de baja fidelidad en PowerPoint realizando diferentes borrador hasta llegar a un portotipo final
 ![Prototipo de baja fidelidad](maqueta.jpg)
 
-Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipò de alta fidelidad en figma
+Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipo de alta fidelidad en figma
 ![Prototipo de alta fidelidad](altaFidelidad.jpg)
 Todo esto bajo un organizacion planteada en nuestro trello
 ![Trello](TRELLOPOKE.jpg)
