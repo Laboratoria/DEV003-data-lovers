@@ -1,6 +1,6 @@
 body {
     display: block;
-    background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2016/07/landscape-1433777123-hogwarts-school-of-witchcraft-and-wizardry-harry-potter-movie-hd-wallpaper-1920x1080-4707.jpg?fit=1600%2C800&quality=50&strip=all&ssl=1);
+    background-color: darkblue;
     background-repeat: no-repeat;
     margin:0em;
     font-family: 'Harry Potter', sans-s;
@@ -28,17 +28,6 @@ body {
     #menuInicial ul li a:hover{
         color: white;
     }
-    .flexCenter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: goldenrod;
-        background-image: url(CastilloAzul.jpg);
-        background-repeat: no-repeat;
-        width: 700px;
-        height: 500px;
-        font-size: 170px;
-    }
 
     #buscador{
         color: goldenrod;
@@ -62,7 +51,7 @@ body {
         text-align: center;
     }
     #mensajeUsuario{
-        color: goldenrod;
+        color: yellow;
     }
     
     #divmensaje{
@@ -80,5 +69,5 @@ body {
         align-items: center;
         height: 800px;
      }
-    (115 kB)
+ 
    
