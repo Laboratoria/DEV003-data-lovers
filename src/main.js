@@ -31,12 +31,10 @@ genderFilterSelect.addEventListener("change", () => {
   filteredChars.map((char) => {
     createCharEl(char, dataSection);
   });
-  calculo(
-    calculoPersonajes,
-    characters,
-    charFilters(characters, genderFilterSelect.value, houseFilterSelect.value),
-    genderFilterSelect.value
-  );
+  calculo(calculoPersonajes, characters, [
+    genderFilterSelect.value,
+    houseFilterSelect.value,
+  ]);
 });
 
 houseFilterSelect.addEventListener("change", () => {
@@ -49,6 +47,10 @@ houseFilterSelect.addEventListener("change", () => {
   filteredChars.map((char) => {
     createCharEl(char, dataSection);
   });
+  calculo(calculoPersonajes, characters, [
+    genderFilterSelect.value,
+    houseFilterSelect.value,
+  ]);
 });
 
 //CLEAR FILTER

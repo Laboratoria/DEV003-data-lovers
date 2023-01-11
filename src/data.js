@@ -51,14 +51,34 @@ export function sortMe(items) {
   });
 }
 
-export function calculo(div, characters, charFilters, filterValue) {
+export function calculo(div, characters, filterValue) {
+  const [genderFilter, houseFilter] = filterValue;
+  const characterFilters = charFilters(characters, genderFilter, houseFilter);
   const total = characters.length;
-  const totalFilter = charFilters.length;
+  const totalFilter = characterFilters.length;
   let gender = "";
-  if (filterValue === "Male") {
-    gender = "hombres";
-  } else {
-    gender = "mujeres";
+  let house = "";
+  switch (genderFilter) {
+    case "Male":
+      gender = "hombres";
+      break;
+    case "Female":
+      gender = "mujeres";
+      break;
   }
-  div.innerHTML = `Hay ${totalFilter} ${gender} de ${total} personajes`;
+  switch (houseFilter) {
+    case "Gryffindor":
+      house = "Gryffindor";
+      break;
+    case "Slytherin":
+      house = "Slytherin";
+      break;
+    case "Ravenclaw":
+      house = "Ravenclaw";
+      break;
+    case "Hufflepuff":
+      house = "Hufflepuff";
+      break;
+  }
+  div.innerHTML = `Hay ${totalFilter} ${gender} ${house} de ${total} personajes`;
 }
