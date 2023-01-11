@@ -8,7 +8,7 @@ export const anotherExample = () => {
   return 'OMG';
 };*/
 
-export const orderFunc = (films, orderSelected) => {
+export const sortTitles = (films, orderSelected) => {
   if (orderSelected === "a-z"){
     return films.sort((a,b) => a.title > b.title ? 1 : -1)
   }
@@ -26,7 +26,7 @@ export const orderFunc = (films, orderSelected) => {
   }
 }
 
-export const orderCharacterFunction = (peopleArr, orderSelec) => {
+export const sortCharacters = (peopleArr, orderSelec) => {
   if (orderSelec === "a-z"){
     return peopleArr.sort((a,b) => a.name > b.name ? 1 : -1)
   }

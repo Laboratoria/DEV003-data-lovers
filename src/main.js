@@ -1,10 +1,11 @@
-import { orderFunc, orderCharacterFunction, filterDirector, filterProducer, filterTitles } from './data.js';
+import { sortTitles, sortCharacters, filterDirector, filterProducer, filterTitles } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const dataGhibli = data.films
 
-function directorsFilms(index) {
-  const container = document.querySelector(".container");
+//Funcion para las cartas giratorias
+function displayTitleCards(index, contenedor) {
+  const container = document.querySelector(contenedor);
   container.innerHTML = index.map((item) =>
     `<div class = "card">
           <div class = "face front">
@@ -21,7 +22,31 @@ function directorsFilms(index) {
   ).join('')
 }
 
-function titles (films, contenedor) {
+//Funcion para las tarjetas de los personajes
+function displayCharacters(index, contenedor) {
+  const container = document.querySelector(contenedor);
+  container.innerHTML = index.map((item) =>
+    `<div class = "cardCharacter">
+          <div class = "imgCharacter">
+            <img src = "${item.img}"></img>
+          </div>
+          <div class = "dataCharacter">
+            <p class = "name">${item.name}</p>
+          </div>
+          <ul class = "characterList">
+            <li><p class = "gender"> <strong>Gender:</strong> &nbsp ${item.gender}</p></li>
+            <li><p class = "age"> <strong>Age:</strong> &nbsp ${item.age}</p></li>
+            <li><p class = "eyeColor"> <strong>Eye color:</strong> &nbsp ${item.eye_color}</p></li>
+            <li><p class = "hairColor"> <strong>Hair color:</strong> &nbsp ${item.hair_color}</p></li>
+            <li><p class = "specie"> <strong>Specie:</strong> &nbsp ${item.specie}</p></li>
+          </ul>
+      </div>`
+  ).join('')
+}
+const peopleArr = dataGhibli.map(ppl=>ppl.people).flat(1)
+
+//Funcion para ver director y productor de las películas
+function displayDirecProds (films, contenedor) {
   const container = document.querySelector(contenedor);
   container.innerHTML = films.map((item) =>
     `<div class = "cardTitle">
@@ -43,137 +68,111 @@ function titles (films, contenedor) {
   ).join('')
 }
 
-//Vista Characters
-function charactersView(index) {
-  const container = document.querySelector(".characters");
-  container.innerHTML = index.map((item) =>
-    `<div class = "cardCharacter">
-          <div class = "imgCharacter">
-            <img src = "${item.img}"></img>
-          </div>
-          <div class = "dataCharacter">
-            <p class = "name">${item.name}</p>
-          </div>
-          <ul class = "characterList">
-            <li><p class = "gender"> <strong>Gender:</strong> &nbsp ${item.gender}</p></li>
-            <li><p class = "age"> <strong>Age:</strong> &nbsp ${item.age}</p></li>
-            <li><p class = "eyeColor"> <strong>Eye color:</strong> &nbsp ${item.eye_color}</p></li>
-            <li><p class = "hairColor"> <strong>Hair color:</strong> &nbsp ${item.hair_color}</p></li>
-            <li><p class = "specie"> <strong>Specie:</strong> &nbsp ${item.specie}</p></li>
-          </ul>
-      </div>`
-  ).join('')
-}
-const peopleArr = dataGhibli.map(ppl=>ppl.people).flat(1)
-
-function characters() {
-  document.querySelector(".dataFilms").style.display = "none";
-  document.querySelector(".homeView").style.display = "none";
-  document.querySelector(".titles").style.display = "none";
-  document.querySelector(".charactersView").style.display = "block";
-  document.querySelector("#main-content").style.display = "none";
-  document.querySelector("#main-content-characters").style.display = "block";
-  document.querySelector(".swaying-icon").style.display = "none";
-  document.querySelector("#main-content-movies").style.display = "none";
-  document.querySelector("#main-content-directors").style.display = "none";
-  charactersView(peopleArr);
-}
-
-
-function directors() {
-  document.querySelector(".dataFilms").style.display = "block";
-  document.querySelector(".homeView").style.display = "none";
-  document.querySelector(".titles").style.display = "none";
-  document.querySelector(".charactersView").style.display = "none";
-  document.querySelector("#main-content").style.display = "none";
-  document.querySelector(".swaying-icon").style.display = "none";
-  document.querySelector("#main-content-characters").style.display = "none";
-  document.querySelector("#main-content-movies").style.display = "block";
-  document.querySelector("#main-content-directors").style.display = "none";
-  directorsFilms(dataGhibli);
-}
-
-function title() {
-  document.querySelector(".dataFilms").style.display = "none";
-  document.querySelector(".homeView").style.display = "none";
-  document.querySelector(".charactersView").style.display = "none";
-  document.querySelector("#main-content").style.display = "none";
-  document.querySelector(".titles").style.display = "block";
-  document.querySelector(".swaying-icon").style.display = "none";
-  document.querySelector("#main-content-characters").style.display = "none";
-  document.querySelector("#main-content-movies").style.display = "none";
-  document.querySelector("#main-content-directors").style.display = "block";
-  titles(dataGhibli, ".titlesContainer");
-}
-
-function home() {
-  document.querySelector(".dataFilms").style.display = "none";
-  document.querySelector(".titles").style.display = "none";
-  document.querySelector(".homeView").style.display = "block";
-  document.querySelector(".charactersView").style.display = "none";
-  document.querySelector("#main-content").style.display = "flex";
-  document.querySelector("#main-content-characters").style.display = "none";
+//Funciones para las vistas
+function homeView() {
+  document.querySelector(".homeContainer").style.display = "block";
+  document.querySelector(".titleCardsContainer").style.display = "none";
+  document.querySelector(".charactersContainer").style.display = "none";
+  document.querySelector(".dirProdsContainer").style.display = "none";
   document.querySelector(".swaying-icon").style.display = "block";
+  document.querySelector("#main-content").style.display = "flex";
   document.querySelector("#main-content-movies").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "none";
 }
 
-document.getElementById("home").addEventListener("click",home)
-document.getElementById("titles").addEventListener("click",directors)
-document.getElementById("characters").addEventListener("click",characters)
-document.getElementById("directors").addEventListener("click",title)
+function cardTitlesView() {
+  document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".titleCardsContainer").style.display = "block";
+  document.querySelector(".charactersContainer").style.display = "none";
+  document.querySelector(".dirProdsContainer").style.display = "none";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "block";
+  document.querySelector("#main-content-characters").style.display = "none";
+  document.querySelector("#main-content-directors").style.display = "none";
+  displayTitleCards(dataGhibli, ".titleCardContainer");
+}
 
+function charactersView() {
+  document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".titleCardsContainer").style.display = "none";
+  document.querySelector(".charactersContainer").style.display = "block";
+  document.querySelector(".dirProdsContainer").style.display = "none";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "block";
+  document.querySelector("#main-content-directors").style.display = "none";
+  displayCharacters(peopleArr, ".characterContainer");
+}
 
+function dirProdsView() {
+  document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".titleCardsContainer").style.display = "none";
+  document.querySelector(".charactersContainer").style.display = "none";
+  document.querySelector(".dirProdsContainer").style.display = "block";
+  document.querySelector(".swaying-icon").style.display = "none";
+  document.querySelector("#main-content").style.display = "none";
+  document.querySelector("#main-content-movies").style.display = "none";
+  document.querySelector("#main-content-characters").style.display = "none";
+  document.querySelector("#main-content-directors").style.display = "block";
+  displayDirecProds(dataGhibli, ".dirProdContainer");
+}
 
+//Event listeners
+document.getElementById("home").addEventListener("click", homeView)
+document.getElementById("titles").addEventListener("click", cardTitlesView)
+document.getElementById("characters").addEventListener("click", charactersView)
+document.getElementById("dirProds").addEventListener("click", dirProdsView)
 
 
 //Ordenar películas
-
 const orderFilms = (a) =>{
   const orderSelected = a.target.value;
   if (orderSelected !== ""){
-    const filterOrder = orderFunc(dataGhibli, orderSelected)
-    directorsFilms(filterOrder)
+    const filterOrder = sortTitles(dataGhibli, orderSelected)
+    displayTitleCards(filterOrder, ".titleCardContainer")
   }
 }
 
 const order = document.getElementById("selectOrder")
 order.addEventListener ("change", orderFilms)
 
-//Ordenar Personajes
 
+//Ordenar Personajes
 const orderCharacter = (a)=>{
   const orderSelec = a.target.value;
   if(orderSelec !== ""){
-    const filterOrder = orderCharacterFunction(peopleArr, orderSelec)
-    charactersView(filterOrder)
+    const filterOrder = sortCharacters(peopleArr, orderSelec)
+    displayCharacters(filterOrder, ".characterContainer")
   }
 }
 
 const orderPeople = document.getElementById("selectOrderCharacter")
 orderPeople.addEventListener ("change", orderCharacter)
 
-//Filtro director y productor
 
+//Filtro director y productor
 const director = document.getElementById("director")
 director.addEventListener("change", () => {    
   const directorSelected = director.value;
   const directorFiltered = filterDirector(dataGhibli, directorSelected);
-  titles(directorFiltered, ".titlesContainer")
+  displayDirecProds(directorFiltered, ".dirProdContainer")
 });
 
-
+//Filtro productor
 const producer = document.getElementById("producer")
 producer.addEventListener("change", () => {
   const producerSelected = producer.value;
   const producerFiltered = filterProducer(dataGhibli, producerSelected);
-  titles(producerFiltered, ".titlesContainer")
+  displayDirecProds(producerFiltered, ".dirProdContainer")
 });
 
-
+//Filtro por título
 const filterMovie = document.getElementById("titlesSelec")
 filterMovie.addEventListener("change", () => {    
   const titleSelected = filterMovie.value;
   const titleFiltered = filterTitles(dataGhibli, titleSelected);
-  titles(titleFiltered,  ".movieFilter")
+  displayDirecProds(titleFiltered,  ".titleSelec")
 })

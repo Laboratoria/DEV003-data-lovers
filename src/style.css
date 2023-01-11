@@ -100,7 +100,7 @@ button.outline:active {
 /* fin boton*/
 
 /*inicio css index*/
-.container {
+.titleCardContainer {
   margin: 3rem;
   display: grid;
   gap: 2rem;
@@ -201,7 +201,7 @@ button.outline:active {
 /*fin css titles*/
 
 /*inicio css titles*/
-.titlesContainer {
+.dirProdContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(max(20rem, 500px), 1fr));
 }
@@ -492,7 +492,7 @@ a{
 }
 
 /*Vista Characters*/
-.characters {
+.characterContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(max(18rem, 20rem), 1fr));
     font-size: 1.5rem;
