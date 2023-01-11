@@ -5,7 +5,7 @@
 Este proyecto se baso en crear una pagina web, para maestros de Pokémon y usuarios interesados en conocer y aprender un poco mas de los Pokémon y sus características, lo cual dentro de la interfaz encontraran un conjunto de información de cada Pokémon como sus elementos, tipo de alimentación, tamaño y mucho más. Filtrándolos o seleccionando el Pokémon que deseen conocer.
 
 En este proyecto se realizo prototipo de baja fidelidad en PowerPoint realizando diferentes borrador hasta llegar a un portotipo final
-![Prototipo de baja fidelidad](maqueta.jpg)
+![Prototipo de baja fidelidad](ProtoBajaF.png)
 
 Con el fin de poder crear nuestro prototipo de alta fidelidad para la continuidad de nuestro proyecto. se realizo un prototipo de alta fidelidad en figma
 ![Prototipo de alta fidelidad](altaFidelidad.jpg)
