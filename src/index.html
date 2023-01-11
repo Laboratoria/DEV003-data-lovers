@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--tag para responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E Universo Ghibli</title>
+    <title>Universo Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -15,13 +15,13 @@
       <a class="button-inicio mainbutton " href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
       <input class="button-inicio mainbutton" type="button" value="Elige al Azar" id="randomBtn">
       <!--div para generar nav, definir id -->
-      <select value="orderYear" class="select-year mainbutton">
+      <select id="orderYear" class="select-year mainbutton">
         <option value="allYear" class="mainbutton ">Ordenar por año de emisión</option>
-        <option value="upward ">Ascendente</option>
-        <option value="downward ">Descendente</option>
+        <option value="upward">Ascendente</option>
+        <option value="downward">Descendente</option>
       </select>
 
-      <select value="orderDirector" class="select-director mainbutton">
+      <select id="orderDirector" class="select-director mainbutton">
         <option value="allDirector">Ordenar por Director</option>
         <option value="Miyazaki">Hayao Miyazaki</option>
         <option value="Takahata">Isao Takahata</option>
@@ -32,16 +32,16 @@
         
       </select>
       <select value="orderCharacter" class="select-character mainbutton">
-        <option value="allCharacter">Ordenar por especie</option>
-        <option value="">A</option>
-        <option value="">b<b></b></option>
+        <option value="allCharacter">Ordenar Albabeticamente</option>
+        <option value="Az">A-Z</option>
+        <option value="Za">Z-A<b></b></option>
       </select>
     </nav>
 
     <div class="all-movies-cards" id=""> 
       <div class="show-cards">
         <!--div donde se mostrara el output del innerHtml-->
-      <ol id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </ol>
+      <div id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </div>
     </div>
     </div>
    
