@@ -35,6 +35,8 @@ header{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: center;
+    margin-left: 8px;
+    border-radius: 4px; /*sugerencia */
 }
 
 .btnHeader:hover{
@@ -145,4 +147,22 @@ h2{
 }
 .episodes{
     word-break: break-all;
+<<<<<<< HEAD
+=======
+}
+select{
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+input{
+    margin-left: 10px;
+    gap: 35px;
+}
+
+#filtMain{
+    margin-left: 10px;
+     border-radius: 4px; /*sugerencia */
+>>>>>>> 19d38af3ff071c0b117c29da058deb4b0723fa61
 }

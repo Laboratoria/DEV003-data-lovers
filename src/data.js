@@ -1,6 +1,3 @@
-// estas funciones son de ejemplo
-//import data from './data/rickandmorty/rickandmorty.js';
-
 export function filterData(data, input, category){
   //Ejecuta la función si está dentro de estas categorías
   if (category === "name" || category === "species" || category === "type" || category === "status") {
@@ -23,7 +20,6 @@ export function filterData(data, input, category){
 
       return selectOpt.startsWith(enteredTxt);
       //comparar si la categoria de la data startsWith input del usuario
-      //string.startsWith('Fe');
     })
     console.log(filtGender);
     return filtGender;
@@ -40,7 +36,7 @@ export function filterData(data, input, category){
     const filtEpi = data.filter((character) => {
       console.log(character[category]);//contiene mis elementos en un string
       const enteredTxt = input.toLowerCase();//Contiene txt input
-      const epNumbs = character[category].map((episode) => {//Tiene mi array de núms
+      const epNumbs = character[category].map((episode) => {//Array de núms
         const urlNum = episode.split("/");//Contiene array con elements separados
         const lastNumb = urlNum[urlNum.length - 1];
 
@@ -70,8 +66,3 @@ export function getData(categoSelect, inpTxt, orderType, data) {
   const orderedResult = orderAlf(orderType, filteredResult)
   return orderedResult
 };
-//Obtener valor de input txt en una variable---> Hecho
-
-//Function filterData 3 paráms: data, input, categor---> Hecho
-//filterData recibe toda la data y la regresa filtradas---> Hecho
-//Usar ejemplo que tngo en main.js

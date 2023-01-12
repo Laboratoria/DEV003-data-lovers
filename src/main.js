@@ -4,7 +4,6 @@ import data from './data/rickandmorty/rickandmorty.js';
 import { filterData, getData } from './data.js';
 
 
-
 function showAllCharacters(characters){
     document.getElementById("cards").innerHTML=("");
     for (let character of characters){
@@ -74,7 +73,7 @@ function showAllCharacters(characters){
       //Episodios
       let episodes=document.createElement("h2");
       episodes.classList.add("episodes")
-    //Es un arreglo, hay que iterar sobre cada elemento y usar .split para recuperar el núm del episodio
+      //Es un arreglo, hay que iterar sobre cada elemento y usar .split para recuperar el núm del episodio
       const epNumbs=character["episode"].map((episode)=>{//Tiene mi array de núms
         const urlNum=episode.split("/");//Contiene array con elements separados
         const lastNumb=urlNum[urlNum.length -1];
@@ -83,9 +82,6 @@ function showAllCharacters(characters){
       })
       episodes.innerText= "Episodes: " + epNumbs.join(", ");
       container.appendChild(episodes);
-  
-      
-  
       cardMold.appendChild(container);
       document.getElementById("cards").appendChild(cardMold); //Anida en cards
     }
@@ -93,8 +89,6 @@ function showAllCharacters(characters){
   
 window.onload = (event) => {
     showAllCharacters(data.results) //No retorna nada porque solo quiero que muestre cards
-    // console.log(showAllCharacters);
-
     document.getElementById("searchBtn").onclick = searchButton; //Ejecuta mi función al escuchar click
     const orderSelect = document.getElementById("order");
     orderSelect.addEventListener("change", (e) => {
@@ -104,8 +98,6 @@ window.onload = (event) => {
         const characters = getData(categoSelect, inpTxt, orderType, data);
         showAllCharacters(characters);
      });
-
-    //.onclick=searchButton; //Ejecuta mi función al escuchar click
 
 };
 function searchButton() {
@@ -156,10 +148,3 @@ function showAll(){
 
     showAllCharacters(data.results);
 }
-
-  //  export const ordenA = (data) => ordenAlf(data);
-  //  export const ordenZ= (data) => ordenA(data).reverse();
-
-
-
-
