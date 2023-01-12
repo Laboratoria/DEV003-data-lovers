@@ -8,6 +8,13 @@ html {
   font-size: 62.5%;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   background-image: url(./images/fondo2.jpg);
   background-size: cover;
@@ -77,9 +84,9 @@ main {
   justify-content: center;
 }
 
-.espacio {
+/* .espacio {
   margin: 70px;
-}
+} */
 
 .navbar {
   padding: 10px 35px 10px 35px;
@@ -91,11 +98,22 @@ main {
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu-item {
+  padding: 10px 35px 10px 35px;
 }
 
 .navbar a {
   color: #c5a227;
   margin: auto;
+  display: inline-block;
 }
 
 .potions,
@@ -233,29 +251,44 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-menu_visible {
-    left: 0;
-  }
   .nav-menu {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: #2c3e50;
+    background-color: #000000ed;
     position: fixed;
-    top: 60px;
-    width: 100%;
+    top: 83px;
+    width: 50%;
     padding: 20px 0;
 
-    height: calc(100% - 60px);
+    height: auto;
     overflow-y: auto;
 
     left: 100%;
     transition: left 0.3s;
+
+    border: 1px solid #a58822;
+    font-size: 2.5rem;
   }
   .nav-menu-item {
     line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #83c5f7;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 20%;
+  }
+
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
   }
 }

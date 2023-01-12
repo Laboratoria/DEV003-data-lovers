@@ -34,11 +34,10 @@ export function charFilters(charArr, genderFilter, houseFilter) {
   return filtered;
 }
 
-// para ordenar alfabeticamente
 export function sortMe(items) {
   items.sort((a, b) => {
-    const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
     if (nameA < nameB) {
       return -1;
     }
