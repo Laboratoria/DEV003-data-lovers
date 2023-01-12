@@ -56,9 +56,14 @@ describe("charFilters", () => {
     expect(typeof charFilters).toBe("function");
   });
 
-  it("returns `filter data by gender`", () => {
+  it("returns `filter data by gender female`", () => {
     const charFound = charFilters(dummyData, "Female", "Gryffindor");
     expect(charFound[0].name).toBe("Hermione Granger");
+  });
+
+  it("returns `filter data by gender male`", () => {
+    const charFound = charFilters(dummyData, "Male", "Gryffindor");
+    expect(charFound[0].name).toBe("Euan Abercrombie");
   });
 });
 
