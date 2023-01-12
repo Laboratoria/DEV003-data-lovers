@@ -1,4 +1,4 @@
-import { titleList, peopleList, directorList } from './data.js';
+import { titleList, peopleList, listaDirectores, peliculasDirector } from './data.js';
 // import data from './data/lol/lol.js';
 
 // funcionalidad del botón hacia arriba
@@ -82,6 +82,30 @@ const charactersHTML = () => {
   document.getElementById("listaPersonajes").innerHTML = html
 }
 charactersHTML();
+
+// ejemplo();
+// peliculasDirector();
+// listaDirectores();
+listaDirectores().forEach ((itemDirector) => {
+  console.log(peliculasDirector(itemDirector));
+})
+
+
+
+
+//     html += `
+//     <div id="characterList" class="dosColumnas">
+//       <ul class="columnaPersonajes">
+//         <li class="miniaturaDescripcion">
+//           <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
+//           <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
+//           <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
+//           <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
+//           <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
+//           <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
+//         </li>
+//       </ul>
+//     </div>`
 
 
 
