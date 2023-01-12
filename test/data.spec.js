@@ -1,18 +1,18 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, getData } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterData', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `filterData', () => {
+    expect(filterData()).toBe('example');
   });
-});
+});git pull origin main
 
 
-describe('anotherExample', () => {
+describe('getData', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
