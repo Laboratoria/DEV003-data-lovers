@@ -1,0 +1,73 @@
+body {
+    display: block;
+    background-color: darkblue;
+    background-repeat: no-repeat;
+    margin:0em;
+    font-family: 'Harry Potter', sans-s;
+    /*"https://i.pinimg.com/originals/d9/35/17/d9351755a84d0170f1126b69b9025f56.jpg*/
+}
+
+    #menuInicial ul{
+        margin: 0;
+        background-color: black;
+        list-style: none;
+        background-position: center;
+        text-align: center;
+    }
+    #menuInicial ul li{
+        display: inline;
+    }
+    #menuInicial ul li a{
+        padding: 20px 100px;
+        display: inline-block;
+        color: goldenrod;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-style: normal tahoma;
+    }
+    #menuInicial ul li a:hover{
+        color: white;
+    }
+
+    #buscador{
+        color: goldenrod;
+        margin-left: 2rem;
+    }
+    #informacion1{
+        align-content: center;
+    }
+    input{
+        background-position: center;
+        text-align: center;
+        height: 50px;
+        width: 310px;
+        font-size: 20px ;
+        margin-left: 2rem;
+    }
+    button{
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+        text-align: center;
+    }
+    #mensajeUsuario{
+        color: yellow;
+    }
+    
+    #divmensaje{
+        background-position: center;
+        text-align: center;
+        height: 50px;
+        width: 310px;
+        font-size: 20px ;
+        margin-top: 1rem;
+    }
+
+    #casas{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+     }
+ 
+   

@@ -13,7 +13,18 @@ body {
     list-style: none;
     background-position: center;
     text-align: center;
+}
 
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    background-image: url(CastilloAzul.jpg);
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 500px;
+    font-size: 170px;
 }
 
 #menuInicial ul li{

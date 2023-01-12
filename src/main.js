@@ -13,16 +13,23 @@ function buscar() {
   const name = getName()
   console.log(name)
   for (let i = 0; i < personajes.length; i++) {
-    if (personajes[i].name.toUpperCase() === name.toUpperCase()) {
-      const mensaje = "Este personaje es:" + personajes[i].name + ". Pertenece a la casa " + personajes[i].house
+
+    if (personajes[i].name.toUpperCase () === name.toUpperCase ()) {
+
+      const mensaje = "This character is: " + personajes[i].name + ". It belongs to House " + personajes[i].house
       // alert(mensaje)
 
       getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
 
+      if (personajes[i].name.toUpperCase() === name.toUpperCase()) {
+        const mensaje = "This character is:" + personajes[i].name + ". Belongs to House " + personajes[i].house;
+        // alert(mensaje)
+
+        getDivMensajeUsuario().innerHTML = `<div id='divmensaje'>${mensaje}</div>`
+      }
     }
   }
 }
-
 function getDivMensajeUsuario() {
   return document.getElementById("mensajeUsuario")
 }
@@ -31,3 +38,4 @@ function getName() {
   return document.getElementById("informationbox").value
 }
 
+alert("Este personaje es:" + personajes[i].house)
