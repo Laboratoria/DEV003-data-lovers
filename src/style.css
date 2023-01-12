@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-size: cover;
+    background-image: url(https://i.gifer.com/YgbO.gif); */
+   
+   
+ 
+}
+body{background-color:  rgba(7, 116, 224, 0.979);
+  
+}
+header{
+    background-image: url(https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/07/principal-pokemon.jpg?itok=FITBzJ3K);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position: left;
+    width: 1400px;
+    padding: 70px  70px ; 
+    background-size: 100%; 
+    margin: auto;
+   
+   
+}
+
+
+    
+ul li{
+    display: inline-flex; 
+    margin: 50px;
+    font-family:Cooper Black;
+    border: 1px solid rgb(13, 14, 2); 
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: yellow;
+    padding: 15px 20px;
+    font-family: 'Cooper Black';
+    font-size: 13px;
+
+}
+
+      
+
+
+
