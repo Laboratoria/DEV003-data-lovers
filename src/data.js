@@ -10,7 +10,7 @@ import ghibli from "./data/ghibli/ghibli.js"
 export const titleList = () => {
 
   return ghibli.films.map((movieObject) => {
-   console.log("objetopelicula",movieObject);
+    console.log("objetopelicula", movieObject);
     return {
       titulo: movieObject.title,
       director: movieObject.director,
@@ -52,15 +52,15 @@ export const peopleList = () => {
 //   }));
 //  }
 
- 
- //listar directores y usamos ...new Set para que no se repitan los elementos 
- export const ejemplo =() => {
-  console.log ();
+
+//listar directores y usamos ...new Set para que no se repitan los elementos 
+export const ejemplo = () => {
+  console.log();
   const directoresg = ghibli.films.map((t) => {
     return t.director;
-    });
-    const dirsingular = [ ...new Set(directoresg)]
-    console.log(dirsingular);
-    console.log(dirsingular.sort());
-    console.log(dirsingular.reverse());
-  }
+  });
+  const dirsingular = [...new Set(directoresg)]
+  console.log(dirsingular);
+  console.log(dirsingular.sort());
+  console.log(dirsingular.reverse());
+}

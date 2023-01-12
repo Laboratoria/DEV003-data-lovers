@@ -40,7 +40,7 @@ const charactersHTML = () => {
   let html = ''
   datosPersonajes.forEach((itemCharacter, index) => {
 
-    // console.log("personajes",itemCharacter, index);
+    console.log("personajes",itemCharacter, index);
 
     html += `
    <div class="contenedorPeliculas">
