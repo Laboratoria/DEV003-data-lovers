@@ -7,7 +7,10 @@ console.log(example, data);
 
 const personajes = data.characters
 
-document.getElementById("search").addEventListener("click", buscar)
+
+if (document.getElementById("search") !== null) {
+  document.getElementById("search").addEventListener("click", buscar);
+}
 
 function buscar() {
   const name = getName()
@@ -38,4 +41,44 @@ function getName() {
   return document.getElementById("informationbox").value
 }
 
-alert("Este personaje es:" + personajes[i].house)
+//java busca todos los "casa link"
+document.querySelectorAll('.casalink').forEach((item) => {
+  item.addEventListener('click', function (){
+    //el banner se activa
+    const bannerCentral = document.getElementById("bannerCentral");
+    bannerCentral.classList.add("active"); 
+    //Ya tenemos que casa es
+    const searchHouse = this.getAttribute("data-house"); 
+    const todaLaCasa = personajes.filter(function(persona){
+      return persona.house === searchHouse;
+    }).map(function (persona){
+      return persona.name;
+    }); 
+    const activeHouse = document.getElementById("ActiveHouse");
+    activeHouse.innerHTML = "";
+    todaLaCasa.forEach(function(name){
+      activeHouse.innerHTML += "<p>" + name + "</p>";
+    });
+    
+  });
+});
+const mostrarLibros = document.getElementById('getBooks');
+mostrarLibros.addEventListener("click",function(){
+  document.getElementById("mostrarCasas").style.display = "none";
+  document.getElementById("ocultarLibros").style.display = "block";
+});
+
+const mostrarCasas = document.getElementById('getHouses');
+mostrarCasas.addEventListener("click",function(){
+  document.getElementById("ocultarLibros").style.display = "none";
+  document.getElementById("mostrarCasas").style.display = "block";
+
+});
+
+const mostrarHome = document.getElementById('getHome');
+mostrarHome.addEventListener("click",function(){
+  document.getElementById("mostrarCasas").style.display = "block";
+  document.getElementById("ocultarLibros").style.display = "none";
+});
+
+
