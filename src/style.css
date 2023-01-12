@@ -20,13 +20,15 @@ header{
     width: 350px;
 }
 .btnLupa{
-    max-height: 30px;
+    height: 30px;
     width: 40px;
     display: flex;
     justify-content: center;
 }
+#searchBtn{
+    border-radius: 6px;
+}
 .btnHeader{
-    max-height: 130px;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -35,8 +37,9 @@ header{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: center;
-    margin-left: 8px;
-    border-radius: 4px; /*sugerencia */
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
 }
 
 .btnHeader:hover{
@@ -56,6 +59,7 @@ select{
     font-size: 20px;
     text-align: center;
     padding: 15px;
+    border-radius: 6px;
 }
 
 .containerPrinc{
@@ -80,15 +84,7 @@ select{
     align-content:flex-start;
     gap: 35px;
 }
-#order{
-    background:#c6ed93;
-    border-color: #7AD605;
-    border-radius: 50px;
-    border-width: 3px;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#000000;
-    float: right;
-}
+
 .cards{
     padding-top: 12px;
     display: flex;
@@ -98,6 +94,7 @@ select{
     align-content:flex-start;
     gap: 35px;
 }
+
 .cardsDesign{
     background-color: black;
     color: #7AD605;
@@ -154,19 +151,4 @@ h2{
 }
 .episodes{
     word-break: break-all;
-}
-select{
-    background-color: #9bf525;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    text-align: center;
-}
-input{
-    margin-left: 10px;
-    gap: 35px;
-}
-
-#filtMain{
-    margin-left: 10px;
-     border-radius: 4px; /*sugerencia */
 }
