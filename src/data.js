@@ -1,7 +1,7 @@
 // funcion de ordenar para exportarla en main
-export function ordenarAlfabeto(pokemons, orden){
+export function ordenar(pokemons, orden){
   const organizadorSeleccionado = orden
-  const ordenarDataAZ = pokemons.slice().sort((a,b) =>{
+  const ordenarDataAZ = pokemons.sort((a,b) =>{
     if (a.name.toLowerCase() < b.name.toLowerCase()){ 
       return -1;
     }
@@ -10,11 +10,29 @@ export function ordenarAlfabeto(pokemons, orden){
     }
     return 0;
   });
-  const ordenarDataZA = pokemons.slice().sort((a,b) =>{
+  const ordenarDataZA = pokemons.sort((a,b) =>{
     if (a.name.toLowerCase() > b.name.toLowerCase()){ 
       return -1;
     }
     if (a.name.toLowerCase() < b.name.toLowerCase()){ 
+      return 1;
+    }
+    return 0;
+  });
+  const ordenarDataMenorMAyor = pokemons.sort((a,b) =>{
+    if (a.num < b.num){ 
+      return -1;
+    }
+    if (a.num > b.num){ 
+      return 1;
+    }
+    return 0;
+  });
+  const ordenarDataMayorMenor = pokemons.sort((a,b) =>{
+    if (a.num > b.num){ 
+      return -1;
+    }
+    if (a.num < b.num){ 
       return 1;
     }
     return 0;
@@ -25,9 +43,11 @@ export function ordenarAlfabeto(pokemons, orden){
   }
   else if (organizadorSeleccionado === "zA"){
     return ordenarDataZA;
-  }
-
-  else {
+  } else if (organizadorSeleccionado === "ascendente"){
+    return ordenarDataMenorMAyor;
+  }else if (organizadorSeleccionado === "descendente"){
+    return ordenarDataMayorMenor;
+  }  else {
     return "";
   }
 }
@@ -35,6 +55,6 @@ export function ordenarAlfabeto(pokemons, orden){
 // funcion de filtrar
 export function filtroData (pokemons, condicion) {
   const elementoTipo = condicion
-  const nuevaData = pokemons.filter((element) => element.type == elementoTipo);
+  const nuevaData = pokemons.filter((element) => element.type.includes(elementoTipo));
   return nuevaData;
 }

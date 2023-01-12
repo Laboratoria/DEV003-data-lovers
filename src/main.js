@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {ordenarAlfabeto} from './data.js'
+import {ordenar} from './data.js'
 import {filtroData} from './data.js'
 
 
@@ -74,7 +74,7 @@ dataPokemons.forEach(mostrarData);
 const selectorOrganizarAlfabeticamente = document.getElementById("ordenarAlfabeto");
 selectorOrganizarAlfabeticamente.addEventListener("change",function(){
   const opcionSeleccionada = this.options[selectorOrganizarAlfabeticamente.selectedIndex];
-  const nuevaData = ordenarAlfabeto(dataPokemons, opcionSeleccionada.value);
+  const nuevaData = ordenar(dataPokemons, opcionSeleccionada.value);
   catalogo.innerHTML="";
   
   if(opcionSeleccionada.value === "selecciona")
