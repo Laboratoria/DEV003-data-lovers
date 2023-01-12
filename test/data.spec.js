@@ -3,18 +3,18 @@ import { filterData, getData } from '../src/data.js';
 
 describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
   it('returns `filterData', () => {
     expect(filterData()).toBe('example');
   });
-});git pull origin main
+})
 
 
 describe('getData', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof getData).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
