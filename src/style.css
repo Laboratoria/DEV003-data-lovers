@@ -49,9 +49,11 @@ header{
 .buscador{
     background-color: black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    max-height: 130px;
     padding-bottom: 2px;
+    height: auto;
+    min-height: auto;
 }
 select{
     background-color: #9bf525;
