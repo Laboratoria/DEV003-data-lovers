@@ -1,4 +1,4 @@
-import { titleList, peopleList, ejemplo } from './data.js';
+import { titleList, peopleList, listaDirectores, peliculasDirector } from './data.js';
 // import data from './data/lol/lol.js';
 
 
@@ -60,7 +60,16 @@ const charactersHTML = () => {
   document.getElementById("characterList").innerHTML = html
 }
 charactersHTML();
-ejemplo();
+
+// ejemplo();
+// peliculasDirector();
+// listaDirectores();
+listaDirectores().forEach ((itemDirector) => {
+  console.log(peliculasDirector(itemDirector));
+})
+
+
+
 
 //     html += `
 //     <div id="characterList" class="dosColumnas">

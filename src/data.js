@@ -10,7 +10,7 @@ import ghibli from "./data/ghibli/ghibli.js"
 export const titleList = () => {
 
   return ghibli.films.map((movieObject) => {
-   console.log("objetopelicula",movieObject);
+  //  console.log("objetopelicula",movieObject);
     return {
       titulo: movieObject.title,
       director: movieObject.director,
@@ -39,28 +39,30 @@ export const peopleList = () => {
 }
 
 // Filtro de peliculas por director
-// export const ejemplo =() => {
-//  console.log (ghibli.films.filter((e) => {
-//   return e.director == "Hayao Miyazaki";
-//  }));
-// }
+export const peliculasDirector =(director) => {
+  return (ghibli.films.filter((e) => {
+  return e.director == director;
+ }));
+}
 
 
 // export const ejemplo =() => {
-//   // console.log (ghibli.films.map((t) => {
+//   console.log (ghibli.films.map((t) => {
 // return t.director;
 //   }));
 //  }
 
  
- //listar directores y usamos ...new Set para que no se repitan los elementos 
- export const ejemplo =() => {
-  console.log ();
+//  listar directores y usamos ...new Set para que no se repitan los elementos 
+ export const listaDirectores =() => {
+
   const directoresg = ghibli.films.map((t) => {
     return t.director;
     });
-    const dirsingular = [ ...new Set(directoresg)]
-    console.log(dirsingular);
-    console.log(dirsingular.sort());
-    console.log(dirsingular.reverse());
+    return [ ...new Set(directoresg)];
+
+    // const dirsingular = 
+    // console.log(dirsingular);
+    // console.log("asc", dirsingular.sort());
+    // console.log("desc", dirsingular.reverse());
   }
