@@ -1,6 +1,5 @@
-import { titleList, peopleList, ejemplo } from './data.js';
+import { titleList, peopleList, directorList } from './data.js';
 // import data from './data/lol/lol.js';
-
 
 // funcionalidad del botón hacia arriba
 window.topFunction = () => {
@@ -34,13 +33,36 @@ const titulosHTML = () => {
 }
 titulosHTML();
 
+// lista de directores por película
+const directoresHTML = () => {
+  const datosDirector = directorList();
+  let html = ''
+  datosDirector.forEach((itemDirector) => {
+
+    html += `
+  <div class="contenedorPeliculas">
+    <div class="descripcionPeliculas">
+      <p>"${itemDirector.director}"</p>
+    </div>
+  </div>`
+
+  })
+  document.getElementById("listaDirectores").innerHTML = html
+}
+directoresHTML();
+
+
+
+
+
+// lista de personajes -prueba-
 const charactersHTML = () => {
   const datosPersonajes = peopleList();
   // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
   let html = ''
   datosPersonajes.forEach((itemCharacter, index) => {
 
-    console.log("personajes",itemCharacter, index);
+    // console.log("personajes",itemCharacter, index);
 
     html += `
    <div class="contenedorPeliculas">
@@ -57,29 +79,10 @@ const charactersHTML = () => {
     </div>`
 
   })
-  document.getElementById("characterList").innerHTML = html
+  document.getElementById("listaPersonajes").innerHTML = html
 }
 charactersHTML();
-ejemplo();
 
-//     html += `
-//     <div id="characterList" class="dosColumnas">
-//       <ul class="columnaPersonajes">
-//         <li class="miniaturaDescripcion">
-//           <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
-//           <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
-//           <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//         </li>
-//       </ul>
-//     </div>`
-
-//   })
-//   document.getElementById("characterList").innerHTML = html
-// }
-// charactersHTML();
 
 
 // console.log(example, data);
