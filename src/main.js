@@ -1,5 +1,12 @@
-import { titleList } from './data.js';
+import { titleList, peopleList, ejemplo } from './data.js';
 // import data from './data/lol/lol.js';
+
+
+// funcionalidad del botón hacia arriba
+window.topFunction = () => {
+  document.body.scrollTop = 0; // para Safari
+  document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
+}
 
 // console.log(titleList());
 
@@ -13,12 +20,12 @@ const titulosHTML = () => {
     <div>
       <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
     </div>
-    <div>
-      <p class="descripcionPeliculas">"${itemFilm.titulo}"</p>
-      <p class="descripcionPeliculas"> Release Date: "${itemFilm.lanzamiento}"</p>
-      <p class="descripcionPeliculas"> Director: "${itemFilm.director}"</p>
-      <p class="descripcionPeliculas"> Producer: "${itemFilm.productor}"</p>
-      <p class="descripcionPeliculas"> Characters: "${itemFilm.personajes}"</p>
+    <div class="descripcionPeliculas">
+      <p> "${itemFilm.titulo}"</p>
+      <p> Release Date: "${itemFilm.lanzamiento}"</p>
+      <p> Director: "${itemFilm.director}"</p>
+      <p> Producer: "${itemFilm.productor}"</p>
+      <p> Characters: "${itemFilm.personajes}"</p>
     </div>
   </div>`
 
@@ -27,11 +34,33 @@ const titulosHTML = () => {
 }
 titulosHTML();
 
-// const charactersHTML = () => {
-//   const datosPersonajes = peopleList();
-//   let html = ''
-//   datosPersonajes.forEach((itemCharacter) => {
+const charactersHTML = () => {
+  const datosPersonajes = peopleList();
+  // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
+  let html = ''
+  datosPersonajes.forEach((itemCharacter, index) => {
 
+    // console.log("personajes",itemCharacter, index);
+
+    html += `
+   <div class="contenedorPeliculas">
+      <div>
+        <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
+      </div>
+      <div class="descripcionPeliculas">  
+          <p> Name: "${itemCharacter.nombre}"</p>
+          <p> Gender: "${itemCharacter.genero}"</p>
+          <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
+          <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
+          <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
+      </div>
+    </div>`
+
+  })
+  document.getElementById("characterList").innerHTML = html
+}
+charactersHTML();
+ejemplo();
 
 //     html += `
 //     <div id="characterList" class="dosColumnas">
@@ -52,12 +81,5 @@ titulosHTML();
 // }
 // charactersHTML();
 
-
-
-// funcionalidad del botón hacia arriba
-window.topFunction = () => {
-  document.body.scrollTop = 0; // para Safari
-  document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
-}
 
 // console.log(example, data);
