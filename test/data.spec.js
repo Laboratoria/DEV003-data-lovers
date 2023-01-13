@@ -63,7 +63,7 @@ describe("charFilters", () => {
 
   it("returns `filter data by gender male`", () => {
     const charFound = charFilters(dummyData, "Male", "Gryffindor");
-    expect(charFound[0].name).toBe("Euan Abercrombie");
+    expect(charFound[0].name).toBe("Euan Abercrombie")
   });
 });
 
@@ -72,10 +72,17 @@ describe("sortMe", () => {
     expect(typeof sortMe).toBe("function");
   });
 
-  // it("returns characters from A to Z", () => {
-  //   const charactersSorted = sortMe(dummyData, "A-Z");
-  //   expect(charactersSorted).toBe(dummyData);
-  // });
+  it("is a function", () => {
+
+    const arrTest = [{name:"hola"}, {name:'test'}, {name:"adios"}]
+   
+    sortMe(arrTest)
+
+    expect(arrTest).toEqual([ {name:"adios"}, {name:"hola"}, {name:'test'}]);
+
+  });
+
+ 
 });
 
 describe("calculo", () => {
@@ -83,10 +90,10 @@ describe("calculo", () => {
     expect(typeof calculo).toBe("function");
   });
 
-  // it("returns total female characters", () => {
-  //   const totalFemales = calculo(div, dummyData, ["Female", "Gryffindor"]);
-  //   expect(totalFemales).toBe("1");
-  // });
+  it("returns total female characters", () => {
+    const totalFemales = calculo(dummyData, ["Female", "Gryffindor"]);
+    expect(totalFemales).toBe("Hay 1 mujeres Gryffindor de 6 personajes");
+  });
 });
 
 describe("createCharEl", () => {

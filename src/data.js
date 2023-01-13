@@ -34,6 +34,22 @@ export function charFilters(charArr, genderFilter, houseFilter) {
   return filtered;
 }
 
+// let arr = [15,59,35,15]
+//console.log(arr[1]) == 59
+
+// arr.sort()
+// [15,15,35,59]
+//console.log(arr[1]) == 15
+
+// let x = {harry, ron, hermione, snape}
+// console.log(x) == [harry, her...]
+
+// valor  = 2
+// ref = #6589FxZ
+//x = ref
+//console.log(x) == #6589FxZ
+
+
 export function sortMe(items) {
   items.sort((a, b) => {
     const nameA = a.name.toUpperCase();
@@ -50,7 +66,7 @@ export function sortMe(items) {
   });
 }
 
-export function calculo(div, characters, filterValue) {
+export function calculo(characters, filterValue) {
   const [genderFilter, houseFilter] = filterValue;
   const characterFilters = charFilters(characters, genderFilter, houseFilter);
   const total = characters.length;
@@ -79,5 +95,5 @@ export function calculo(div, characters, filterValue) {
       house = "Hufflepuff";
       break;
   }
-  div.innerHTML = `Hay ${totalFilter} ${gender} ${house} de ${total} personajes`;
+  return `Hay ${totalFilter} ${gender} ${house} de ${total} personajes`;
 }
