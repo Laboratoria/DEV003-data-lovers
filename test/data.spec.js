@@ -63,7 +63,7 @@ describe("charFilters", () => {
 
   it("returns `filter data by gender male`", () => {
     const charFound = charFilters(dummyData, "Male", "Gryffindor");
-    expect(charFound[0].name).toBe("Euan Abercrombie")
+    expect(charFound[0].name).toBe("Euan Abercrombie");
   });
 });
 
@@ -73,16 +73,16 @@ describe("sortMe", () => {
   });
 
   it("is a function", () => {
+    const arrTest = [{ name: "hola" }, { name: "test" }, { name: "adios" }];
 
-    const arrTest = [{name:"hola"}, {name:'test'}, {name:"adios"}]
-   
-    sortMe(arrTest)
+    sortMe(arrTest);
 
-    expect(arrTest).toEqual([ {name:"adios"}, {name:"hola"}, {name:'test'}]);
-
+    expect(arrTest).toEqual([
+      { name: "adios" },
+      { name: "hola" },
+      { name: "test" },
+    ]);
   });
-
- 
 });
 
 describe("calculo", () => {
@@ -93,6 +93,21 @@ describe("calculo", () => {
   it("returns total female characters", () => {
     const totalFemales = calculo(dummyData, ["Female", "Gryffindor"]);
     expect(totalFemales).toBe("Hay 1 mujeres Gryffindor de 6 personajes");
+  });
+
+  it("return total male ravenclaw characters", () => {
+    const totalMales = calculo(dummyData, ["Male", "Ravenclaw"]);
+    expect(totalMales).toBe("Hay 1 hombres Ravenclaw de 6 personajes");
+  });
+
+  it("return total male hufflepuff characters", () => {
+    const totalMales = calculo(dummyData, ["Male", "Hufflepuff"]);
+    expect(totalMales).toBe("Hay 1 hombres Hufflepuff de 6 personajes");
+  });
+
+  it("return total male slytherin characters", () => {
+    const totalMales = calculo(dummyData, ["Male", "Slytherin"]);
+    expect(totalMales).toBe("Hay 1 hombres Slytherin de 6 personajes");
   });
 });
 

@@ -49,7 +49,6 @@ export function charFilters(charArr, genderFilter, houseFilter) {
 //x = ref
 //console.log(x) == #6589FxZ
 
-
 export function sortMe(items) {
   items.sort((a, b) => {
     const nameA = a.name.toUpperCase();
@@ -60,9 +59,6 @@ export function sortMe(items) {
     if (nameA > nameB) {
       return 1;
     }
-
-    // names must be equal
-    return 0;
   });
 }
 
