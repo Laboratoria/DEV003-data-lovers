@@ -34,20 +34,6 @@ export function charFilters(charArr, genderFilter, houseFilter) {
   return filtered;
 }
 
-// let arr = [15,59,35,15]
-//console.log(arr[1]) == 59
-
-// arr.sort()
-// [15,15,35,59]
-//console.log(arr[1]) == 15
-
-// let x = {harry, ron, hermione, snape}
-// console.log(x) == [harry, her...]
-
-// valor  = 2
-// ref = #6589FxZ
-//x = ref
-//console.log(x) == #6589FxZ
 
 export function sortMe(items) {
   items.sort((a, b) => {
