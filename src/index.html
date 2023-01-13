@@ -13,6 +13,8 @@
       <button type="button" class="outline" id="home" value="Home">Home</button>
       <button type="button" class="outline" id="titles" value="Titles">Movies</button>
       <button type="button" class="outline" id="characters" value="Characters">Characters</button>
+      <button type="button" class="outline" id="locations" value="Locations">Locations</button>
+      <button type="button" class="outline" id="vehicles" value="Vehicles">Vehicles</button>
       <button type="button" class="outline" id="dirProds" value="Director/Producer">Director/Producer</button>
       
     </header>
@@ -33,8 +35,8 @@
       </div>
     </main>
 
-     <!-- another extension MOVIES -->
-     <main id="main-content-movies" class="page-sections-movies">
+    <!-- another extension MOVIES -->
+    <main id="main-content-movies" class="page-sections-movies">
       <select class="select" id="selectOrder" >
         <option type="button" value="order" disabled selected >Order</option>
         <option type="button" value="a-z">A-Z</option>
@@ -45,26 +47,26 @@
 
       <select class="select" id="titlesSelec">
         <option value="" selected>Titles</option>
-        <option type="button">Castle in the Sky</option>
-        <option type="button">Grave of the Fireflies</option>
-        <option type="button">My Neighbor Totoro</option>
-        <option type="button">Kiki's Delivery Service</option>
-        <option type="button">Only Yesterday</option>
-        <option type="button">Porco Rosso</option>
-        <option type="button">Pom Poko</option>
-        <option type="button">Whisper of the Heart</option>
-        <option type="button">Princess Mononoke</option>
-        <option type="button">My Neighbors the Yamadas</option>
-        <option type="button">Spirited Away</option>
-        <option type="button">The Cat Returns</option>
-        <option type="button">Howl's Moving Castle</option>
-        <option type="button">Tales from Earthsea</option>
-        <option type="button">Ponyo on the Cliff by the Sea</option>
-        <option type="button">The Secret World of Arrietty</option>
-        <option type="button">From Up on Poppy Hill</option>
-        <option type="button">The Tale of the Princess Kaguya</option>
-        <option type="button">The Wind Rises</option>
-        <option type="button">When Marnie Was There</option>
+        <option type="button" value="Castle in the Sky">Castle in the Sky</option>
+        <option type="button" value="Grave of the Fireflies">Grave of the Fireflies</option>
+        <option type="button" value="My Neighbor Totoro">My Neighbor Totoro</option>
+        <option type="button" value="Kiki's Delivery Service">Kiki's Delivery Service</option>
+        <option type="button" value="Only Yesterday">Only Yesterday</option>
+        <option type="button" value="Porco Rosso">Porco Rosso</option>
+        <option type="button" value="Pom Poko">Pom Poko</option>
+        <option type="button" value="Whisper of the Heart">Whisper of the Heart</option>
+        <option type="button" value="Princess Mononoke">Princess Mononoke</option>
+        <option type="button" value="My Neighbors the Yamadas">My Neighbors the Yamadas</option>
+        <option type="button" value="Spirited Away">Spirited Away</option>
+        <option type="button" value="The Cat Returns">The Cat Returns</option>
+        <option type="button" value="Howl's Moving Castle">Howl's Moving Castle</option>
+        <option type="button" value="Tales from Earthsea">Tales from Earthsea</option>
+        <option type="button" value="Ponyo on the Cliff by the Sea">Ponyo on the Cliff by the Sea</option>
+        <option type="button" value="The Secret World of Arrietty">The Secret World of Arrietty</option>
+        <option type="button" value="From Up on Poppy Hill">From Up on Poppy Hill</option>
+        <option type="button" value="The Tale of the Princess Kaguya">The Tale of the Princess Kaguya</option>
+        <option type="button" value="The Wind Rises">The Wind Rises</option>
+        <option type="button" value="When Marnie Was There">When Marnie Was There</option>
       </select>
       
       <section class="page-section-movies">
@@ -82,6 +84,11 @@
         <option type="button" value="a-z">A-Z</option>
         <option type="button" value="z-a">Z-A</option>
       </select>
+      <select class="select" id="selectGender"> 
+        <option type="button" value="gender" disabled selected >Gender</option>
+        <option type="button" value="Female">Female</option>
+        <option type="button" value="Male">Male</option>
+      </select>
       <section class="page-section-characters">
         <h2 class="section-title" id="about-chracters">Characters</h2>
         <p>In this section you'll find every character and their description from all Ghibli films.
@@ -89,6 +96,33 @@
       </section>
     </main>
 
+    <!-- another extension LOCATIONS -->
+    <main class="select" id="main-content-locations">
+      <select class="select" id="selectOrderLocation"> 
+        <option type="button" value="order" disabled selected >Order</option>
+        <option type="button" value="a-z">A-Z</option>
+        <option type="button" value="z-a">Z-A</option>
+      </select>
+      <section class="page-section-locations">
+        <h2 class="section-title" id="about-location">Locations</h2>
+        <p>In this section you'll find the locations from all Ghibli films.
+        </p>
+      </section>
+    </main>
+
+    <!-- another extension VEHICLES -->
+    <main class="select" id="main-content-vehicles">
+      <select class="select" id="selectOrderVehicles"> 
+        <option type="button" value="order" disabled selected >Order</option>
+        <option type="button" value="a-z">A-Z</option>
+        <option type="button" value="z-a">Z-A</option>
+      </select>
+      <section class="page-section-vehicles">
+        <h2 class="section-title" id="about-vehicle">Vehicles</h2>
+        <p>In this section you'll find the vehicles from all Ghibli films.
+        </p>
+      </section>
+    </main>
     <!-- another extension DIRECTORS -->
     <main id="main-content-directors" class="page-sections-directors">
 
@@ -126,11 +160,25 @@
 
     <section class = "titleCardsContainer">
       <div class = "titleSelec"></div>
+      <div class = "pplSelec"></div>
+      <section class = "selecLV">
+      <div class = "locationSelec"></div>
+      <div class = "vehicleSelec"></div>
+      </section>
+
       <div class="titleCardContainer"> </div>
     </section>
 
     <section class = "charactersContainer">
       <div class="characterContainer"> </div>
+    </section>
+    
+    <section class = "locationsContainer">
+      <div class="locationContainer"> </div>
+    </section>
+    
+    <section class = "vehiclesContainer">
+      <div class="vehicleContainer"> </div>
     </section>
     
     <section class = "dirProdsContainer">

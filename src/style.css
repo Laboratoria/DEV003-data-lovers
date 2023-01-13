@@ -434,6 +434,24 @@ ul:not(.menu) {
  
 }
 
+#main-content-locations {
+  display: none;
+  margin-top: 100px;
+  width: 50%; /* Set the width of the element */
+  margin: auto; 
+  justify-content: center;
+ 
+}
+
+#main-content-vehicles {
+  display: none;
+  margin-top: 100px;
+  width: 50%; /* Set the width of the element */
+  margin: auto; 
+  justify-content: center;
+ 
+}
+
 /* SECTION MOVIES PRODUCES/DIRECTORS*/
 
 #main-content-directors{
@@ -494,7 +512,7 @@ a{
 /*Vista Characters*/
 .characterContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(max(18rem, 20rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(max(20rem), 1fr));
     font-size: 1.5rem;
     gap: 3rem;
 }
@@ -502,6 +520,7 @@ a{
     border-radius: 1rem 10rem 1rem 1rem;
     background:whitesmoke;
     margin: 2rem;
+    width: 18rem;
     gap: 1rem;
     box-shadow: 0 5px 10px #000;
 }
@@ -532,3 +551,117 @@ a{
   list-style: none;
 }
  /*End Vista Characters*/
+
+ /*Inicio vista Locations*/
+ .locationContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  font-size: 1.5rem;
+  gap: 3rem;
+ }
+ .cardLocation {
+  background: linear-gradient(
+    rgba(270, 250, 243, 0.85),
+    rgba(270, 250, 243, 0.85)
+  );
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  gap: 2rem;
+  width:42rem;
+  box-shadow: 0 5px 10px #000;
+}
+
+.imgLocation {
+  display: flex;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.imgLocation img {
+  border-radius: 10px;
+  position: static;
+  width: 100%;
+  height: 30rem;
+  object-fit: fill;
+}
+
+.locationList {
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/*End Vista Locations*/
+
+/*Inicio vista Vehicles*/
+.vehicleContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  font-size: 1.5rem;
+  gap: 3rem;
+ }
+ .cardVehicle {
+  background: linear-gradient(
+    rgba(270, 250, 243, 0.85),
+    rgba(270, 250, 243, 0.85)
+  );
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  gap: 2rem;
+  width:42rem;
+  box-shadow: 0 5px 10px #000;
+}
+
+.imgVehicle {
+  display: flex;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.imgVehicle img {
+  border-radius: 10px;
+  position: static;
+  width: 100%;
+  height: 30rem;
+  object-fit: fill;
+}
+
+.vehicleList {
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/*End Vista Vehicles*/
+
+/*Características del display por Títulos*/
+.pplSelec {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.selecLV {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.locationSelec {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vehicleSelec {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}

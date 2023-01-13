@@ -51,3 +51,9 @@ export const filterProducer = (films, condition) => {
 export const filterTitles = (films, condition) => {
   return films.filter((film) => film.title.includes(condition));
 };
+
+//Filtro por género
+
+export const filterGenders = (films, condition) => {
+  return films.filter((film) => film.gender.includes(condition));
+};
