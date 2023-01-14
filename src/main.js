@@ -1,4 +1,4 @@
-import { titleList, peopleList, listaDirectores, peliculasDirector } from './data.js';
+import { titleList, listaDirectores, peliculasDirector } from './data.js';
 // import data from './data/lol/lol.js';
 
 
@@ -25,7 +25,6 @@ const titulosHTML = () => {
       <p> Release Date: "${itemFilm.lanzamiento}"</p>
       <p> Director: "${itemFilm.director}"</p>
       <p> Producer: "${itemFilm.productor}"</p>
-      <p> Characters: "${itemFilm.personajes}"</p>
     </div>
   </div>`
 
@@ -43,6 +42,17 @@ titulosHTML();
 //     // console.log("personajes",itemCharacter, index);
 
 //     html += `
+//    <div class="contenedorPeliculas">
+//       <div>
+//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
+//       </div>
+//       <div class="descripcionPeliculas">  
+//           <p> Name: "${itemCharacter.nombre}"</p>
+//           <p> Gender: "${itemCharacter.genero}"</p>
+//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
+//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
+//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
+//       </div>
 //    <div class="contenedorPeliculas">
 //       <div>
 //         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
