@@ -56,13 +56,16 @@ export const peliculasDirector =(director) => {
 //  listar directores y usamos ...new Set para que no se repitan los elementos 
  export const listaDirectores =() => {
 
-  const directoresg = ghibli.films.map((t) => {
-    return t.director;
+  const directoresg = ghibli.films.map((direcList) => {
+    return direcList.director;
     });
+    
+    console.log([ ...new Set(directoresg)]); 
+
     return [ ...new Set(directoresg)];
 
-    // const dirsingular = 
-    // console.log(dirsingular);
+}
+    // const dirsingular = [ ...new Set(directoresg)]; 
+    
     // console.log("asc", dirsingular.sort());
     // console.log("desc", dirsingular.reverse());
-  }

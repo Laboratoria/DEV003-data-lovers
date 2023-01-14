@@ -30,9 +30,34 @@ const titulosHTML = () => {
   </div>`
 
   })
-  document.getElementById("lista").innerHTML = html
+  document.getElementById("listaTitulos").innerHTML = html
 }
 titulosHTML();
+
+
+// const titulosHTML = () => {
+//   const datosProcesados = titleList();
+//   let html = ''
+//   datosProcesados.forEach((itemFilm) => {
+
+//     html += `
+//   <div class="contenedorPeliculas">
+//     <div>
+//       <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
+//     </div>
+//     <div class="descripcionPeliculas">
+//       <p> "${itemFilm.titulo}"</p>
+//       <p> Release Date: "${itemFilm.lanzamiento}"</p>
+//       <p> Director: "${itemFilm.director}"</p>
+//       <p> Producer: "${itemFilm.productor}"</p>
+//       <p> Characters: "${itemFilm.personajes}"</p>
+//     </div>
+//   </div>`
+
+//   })
+//   document.getElementById("lista").innerHTML = html
+// }
+// titulosHTML();
 
 const charactersHTML = () => {
   const datosPersonajes = peopleList();
@@ -63,32 +88,40 @@ charactersHTML();
 
 // ejemplo();
 // peliculasDirector();
-// listaDirectores();
-listaDirectores().forEach ((itemDirector) => {
-  console.log(peliculasDirector(itemDirector));
-})
+listaDirectores();
+// listaDirectores().forEach ((itemDirector) => {
+//   console.log("peliculas x director", peliculasDirector(itemDirector));
+// })
 
+const directorsHTML = () => {
+  const directorList = listaDirectores();
+  // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
+  let html = ''
+  // directorList.forEach((itemDirector) => {
 
+    // console.log("personajes",itemCharacter, index);
 
+    html += `
+        <label for="directorSelect">Películas por Director:</label>
+        <select name="directores" id="directorSelect">
+           // <option value="">--Elige un Director para ver sus películas--</option>
+            <option value="Hayao">Hayao</option>
+            <option value="Hayao2">Hayao2</option>
+            <option value="dir3">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>`
 
-//     html += `
-//     <div id="characterList" class="dosColumnas">
-//       <ul class="columnaPersonajes">
-//         <li class="miniaturaDescripcion">
-//           <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
-//           <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
-//           <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//         </li>
-//       </ul>
-//     </div>`
+  // })
+  document.getElementById("directorList").innerHTML = html
+}
+directorsHTML();
 
-//   })
-//   document.getElementById("characterList").innerHTML = html
-// }
-// charactersHTML();
-
+//
+const selectElement = document.getElementById("directorSelect");
+selectElement.addEventListener('change', (event) => {
+  alert("Hola");
+});
 
 // console.log(example, data);
