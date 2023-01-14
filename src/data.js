@@ -40,8 +40,8 @@ export const peopleList = () => {
 
 // Filtro de peliculas por director
 export const peliculasDirector =(director) => {
-  return (ghibli.films.filter((e) => {
-  return e.director == director;
+  return (ghibli.films.filter((elementFilm) => {
+  return elementFilm.director == director;
  }));
 }
 
@@ -59,10 +59,8 @@ export const peliculasDirector =(director) => {
   const directoresg = ghibli.films.map((direcList) => {
     return direcList.director;
     });
-    
     console.log([ ...new Set(directoresg)]); 
-
-    return [ ...new Set(directoresg)];
+  return [ ...new Set(directoresg)];
 
 }
     // const dirsingular = [ ...new Set(directoresg)]; 
