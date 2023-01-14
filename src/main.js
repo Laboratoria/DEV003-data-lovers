@@ -1,5 +1,6 @@
-import { titleList, peopleList, listaDirectores, peliculasDirector } from './data.js';
+import { titleList, listaDirectores, peliculasDirector } from './data.js';
 // import data from './data/lol/lol.js';
+
 
 // funcionalidad del botón hacia arriba
 window.topFunction = () => {
@@ -24,7 +25,6 @@ const titulosHTML = () => {
       <p> Release Date: "${itemFilm.lanzamiento}"</p>
       <p> Director: "${itemFilm.director}"</p>
       <p> Producer: "${itemFilm.productor}"</p>
-      <p> Characters: "${itemFilm.personajes}"</p>
     </div>
   </div>`
 
@@ -33,80 +33,39 @@ const titulosHTML = () => {
 }
 titulosHTML();
 
-// lista de directores por película
-const directoresHTML = () => {
-  const datosDirector = directorList();
-  let html = ''
-  datosDirector.forEach((itemDirector) => {
 
-    html += `
-  <div class="contenedorPeliculas">
-    <div class="descripcionPeliculas">
-      <p>"${itemDirector.director}"</p>
-    </div>
-  </div>`
-
-  })
-  document.getElementById("listaDirectores").innerHTML = html
-}
-directoresHTML();
-
-
-
-
-
-// lista de personajes -prueba-
-const charactersHTML = () => {
-  const datosPersonajes = peopleList();
-  // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
-  let html = ''
-  datosPersonajes.forEach((itemCharacter, index) => {
-
-    // console.log("personajes",itemCharacter, index);
-
-    html += `
-   <div class="contenedorPeliculas">
-      <div>
-        <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
-      </div>
-      <div class="descripcionPeliculas">  
-          <p> Name: "${itemCharacter.nombre}"</p>
-          <p> Gender: "${itemCharacter.genero}"</p>
-          <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
-          <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-          <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-      </div>
-    </div>`
-
-  })
-  document.getElementById("listaPersonajes").innerHTML = html
-}
-charactersHTML();
-
-// ejemplo();
-// peliculasDirector();
-// listaDirectores();
+// lista de directores
 listaDirectores().forEach ((itemDirector) => {
   console.log(peliculasDirector(itemDirector));
 })
 
 
 
+// lista de personajes para después
+// const charactersHTML = () => {
+//   const datosPersonajes = peopleList();
+//   let html = ''
+//   datosPersonajes.forEach((itemCharacter, index) => {
+
 
 //     html += `
-//     <div id="characterList" class="dosColumnas">
-//       <ul class="columnaPersonajes">
-//         <li class="miniaturaDescripcion">
-//           <img class="miniatura" src="${itemCharacter.imagen}" alt="personajes por título">
-//           <p class="descripcionPersonaje"> Name: "${itemCharacter.nombre}"</p>
-//           <p class="descripcionPersonaje"> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPersonaje"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPersonaje"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPersonaje"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//         </li>
-//       </ul>
+//    <div class="contenedorPeliculas">
+//       <div>
+//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
+//       </div>
+//       <div class="descripcionPeliculas">  
+//           <p> Name: "${itemCharacter.nombre}"</p>
+//           <p> Gender: "${itemCharacter.genero}"</p>
+//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
+//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
+//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
+//       </div>
 //     </div>`
 
+//   })
+//   document.getElementById("characterList").innerHTML = html
+// }
+// charactersHTML();
 
 
 // console.log(example, data);
