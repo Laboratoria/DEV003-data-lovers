@@ -271,6 +271,16 @@ h4 {
     align-self: center;
 }
 
+#directorList {
+    color: #00686C;
+    margin-left: 40px;
+}
+
+#directorSelect {
+    color: #00686C;
+    font-style: italic;
+}
+
 .columnaPeliculas {
     display: flex;
     flex-direction: column;

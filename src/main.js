@@ -8,8 +8,7 @@ window.topFunction = () => {
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
 }
 
-// console.log(titleList());
-
+// Lista de Títulos
 const titulosHTML = () => {
   const datosProcesados = titleList();
   let html = ''
@@ -27,66 +26,24 @@ const titulosHTML = () => {
       <p> Producer: "${itemFilm.productor}"</p>
     </div>
   </div>`
-
   })
   document.getElementById("listaTitulos").innerHTML = html
 }
 titulosHTML();
 
-// const charactersHTML = () => {
-//   const datosPersonajes = peopleList();
-//   // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
-//   let html = ''
-//   datosPersonajes.forEach((itemCharacter, index) => {
+// lista de directores filtrada
+listaDirectores().forEach ((itemDirector) => {
+  console.log(peliculasDirector(itemDirector));
+})
 
-//     // console.log("personajes",itemCharacter, index);
-
-//     html += `
-//    <div class="contenedorPeliculas">
-//       <div>
-//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
-//       </div>
-//       <div class="descripcionPeliculas">  
-//           <p> Name: "${itemCharacter.nombre}"</p>
-//           <p> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//       </div>
-//    <div class="contenedorPeliculas">
-//       <div>
-//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
-//       </div>
-//       <div class="descripcionPeliculas">  
-//           <p> Name: "${itemCharacter.nombre}"</p>
-//           <p> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//       </div>
-//     </div>`
-
-//   })
-//   document.getElementById("characterList").innerHTML = html
-// }
-// charactersHTML();
-
-// ejemplo();
-// peliculasDirector();
-listaDirectores();
-// listaDirectores().forEach ((itemDirector) => {
-//   console.log("peliculas x director", peliculasDirector(itemDirector));
-// })
-
+// selector de filtros
 const directorsHTML = () => {
   const directorList = listaDirectores();
   // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
   let html = ''
   // directorList.forEach((itemDirector) => {
-
-    // console.log("personajes",itemCharacter, index);
-
-    html += `
+  // console.log("personajes",itemCharacter, index);
+  html += `
         <label for="directorSelect">Películas por Director:</label>
         <select name="directores" id="directorSelect">
            // <option value="">--Elige un Director para ver sus películas--</option>
@@ -97,20 +54,19 @@ const directorsHTML = () => {
             <option value="spider">Spider</option>
             <option value="goldfish">Goldfish</option>
         </select>`
-
   // })
   document.getElementById("directorList").innerHTML = html
 }
 directorsHTML();
+listaDirectores();
 
-// funcionalidad *select directores*
-// Seleccionar elemento lista de directores
+// funcionalidad barra select directores
 const selectElement = document.getElementById("directorSelect");
 
 // agregar el evento change al elemento select
 selectElement.addEventListener('change', (event) => {
   
-  console.log("select",peliculasDirector("Hayao Miyazaki"));
+  console.log("select", peliculasDirector("Hayao Miyazaki"));
 });
 
 // funcionalidad *botón a-z*
@@ -118,6 +74,5 @@ selectElement.addEventListener('change', (event) => {
 // selectElement.addEventListener('change', (event) => {
 //   alert("Hola");
 // });
-// console.log(example, data);
 
-//Array.isArray(fruits);
+// console.log(example, data);
