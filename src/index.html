@@ -6,18 +6,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body >
-    <div id="page-image-header"> 
-    </div>
     <header>
-       <img src="./media/totoro.svg" alt="icon" class="swaying-icon">
+    <div id="page-image-header"></div>
+    </header>
+
+    <nav>
       <button type="button" class="outline" id="home" value="Home">Home</button>
       <button type="button" class="outline" id="titles" value="Titles">Movies</button>
       <button type="button" class="outline" id="characters" value="Characters">Characters</button>
       <button type="button" class="outline" id="locations" value="Locations">Locations</button>
       <button type="button" class="outline" id="vehicles" value="Vehicles">Vehicles</button>
       <button type="button" class="outline" id="dirProds" value="Director/Producer">Director/Producer</button>
-      
-    </header>
+    </nav> 
+    
+    <section id="totoro">
+       <img src="./media/totoro.svg" alt="icon" class="swaying-icon">
+    </section>
+
+    
    
  <!-- another extension HOME-->
     <main id="main-content" class="page-sections">
@@ -36,136 +42,173 @@
     </main>
 
     <!-- another extension MOVIES -->
-    <main id="main-content-movies" class="page-sections-movies">
-      <select class="select" id="selectOrder" >
-        <option type="button" value="order" disabled selected >Order</option>
-        <option type="button" value="a-z">A-Z</option>
-        <option type="button" value="z-a">Z-A</option>
-        <option type="button" value="first">First</option>
-        <option type="button" value="last">Last</option>
-      </select>
-
-      <select class="select" id="titlesSelec">
-        <option value="" selected>Titles</option>
-        <option type="button" value="Castle in the Sky">Castle in the Sky</option>
-        <option type="button" value="Grave of the Fireflies">Grave of the Fireflies</option>
-        <option type="button" value="My Neighbor Totoro">My Neighbor Totoro</option>
-        <option type="button" value="Kiki's Delivery Service">Kiki's Delivery Service</option>
-        <option type="button" value="Only Yesterday">Only Yesterday</option>
-        <option type="button" value="Porco Rosso">Porco Rosso</option>
-        <option type="button" value="Pom Poko">Pom Poko</option>
-        <option type="button" value="Whisper of the Heart">Whisper of the Heart</option>
-        <option type="button" value="Princess Mononoke">Princess Mononoke</option>
-        <option type="button" value="My Neighbors the Yamadas">My Neighbors the Yamadas</option>
-        <option type="button" value="Spirited Away">Spirited Away</option>
-        <option type="button" value="The Cat Returns">The Cat Returns</option>
-        <option type="button" value="Howl's Moving Castle">Howl's Moving Castle</option>
-        <option type="button" value="Tales from Earthsea">Tales from Earthsea</option>
-        <option type="button" value="Ponyo on the Cliff by the Sea">Ponyo on the Cliff by the Sea</option>
-        <option type="button" value="The Secret World of Arrietty">The Secret World of Arrietty</option>
-        <option type="button" value="From Up on Poppy Hill">From Up on Poppy Hill</option>
-        <option type="button" value="The Tale of the Princess Kaguya">The Tale of the Princess Kaguya</option>
-        <option type="button" value="The Wind Rises">The Wind Rises</option>
-        <option type="button" value="When Marnie Was There">When Marnie Was There</option>
-      </select>
+    <section id="main-content-movies" class="page-sections-movies">
       
-      <section class="page-section-movies">
+      
+      <div class="selectBar">
+          <div class="subSelectBar">
+            <button type="button" value="allTitles" disabled>All Titles</button>
+            <select class="select" id="selectOrder" >
+              <option type="button" value="order" disabled selected >Order</option>
+              <option type="button" value="a-z">A-Z</option>
+              <option type="button" value="z-a">Z-A</option>
+              <option type="button" value="first">First</option>
+              <option type="button" value="last">Last</option>
+            </select>
+          </div>
+          <div class="subSelectBar">
+            <button type="button" value="byTitle" disabled>By Titles</button>
+            <select class="select" id="titlesSelec">
+              <option value="" selected disabled>Titles</option>
+              <option type="button" value="Castle in the Sky">Castle in the Sky</option>
+              <option type="button" value="Grave of the Fireflies">Grave of the Fireflies</option>
+              <option type="button" value="My Neighbor Totoro">My Neighbor Totoro</option>
+              <option type="button" value="Kiki's Delivery Service">Kiki's Delivery Service</option>
+              <option type="button" value="Only Yesterday">Only Yesterday</option>
+              <option type="button" value="Porco Rosso">Porco Rosso</option>
+              <option type="button" value="Pom Poko">Pom Poko</option>
+              <option type="button" value="Whisper of the Heart">Whisper of the Heart</option>
+              <option type="button" value="Princess Mononoke">Princess Mononoke</option>
+              <option type="button" value="My Neighbors the Yamadas">My Neighbors the Yamadas</option>
+              <option type="button" value="Spirited Away">Spirited Away</option>
+              <option type="button" value="The Cat Returns">The Cat Returns</option>
+              <option type="button" value="Howl's Moving Castle">Howl's Moving Castle</option>
+              <option type="button" value="Tales from Earthsea">Tales from Earthsea</option>
+              <option type="button" value="Ponyo on the Cliff by the Sea">Ponyo on the Cliff by the Sea</option>
+              <option type="button" value="The Secret World of Arrietty">The Secret World of Arrietty</option>
+              <option type="button" value="From Up on Poppy Hill">From Up on Poppy Hill</option>
+              <option type="button" value="The Tale of the Princess Kaguya">The Tale of the Princess Kaguya</option>
+              <option type="button" value="The Wind Rises">The Wind Rises</option>
+              <option type="button" value="When Marnie Was There">When Marnie Was There</option>
+            </select>
+        </div>
+      </div>
+      <div class="page-section-movies">
         <h2 class="section-title" id="about-movies">Movies</h2>
         <p>In this section youll find all the movies of the world of ghibli,
           since the most new films that they have in their calendar.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- another extension CHARACTERS -->
-    <main class="select" id="main-content-characters">
-      <select class="select" id="selectOrderCharacter"> 
-        <option type="button" value="order" disabled selected >Order</option>
-        <option type="button" value="a-z">A-Z</option>
-        <option type="button" value="z-a">Z-A</option>
-      </select>
-      <select class="select" id="selectGender"> 
-        <option type="button" value="gender" disabled selected >Gender</option>
-        <option type="button" value="Female">Female</option>
-        <option type="button" value="Male">Male</option>
-      </select>
-      <section class="page-section-characters">
+    <section class="select" id="main-content-characters">
+      <div class="selectBar">
+        <div class="subSelectBar">
+          <button type="button" value="allCharacters" disabled>All Characters</button>
+          <select class="select" id="selectOrderCharacter"> 
+            <option type="button" value="order" disabled selected >Order</option>
+            <option type="button" value="a-z">A-Z</option>
+            <option type="button" value="z-a">Z-A</option>
+          </select>
+        </div>
+
+        <div class="subSelectBar">
+          <button type="button" value="byGender" disabled>By Gender</button>
+          <select class="select" id="selectGender"> 
+            <option type="button" value="gender" disabled selected >Gender</option>
+            <option type="button" value="Female">Female</option>
+            <option type="button" value="Male">Male</option>
+          </select>
+        </div>
+      </div>
+      <div class="page-section-characters">
         <h2 class="section-title" id="about-chracters">Characters</h2>
         <p>In this section you'll find every character and their description from all Ghibli films.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- another extension LOCATIONS -->
-    <main class="select" id="main-content-locations">
-      <select class="select" id="selectOrderLocation"> 
-        <option type="button" value="order" disabled selected >Order</option>
-        <option type="button" value="a-z">A-Z</option>
-        <option type="button" value="z-a">Z-A</option>
-      </select>
-      <section class="page-section-locations">
+    <section class="select" id="main-content-locations">
+      <div class="selectBar">
+        <div class="subSelectBar">
+          <button type="button" value="allLocations" disabled>All Locations</button>
+          <select class="select" id="selectOrderLocation"> 
+            <option type="button" value="order" disabled selected >Order</option>
+            <option type="button" value="a-z">A-Z</option>
+            <option type="button" value="z-a">Z-A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="page-section-locations">
         <h2 class="section-title" id="about-location">Locations</h2>
         <p>In this section you'll find the locations from all Ghibli films.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- another extension VEHICLES -->
-    <main class="select" id="main-content-vehicles">
-      <select class="select" id="selectOrderVehicles"> 
-        <option type="button" value="order" disabled selected >Order</option>
-        <option type="button" value="a-z">A-Z</option>
-        <option type="button" value="z-a">Z-A</option>
-      </select>
-      <section class="page-section-vehicles">
+    <section class="select" id="main-content-vehicles">
+      <div class="selectBar">
+        <div class="subSelectBar">
+          <button type="button" value="allVehicles" disabled>All Vehicles</button>
+          <select class="select" id="selectOrderVehicles"> 
+            <option type="button" value="order" disabled selected >Order</option>
+            <option type="button" value="a-z">A-Z</option>
+            <option type="button" value="z-a">Z-A</option>
+          </select>
+        </div>
+      </div>
+      <div class="page-section-vehicles">
         <h2 class="section-title" id="about-vehicle">Vehicles</h2>
         <p>In this section you'll find the vehicles from all Ghibli films.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
     <!-- another extension DIRECTORS -->
-    <main id="main-content-directors" class="page-sections-directors">
+    <section id="main-content-directors" class="page-sections-directors">
+      <div class="selectBar">
+        <div class="subSelectBar">
+          <button type="button" value="byDirector" disabled>By Director</button>
+          <select class="select" id="director">
+            <option value="" selected>Director</option>
+            <option type="button">Hayao Miyazaki</option>
+            <option type="button">Yoshifumi Kondō</option>
+            <option type="button">Hiroyuki Morita</option>
+            <option type="button">Gorō Miyazaki</option>
+            <option type="button">Hiromasa Yonebayashi</option>
+            <option type="button">Isao Takahata</option>
+          </select>
+        </div>
+        
+        <div class="subSelectBar">
+          <button type="button" value="byProducer" disabled>By Producer</button>
+          <select class="select" id="producer">
+            <option value="" selected>Producer</option>
+            <option type="button">Hayao Miyazaki</option>
+            <option type="button">Isao Takahata</option>
+            <option type="button">Toru Hara</option>
+            <option type="button">Toshio Suzuki</option>
+            <option type="button">Yoshiaki Nishimura</option>
+          </select>
+        </div>
+      </div>
 
-      <select class="select" id="director">
-        <option value="" selected>Director</option>
-        <option type="button">Hayao Miyazaki</option>
-        <option type="button">Yoshifumi Kondō</option>
-        <option type="button">Hiroyuki Morita</option>
-        <option type="button">Gorō Miyazaki</option>
-        <option type="button">Hiromasa Yonebayashi</option>
-        <option type="button">Isao Takahata</option>
-      </select>
-
-      <select class="select" id="producer">
-        <option value="" selected>Producer</option>
-        <option type="button">Hayao Miyazaki</option>
-        <option type="button">Isao Takahata</option>
-        <option type="button">Toru Hara</option>
-        <option type="button">Toshio Suzuki</option>
-        <option type="button">Yoshiaki Nishimura</option>
-      </select>
-
-      <section class="page-section-directors">
+      <div class="page-section-directors">
         <h2 class="section-title" id="about-directors">Directors and Producers</h2>
         <p>In this section youll find all the Directors  for each movie and producers also, take 
           a look of all genious people who make these wonderfull films.
         </p>
-      </section>
-    </main>
+      </div>
+    </section>
 
 <!--     bar menu sections js   -->
     <section class = "homeContainer">
       <div class="home"> </div>
     </section>
 
-    <section class = "titleCardsContainer">
+    <div class="byTitleContainer">
       <div class = "titleSelec"></div>
       <div class = "pplSelec"></div>
       <section class = "selecLV">
-      <div class = "locationSelec"></div>
-      <div class = "vehicleSelec"></div>
+        <div class = "locationSelec"></div>
+        <div class = "vehicleSelec"></div>
       </section>
+    </div>
 
+    <section class = "titleCardsContainer">
       <div class="titleCardContainer"> </div>
     </section>
 

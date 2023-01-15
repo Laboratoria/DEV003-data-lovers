@@ -288,7 +288,7 @@ export default {
           "name": "Chu Totoro",
           "img": "https://i.pinimg.com/736x/2a/ec/11/2aec115beb97d47cfa5c39e5a0747368.jpg",
           "gender": "NA",
-          "age": "",
+          "age": "NA",
           "eye_color": "Black",
           "hair_color": "Blue",
           "specie": "Totoro"
@@ -298,7 +298,7 @@ export default {
           "name": "Chibi Totoro",
           "img": "https://cdn.shopify.com/s/files/1/0185/4636/products/Chibi_Totoro.png?v=1616628140",
           "gender": "NA",
-          "age": "",
+          "age": "NA",
           "eye_color": "Black",
           "hair_color": "White",
           "specie": "Totoro"

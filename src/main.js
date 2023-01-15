@@ -136,6 +136,7 @@ function displayDirecProds (films, contenedor) {
 //Funciones para las vistas
 function homeView() {
   document.querySelector(".homeContainer").style.display = "block";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "none";
   document.querySelector(".charactersContainer").style.display = "none";
   document.querySelector(".locationsContainer").style.display = "none";
@@ -149,9 +150,11 @@ function homeView() {
   document.querySelector("#main-content-vehicles").style.display = "none";
   document.querySelector("#main-content-directors").style.display = "none";
 }
+homeView()
 
 function cardTitlesView() {
   document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "block";
   document.querySelector(".charactersContainer").style.display = "none";
   document.querySelector(".locationsContainer").style.display = "none";
@@ -169,6 +172,7 @@ function cardTitlesView() {
 
 function charactersView() {
   document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "none";
   document.querySelector(".charactersContainer").style.display = "block";
   document.querySelector(".locationsContainer").style.display = "none";
@@ -186,6 +190,7 @@ function charactersView() {
 
 function locationsView() {
   document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "none";
   document.querySelector(".charactersContainer").style.display = "none";
   document.querySelector(".locationsContainer").style.display = "block";
@@ -203,6 +208,7 @@ function locationsView() {
 
 function vehiclesView() {
   document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "none";
   document.querySelector(".charactersContainer").style.display = "none";
   document.querySelector(".locationsContainer").style.display = "none";
@@ -220,6 +226,7 @@ function vehiclesView() {
 
 function dirProdsView() {
   document.querySelector(".homeContainer").style.display = "none";
+  document.querySelector(".byTitleContainer").style.display = "none";
   document.querySelector(".titleCardsContainer").style.display = "none";
   document.querySelector(".charactersContainer").style.display = "none";
   document.querySelector(".locationsContainer").style.display = "none";
@@ -250,6 +257,8 @@ const orderFilms = (a) =>{
   if (orderSelected !== ""){
     const filterOrder = sortTitles(dataGhibli, orderSelected)
     displayTitleCards(filterOrder, ".titleCardContainer")
+    document.querySelector(".titleCardsContainer").style.display = "block";
+    document.querySelector(".byTitleContainer").style.display = "none";
   }
 }
 
@@ -315,7 +324,9 @@ const filterMovie = document.getElementById("titlesSelec")
 filterMovie.addEventListener("change", () => {    
   const titleSelected = filterMovie.value;
   const titleFiltered = filterTitles(dataGhibli, titleSelected);
-  displayDirecProds(titleFiltered,  ".titleSelec")
+  displayDirecProds(titleFiltered,  ".titleSelec");
+  document.querySelector(".byTitleContainer").style.display = "block";
+  document.querySelector(".titleCardsContainer").style.display = "none";
 })
 
 //--Filtro por título-personajes

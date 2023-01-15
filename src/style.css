@@ -6,15 +6,10 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
 }
-/*body::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.6), transparent 70%,rgba(255, 255, 255, 1));
-}*/
+
+header{
+  position: relative;
+}
 
 #page-image-header {
   background: url(./media/fondo_inicio.png) no-repeat center center fixed;
@@ -23,16 +18,10 @@ body {
   height: 600px;
 }
 
-header {
+#totoro {
   position: sticky;
   width: 100%;
-  height: 80px;
   background-color: rgba(255, 255, 255, 0.905);
-  box-shadow: inset lightgray 0 -1px 0, rgba(0, 0, 0, 0.15) 0 3px 10px 0;
-  /*  z-index: 100;*/
-  /*position: fixed;*/
-  /*top: 0;
-    left: 0;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,28 +29,62 @@ header {
   box-sizing: border-box;
   transition: 0.5s;
 }
-
-header h1 {
-  color: #1172c4;
-  font-size: 5rem;
-}
-aside {
-  background: linear-gradient(
-    rgba(270, 250, 243, 0.85),
-    rgba(270, 250, 243, 0.85)
-  );
+/*background: rgb(74, 201, 215);#4fd3e9*/
+.selectBar {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  background: #4fd3e9;
+  box-shadow: inset lightgray 0 -1px 0, rgba(0, 0, 0, 0.15) 0 3px 10px 0;
   display: flex;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 3rem;
-  justify-content: space-around;
-  font-size: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-size: 1.5rem;
+}
+
+.selectBar button {
+  outline: none;
+  background: rgb(240, 240, 240);
+  color: black;
+  font-size: 1.4rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 0.8rem 4rem;
+}
+
+select {
+  border-radius: 22px;
+  color: black;
+  font-size: 1.4rem;
+  /* border-color: #1172c4;*/
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 0.8rem 4rem;
+  cursor: pointer;
+}
+
+nav {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.905);
+  box-shadow: inset lightgray 0 -1px 0, rgba(0, 0, 0, 0.15) 0 3px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 /*inicio boton*/
 
-header{
-  position: relative;
-}
 button {
   cursor: pointer;
   outline: none;
@@ -71,35 +94,55 @@ button.outline {
   position: relative;
   z-index: 3;
   background: transparent;
-  /*color: #1172c4;*/
   color: black;
-  font-size: 14px;
-  /* border-color: #1172c4;*/
+  font-size: 1.4rem;
   border-color: black;
   border-style: solid;
   border-width: 2px;
   border-radius: 22px;
-  padding: 10px 40px;
+  padding: 1rem 4rem;
   text-transform: uppercase;
   transition: all 0.2s linear;
   z-index: 0; /* This makes the buttons appear behind the image */
 }
-button.outline a {
-  text-decoration: none;
-}
+
 button.outline:hover {
   color: white;
   background: #1172c4;
   border-color: white;
   transition: all 0.2s linear;
 }
-button.outline:active {
-  border-radius: 22px;
-}
 
 /* fin boton*/
 
 /*inicio css index*/
+.titleCardsContainer {
+background: linear-gradient(white 60%, #4fd3e9);
+padding-bottom: 2rem;
+}
+
+.charactersContainer {
+  background: linear-gradient(white 60%, #4fd3e9);
+  padding-bottom: 2rem;
+}
+
+.locationsContainer {
+  background: linear-gradient(white 60%, #4fd3e9);
+  padding-bottom: 2rem;
+}
+
+.vehiclesContainer {
+  background: linear-gradient(white 60%, #4fd3e9);
+  padding-bottom: 2rem;
+}
+
+.dirProdsContainer {
+  background: linear-gradient(white 60%, #4fd3e9);
+  padding-bottom: 2rem;
+}
+
+
+
 .titleCardContainer {
   margin: 3rem;
   display: grid;
@@ -419,37 +462,38 @@ ul:not(.menu) {
 #main-content-movies{
   display: none;
   margin-top: 100px;
-  width: 50%; /* Set the width of the element */
+  width: 100%; /* Set the width of the element */
   margin: auto; 
   justify-content: center;
- 
+  text-align: center;
 }
+
 
 #main-content-characters {
   display: none;
   margin-top: 100px;
-  width: 50%; /* Set the width of the element */
+  width: 100%; /* Set the width of the element */
   margin: auto; 
   justify-content: center;
- 
+  text-align: center;
 }
 
 #main-content-locations {
   display: none;
   margin-top: 100px;
-  width: 50%; /* Set the width of the element */
+  width: 100%; /* Set the width of the element */
   margin: auto; 
   justify-content: center;
- 
+  text-align: center;
 }
 
 #main-content-vehicles {
   display: none;
   margin-top: 100px;
-  width: 50%; /* Set the width of the element */
+  width: 100%; /* Set the width of the element */
   margin: auto; 
   justify-content: center;
- 
+  text-align: center;
 }
 
 /* SECTION MOVIES PRODUCES/DIRECTORS*/
@@ -457,12 +501,11 @@ ul:not(.menu) {
 #main-content-directors{
   display: none;
   margin-top: 100px;
-  width: 50%; /* Set the width of the element */
+  width: 100%; /* Set the width of the element */
   margin: auto; 
   justify-content: center;
+  text-align: center;
 }
-
-
 
 /*-----------------ICON NAV-----------------*/
 
