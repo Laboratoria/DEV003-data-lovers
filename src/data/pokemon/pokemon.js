@@ -1,4 +1,4 @@
-export default {
+export const data =  {
   "pokemon": [{
     "num": "001",
     "name": "bulbasaur",
@@ -23949,5 +23949,16 @@ export default {
     "evolution": {
       "candy": "celebi candy"
     }
-  }]
+  }],
+  "desarrollador": "gamefrak", 
+  "lanzamiento": 1996,
 };
+
+/**
+ * un objeto se compone de llaves {}
+ * y dentro tiene claves y valores ej: 
+ * {
+ *   "estudiante1": "Javielis R",
+ *   "estudiante2": "Yandira"
+ * }
+ */

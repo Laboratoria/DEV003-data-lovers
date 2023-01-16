@@ -24,26 +24,52 @@ header{
    
 }
 
-
+.centrado{
+    text-align:center;
+    font-family: 'Cooper Black';
+    background-color: yellow;
+  }
+  
     
-ul li{
-    display: inline-flex; 
-    margin: 50px;
-    font-family:Cooper Black;
-    border: 1px solid rgb(13, 14, 2); 
-    width: 150px;
-    height: 30px;
-    text-align: center;
-    align-items: center;
+
+
+#elemento{
+    margin: 50px; 
     border-radius: 10px;
     background-color: yellow;
-    padding: 15px 20px;
     font-family: 'Cooper Black';
     font-size: 13px;
 
 }
 
-      
+#frecuencia{
+    margin: 50px; 
+    border-radius: 10px;
+    background-color: yellow;
+    font-family: 'Cooper Black';
+    font-size: 13px;
+
+}
+
+#evolucion{
+    margin: 50px; 
+    border-radius: 10px;
+    background-color: yellow;
+    font-family: 'Cooper Black';
+    font-size: 13px;
+
+}
+
+#alimentacion{
+    margin: 50px; 
+    border-radius: 10px;
+    background-color: yellow;
+    font-family: 'Cooper Black';
+    font-size: 13px;
+
+}
+
+
 
 
 
