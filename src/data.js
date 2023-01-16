@@ -1,4 +1,4 @@
-export function filterData(data, input, category){
+export function filterData(data, input, category) {
   //Ejecuta la función si está dentro de estas categorías
   if (category === "name" || category === "species" || category === "type" || category === "status") {
     const filterD = data.filter((character) => {
@@ -47,7 +47,7 @@ export function filterData(data, input, category){
       return epNumbs.includes(enteredTxt);
     })
     return filtEpi;
-    }
+  }
 }
 
 export function orderAlf(orderType, inputArray) {

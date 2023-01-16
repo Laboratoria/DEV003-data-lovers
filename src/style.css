@@ -16,7 +16,6 @@ header{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     text-align: center;
-    color: #7AD605;
     width: 350px;
 }
 .btnLupa{
@@ -71,7 +70,7 @@ select{
 
 .cardsTittle{
     font-family:Arial, Helvetica, sans-serif;
-    color:#7AD605;
+    color:#9bf525;
     font-size: 38px;
     text-align: center;
     text-shadow: 10px;
@@ -99,12 +98,12 @@ select{
 
 .cardsDesign{
     background-color: black;
-    color: #7AD605;
+    color: #9bf525;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     text-align: justify;
     text-shadow: 10px;
-    text-shadow: white;
+    text-shadow: #ffffff;
     border-radius: 6px;
     width: 300px;
     height: 580px;
@@ -135,7 +134,7 @@ select{
     border-radius: 4px;
 }
 .container h1{
-    color: #7AD605;
+    color: #9bf525;
     font-size: 28px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
