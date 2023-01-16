@@ -1,4 +1,4 @@
-**Definición del producto **
+**Definición del producto**
 
 Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le permite al usuario visualizar todos los personajes que aparecen en todos los libros de la saga, también le permite filtrar por género y por casa a la que pertenece. Para facilitar la búsqueda de algún personaje se agregó una barra de búsqueda y un botón para limpiar los filtros. Al hacer uso de algún filtro, se indica la cantidad de personajes que cumplen con esa condición.
 
