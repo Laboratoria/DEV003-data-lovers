@@ -26,6 +26,10 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 **Sketches baja fidelidad**
 
 [![Sketch1.jpg](https://i.postimg.cc/VsgwzsMf/Sketch1.jpg)](https://postimg.cc/dDhpBY4p)
+[![sketch2.jpg](https://i.postimg.cc/cJBFXQQm/sketch2.jpg)](https://postimg.cc/QBVgMKY9)
+[![sketch3.jpg](https://i.postimg.cc/vHxXpRrD/sketch3.jpg)](https://postimg.cc/SJqWMvtp)
+[![sketch4.jpg](https://i.postimg.cc/59Rn79FZ/sketch4.jpg)](https://postimg.cc/yW0mWHjP)
+[![sketch5.jpg](https://i.postimg.cc/t40Dbrkk/sketch5.jpg)](https://postimg.cc/Xp89ckTB)
 
 
 
