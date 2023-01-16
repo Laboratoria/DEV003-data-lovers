@@ -24,5 +24,6 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 
 
 **Sketches baja fidelidad**
-
+Primer sketch
+![Sketch1](./images/Sketch 1.jpg)
 
