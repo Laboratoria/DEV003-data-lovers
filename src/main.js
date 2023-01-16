@@ -1,8 +1,8 @@
-// import { example } from './data.js';
-// import data from './data/lol/lol.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/pokemon/pokemon.js';
+console.log(data,"hola");
+export const type= data.type;
+console.log(type,"tipo");
 
-// console.log(example, data);
 document.getElementById("elemento").addEventListener("change",function(event)
 {
   const elementos= document.getElementById("filtroEle").value
