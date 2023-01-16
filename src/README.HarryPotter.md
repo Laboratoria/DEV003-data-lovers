@@ -33,5 +33,13 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 
 **Sketches de alta fidelidad**
 
+
 [![sketch-Af1.png](https://i.postimg.cc/3RSjy9Tk/sketch-Af1.png)](https://postimg.cc/WFZqCGtV)
 [![sketch-Af2.png](https://i.postimg.cc/Hnrwb5YB/sketch-Af2.png)](https://postimg.cc/JHWHLsBk)
+=======
+
+
+
+
+
+
