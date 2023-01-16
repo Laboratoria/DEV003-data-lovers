@@ -1,4 +1,4 @@
-# Rick y Morty (by Ale y Jime)
+# Rick y Morty (by [Ale](https://github.com/alesantoscoz) y [Jime](https://github.com/MenaVillalobos))
 
 ## Índice
 

@@ -5,11 +5,11 @@ describe('filterData', () => {
   it('returns `filterData', () => {
     expect(filterData()).toEquals('example');
   });
-  });
+});
 
-  it('returns `filterData', () => {
-    expect(filterData()).toEquals('example');
-  });
+it('returns `filterData', () => {
+  expect(filterData()).toEquals('example');
+});
 
 
 describe('getData', () => {
@@ -28,7 +28,14 @@ describe('orderAlf', () => {
   });
 
   it.only('retorna array ordenado alfabeticamente', () => {
+    const array = ["g", "t", "z", "d", "a"];
+    expect(orderAlf("alphabetic", array)).toBe(["a", "d", "g", "t", "z"]);
+  });
+
+  it.only('retorna array ordenado alfabeticamente en reversa', () => {
     const array = ["g", "t", "z", "d", "a"]
-    expect(orderAlf("alphabetic", array)).toEquals(["a", "d", "g", "t", "z"]);
+    expect(orderAlf("reverse", array)).toBe(["z", "t", "g", "d", "a"]);
   });
 });
+
+
