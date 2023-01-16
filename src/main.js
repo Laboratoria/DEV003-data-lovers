@@ -1,6 +1,9 @@
-import { titleList, listaDirectores, peliculasDirector } from './data.js';
+import { titleList, listaDirectores } from './data.js';
 // import data from './data/lol/lol.js';
 
+// declaracipon de variables a utilizar
+const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML
+const botonLista = document.getElementById("botonAZ"); // esta variable llama el botón A-Z
 
 // funcionalidad del botón hacia arriba
 window.topFunction = () => {
@@ -8,11 +11,47 @@ window.topFunction = () => {
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
 }
 
+// función del boton AZ
+botonLista.addEventListener("click", () => {
+
+  contenedorDisplayPeliculasPorTitulos.innerHTML = ''; // se vacía el contenedor de las películas
+
+  const titulosOrdenados = titleList().sort((a, b) => {
+    const tituloA = a.titulo.toLowerCase();
+    const tituloB = b.titulo.toLowerCase();
+
+    if (tituloA < tituloB) {
+      return -1;
+    }
+    if (tituloA > tituloB) {
+      return 1;
+    }
+    return 0;
+  });
+
+  titulosOrdenados.forEach((itemFilm) => {
+
+    contenedorDisplayPeliculasPorTitulos.innerHTML += `
+<div class="contenedorPeliculas">
+  <div>
+    <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
+  </div>
+  <div class="descripcionPeliculas">
+    <p> "${itemFilm.titulo}"</p>
+    <p> Release Date: "${itemFilm.lanzamiento}"</p>
+    <p> Director: "${itemFilm.director}"</p>
+    <p> Producer: "${itemFilm.productor}"</p>
+  </div>
+</div>`
+  });
+});
+
+
 // Lista de Títulos
 const titulosHTML = () => {
-  const datosProcesados = titleList();
+
   let html = ''
-  datosProcesados.forEach((itemFilm) => {
+  titleList().forEach((itemFilm) => {
 
     html += `
   <div class="contenedorPeliculas">
@@ -27,13 +66,13 @@ const titulosHTML = () => {
     </div>
   </div>`
   })
-  document.getElementById("listaTitulos").innerHTML = html
+  contenedorDisplayPeliculasPorTitulos.innerHTML = html
 }
 titulosHTML();
 
 // lista de directores filtrada
 listaDirectores().forEach ((itemDirector) => {
-  console.log(peliculasDirector(itemDirector));
+  // console.log(peliculasDirector(itemDirector));
 })
 
 // selector de filtros
@@ -61,13 +100,13 @@ directorsHTML();
 listaDirectores();
 
 // funcionalidad barra select directores
-const selectElement = document.getElementById("directorSelect");
+// const selectElement = document.getElementById("directorSelect");
 
 // agregar el evento change al elemento select
-selectElement.addEventListener('change', (event) => {
+// selectElement.addEventListener('change', (event) => {
   
-  console.log("select", peliculasDirector("Hayao Miyazaki"));
-});
+//   console.log("select", peliculasDirector("Hayao Miyazaki"));
+// });
 
 // funcionalidad *botón a-z*
 // const selectElement = document.getElementById("directorSelect");

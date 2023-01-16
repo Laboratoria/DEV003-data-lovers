@@ -28,31 +28,14 @@ export const listaDirectores = () => {
     return t.director;
   });
   return [ ...new Set(directoresg)];
-
-  // orden A-Z
-  // const dirsingular = 
-  // console.log(dirsingular);
-  // console.log("asc", dirsingular.sort());
-  // console.log("desc", dirsingular.reverse());
 }
-
-
-// lista de personajes para después
-// export const peopleList = () => {
-
-//   return ghibli.films.map((movieObject) => {
-//     return movieObject.people.map((characterObject) => {
-//       return {
-//         nombre: characterObject.name,
-//         genero: characterObject.gender,
-//         edad: characterObject.age,
-//         colorDeOjos: characterObject.eye_color,
-//         colorDePelo: characterObject.hair_color,
-//         imagen: characterObject.img
-//       };
-//     });
-//   });
+// orden A-Z
+//   const dirsingular = 
+//   console.log(dirsingular);
+//   console.log("asc", dirsingular.sort());
+//   console.log("desc", dirsingular.reverse());
 // }
+
 
 // lista completa de peliculas y sus datos correspondientes - estructura
 // export const obtenerData = () => {
