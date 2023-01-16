@@ -31,7 +31,12 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 [![sketch4.jpg](https://i.postimg.cc/59Rn79FZ/sketch4.jpg)](https://postimg.cc/yW0mWHjP)
 [![sketch5.jpg](https://i.postimg.cc/t40Dbrkk/sketch5.jpg)](https://postimg.cc/Xp89ckTB)
 
+**Sketches de alta fidelidad**
 
+
+[![sketch-Af1.png](https://i.postimg.cc/3RSjy9Tk/sketch-Af1.png)](https://postimg.cc/WFZqCGtV)
+[![sketch-Af2.png](https://i.postimg.cc/Hnrwb5YB/sketch-Af2.png)](https://postimg.cc/JHWHLsBk)
+=======
 
 
 
