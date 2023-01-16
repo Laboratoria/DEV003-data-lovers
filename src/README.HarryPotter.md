@@ -21,3 +21,8 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 | Yo como usuario que no conoce mucho de HP     | Poder ver los libros acomodados por fecha de publicación de estudiantes de cada una | 
 | quiero poder ver cuantos y cuales son los libros que hay     |** Definición de terminado**        |
 | para poder leerlos todos en orden. | - Que aparezcan los libros en orden por fecha de publicación  -Filtrar data para mostrar solo libros  |
+
+
+**Sketches baja fidelidad**
+
+
