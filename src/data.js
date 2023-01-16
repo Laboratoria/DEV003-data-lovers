@@ -2,7 +2,7 @@ export function filterData(data, input, category) {
   //Ejecuta la función si está dentro de estas categorías
   if (category === "name" || category === "species" || category === "type" || category === "status") {
     const filterD = data.filter((character) => {
-      console.log(character[category]); //Imprime todos los personajes
+      //console.log(character[category]); //Imprime todos los personajes
 
       const selectOpt = character[category].toLowerCase(); //Opc seleccionada de select
       const enteredTxt = input.toLowerCase(); //Txt ingresado en input
@@ -10,7 +10,6 @@ export function filterData(data, input, category) {
       return selectOpt.includes(enteredTxt);
       //includes compara la data del select con el txt ingresado en el input
     })
-    console.log(filterD);
     return filterD;
   } else if (category === "gender") {
     // otro filtro
@@ -21,7 +20,6 @@ export function filterData(data, input, category) {
       return selectOpt.startsWith(enteredTxt);
       //comparar si la categoria de la data startsWith input del usuario
     })
-    console.log(filtGender);
     return filtGender;
   } else if (category === "origin" || category === "location") {
     //Otro filtro
@@ -34,7 +32,7 @@ export function filterData(data, input, category) {
   } else if (category === "episode") {
     //Otro filtro
     const filtEpi = data.filter((character) => {
-      console.log(character[category]);//contiene mis elementos en un string
+      //console.log(character[category]);//contiene mis elementos en un string
       const enteredTxt = input.toLowerCase();//Contiene txt input
       const epNumbs = character[category].map((episode) => {//Array de núms
         const urlNum = episode.split("/");//Contiene array con elements separados
@@ -42,8 +40,6 @@ export function filterData(data, input, category) {
 
         return lastNumb;
       })
-      console.log(epNumbs);
-
       return epNumbs.includes(enteredTxt);
     })
     return filtEpi;
@@ -59,10 +55,9 @@ export function orderAlf(orderType, inputArray) {
 
   }
   return inputArray
-};
-
+}
 export function getData(categoSelect, inpTxt, orderType, data) {
   const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
   const orderedResult = orderAlf(orderType, filteredResult)
-  return orderedResult
-};
+  return orderedResult 
+}

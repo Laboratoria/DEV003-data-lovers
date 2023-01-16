@@ -2,14 +2,14 @@ import { filterData, getData, orderAlf } from '../src/data.js';
 
 
 describe('filterData', () => {
-  it('is a function', () => {
-    expect(typeof filterData).toBe('function');
+  it('returns `filterData', () => {
+    expect(filterData()).toEquals('example');
+  });
   });
 
   it('returns `filterData', () => {
     expect(filterData()).toEquals('example');
   });
-})
 
 
 describe('getData', () => {
