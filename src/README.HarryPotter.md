@@ -1,8 +1,8 @@
-**Definición del producto**
+##Definición del producto
 
 Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le permite al usuario visualizar todos los personajes que aparecen en todos los libros de la saga, también le permite filtrar por género y por casa a la que pertenece. Para facilitar la búsqueda de algún personaje se agregó una barra de búsqueda y un botón para limpiar los filtros. Al hacer uso de algún filtro, se indica la cantidad de personajes que cumplen con esa condición.
 
-**Historias de Usuarios**
+##Historias de Usuarios
 
 | Historia de usuario 1 (Personajes)   | Criterios de aceptación |
 | :------------ |:---------------:
@@ -23,14 +23,14 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 | para poder leerlos todos en orden. | - Que aparezcan los libros en orden por fecha de publicación  -Filtrar data para mostrar solo libros  |
 
 
-**Sketches baja fidelidad**
+##Sketches baja fidelidad
 
 [![sketch2.jpg](https://i.postimg.cc/cJBFXQQm/sketch2.jpg)](https://postimg.cc/QBVgMKY9)
 [![sketch3.jpg](https://i.postimg.cc/vHxXpRrD/sketch3.jpg)](https://postimg.cc/SJqWMvtp)
 [![sketch4.jpg](https://i.postimg.cc/59Rn79FZ/sketch4.jpg)](https://postimg.cc/yW0mWHjP)
 [![sketch5.jpg](https://i.postimg.cc/t40Dbrkk/sketch5.jpg)](https://postimg.cc/Xp89ckTB)
 
-**Sketches de alta fidelidad**
+##Sketches de alta fidelidad
 
 
 [![sketch-Af1.png](https://i.postimg.cc/3RSjy9Tk/sketch-Af1.png)](https://postimg.cc/WFZqCGtV)
