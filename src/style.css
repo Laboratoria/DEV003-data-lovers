@@ -1,0 +1,350 @@
+/*.nombre es para CLASS y #nombre para ID, etiquetas se escriben directo*/
+/* en boby le podemos dar formato general a toda la pagina */
+body {
+    background-color: #C4F0DF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    
+   
+}
+
+.boxHeader {
+    box-sizing: border-box; /* especifica el comportamiento de altura y ancho*/
+    width: 100%;
+    display: flex; /* se va a mostrar con flexibilidad en la pagina o dispositivo*/
+    justify-content: center;
+    padding: 5px; /* es el espacio entre el contenido y el borde del rectangulo */
+    background: #E30000;
+    height: 150px;
+}
+
+.img_header {
+    padding: 25px; /* espacio entre el contenido y el borde */
+    display: flex;
+}
+
+.cPopUp {
+    display: none;
+    margin: auto;
+    position: fixed; /* posicion fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    top: 10%;
+    border: #000;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    font-family: 'Gill Sans', sans-serif;
+    font-size: medium;
+    transition: all 500ms ease;
+    width: 40%;
+    height: 68%;
+    right: 25%;
+    left: 25%;
+    padding: 2%;
+    line-height: 25px;
+    border-radius: 8px; 
+    text-align: center;
+    box-align: center;
+    overflow: auto;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 767px*/
+    .cPopUp {
+        right: 10%;
+        left: 10%;
+        padding: 2%;
+        width: 60%;
+        height: 30%;
+    }
+}
+
+@media (max-width: 415px) { /*el media query sirve para cambiar cosas cuando el ancho de la pagina sea menor de 415px*/
+    .img_header {
+        display: none; /*Para hacerlo mas responsive, borramos las imagenes de pokebola*/
+    }
+    .cPopUp {
+        right: 5%;
+        left: 5%;
+        padding: 2%;
+        width: 80%;
+        height: 65%;
+        font-size: small;
+    }
+}
+
+.UlMenuClass { /*Contenedor del Menu*/
+    list-style: none; /* quita el estilo de mostrarlo como lista */
+    padding: 5px;
+    margin: 0;
+    background-color: #35AAF2;
+    line-height: 35px; /* altura dentro del line-box */
+    text-align: center;
+}
+
+.liMenuClass {
+    outline: 2px solid black; /* borde de la caja en pixeles y color*/
+    background: whitesmoke;
+    width: 100px;
+    display: inline-block; /* se muestra uno trs otro */
+    text-align: center;
+    margin-left: 30px;
+    margin-left: 30px; 
+}
+
+.aMenuClass { /*etiqueta ancor - incluye texto */
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+button:hover { /* cambia de color cuando el mouse esta sobre el boton */
+    background: #F2E41B;
+    color: #E30000;
+}
+
+.button_image { /* imagenes dentro del boton */
+    margin: 2px;
+    width: 70%;
+    height: 70%;
+}
+
+#scIntroduction {
+    position: relative; /*posicion relativa */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 25px; /* El contenido estará situado a 25px de la parte superior */
+    margin: 0 auto;
+    box-align: center;
+    text-align: center;
+    width: 75%; /* ocupa el 75% del ancho de la pagina */
+    overflow: auto; /* Se activará el scroll si es necesario */
+}
+
+#scPokedex {
+    display: none; /*Por defecto, estará oculto */
+    position: relative;
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    margin: 0 auto;
+    box-align: center;
+    text-align: center;
+    overflow: auto; /* Se activará el scroll si es necesario */
+}
+
+#scListPokemon {
+    display: none;
+}
+
+#scSearch {
+    display: none;
+}
+
+#scEvolution {
+    display: none;
+}
+
+#scSpawRate {
+    display: none;
+}
+
+#scPopUp {
+    display: none;
+}
+
+.footer {
+    display: table-row; /* Fijar al final */
+    height: 0;
+    padding: 10px;
+}
+
+.container{
+    display: block;
+}
+
+.scCards { /* seccion que muestra las cards una tras otra */
+    display: flex;
+    padding: 2%; 
+    width: 95%;
+    flex-wrap: wrap; /* los elementos hijos de flex se mostraran uno tras otro */
+}
+
+.card { /* nuestra card */
+    width: 20ch;
+    border: solid #333 1px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    background: white;
+    border-radius: 5px;
+    height: 275px;
+    margin: 5px auto;
+}
+
+.card_body { /* cuerpo de nuestra card */
+    padding: 10px; /* espacio entre el contenido y el borde */
+}
+
+.card_title { /* titulo dentro de nuestra card */
+    text-align: center; 
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right; /* Fijar a la derecha */
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+.close:hover,
+.close:focus { /* al pasar por arriba del close */
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.labelCard2 {
+    font-size:medium;
+}
+
+.card_title2{
+    font-size: larger;
+}
+
+.card3 { /* nuestra card */
+    width: 20ch;
+    border: solid #333 1px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    background: white;
+    border-radius: 5px;
+    height: 300px;
+    margin: 5px auto;
+}
+
+.labelCard3 {
+    font-size: small;
+}
+
+.generationStyle {
+    text-align: left;
+}
+
+.aboutStyle {
+    text-align: center;
+    white-space: wrap;
+}
+
+.resistantStyle{
+    text-align: center;
+}
+
+#btnUp {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    bottom: 20px; /* Coloque el botón en la parte inferior de la página. */
+    right: 30px; /* Coloca el botón 30px de la derecha. */
+    z-index: 99; /* Asegúrese de que no se superponga */
+    border: none; /* Quitar bordes */
+    outline: none; /* Quitar contorno*/
+    background-color: black; /* Establecer un color de fondo */
+    color: white; /* Color de texto */
+    cursor: pointer; /* Añadir un puntero del ratón en el hover */
+    padding: 15px; /* Algo de relleno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+  }
+  
+#myBtn:hover {
+    background-color: #555; /* Añadir un fondo gris oscuro en el hover */
+  }
+
+  /*Inicio Card All Info*/
+#secPopUp{
+    display: flex;  
+    flex-flow: row;
+  /*  justify-content: space-around;*/
+   
+  
+}
+
+#headerDetails{
+    width: 100%;
+    font-weight: bold; 
+    display: flex;  
+    flex-flow: row wrap;
+}
+
+#spPokemonRarityD{
+   align-content: left;
+   padding-right: 20%;
+
+}
+
+#spNameNumPokemonD{
+    padding-right: 15%;
+}
+
+#divCloseDetails{
+    /*la X de cerrar*/
+    align-content: right;
+    margin: 0 0 0 auto;
+    
+}
+
+#scBodyDetail{
+    display: grid;  
+    flex-flow: row;
+   /* justify-content: space-around;*/
+   /* align-items: flex-start;*/
+    align-content: center;
+    grid-template-columns:1fr 2fr;
+    flex-wrap: nowrap;
+    font-family: 'Comic Sans', sans-serif;
+
+   /* grid-template-rows: 1fr 1fr;*/
+}
+
+#imgPokemon{
+    align-content: center;
+}
+
+#leftDetails{  
+    left: 0;
+    align-items: center;
+}
+
+
+
+#scRigthDetails{
+    margin: 0 0 0 auto;
+   /* align-self:flex-start;*/
+    left: 100%;
+    top:0;
+    vertical-align: top;
+
+}
+#scweaknessesDetails{
+    align-items:initial;
+   /* float: left;*/
+}
+
+#ulWeaknesses{
+    list-style-position:inside;
+    list-style-type:square;
+  /*  float:right;*/
+}
+
+#ulResistant{
+    list-style-position:inside;
+    align-items:flex-start;
+  /* float:left; */
+   list-style-type:square;
+   
+  /* padding-left: 2rem;*/
+}
+
+#scOtherInfoP{
+    grid-area: 2/1/3/3;
+}

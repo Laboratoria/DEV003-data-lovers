@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+ 
+<head>
+  <meta charset="utf-8"> <!-- por default -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Metatag para hacer responsive -->
+  <title>Data Lovers - Pokemon </title> <!-- titulo de la pagina -->
+  <link rel="stylesheet" href="style.css" /> <!-- traemos la hoja de estilos  -->
+  <link href="https://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet">
+</head>
+ 
+<body> <!-- cuerpo de la pagina web -->
+  <button  id="btnUp" >Top</button> <!-- se agrego en todo el body para que salga en todas las paginas -->
+  <header class="boxHeader"> <!-- Encabezado con imagen de Pokemon con pokebolas -->
+    <img src="./Media/Images/pokebola.png" alt="Pokebola" class="img_header">
+    <img src="./Media/Images/logo_p.png" alt="Titulo Pokemon" width="300">
+    <img src="./Media/Images/pokebola.png" alt="Pokebola" class="img_header">
+  </header>
+ 
+  <nav class="menu"> <!-- navegador de menu con botones  -->
+    <ul class="UlMenuClass"> <!-- Contenedor del Menu -->
+      <!-- li es la lista del Menu -->
+      <li class="liMenuClass"><button id="buttonHome"> <img src="./Media/Images/pokebola2.png" class="button_image"> <br> Home </button>
+      </li>
+      <li class="liMenuClass"><button id="buttonPokedex"> <img src="./Media/Images/pokedex.png" class="button_image"> <br> Pokedex </button>
+      </li>
+      <li class="liMenuClass"><button id="buttonSearch"> <img src="./Media/Images/buscar_pokemon.png" class="button_image"> <br> Search
+        </button></li>
+      <li class="liMenuClass"><button id="buttonEvolution"> <img src="./Media/Images/evolucion.png" class="button_image"> <br> Evolution
+        </button></li>
+      <li class="liMenuClass"><button id="buttonSpawRate"> <img src="./Media/Images/top_10.png" class="button_image"> <br> Spaw Rate
+        </button></li>
+      <li class="liMenuClass"><a class="aMenuClass" href="https://pokemongolive.com/"> <!-- incluimos un link al boton -->
+          <button id="buttonPokemonGo"> <img src="./Media/Images/pokemon_go.png" class="button_image"> <br>Pokemon
+            Go</button>
+        </a></li>
+    </ul>
+  </nav>
+ 
+  <main>
+    <section id="scIntroduction"> <!-- 1ra pagina 1ra seccion  -->
+      <p>
+        Pokémon GO is an experience is an international gaming experience that has over a billion downloads and
+        has been named " The Best Mobile Game" by the Game Developers Choice Awards and "Best App of the Year"
+        by TechCrunch (taken from Google Play). Game users are set to "Pokémon Masters/Trainers". <br><br>
+ 
+        The main objectives of Pokemon GO are the following:
+        Discover the world of Pokémon: Explore and discover new Pokémon wherever you go.
+        Catch different Pokémon to complete your Pokédex.
+        Fight against Pokémon from other trainers and conquer a gym.
+        Compete in epic battles against other trainers.
+        Team up with other trainers to catch powerful Pokémon during raids. <br><br>
+ 
+        This website was created with the main objective of helping gamers improve their game in Pokémon Go, any gamer
+        can find important information here and can research specific information in our menu. Please do not hesitate to
+        visit all our tabs in the navigation menu to find more information about Pokedex, Evolutions, Candies, Spawn
+        Rate, and also to play Pokemon Go.<br>
+      <h3>Pokemon of the day!<br>⬇️ </h3>
+      </p>
+      <figure> <!-- card del pokemon del dia -->
+      </figure>
+    </section>
+ 
+    <section id="scPokedex"> <!-- 2do boton pagina de pokedex -->
+      <label>
+        <h1> Who's this Pokémon? </h1>
+      </label>
+      <p>
+        Sort Pokémons by: <br>
+        <!-- radio buttons son opciones para ordenar -->
+        <input type="radio" name="rdOptionShow" default checked value="1"> Ascending
+        <br>
+        <input type="radio" name="rdOptionShow" value="2"> Descending
+        <br>
+        <input type="radio" name="rdOptionShow" value="3"> A-Z
+        <br>
+        <input type="radio" name="rdOptionShow" value="4" /> Z-A
+      </p>
+    </section>
+ 
+    <section id="scSearch"> <!-- 3er boton pagina de busqueda y filtrar -->
+      <p>Search your favorite pokemon by filters:</p>
+      <div id="filterContainer"></div> <!-- contenedor de los tipos de filtros -->
+      <div><br>
+        <label>Region of Pokemon </label> <!-- creamos una opcion de filtrado por region -->
+        <select name="regionPokemon" id="regionPokemon"> <!-- selector con 2 opciones de region  -->
+          <option value="kanto">Kanto</option>
+          <option value="johto">Johto</option>
+        </select>
+      </div><br>
+      <!-- crea un input de texto que al dar enter crea un evento y llama a una funcion  -->
+      <div>
+        <input type="text" id="txtSearch" autocomplete="off" placeholder="🔍 Search pokemon">
+        <button id="btnSearchPokemon"> Search! </button>
+      </div><br>
+    </section>
+ 
+    <section id="scEvolution"> <!-- 4to boton pagina de evoluciones -->
+      <p> Find the evolutions of your favorite Pokemon, just type below and search!</p>
+      <!-- crea un input de texto para buscar un pokemon y mostrar las evoluciones  -->
+      <div>
+        <input type="text" id="evolutionP" autocomplete="off" placeholder="Type Pokemon here">
+        <button id="evolutionButton"> Search! </button>
+      </div><br>
+    </section>
+ 
+    <section id="scSpawRate"> <!-- 5to boton muestra el porcentaje de aparicion -->
+ 
+    </section>
+ 
+    <section id="scShowPokemonDetails">
+     
+     
+        <section id="scPopUp" class="cPopUp">
+     
+         
+    </section>
+   
+ 
+    </section>
+ 
+    <!--Aqui se muestra la lista completa de pokemons scShowAllPokemon-->
+    <section id="scShowAllPokemon" class="scCards">
+     
+    </section>
+  </main>
+ 
+  <div id="root"></div> <!-- NO SE PARA QUE SIRVE -->
+  <script src="main.js" type="module"></script> <!-- traemos la hoja de funciones, intermediario de la data y html  -->
+</body>
+ 
+<footer> <!-- pie de pagina -->
+  <p> © January 2023 Developed by Chris and Fernanda </p>
+</footer>
+ 
 </html>
+
