@@ -10,37 +10,38 @@ export const titleList = () => {
       productor: movieObject.producer,
       lanzamiento: movieObject.release_date,
       poster: movieObject.poster,
+      personajes: movieObject.people
     }
   });
 }
+
+// función del botón de orden alfabético
+export const ordenadorAZ = (titulosIndependientes) => { 
+  return titulosIndependientes.sort((a, b) => {
+    const tituloA = a.titulo.toLowerCase();
+    const tituloB = b.titulo.toLowerCase();
+
+    if (tituloA < tituloB) {
+      return -1;
+    }
+    if (tituloA > tituloB) {
+      return 1;
+    }
+    return 0;
+  })};
+
 //  listar directores y usamos ...new Set para que no se repitan los elementos 
 export const listaDirectores = () => {
 
-  const directoresg = ghibli.films.map((t) => {
-    return t.director;
+  const directoresg = ghibli.films.map((listaCompletaDirectores) => {
+    return listaCompletaDirectores.director;
   });
   return [ ...new Set(directoresg)];
 }
 
 // DIRECTORES: Filtro de peliculas por director
 export const peliculasDirector = (director) => {
-  return (ghibli.films.filter((e) => {
-    return e.director === director;
+  return (titleList().filter((titulosPorDirector) => {
+    return titulosPorDirector.director === director;
   }));
 }
- 
-// orden A-Z
-//   const dirsingular = 
-//   console.log(dirsingular);
-//   console.log("asc", dirsingular.sort());
-//   console.log("desc", dirsingular.reverse());
-// }
-
-
-// lista completa de peliculas y sus datos correspondientes - estructura
-// export const obtenerData = () => {
-
-//   return ghibli.films.map((movieObject) => {
-//     return movieObject.title
-//   });
-// }

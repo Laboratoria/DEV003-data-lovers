@@ -1,61 +1,49 @@
-import { titleList, peliculasDirector } from './data.js';
+import { titleList, peliculasDirector, ordenadorAZ } from './data.js';
 
-// declaracion de variables a utilizar
+// declaración de variables a utilizar
 const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML de títulos
 const botonLista = document.getElementById("botonAZ"); // esta variable llama el botón A-Z
 const contenedorListaDirectores = document.getElementById("directorList") // esta variable llama a la barra de selector de directores
 const topButton = document.getElementById("topBtn") // esta variable llama al botón de scroll hacia arriba
+let titleListGenerado = titleList(); // esta variable muestra el array de películas al cargar el DOM
+let primerClick = true; // esta variable es un booleano que al cargar el DOM siempre será true
 
-// funcionalidad del botón hacia arriba
+// evento del botón hacia arriba
 topButton.addEventListener("click", () => {
   document.body.scrollTop = 0; // para Safari
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
 });
 
-// funcionalidad del boton A-Z
+// evento del botón de orden alfabético (preguntar si esq el if else se deja en data.js)
 botonLista.addEventListener("click", () => {
 
   contenedorDisplayPeliculasPorTitulos.innerHTML = ''; // se vacía el contenedor de las películas
+  
+  if (primerClick) {
+    titleListGenerado = ordenadorAZ(titleListGenerado);
+    primerClick = false;
+  } else {
+    titleListGenerado.reverse();
+  }
 
-  // const titulosOrdenados = titleList().reverse(); // método utilizado para ordenar de la Z a la A, pero no sé cómo usarlo XD
-  const titulosOrdenados = titleList().sort((a, b) => {
-    const tituloA = a.titulo.toLowerCase();
-    const tituloB = b.titulo.toLowerCase();
-
-    if (tituloA < tituloB) {
-      return -1;
-    }
-    if (tituloA > tituloB) {
-      return 1;
-    }
-    return 0;
-  });
-
-  titulosOrdenados.forEach((itemFilm) => {
-
-    contenedorDisplayPeliculasPorTitulos.innerHTML += `
-<div class="contenedorPeliculas">
-  <div>
-    <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
-  </div>
-  <div class="descripcionPeliculas">
-    <p> "${itemFilm.titulo}"</p>
-    <p> Release Date: "${itemFilm.lanzamiento}"</p>
-    <p> Director: "${itemFilm.director}"</p>
-    <p> Producer: "${itemFilm.productor}"</p>
-  </div>
-</div>`
-  });
+  titulosHTML(titleListGenerado); // se ejecuta la función de títulos para ordenarlos en orden alfabético
 });
 
+// evento change al elemento select
+contenedorListaDirectores.addEventListener('change', (event) => {
 
-//LISTA DE TITULOS DE PELICULAS
+  const directorSeleccionado = event.target.value;
+  titulosHTML(peliculasDirector(directorSeleccionado));
+
+});
+
+//lista completa de películas
 const titulosHTML = (listaPeliculas) => {
 
   let html = ''
 
   listaPeliculas.forEach((itemFilm) => {
-
+  //console.log(itemFilm.personajes); // crear for
     html += `
   <div class="contenedorPeliculas">
     <div>
@@ -66,21 +54,20 @@ const titulosHTML = (listaPeliculas) => {
       <p> Release Date: "${itemFilm.lanzamiento}"</p>
       <p> Director: "${itemFilm.director}"</p>
       <p> Producer: "${itemFilm.productor}"</p>
+  
     </div>
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
 }
-titulosHTML(titleList());
 
-//LISTA DE DIRECTORES FILTRADA
+//filtro de lista de directores
 const directorsHTML = () => {
 
   let html = ''
 
   html += `
-        <label for="directorSelect"></label>
-        <select class="busquedaDirector" name="directores" id="directorSelect">
+        <select class="busquedaDirector" id="directorSelect" name="directores">
            <option value="">— Busca por Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
             <option value="Isao Takahata">Isao Takahata</option>
@@ -92,18 +79,8 @@ const directorsHTML = () => {
 
   contenedorListaDirectores.innerHTML = html
 }
+
+titulosHTML(titleListGenerado);
 directorsHTML();
-
-
-// Seleccionar de la lista de directores
-const selectElement = document.getElementById("directorSelect");
-
-// agregar el evento change al elemento select
-selectElement.addEventListener('change', (event) => {
-
-  const directorSeleccionado = event.target.value;
-  titulosHTML(peliculasDirector(directorSeleccionado));
-
-});
 
 // console.log(example, data);
