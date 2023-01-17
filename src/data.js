@@ -1,7 +1,7 @@
 // funcion de ordenar para exportarla en main
 export function ordenar(pokemons, orden){
   const organizadorSeleccionado = orden
-  const ordenarDataAZ = pokemons.sort((a,b) =>{
+  const ordenarDataAZ = pokemons.slice().sort((a,b) =>{
     if (a.name.toLowerCase() < b.name.toLowerCase()){ 
       return -1;
     }
@@ -10,7 +10,7 @@ export function ordenar(pokemons, orden){
     }
     return 0;
   });
-  const ordenarDataZA = pokemons.sort((a,b) =>{
+  const ordenarDataZA = pokemons.slice().sort((a,b) =>{
     if (a.name.toLowerCase() > b.name.toLowerCase()){ 
       return -1;
     }
@@ -19,7 +19,7 @@ export function ordenar(pokemons, orden){
     }
     return 0;
   });
-  const ordenarDataMenorMAyor = pokemons.sort((a,b) =>{
+  const ordenarDataMenorMAyor = pokemons.slice().sort((a,b) =>{
     if (a.num < b.num){ 
       return -1;
     }
@@ -28,7 +28,7 @@ export function ordenar(pokemons, orden){
     }
     return 0;
   });
-  const ordenarDataMayorMenor = pokemons.sort((a,b) =>{
+  const ordenarDataMayorMenor = pokemons.slice().sort((a,b) =>{
     if (a.num > b.num){ 
       return -1;
     }

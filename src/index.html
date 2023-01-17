@@ -3,67 +3,68 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <!--menu de opciones-->
+  <div></div>
+  <img id="logoImg" src="img/logo.png">
   <header>
-        <img src="img/pokrmonGo.png" alt="imagen Pokemon Go">
-    <nav class="menu">
-      <ul> 
-        <li><a href="#" id="inicioNav">Inicio</a></li>
-        <li><a href="#" id="pokemonsNav">Pokemones</a></li>
-        <li><a href="#" id="filtroNav">Filtrar</a></li>
-        <li><a href="#" id="multiplicadorNav">Multiplicador</a></li>
+        <input type="checkbox" id="check">
+        <label for="check" class="btnMenu">
+           <img  id="menuImg" src="img/menu.png">
+        </label>
+        <nav class="menu">
+      <ul>
+        <li><a href="#" id="inicioNav">HOME</a></li>
+        <li><a href="#" id="pokemonsNav">POKEMONS</a></li>
+        <li><a href="#" id="filtroNav">FILTER</a></li>
+        <li><a href="#" id="multiplicadorNav">GENERATION</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+   <main>
     <!--descripcion de pokemon go-->
     <section class="introduccion" id="page1">
-      <h3>Pokèmon Go</h3>
-      <p> ¿Que es Pokemon go?, es un videojuego de <a
-          href="https://es.wikipedia.org/wiki/Realidad_aumentada">realidad aumentada.</a> Se necesita conecion a internet para jugar, es un videojuego gratuito pero contiene
-        microtransacciones. El juego consiste en buscar y capturar personajes de la saga <a
-          href="https://es.wikipedia.org/wiki/Pok%C3%A9mon">Pokémon</a> escondidos en ubicaciones del mundo real y
-        luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar.
-        ¿Como funciona pokemon Go?, completa tu Pokédex, fortalécete y combate online con otros entrenadores durante PvP combates de
-        Raid. Evoluciona tus Pokémon para hacerlos más fuertes en este juego.</p>
-
+      <div id="introduccionTexto">
+      <h2>What is it and how does pokemon go work?</h2>
+      <p>It is an augmented reality video game. Internet connection is required to play, it is a free game but it contains microtransactions. The game consists of finding and capturing characters from the Pokémon saga hidden in real-world locations and fighting with them, which involves physically moving through the streets of the city to progress. complete your Pokédex, strengthen yourself and battle online with other trainers during PvP Raid combat. Evolve your Pokémon to make them stronger in this game</p>
    <!--enlace para descargar aplicacion-->
-      <p> Deseas descargar la aplicacion sigue el enlace <a
-          href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_CO&gl=US&pli=1">Descarga
-          la app</a></p>
+      <p> You want to download the application follow the link <a
+          href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_CO&gl=US&pli=1">
+download the app</a></p>
 
-
+        </div>
+          <div id="boton">
    <!--boton que lleva a page2 y muestra los pokemones-->
-      <button id="btnPokemones">Conoce los Pokemones</button>
+      <button id="btnPokemones">MEET THE POKEMONS</button>
+    </div>
     </section>
 
     <!--pagina donde muestra todos los pokemones-->
     <section class="pokemon" id="page2">
-      <div class="Ordenador"><label>Ordenar alfabeticamente: </label>
+      <div class="Ordenador"><label>Order alphabetically: </label>
       <select id="ordenarAlfabeto">
-        <option selected>selecciona</option>
+        <option selected>Choose</option>
         <option id="aZ" value="aZ">De la A - Z</option>
         <option id="zA" value="zA">De la Z - A.</option>
-        <option id="ascendente" value="ascendente">Ascendente</option>
-        <option id="descendente" value="descendente">Descendente</option>
+        <option id="ascendente" value="ascendente">Upward</option>
+        <option id="descendente" value="descendente">Falling</option>
       </select>
-    </div> 
+    </div>
     <div class="mostrarPokemons" id="mostrarPokemons"></div>
-     
+
     </section>
-    
+
     <!--filtro por tipo-->
     <section class="filtro" id="page3">
-      <div class="selectordetipo">
-      <label>Filtro tipo: </label>
+      <div class="selectordetipo"><label>Filter type: </label>
       <select id="filtroTipo">
-        <option value="selecciona">selecciona</option>
+        <option value="selecciona">Choose</option>
         <option value="bug">Bug</option>
         <option value="dark">Dark</option>
         <option value="dragon">Dragon</option>
@@ -96,8 +97,8 @@
   </main>
 
   <!--links redes sociales-->
-  <footer><p><a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a></p>
-<p>Proyecto Data Lovers by Sara Sierra y Rossanna Ariza</p></footer>
+   <footer><p><a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a></p>
+<p>Project Data Lovers by Sara Sierra y Rossanna Ariza</p></footer> 
 
   <script src="main.js" type="module"></script>
 </body>
