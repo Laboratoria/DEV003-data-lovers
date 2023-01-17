@@ -1,12 +1,445 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Wiki Ghibli</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="">
+  <!--<div id="root"></div>!-->
+  <header>
+    <!--Menú Desplegable-->
+    <div class="menu-dropdown">
+      <button class="dropbtn">
+        <div class="barras"></div>
+        <div class="barras"></div>
+        <div class="barras"></div>
+      </button>
+      <div class="dropdown-content">
+        <a href="#titulos">Títulos</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#directores">Directores</a>
+        <a href="#productores">Productores</a>
+      </div>
+    </div>
+
+    <!--Categorías header-->
+    <nav class="categorias">
+      <ul class="lista">
+        <li><a href="#titulos">Títulos</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#directores">Directores</a></li>
+        <li><a href="#productores">Productores</a></li>
+      </ul>
+    </nav>
+
+    <!--Logo superior-->
+    <img class="logoTop" src="img/studio ghibli letras.png" alt="logo">
+  </header>
+
+  <!-- BIENVENIDA-->
+
+  <section class="welcome">
+    <container id="fondoBienvenida">
+      <h1> ¡BIENVENIDA A WIKI GHIBLI!</h1>
+      <p>Acá encontrarás toda la información que necesitas conocer si quieres adentrarte en el Mundo de Studio Ghibli.
+        <br>
+        <br>
+        Studio Ghibli es un estudio de animación japonés, considerado por la crítica especializada y muchos cinéfilos
+        como
+        uno de los mejores estudios de animación del mundo en la actualidad.
+      </p>
+    </container>
+  </section>
+
+  <!--botón de regreso-->
+  <div>
+    <button onclick="topFunction()" class="backButton" id="topBtn">
+      <img class="flecha" src="img/flecha arriba.png" alt="">
+    </button>
+  </div>
+
+
+
+  <!-- ejemplo -->
+  <div id="inventado">
+  </div>
+
+
+
+  <!--TITULOS DESTACADOS-->
+  <section class="destacados" id="idlista">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">TÍTULOS DESTACADOS</h2>
+        <div class="barraDestacados"></div>
+      </div>
+
+      <ul class="listaDestacados">
+        <li class="pelicula-titulo">
+          <a href="" onclick="desplegable()"><img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula1"></a>
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula2">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula3">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula4">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula5">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+      </ul>
+  </section>
+
+  <!-- películas más votadas -->
+  <section class="destacados">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">PELÍCULAS MÁS VOTADAS</h2>
+        <div class="barraMasVotadas"></div>
+      </div>
+
+      <ul class="listaDestacados">
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula1">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula2">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula3">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula4">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+        <li class="pelicula-titulo">
+          <img class="iconoPeliculas" src="img/mononoke.jpg" alt="pelicula5">
+          <h4>La Princesa Mononoke</h4>
+        </li>
+      </ul>
+  </section>
+
+  <!--TÍTULOS GENERALES-->
+
+  <section id="titulos" class="ListaPeliculas">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">TÍTULOS</h2>
+        <div class="barra"></div>
+        <p class="resultados">"Cont X" Títulos encontrados</p>
+      </div>
+      <br>
+      <div class="tituloYBoton">
+        <button class="botonAZ">
+          <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+        </button>
+        <p class="AZ">A - Z</p>
+        <div id ="directorList" class="directorList"></div>  
+      </div>
+      </div>
+
+    <!--Listado de Titulos Generales-->
+    <div id="listaTitulos" class="dosColumnas">
+    </div>
+  </section>
+
+  <!--INFO COMPLETA POR PELÍCULA-->
+
+  <!-- <section class="infoPelicula">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">TÍTULO PELÍCULA</h2>
+        <div class="barra"></div>
+      </div>
+    </div>
+
+    <section class="peliculaEnDetalle">
+      <div class="imgDetalle"> 
+  <img class="portadaTDP" src="img/mononoke.jpg" alt="pelicula">
+  <article class="dosParrafos">
+    <p class="detalles">1997 / 133 min
+      Director: Hayao Miyazaki
+      Productor: Toshio Suzuki</p>
+    <br>
+    <p class="descripcion">Herido por una maldición mortal, el joven guerrero Ashitaka se dirige al oeste en
+      busca
+      de una cura. Allí se topa con un amargo conflicto entre Lady Eboshi, el orgulloso pueblo de Iron Town, y
+      la
+      enigmática princesa Mononoke, una joven criada por lobos que no se detendrá ante nada para evitar que los
+      humanos destruyan su hogar y a los espíritus del bosque y dioses animales que lo habitan.</p>
+  </article>
+  </div>
+  <div class="estadisticas">
+    <div class="medallaRanking">
+      <img class="medalla" src="img/medalla.jpg" alt="medalla">
+      <h4 class="ranking">Ranking: #1 lugar</h4>
+    </div>
+    <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas"> 
+  <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra
+    cuantitativa
+    de participantes.
+    Tal vez mencionar premios ganados.</p>
+  </div>
+  </section>
+  </section> -->
+
+  <!--LISTA DE PERSONAJES POR TÍTULO-->
+
+  <!-- <section class="personajesPorPelicula">
+    <div class="tituloYBoton">
+      <h3 class="tituloPersonajes">PERSONAJES</h3>
+      <button class="botonAZ">
+        <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+      </button>
+      <p class="AZ">A - Z</p>
+    </div>
+    <div class="dosColumnas">
+      <ul class="columnaPersonajes">
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje"></p>
+        </li>
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+            voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+            adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+        </li>
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+            voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+            adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+        </li>
+      </ul>
+      <ul class="columnaPersonajes">
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+            voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+            adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+        </li>
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+            voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+            adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+        </li>
+        <li class="miniaturaDescripcion">
+          <img class="miniatura" src="img/mononoke.png" alt="personajes por título">
+          <p class="descripcionPersonaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+            voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+            adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+        </li>
+      </ul>
+    </div>
+  </section> -->
+
+  <!--INFO COMPLETA POR DIRECTORES-->
+
+  <!-- <section id="directores" class="infoPelicula">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">DIRECTORES</h2>
+        <div class="barra"></div>
+      </div>
+
+      <section class="dirproEnDetalle">
+        <div class="imgDetalle"> 
+          <img class="portadaTDP" src="/img/Hayao_Miyazaki.jpg" alt="director"> 
+          <article class="dosParrafos"> 
+            <p class="detalles">
+              Director: Hayao Miyazaki</p>
+            <br>
+            <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+              voluptatem
+              animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+              adipisci
+              necessitatibus cum iste. Illum, harum fuga!</p>
+          </article>
+        </div>
+        <div class="estadisticas">
+          <div class="medallaRanking">
+            <img class="medalla" src="img/medalla.jpg" alt="medalla">
+            <h4 class="ranking">Ranking: #1 lugar</h4>
+          </div>
+          <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas"> 
+          <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra
+            cuantitativa
+            de participantes.
+            Tal vez mencionar premios ganados.</p>
+        </div>
+      </section>
+  </section> -->
+
+  <!--LISTA DE DIRECTORES-->
+  <!-- 
+  <section class="peliculasPorDirector">
+    <div class="tituloYBoton">
+      <h3 class="tituloPeliculas">MÁS DIRECTORES</h3>
+      <button class="botonAZ">
+        <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+      </button>
+      <p class="AZ">A - Z</p>
+    </div>
+
+    <ul class="dosColumnas">
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/HayaoMcirc.png" alt="peliculas por Director">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+    </ul>
+  </section> -->
+  <div id="listaDirectores" class="dosColumnas">
+  </div>
+  <!--INFO COMPLETA POR PRODUCTORES-->
+
+  <!-- <section id="productores" class="infoProductores">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">PRODUCTORES</h2>
+        <div class="barra"></div>
+      </div>
+
+      <section class="dirproEnDetalle">
+        <div class="imgDetalle">
+          <img class="portadaTDP" src="/img/Isao_Takahata.jpg" alt="Productor">
+          <article class="dosParrafos">
+            <p class="detalles">
+              Productor: Isao_Takahata</p>
+            <br>
+            <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+              voluptatem
+              animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+              adipisci
+              necessitatibus cum iste. Illum, harum fuga!</p>
+          </article>
+        </div>
+        <div class="estadisticas">
+          <div class="medallaRanking">
+            <img class="medalla" src="img/medalla.jpg" alt="medalla">
+            <h4 class="ranking">Ranking: #1 lugar</h4>
+          </div>
+          <img class="imgEstadisticas" src="img/estadisticas.png" alt="estadisticas">
+          <p class="conclusiones">Conclusiones de las estadísticas, explicaciones del procedimiento y muestra
+            cuantitativa
+            de participantes.
+            Tal vez mencionar premios ganados.</p>
+        </div>
+      </section>
+  </section> -->
+
+  <!--LISTA DE PRODUCTORES-->
+
+  <!-- <section class="listaProductores">
+    <div class="tituloYBoton">
+      <h3 class="tituloPeliculas">MÁS PRODUCTORES</h3>
+      <button class="botonAZ">
+        <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+      </button>
+      <p class="AZ">A - Z</p>
+    </div>
+    <ul class="dosColumnas">
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+      <li class="miniaturaDescripcion">
+        <img class="miniatura" src="/img/IsaoTcirc.png" alt="peliculas por Productor">
+        <p class="descripcionDirPro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur
+          voluptatem animi, architecto est quaerat pariatur numquam itaque quibusdam expedita aliquam, ipsam possimus
+          adipisci necessitatibus cum iste. Illum, harum fuga!</p>
+      </li>
+    </ul>
+  </section> -->
+
+  <!--PERSONAJES GENERALES-->
+
+  <!-- <section id="personajes">
+    <div class="parteSuperior">
+      <div class="contenedorTitulo">
+        <h2 class="titulos">PERSONAJES</h2>
+        <div class="barra"></div>
+        <br>
+        <p class="resultados">6 resultados</p>
+      </div>
+    </div>
+    <div class="personajesPorPelicula">
+      <div class="tituloYBoton">
+        <h3 class="tituloPersonajes">PERSONAJES</h3>
+        <button class="botonAZ">
+          <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
+        </button>
+        <p class="AZ">A - Z</p>
+      </div>
+
+      <div id="characterList" class="dosColumnas">
+        <ul class="columnaPersonajes">
+          <li class="miniaturaDescripcion">
+            <img class="miniatura" src="" alt="personajes por título">
+            <p class="descripcionPersonaje"></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section> -->
+  <div id="listaPersonajes" class="dosColumnas">
+  </div>
+  <!--FOOTER-->
+  <img class="marchando" src="img/marchando.jpg" alt="img marchando">
+
+  <footer>
+    <!--Logo foot-->
+    <img class="logobottom" src="/img/Logo foot.png" alt="logo">
+    <!--Copyright foot-->
+    <p class="copyrighttext">&copy; 2022 Studio Ghibli. All Rights Reserved</p>
+    <!--Iconos Redes foot-->
+    <ul class="socialfooter">
+      <li><img src="/img/insta.png" alt="instagram"></li>
+      <li><img src="/img/twitter.png" alt="twitter"></li>
+    </ul>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
