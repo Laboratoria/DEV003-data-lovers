@@ -2,13 +2,9 @@ export function filterData(data, input, category) {
   //Ejecuta la función si está dentro de estas categorías
   if (category === "name" || category === "species" || category === "type" || category === "status") {
     const filterD = data.filter((character) => {
-      //console.log(character[category]); //Imprime todos los personajes
-
       const selectOpt = character[category].toLowerCase(); //Opc seleccionada de select
       const enteredTxt = input.toLowerCase(); //Txt ingresado en input
-
-      return selectOpt.includes(enteredTxt);
-      //includes compara la data del select con el txt ingresado en el input
+      return selectOpt.includes(enteredTxt); //includes compara la data del select con el txt ingresado en el input
     })
     return filterD;
   } else if (category === "gender") {
@@ -16,9 +12,7 @@ export function filterData(data, input, category) {
     const filtGender = data.filter((character) => {
       const selectOpt = character[category].toLowerCase(); //Opc seleccionada de select
       const enteredTxt = input.toLowerCase(); //Txt ingresado en input
-
-      return selectOpt.startsWith(enteredTxt);
-      //comparar si la categoria de la data startsWith input del usuario
+      return selectOpt.startsWith(enteredTxt); //comparar si la categoria de la data startsWith input del usuario
     })
     return filtGender;
   } else if (category === "origin" || category === "location") {
@@ -32,12 +26,10 @@ export function filterData(data, input, category) {
   } else if (category === "episode") {
     //Otro filtro
     const filtEpi = data.filter((character) => {
-      //console.log(character[category]);//contiene mis elementos en un string
       const enteredTxt = input.toLowerCase();//Contiene txt input
       const epNumbs = character[category].map((episode) => {//Array de núms
         const urlNum = episode.split("/");//Contiene array con elements separados
         const lastNumb = urlNum[urlNum.length - 1];
-
         return lastNumb;
       })
       return epNumbs.includes(enteredTxt);
@@ -48,7 +40,7 @@ export function filterData(data, input, category) {
 
 export function orderAlf(orderType, inputArray) {
   if (orderType === "alphabetic") {
-    return inputArray.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
+    return inputArray.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)) //ordena alfabéticamente
   }
   if (orderType === "reverse") {
     return inputArray.sort((a, b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0))
@@ -58,6 +50,6 @@ export function orderAlf(orderType, inputArray) {
 }
 export function getData(categoSelect, inpTxt, orderType, data) {
   const filteredResult = filterData(data.results, inpTxt, categoSelect); //Lo que retorna filterData almacenado en filteredResult
-  const orderedResult = orderAlf(orderType, filteredResult)
-  return orderedResult 
+  const orderedResult = orderAlf(orderType, filteredResult)//toma en cuenta el resultado de la data ordenada y la eleción de orden
+  return orderedResult //retorna el resultado de la data filtrada y ordenada
 }
