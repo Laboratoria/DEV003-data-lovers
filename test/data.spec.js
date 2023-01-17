@@ -1,10 +1,4 @@
-import { filterData, orderAlf } from '../src/data.js';
-
-describe('filterData', () => {
-  it('returns `filterData', () => {
-    expect(filterData()).toEquals('example');
-  });
-});
+import { filterData, /*orderAlf*/ } from '../src/data.js';
 
 const mockCharacters=[{"name": "Rick Sanchez"}, {"name": "Morty Smith"}, {"name": "Summer Smith"}]
 describe('filterData', () => 
@@ -51,8 +45,6 @@ describe('filterData', ()=>
     expect(filtOrigin).toEqual([{"origin": {"name": "unknown"}}]);
   })
 )
-
-
 
 const mockLoc=[{"location":{"name": "Venzenulon 7"}}, {"location":{"name":"Interdimensional Cable"}},{"location":{"name":"Bepis 9"}}]
 describe('filterData', ()=>
