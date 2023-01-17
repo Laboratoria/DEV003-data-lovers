@@ -12,7 +12,7 @@
       <h1>Universo Ghibli</h1>
     </header>
     <nav class="caja-opciones">
-      <a class="button-inicio mainbutton " href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
+      <a class="button-inicio mainbutton" href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
       <input class="button-inicio mainbutton" type="button" value="Elige al Azar" id="randomBtn">
       <!--div para generar nav, definir id -->
       <select id="orderYear" class="select-year mainbutton">
@@ -21,17 +21,17 @@
         <option value="downward">Descendente</option>
       </select>
 
-      <select id="orderDirector" class="select-director mainbutton">
-        <option value="allDirector">Ordenar por Director</option>
-        <option value="Miyazaki">Hayao Miyazaki</option>
-        <option value="Takahata">Isao Takahata</option>
-        <option value="Kondo">Yoshifumi Kondo</option>
-        <option value="Morita">Hiroyuki Morita</option>
-        <option value="Goro">Gorō Miyazaki</option>
-        <option value="Yonebayashi">Hiromasa Yonebayashi</option>
+      <select id="directorMovie" class="select-director mainbutton">
+        <option value="allDirector" >Ordenar por Director</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondo">Yoshifumi Kondo</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
         
       </select>
-      <select value="orderCharacter" class="select-character mainbutton">
+      <select value="orderNameMovies" class="select-character mainbutton">
         <option value="allCharacter">Ordenar Albabeticamente</option>
         <option value="Az">A-Z</option>
         <option value="Za">Z-A<b></b></option>
@@ -44,7 +44,7 @@
       <div id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </div>
     </div>
     </div>
-   
+    <footer>Laboratoria 2022. DEV003</footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

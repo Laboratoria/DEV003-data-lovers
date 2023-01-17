@@ -27,6 +27,9 @@ font-size: 30px;
     margin: 10px;
     font-family: 'Roboto';
     margin-bottom: 15px;
+    font-size: 15px;
+    width: 400px;
+    text-align: center;
 }
 
 nav{
@@ -76,6 +79,7 @@ a{
             }
 }
 .all-movies-cards{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -84,18 +88,14 @@ a{
     padding: 3%;
     row-gap: 30px;
     column-gap: 30px;
+    column-gap: 30px;
 }
 /*div para ordenar las tarjetas, fondo y formato letra*/
 .show-cards{
     font-family: 'Roboto';
-    display: flex;
     background-color: rgb(42, 92, 99);
     color: #fff;
-    margin-bottom: 3%;
-    text-align: center;
-    align-items: stretch;
-    text-align: center;
-    margin-bottom: 5%;
+    border-radius: 10px;
 
 }
 .tarjetas{
@@ -103,15 +103,49 @@ a{
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    margin-bottom: 5%;
-    padding: 5%;
+    margin-bottom: 20px;
+    padding: 20px;
     align-items: center;
-
 }
-.poster-Image {
-    display: flex;
-    justify-content: center;
+.card-container{
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 150px;
+    justify-content: center;
+    width: 280px;
+    height: 250px;
+}
+.caja{
     border-radius: 10px;
+    background: rgba(57, 119, 129, 0.678);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.caja:hover{
+    transform: translateY(-15px);
+    /* define margenes del shadow*/
+    box-shadow: 20px 15px 20px  rgb(6, 50, 56);
+}
+.caja .card-container .poster-Image{
+    width: 200px;
+    height: 250px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.title-card{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 10px;
+}
+.text-card{
+    font-size: 13px;
+}
+footer{
+    font-family: 'Italiana';
+    background-color: rgb(42, 92, 99);
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
 }

@@ -1,10 +1,10 @@
 # Data Lovers DEV003
 
-## Resumen del proyecto
+## 1.- Resumen del proyecto
 
 Data Lovers es un proyecto mediante el cual se construyó una página web para visualizar un conjunto de datos y ordenarlos según las necesidades del usuario. En nuestro caso, los datos corresponden al Studio Ghibli. La lógica del proyecto esta implementada a través de Vanilla Javascript, HTML y CSS. El control de versiones es con git y se desplego el proyecto en GitHub Pages.
 
-## Definición del Proyecto 
+## 2.- Definición del Proyecto 
 
 Una vez que definas tu área de interés, buscar entender quién es tu usuario
 Y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
@@ -13,7 +13,9 @@ El objetivo principal de este proyecto es que aprendas a diseñar y construir un
 Interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 Usuario necesita.
 
-### Principales usuarios del proyecto
+## 3.- Principales usuarios del proyecto
+
+#### Historias de usuario
 Luego de revisada la información entregada junto con el proyecto se han definido cuatro historias de usuarios principales, cada una con una problemática y un objetivo destino a resolver.
 
 1.- HU Camila
@@ -23,7 +25,7 @@ Quiere: poder ordenar películas por año de lanzamiento
 
 Para: ver la evolución de la animación, personajes etc.
 
-Definición de terminado: la usuaria al abrir la página web podrá visualizar acceder a un botón que ordenara las películas según año de lanzamiento, en orden ascendente o descendente.
+Definición de terminado: la usuaria al abrir la página web podrá visualizar y acceder a un botón que ordenara las películas según año de lanzamiento, en orden ascendente o descendente.
 
 2.-HU Zoe
 
@@ -49,19 +51,18 @@ Definición de terminado: el usuario al abrir la página web podrá acceder a un
 
 Quien: como persona que les gusta el cine de animación y su historia.
 
-Quiere: ordenar las películas según personajes.
+Quiere: ordenar las películas según .
 
-Para: poder familiarizarse con los personajes, según cual sea su personaje favorito o con el que se identifican.
+Para: poder .
 
-Definición de terminado: la usuaria al abrir la página web podrá acceder a un botón que según la opción seleccionada retornara solo los personajes elegidos.
+Definición de terminado: la usuaria al abrir la página web podrá acceder a un botón que según la opción seleccionada retornara solo .
 
-### Primer prototipo
+## 4.- Primer prototipo
 
 El primer prototipo de la pagina se diseño en Figma, es un prototipo de baja fidelidad donde se muestran los botones que son el resultado de las historias de usuario previamente mencionadas.
 
 (insertar imagen del prototipo)
 
-## 3. Objetivos de aprendizaje
 
 ### Definición del producto
 
@@ -69,20 +70,9 @@ Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
 contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
 el problema (o problemas) que tiene tu usuario.
 
-### Historias de usuario
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
 
 #### Testeos de usabilidad
 

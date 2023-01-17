@@ -1,7 +1,7 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortMovies } from '../src/data.js';
 
 
-describe('example', () => {
+describe('sortMovies', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
