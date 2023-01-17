@@ -1,7 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {ordenar} from './data.js'
-import {filtroData} from './data.js'
-
+import {filtroData, ordenar, estadistica} from './data.js'
 
 
 const btnPokemon = document.querySelector("#btnPokemones")
@@ -115,4 +113,104 @@ SelectorElementoTipo.addEventListener("change", function(){
     dataPokemons.forEach(mostrarData2);
   else
     nuevaData.forEach(mostrarData2);
+});
+
+//funcion estadistica
+ 
+//parte 1 datos para grafica
+const pobladoresKanto = estadistica(dataPokemons,"kanto");
+const pobladoresJohto = estadistica(dataPokemons,"johto");
+const porcentajepobladoresKanto = Math.round((pobladoresKanto.length*100)/251);
+const porcentajepobladoresJohto = Math.round((pobladoresJohto.length*100)/251);
+const catalogo4 = document.getElementById("pokemonesestadistica");
+ 
+ 
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+ 
+function drawChart() {
+ 
+  const data = google.visualization.arrayToDataTable([
+    ['Region', 'Poblacion'],
+    ['Johto', 100],
+    ['Kanto', 151],
+         
+  ]);
+ 
+  const options = {
+    title: 'percentages of pokemon according to region'
+  };
+ 
+  const chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+ 
+  chart.draw(data, options);
+}
+   
+ 
+/*
+const newPorcentajes = [
+  {region:"kanto", poblacion:`${pobladoresKanto.length}`, porcentaje:`${porcentajepobladoresKanto}`},
+  {region:"johto", poblacion:, porcentaje:`${porcentajepobladoresJohto}`},
+];
+const miGrafica = document.getElementById("miGrafica").getContext("2d");
+ 
+const graficaPorcentajes = new Chart(miGrafica,
+  {
+    type: 'bar',
+    data: {
+      labels: newPorcentajes.map(element => element.region),
+      datasets: [
+        {
+          label: '',
+          data: newPorcentajes.map(element => element.porcentaje)
+        }
+      ]
+ 
+    }  }
+);
+*/
+ 
+function mostrarDatos1 (){    
+  catalogo4.innerHTML += `
+    <div class="Tarjetasestadistica">
+      <div class="tarjetasestadistica">
+      <div class="cuerpoTarjetasestadistica">
+      <p> Carrying out an analysis of the data, it was found that the ${porcentajepobladoresKanto}% of Pokémon are found in the Kanto region with ${pobladoresKanto.length} pokemon and the ${porcentajepobladoresJohto}% are in Johto with ${pobladoresJohto.length} pokemon</p>
+    </div>
+    </div>
+    </div>
+    `;
+}
+mostrarDatos1();
+ 
+//parte 2 datos de pokemons filtrados
+ 
+const SelectorElementoPoblacion = document.getElementById("ordenarRegion");
+SelectorElementoPoblacion.addEventListener("change", function (){
+  const opcionSeleccionada = this.options[SelectorElementoPoblacion.selectedIndex];
+  const catalogo3 =document.getElementById("mostrarRegionElemento");
+  const nuevaData = estadistica(dataPokemons, opcionSeleccionada.value);
+  catalogo3.innerHTML="";
+ 
+ 
+  function mostrarData3 (dataAll){    
+    catalogo3.innerHTML += `
+    <div class="TarjetasPokemon">
+        <div class="tarjetas">
+        <div class="cuerpoTarjetas">
+        <img src="${dataAll.img}"/>
+        <h3 class="nombrePokemon">${dataAll.name.toUpperCase()}</h3>
+        <h4 class="tipo">Type: ${dataAll.type}
+        <h4 class="peso">Resistant:<br>${dataAll.resistant}</h4>
+        <h4 class="altura">Weaknesses:<br>${dataAll.weaknesses}</h4>
+      </div>
+      </div>
+      </div>
+      `;
+  }
+ 
+  if(opcionSeleccionada.value === "selecciona")
+    dataPokemons.forEach(mostrarData3);
+  else
+    nuevaData.forEach(mostrarData3);
 });
