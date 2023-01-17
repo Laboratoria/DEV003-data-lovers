@@ -271,6 +271,23 @@ h4 {
     align-self: center;
 }
 
+#directorList {
+    color: #00686C;
+    margin-left: 50px;
+}
+#directorSelect {
+    color: #00686C;
+    font-style: italic;
+}
+.busquedaDirector {
+    width: 300px;
+    border-color: #00686C;
+    border-width: 2px;
+}
+.busquedaDirector:hover {
+    border-color: #FF9915;
+}
+
 .columnaPeliculas {
     display: flex;
     flex-direction: column;
@@ -437,30 +454,6 @@ h4 {
     margin-bottom: 50px;
 }
 
-/* .tituloPersonajes {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.columnaPersonajes {
-    display: flex;
-    flex-direction: column;
-}
-
-.descripcionPersonaje {
-    color: #00686C;
-    width: 60vh;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-} */
-
-/* personajes generales */
-/* #personajes {
-    margin-top: 40px;
-    margin-bottom: 50px;
-} */
-
 .resultados {
     color: #00686C;
     display: flex;
@@ -469,15 +462,16 @@ h4 {
     font-style: italic;
 }
 
-.dosColumnas {
-    column-count: 2;
-    column-gap: 30px;
+.tresColumnas {
+    display: grid;
+    grid-template-columns: 430px 430px 430px;
 }
 
 .marchando {
     display: flex;
     width: 300px;
     margin: auto;
+    margin-top: 50px;
 }
 
 /* footer */

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="">
@@ -144,20 +144,23 @@
       <div class="contenedorTitulo">
         <h2 class="titulos">TÍTULOS</h2>
         <div class="barra"></div>
-        <p class="resultados">"Cont X" Títulos encontrados</p>
+        <div>
+          <h3 id="nroElementos" class="resultados">x</h3>
+        </div>
       </div>
       <br>
       <div class="tituloYBoton">
-        <button class="botonAZ">
+        <button class="botonAZ" id="botonAZ">
           <img class="flechasAZ" src="img/flechasAZ.png" alt="botón de cambio de orden">
         </button>
         <p class="AZ">A - Z</p>
+        <!-- Selector Filtros -->
         <div id ="directorList" class="directorList"></div>  
       </div>
       </div>
 
     <!--Listado de Titulos Generales-->
-    <div id="listaTitulos" class="dosColumnas">
+    <div id="listaTitulos" class="tresColumnas">
     </div>
   </section>
 

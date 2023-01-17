@@ -1,6 +1,9 @@
-import { titleList, listaDirectores, peliculasDirector } from './data.js';
-// import data from './data/lol/lol.js';
+import { titleList, peliculasDirector } from './data.js';
 
+// declaracion de variables a utilizar
+const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML
+const botonLista = document.getElementById("botonAZ"); // esta variable llama el botón A-Z
+const contenedorListaDirectores = document.getElementById("directorList"); // esta variable llama a la barra de selector de directores
 
 // funcionalidad del botón hacia arriba
 window.topFunction = () => {
@@ -8,116 +11,111 @@ window.topFunction = () => {
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
 }
 
-// console.log(titleList());
+// función del boton AZ
+botonLista.addEventListener("click", () => {
 
-const titulosHTML = () => {
-  const datosProcesados = titleList();
+  contenedorDisplayPeliculasPorTitulos.innerHTML = ''; // se vacía el contenedor de las películas
+
+  const titulosOrdenados = titleList().sort((a, b) => {
+    const tituloA = a.titulo.toLowerCase();
+    const tituloB = b.titulo.toLowerCase();
+
+    if (tituloA < tituloB) {
+      return -1;
+    }
+    if (tituloA > tituloB) {
+      return 1;
+    }
+    return 0;
+  });
+  titulosHTML(titulosOrdenados);
+//   titulosOrdenados.forEach((itemFilm) => {
+//     contenedorDisplayPeliculasPorTitulos.innerHTML += `
+//   <div class="contenedorPeliculas">
+//   <div>
+//     <img class="miniaturaPeliculas" src="${itemFilm.poster}">
+//   </div>
+//   <div class="descripcionPeliculas">
+//     <p> "${itemFilm.title}"</p>
+//     <p> Release Date: "${itemFilm.release_date}"</p>
+//     <p> Director: "${itemFilm.director}"</p>
+//     <p> Producer: "${itemFilm.producer}"</p>
+//   </div>
+// </div>`
+//   });
+});
+
+//LISTA DE TITULOS DE PELICULAS
+const titulosHTML = (listaPeliculas) => {
+
   let html = ''
-  datosProcesados.forEach((itemFilm) => {
+  listaPeliculas.forEach((itemFilm) => {
 
     html += `
   <div class="contenedorPeliculas">
     <div>
-      <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
+      <img class="miniaturaPeliculas" src="${itemFilm.poster}">
     </div>
     <div class="descripcionPeliculas">
-      <p> "${itemFilm.titulo}"</p>
-      <p> Release Date: "${itemFilm.lanzamiento}"</p>
+      <p> "${itemFilm.title}"</p>
+      <p> Release Date: "${itemFilm.release_date}"</p>
       <p> Director: "${itemFilm.director}"</p>
-      <p> Producer: "${itemFilm.productor}"</p>
+      <p> Producer: "${itemFilm.producer}"</p>
     </div>
   </div>`
-
   })
-  document.getElementById("listaTitulos").innerHTML = html
+  contenedorDisplayPeliculasPorTitulos.innerHTML = html
 }
-titulosHTML();
+titulosHTML(titleList());
 
-// const charactersHTML = () => {
-//   const datosPersonajes = peopleList();
-//   // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
-//   let html = ''
-//   datosPersonajes.forEach((itemCharacter, index) => {
-
-//     // console.log("personajes",itemCharacter, index);
-
-//     html += `
-//    <div class="contenedorPeliculas">
-//       <div>
-//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
-//       </div>
-//       <div class="descripcionPeliculas">  
-//           <p> Name: "${itemCharacter.nombre}"</p>
-//           <p> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//       </div>
-//    <div class="contenedorPeliculas">
-//       <div>
-//         <img class="miniaturaPeliculas" src="${itemCharacter.imagen}" alt="personajes por título">
-//       </div>
-//       <div class="descripcionPeliculas">  
-//           <p> Name: "${itemCharacter.nombre}"</p>
-//           <p> Gender: "${itemCharacter.genero}"</p>
-//           <p class="descripcionPeliculas"> Age: "${itemCharacter.edad}"</p>
-//           <p class="descripcionPeliculas"> Eye Color: "${itemCharacter.colorDeOjos}"</p>
-//           <p class="descripcionPeliculas"> Hair Color: "${itemCharacter.colorDePelo}"</p>
-//       </div>
-//     </div>`
-
-//   })
-//   document.getElementById("characterList").innerHTML = html
-// }
-// charactersHTML();
-
-// ejemplo();
-// peliculasDirector();
-listaDirectores();
-// listaDirectores().forEach ((itemDirector) => {
-//   console.log("peliculas x director", peliculasDirector(itemDirector));
-// })
-
+//Selector de Filtros - Directores - ++EN PRUEBA++
 const directorsHTML = () => {
-  const directorList = listaDirectores();
-  // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
+  
   let html = ''
-  // directorList.forEach((itemDirector) => {
 
-    // console.log("personajes",itemCharacter, index);
-
-    html += `
-        <label for="directorSelect">Películas por Director:</label>
-        <select name="directores" id="directorSelect">
-           // <option value="">--Elige un Director para ver sus películas--</option>
-            <option value="Hayao">Hayao Miyazaki</option>
-            <option value="Hayao2">Hayao2</option>
-            <option value="dir3">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
+  html += `
+        <label for="directorSelect"></label>
+        <select class="busquedaDirector" name="directores" id="directorSelect">
+           <option value="">—Busca por Directores—</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
         </select>`
-
-  // })
-  document.getElementById("directorList").innerHTML = html
+  contenedorListaDirectores.innerHTML = html
 }
 directorsHTML();
+console.log(titulosHTML.length);
 
 // funcionalidad *select directores*
-// Seleccionar elemento lista de directores
+// Seleccionar de la lista de directores
 const selectElement = document.getElementById("directorSelect");
-
+//console.log(selectElement);
 // agregar el evento change al elemento select
-selectElement.addEventListener('change', (event) => {
+selectElement.addEventListener("change", (event) => {
+  const directorSeleccionado = event.target.value;
+  titulosHTML(peliculasDirector(directorSeleccionado));
+
+  // document.getElementById("nroElementos").addEventListener("load", function(){ 
+  //   cantElements.textContent = cantElements.length;
+  // });
+  let numb = document.getElementById("listaTitulos").childElementCount;
+  document.getElementById("nroElementos").innerHTML = numb;
+
   
-  console.log("select",peliculasDirector("Hayao Miyazaki"));
+  // document.getElementById("nroElementos").innerHTML = "Se encontraron"
+  //   + peliculasDirector.length
+  //console.log(peliculasDirector(directorSeleccionado));
+  //console.log("select", peliculasDirector("Hayao Miyazaki"));
 });
 
-// funcionalidad *botón a-z*
-// const selectElement = document.getElementById("directorSelect");
-// selectElement.addEventListener('change', (event) => {
-//   alert("Hola");
-// });
-// console.log(example, data);
+// window.addEventListener("load", function() {
+//   var cantElementos
+//   document.getElementById('change').addEventListener()
+// })
 
-//Array.isArray(fruits);
+//*FUNCIONALIDAD SELECT PRODUCTORES*
+//*FUNCIONALIDAD BOTON LIMPIAR*
+//*FUNCIONALIDAD CONTADOR DE ELEMENTOS EN LA PAGINA TITULOS*
