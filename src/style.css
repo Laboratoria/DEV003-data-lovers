@@ -215,4 +215,37 @@ footer a img{
     margin-top: 3%;
 }
  
+/*nuevo*/
+.tarjetasestadistica{
+    background: #333;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+    border: solid #333 1px;
+    background: white;
+    border-radius: 5px;
+    height: 200px;  
+  }
+  .cuerpoTarjetasestadistica{
+    padding: 10px;
+    color: black;
+  }
+  .textoIntrodcutorioEstadistica{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    background-color: #0851fd47;  
+    padding: 1%;
+}
+#filtrarpoblacion{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    background-color: #0851fd47;  
+    padding: 1%;
+}
+
+
+
 
