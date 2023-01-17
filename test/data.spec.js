@@ -1,4 +1,4 @@
-import { filterData, /*orderAlf*/ } from '../src/data.js';
+import { filterData, orderAlf } from '../src/data.js';
 
 const mockCharacters=[{"name": "Rick Sanchez"}, {"name": "Morty Smith"}, {"name": "Summer Smith"}]
 describe('filterData', () => 
