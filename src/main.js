@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {filtroData, ordenar, estadistica} from './data.js'
+import {filtroData, ordenar, estadistica, calcular} from './data.js'
 
 
 const btnPokemon = document.querySelector("#btnPokemones")
@@ -120,11 +120,11 @@ SelectorElementoTipo.addEventListener("change", function(){
 //parte 1 datos para grafica
 const pobladoresKanto = estadistica(dataPokemons,"kanto");
 const pobladoresJohto = estadistica(dataPokemons,"johto");
-const porcentajepobladoresKanto = Math.round((pobladoresKanto.length*100)/251);
-const porcentajepobladoresJohto = Math.round((pobladoresJohto.length*100)/251);
+const porcentajepobladoresKanto = calcular(pobladoresKanto);
+const porcentajepobladoresJohto = calcular(pobladoresJohto);
 const catalogo4 = document.getElementById("pokemonesestadistica");
  
- 
+
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
  
@@ -145,8 +145,7 @@ function drawChart() {
  
   chart.draw(data, options);
 }
-   
- 
+    
 /*
 const newPorcentajes = [
   {region:"kanto", poblacion:`${pobladoresKanto.length}`, porcentaje:`${porcentajepobladoresKanto}`},

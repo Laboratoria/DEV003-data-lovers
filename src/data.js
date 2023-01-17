@@ -64,3 +64,8 @@ export function estadistica (pokemons, poblacion){
   const resumen = pokemons.filter((element) => element.generation.name.includes(poblacion));
   return resumen;
 }
+
+export function calcular (data){
+  const resultado = Math.round((data.length*100)/251);
+  return resultado
+}
