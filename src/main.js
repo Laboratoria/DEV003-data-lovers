@@ -1,21 +1,23 @@
-import { titleList, listaDirectores } from './data.js';
-// import data from './data/lol/lol.js';
+import { titleList, peliculasDirector } from './data.js';
 
-// declaracipon de variables a utilizar
-const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML
+// declaracion de variables a utilizar
+const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML de títulos
 const botonLista = document.getElementById("botonAZ"); // esta variable llama el botón A-Z
+const contenedorListaDirectores = document.getElementById("directorList") // esta variable llama a la barra de selector de directores
+const topButton = document.getElementById("topBtn") // esta variable llama al botón de scroll hacia arriba
 
 // funcionalidad del botón hacia arriba
-window.topFunction = () => {
+topButton.addEventListener("click", () => {
   document.body.scrollTop = 0; // para Safari
   document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
-}
+});
 
-// función del boton AZ
+// funcionalidad del boton A-Z
 botonLista.addEventListener("click", () => {
 
   contenedorDisplayPeliculasPorTitulos.innerHTML = ''; // se vacía el contenedor de las películas
 
+  // const titulosOrdenados = titleList().reverse(); // método utilizado para ordenar de la Z a la A, pero no sé cómo usarlo XD
   const titulosOrdenados = titleList().sort((a, b) => {
     const tituloA = a.titulo.toLowerCase();
     const tituloB = b.titulo.toLowerCase();
@@ -47,11 +49,12 @@ botonLista.addEventListener("click", () => {
 });
 
 
-// Lista de Títulos
-const titulosHTML = () => {
+//LISTA DE TITULOS DE PELICULAS
+const titulosHTML = (listaPeliculas) => {
 
   let html = ''
-  titleList().forEach((itemFilm) => {
+
+  listaPeliculas.forEach((itemFilm) => {
 
     html += `
   <div class="contenedorPeliculas">
@@ -68,50 +71,39 @@ const titulosHTML = () => {
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
 }
-titulosHTML();
+titulosHTML(titleList());
 
-// lista de directores filtrada
-listaDirectores().forEach ((itemDirector) => {
-  // console.log(peliculasDirector(itemDirector));
-})
-
-// selector de filtros
+//LISTA DE DIRECTORES FILTRADA
 const directorsHTML = () => {
-  const directorList = listaDirectores();
-  // console.log("lista de personajes de todas las peliculas como string con su imagen",datosPersonajes);
+
   let html = ''
-  // directorList.forEach((itemDirector) => {
-  // console.log("personajes",itemCharacter, index);
+
   html += `
-        <label for="directorSelect">Películas por Director:</label>
-        <select name="directores" id="directorSelect">
-           // <option value="">--Elige un Director para ver sus películas--</option>
-            <option value="Hayao">Hayao Miyazaki</option>
-            <option value="Hayao2">Hayao2</option>
-            <option value="dir3">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
+        <label for="directorSelect"></label>
+        <select class="busquedaDirector" name="directores" id="directorSelect">
+           <option value="">— Busca por Director —</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
         </select>`
-  // })
-  document.getElementById("directorList").innerHTML = html
+
+  contenedorListaDirectores.innerHTML = html
 }
 directorsHTML();
-listaDirectores();
 
-// funcionalidad barra select directores
-// const selectElement = document.getElementById("directorSelect");
+
+// Seleccionar de la lista de directores
+const selectElement = document.getElementById("directorSelect");
 
 // agregar el evento change al elemento select
-// selectElement.addEventListener('change', (event) => {
-  
-//   console.log("select", peliculasDirector("Hayao Miyazaki"));
-// });
+selectElement.addEventListener('change', (event) => {
 
-// funcionalidad *botón a-z*
-// const selectElement = document.getElementById("directorSelect");
-// selectElement.addEventListener('change', (event) => {
-//   alert("Hola");
-// });
+  const directorSeleccionado = event.target.value;
+  titulosHTML(peliculasDirector(directorSeleccionado));
+
+});
 
 // console.log(example, data);

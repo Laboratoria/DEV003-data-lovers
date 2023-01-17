@@ -13,14 +13,6 @@ export const titleList = () => {
     }
   });
 }
-
-// DIRECTORES: Filtro de peliculas por director
-export const peliculasDirector = (director) => {
-  return (ghibli.films.filter((e) => {
-    return e.director == director;
-  }));
-}
- 
 //  listar directores y usamos ...new Set para que no se repitan los elementos 
 export const listaDirectores = () => {
 
@@ -29,6 +21,14 @@ export const listaDirectores = () => {
   });
   return [ ...new Set(directoresg)];
 }
+
+// DIRECTORES: Filtro de peliculas por director
+export const peliculasDirector = (director) => {
+  return (ghibli.films.filter((e) => {
+    return e.director === director;
+  }));
+}
+ 
 // orden A-Z
 //   const dirsingular = 
 //   console.log(dirsingular);
