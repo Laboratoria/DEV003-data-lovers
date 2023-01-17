@@ -13,10 +13,10 @@
         <img src="img/pokrmonGo.png" alt="imagen Pokemon Go">
     <nav class="menu">
       <ul> 
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Pokemones</a></li>
-        <li><a href="#">Filtrar</a></li>
-        <li><a href="#">Multiplicador</a></li>
+        <li><a href="#" id="inicioNav">Inicio</a></li>
+        <li><a href="#" id="pokemonsNav">Pokemones</a></li>
+        <li><a href="#" id="filtroNav">Filtrar</a></li>
+        <li><a href="#" id="multiplicadorNav">Multiplicador</a></li>
       </ul>
     </nav>
   </header>
@@ -45,31 +45,46 @@
 
     <!--pagina donde muestra todos los pokemones-->
     <section class="pokemon" id="page2">
+      <div class="Ordenador"><label>Ordenar alfabeticamente: </label>
+      <select id="ordenarAlfabeto">
+        <option selected>selecciona</option>
+        <option id="aZ" value="aZ">De la A - Z</option>
+        <option id="zA" value="zA">De la Z - A.</option>
+        <option id="ascendente" value="ascendente">Ascendente</option>
+        <option id="descendente" value="descendente">Descendente</option>
       </select>
+    </div> 
+    <div class="mostrarPokemons" id="mostrarPokemons"></div>
+     
     </section>
     
     <!--filtro por tipo-->
     <section class="filtro" id="page3">
-      <label>filtro tipo: </label><select id="filtroTipo">
-        <option>Bug</option>
-        <option>Dark</option>
-        <option>Dragon</option>
-        <option>Electric</option>
-        <option>Fairy</option>
-        <option>Fighting</option>
-        <option>Fire</option>
-        <option>Flyng</option>
-        <option>Ghost</option>
-        <option>Grass</option>
-        <option>Ground</option>
-        <option>Ice</option>
-        <option>Normal</option>
-        <option>Poison</option>
-        <option>Psichi</option>
-        <option>Rock</option>
-        <option>Steel</option>
-        <option>Water</option>
+      <div class="selectordetipo">
+      <label>Filtro tipo: </label>
+      <select id="filtroTipo">
+        <option value="selecciona">selecciona</option>
+        <option value="bug">Bug</option>
+        <option value="dark">Dark</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="steel">Steel</option>
+        <option value="water">Water</option>
       </select>
+    </div>
+    <div class="pokemonesFiltrados" id="pokemonesFiltrados"></div>
 
       <!--pagina del multiplicador-->
     </section>
@@ -81,9 +96,8 @@
   </main>
 
   <!--links redes sociales-->
-  <footer>Proyecto Data Lovers by Sara Sierra y Rossanna Ariza
-<a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a>
-</footer>
+  <footer><p><a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a></p>
+<p>Proyecto Data Lovers by Sara Sierra y Rossanna Ariza</p></footer>
 
   <script src="main.js" type="module"></script>
 </body>
