@@ -107,7 +107,7 @@ navToggle.addEventListener("click", () => {
 const books = getData("books");
 const booksPage = document.querySelector(".books");
 const dataLibros = document.querySelector("#data-libros");
-console.log(dataLibros,'hi')
+
 
 booksPage.addEventListener("click", () => {
   booksPage.setAttribute("class", "subrayado");
