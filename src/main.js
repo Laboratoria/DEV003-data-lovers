@@ -1,4 +1,12 @@
-import { getData, sortMe, createCharEl, charFilters, calculo } from "./data.js";
+import {
+  getData,
+  sortMe,
+  createCharEl,
+  charFilters,
+  calculo,
+  createBooksEl,
+  // createPotionsEl,
+} from "./data.js";
 
 const characters = getData("characters");
 sortMe(characters);
@@ -13,6 +21,8 @@ const calculoPersonajes = document.getElementById("calculo");
 //MUESTRA TODOS LOS PERSONAJES
 charactersPageBtn.addEventListener("click", () => {
   charactersPageBtn.setAttribute("class", "subrayado");
+  const containerBooks = document.querySelector("#data-libros");
+  containerBooks.innerHTML = "";
   document.querySelector(".filtros-data").style.display = "inline-block";
   characters.map((character) => {
     createCharEl(character, dataSection);
@@ -67,7 +77,7 @@ clearFilter.addEventListener("click", () => {
   calculoPersonajes.innerHTML = "Hay 707 personajes";
 });
 
-//BUSCADOR
+//BUSCADOR PERSONAJES
 document.addEventListener("keyup", (e) => {
   if (e.target.matches("#buscador")) {
     if (e.key === "Escape") e.target.value = "";
@@ -93,4 +103,31 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-//OTRO CAMBIO!!!
+// MOSTRAR LIBROS
+const books = getData("books");
+const booksPage = document.querySelector(".books");
+const dataLibros = document.querySelector("#data-libros");
+
+
+booksPage.addEventListener("click", () => {
+  booksPage.setAttribute("class", "subrayado");
+  document.getElementById("filtros-data").style.display = "none";
+  books.map((book) => {
+    createBooksEl(book, dataLibros);
+  });
+});
+
+//MOSTRAR POTIONS
+
+// const potions = getData('potions');
+// const potionsPage= document.querySelector(".potions");
+// const dataPotions= document.querySelector("#data-pociones");
+
+// potionsPage.addEventListener("click", () => {
+//   potionsPage.setAttribute("class", "subrayado");
+//   potions.map((potion) => {
+//     createPotionsEl(potion, dataPotions);
+//   });
+// });
+
+
