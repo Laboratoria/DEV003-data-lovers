@@ -36,6 +36,7 @@ export const listaDirectores = () => {
   const directoresg = ghibli.films.map((listaCompletaDirectores) => {
     return listaCompletaDirectores.director;
   });
+  // eslint-disable-next-line
   return [ ...new Set(directoresg)];
 }
 

@@ -7,6 +7,8 @@ const contenedorListaDirectores = document.getElementById("directorList") // est
 const topButton = document.getElementById("topBtn") // esta variable llama al botón de scroll hacia arriba
 let titleListGenerado = titleList(); // esta variable muestra el array de películas al cargar el DOM
 let primerClick = true; // esta variable es un booleano que al cargar el DOM siempre será true
+const numeroDeElementos = document.getElementById("nroElementos"); // variable que llama al contenedor de los elementos contados
+const porcentajeDelTotal = document.getElementById("porcentajeElementos");
 
 // evento del botón hacia arriba
 topButton.addEventListener("click", () => {
@@ -37,13 +39,13 @@ contenedorListaDirectores.addEventListener('change', (event) => {
 
 });
 
-//lista completa de películas
+// lista completa de películas
 const titulosHTML = (listaPeliculas) => {
 
   let html = ''
 
   listaPeliculas.forEach((itemFilm) => {
-  //console.log(itemFilm.personajes); // crear for
+
     html += `
   <div class="contenedorPeliculas">
     <div>
@@ -59,9 +61,25 @@ const titulosHTML = (listaPeliculas) => {
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
+  contador(listaPeliculas);
+  // porcentajes(listaPeliculas);
 }
 
-//filtro de lista de directores
+// contador de elementos
+const contador = (listaPeliculas) => {
+  const contadorElements = listaPeliculas.length
+  numeroDeElementos.innerHTML = contadorElements + " movies found.";
+  const porcentajesDirector = (contadorElements * 100) / 20;
+  porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
+}
+
+// const porcentajes = (listaPeliculas) => {
+//   const contadorDelTotal = listaPeliculas.length
+//   const porcentajesDirector = (20 * contadorDelTotal) / 100
+//   porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
+// }
+
+// filtro de lista de directores
 const directorsHTML = () => {
 
   let html = ''
@@ -80,6 +98,7 @@ const directorsHTML = () => {
   contenedorListaDirectores.innerHTML = html
 }
 
+// funciones ejecutadas
 titulosHTML(titleListGenerado);
 directorsHTML();
 
