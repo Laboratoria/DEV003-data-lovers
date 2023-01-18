@@ -111,10 +111,7 @@ const dataLibros = document.querySelector("#data-libros");
 
 booksPage.addEventListener("click", () => {
   booksPage.setAttribute("class", "subrayado");
-  // document.getElementById("sombrero-globo").style.display= "none"
   document.getElementById("filtros-data").style.display = "none";
-  // const containerBooks = document.querySelector("#data-libros");
-  // containerBooks.innerHTML = "";
   books.map((book) => {
     createBooksEl(book, dataLibros);
   });
