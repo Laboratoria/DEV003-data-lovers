@@ -5,7 +5,7 @@ import {
   charFilters,
   calculo,
   createBooksEl,
-  createPotionsEl,
+  // createPotionsEl,
 } from "./data.js";
 
 const characters = getData("characters");
