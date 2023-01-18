@@ -63,7 +63,6 @@ Sin embargo, una vez obtenida las historias de usuario se realizo un boceto orie
 ![PrototipoAlta1](/src/img/Palta1.jpg)
 ![PrototipoAlta2](/src/img/Palta2.jpg)
 ![PrototipoAlta3](/src/img/Palta3.jpg)
-![PrototipoAlta4](/src/img/Palta4.jpg)
 
 
   * [Link Figma](https://www.figma.com/file/4mFJWgPWrTPYWmuMZyt90o/Untitled?node-id=0%3A1&t=OD03J3kW2PDgPzH8-0)

@@ -1,6 +1,8 @@
 body{
     background-image: url("img/fondo4.jpg");
     background-repeat: no-repeat; 
+    background-size: cover;
+
     height:calc(100vh-3em); /*mantiene la proporcion de la imagen para completar todo el contenedor*/
 }
 
@@ -12,14 +14,9 @@ body{
     width: 100%;
 
 }
-
 section.introduccion h3{
     color: white;
 }
-
-
-
-
 
 
 /*menu de navegacion*/
@@ -36,7 +33,7 @@ header{
     height: 4em; /*tamaño icono del menu*/
 }
 header label{ 
-    display: none;
+    display: none; /*ocultar icono menu*/
 }
 header label:hover{
     cursor: pointer;
@@ -125,10 +122,10 @@ margin: 4% 42%;
 
 @media (max-width: 800px) {
     #btnPokemones{
-        height: 3em; /*largo del boton*/
-        width: 15em; /*ancho del boton*/
-        font-size: 50%; /*tamaño de la letra*/
-        margin-left:  40%;
+        height: 6em; /*largo del boton*/
+        width: 17em; /*ancho del boton*/
+        font-size: 58%; /*tamaño de la letra*/
+        margin-left:  36%;
     }
     
 }
@@ -215,37 +212,63 @@ footer a img{
     margin-top: 3%;
 }
  
-/*nuevo*/
+/*tarjetas parte estadistica*/
+.textoIntrodcutorioEstadistica{
+    text-align: center;
+    border: solid #2DA4CA 0.2em;
+    background: #87cfebbc;
+    border-radius: 0.05em;
+    color: white;
+    font-size: 150%; 
+    font-weight: 600;
+    padding: 1%;
+    height: 20%;
+    width: 40%;
+    margin-left: 28%;
+
+}
+
 .tarjetasestadistica{
-    background: #333;
-    padding: 10px;
-    display: inline-flex;
-    flex-direction: column;
-    width: 300px;
-    border: solid #333 1px;
-    background: white;
-    border-radius: 5px;
-    height: 200px;  
-  }
-  .cuerpoTarjetasestadistica{
-    padding: 10px;
-    color: black;
-  }
-  .textoIntrodcutorioEstadistica{
+    width: 40%; 
+    border: solid #2DA4CA 0.2em;
+    background: #87cfebbc;
+    border-radius: 0.05em;
+    height: 20%; 
+    font-size: 150%;
+    font-weight: 600;
     text-align: center;
-    color: white;
-    font-size: 1.5em;
-    background-color: #0851fd47;  
-    padding: 1%;
-}
+    color:#FFFFFF;
+    margin-top: 3%;
+    margin-left: 28%;
+  }
+  @media (max-width: 800px) {
+    .textoIntrodcutorioEstadistica{
+        height: 30%;
+        width: 90%;
+        margin-left: 3%;
+    }
+    .tarjetasestadistica{
+        height: 30%;
+        width: 90%;
+        margin-left: 3%;
+    }
+  }
+  
+
+/*select de generacion*/
 #filtrarpoblacion{
+    font-size: 200%;
+    font-weight: bold;
     text-align: center;
-    color: white;
-    font-size: 1.5em;
-    background-color: #0851fd47;  
-    padding: 1%;
+    color: #FFFFFF;
+    margin-left: 25%;
 }
-
-
-
-
+#ordenarRegion{
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2DA4CA;
+    border: 2% white solid;
+    margin-top: 4%;
+    margin-left: center;
+}

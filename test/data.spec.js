@@ -1,4 +1,4 @@
-import { filtroData, ordenar, estadistica, calcular } from '../src/data.js';
+import { filtroData, ordenar, estadisticaFiltro, calcular } from '../src/data.js';
 
 //pruebas filtro
 describe('filtroData', () => {
@@ -95,11 +95,11 @@ describe('ordenar', () => {
   })
 });
  
-// pruebas multiplicador
-describe('estadistica', () => {
+// pruebas filtro para estadistica
+describe('estadisticaFiltro', () => {
  
   it('es una funcion', () =>{
-    expect(typeof estadistica).toEqual('function')
+    expect(typeof estadisticaFiltro).toEqual('function')
   })
   it('deberia retornar el pokemon con la region "Kanto"', () => {
     const pokemons = [{
@@ -174,7 +174,7 @@ describe('estadistica', () => {
     }];
  
     const condicion = "kanto";
-    const orden = estadistica(pokemons, condicion);
+    const orden = estadisticaFiltro(pokemons, condicion);
     expect(orden.length).toEqual(4)
     expect(orden[0].name).toEqual('bulbasaur');
     expect(orden[1].name).toEqual('charmander');
@@ -183,7 +183,7 @@ describe('estadistica', () => {
   });
 });
 
-//pruebas filtro
+//pruebas calcular
 describe('calcular', () => {
 
   it('es una funcion', () =>{

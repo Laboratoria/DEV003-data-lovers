@@ -60,7 +60,7 @@ export function filtroData (pokemons, condicion) {
 }
  
 //funcion estadistica
-export function estadistica (pokemons, poblacion){
+export function estadisticaFiltro (pokemons, poblacion){
   const resumen = pokemons.filter((element) => element.generation.name.includes(poblacion));
   return resumen;
 }

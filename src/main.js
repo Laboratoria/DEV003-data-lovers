@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {filtroData, ordenar, estadistica, calcular} from './data.js'
+import {filtroData, ordenar, estadisticaFiltro, calcular} from './data.js'
 
 
 const btnPokemon = document.querySelector("#btnPokemones")
@@ -55,9 +55,9 @@ function mostrarData (dataAll){
       <div class="cuerpoTarjetas">
       <img src="${dataAll.img}"/>
       <h3 class="idPokemon">${dataAll.num}</h3><h3 class="nombrePokemon">${dataAll.name.toUpperCase()}</h3>
-      <h4 class="peso">Peso: ${dataAll.size.weight}</h4>
-      <h4 class="altura">Altura: ${dataAll.size.height}</h4>
-      <h4 class="tipo">Tipo: ${dataAll.type}</h4>
+      <h4 class="peso">Weight: ${dataAll.size.weight}</h4>
+      <h4 class="altura">Height: ${dataAll.size.height}</h4>
+      <h4 class="tipo">Type: ${dataAll.type}</h4>
       <p class="about"> ${dataAll.about}</p>
       <p class=""></p>
     </div>
@@ -98,9 +98,9 @@ SelectorElementoTipo.addEventListener("change", function(){
         <div class="cuerpoTarjetas">
         <img src="${dataAll.img}"/>
         <h3 class="idPokemon">${dataAll.num}</h3><h3 class="nombrePokemon">${dataAll.name.toUpperCase()}</h3>
-        <h4 class="peso">Peso: ${dataAll.size.weight}</h4>
-        <h4 class="altura">Altura: ${dataAll.size.height}</h4>
-        <h4 class="tipo">Tipo: ${dataAll.type}</h4>
+        <h4 class="peso">Weight: ${dataAll.size.weight}</h4>
+        <h4 class="altura">Height: ${dataAll.size.height}</h4>
+        <h4 class="tipo">Type: ${dataAll.type}</h4>
         <p class="about"> ${dataAll.about}</p>
         <p class=""></p>
       </div>
@@ -118,8 +118,8 @@ SelectorElementoTipo.addEventListener("change", function(){
 //funcion estadistica
  
 //parte 1 datos para grafica
-const pobladoresKanto = estadistica(dataPokemons,"kanto");
-const pobladoresJohto = estadistica(dataPokemons,"johto");
+const pobladoresKanto = estadisticaFiltro(dataPokemons,"kanto");
+const pobladoresJohto = estadisticaFiltro(dataPokemons,"johto");
 const porcentajepobladoresKanto = calcular(pobladoresKanto);
 const porcentajepobladoresJohto = calcular(pobladoresJohto);
 const catalogo4 = document.getElementById("pokemonesestadistica");
@@ -188,7 +188,7 @@ const SelectorElementoPoblacion = document.getElementById("ordenarRegion");
 SelectorElementoPoblacion.addEventListener("change", function (){
   const opcionSeleccionada = this.options[SelectorElementoPoblacion.selectedIndex];
   const catalogo3 =document.getElementById("mostrarRegionElemento");
-  const nuevaData = estadistica(dataPokemons, opcionSeleccionada.value);
+  const nuevaData = estadisticaFiltro(dataPokemons, opcionSeleccionada.value);
   catalogo3.innerHTML="";
  
  
