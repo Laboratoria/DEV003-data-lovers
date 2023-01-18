@@ -68,7 +68,7 @@ const directorsHTML = () => {
 
   html += `
         <select class="busquedaDirector" id="directorSelect" name="directores">
-           <option value="">— Busca por Director —</option>
+           <option value="">— Search by Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
             <option value="Isao Takahata">Isao Takahata</option>
             <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
