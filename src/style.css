@@ -187,7 +187,7 @@ nav.categorias li:hover {
 }
 
 /* películas destacadas */
-h3 {
+/* h3 {
     text-align: center;
     color: #00686C;
 }
@@ -230,10 +230,10 @@ h3 {
 
 h4 {
     margin-top: 15px;
-}
+} */
 
 /* películas más votadas */
-.barraMasVotadas {
+/* .barraMasVotadas {
     display: flex;
     justify-content: center;
     color: #FAD928;
@@ -241,7 +241,7 @@ h4 {
     width: 350px;
     height: 18px;
     margin: 0 auto;
-}
+} */
 
 /* titulos */
 .botonAZ {
@@ -299,7 +299,7 @@ h4 {
     justify-content: flex-start;
     align-items: center;
     margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 30px;  
 }
 
 .miniaturaPeliculas {
@@ -317,7 +317,7 @@ h4 {
 }
 
 /* directores y productores */
-.columnaDirPro {
+/* .columnaDirPro {
     display: flex;
     flex-direction: column;
 }
@@ -342,7 +342,7 @@ h4 {
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
-}
+} */
 
 /* info completa por película */
 .parteSuperior {
@@ -374,78 +374,6 @@ h4 {
     margin: 0 auto;
 }
 
-/* info pelicula superior */
-/* .peliculaEnDetalle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 50px 50px 50px;
-}
-
-.dirproEnDetalle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 50px 50px 50px;
-}
-
-.imgDetalle {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 50px;
-}
-
-.portadaTDP {
-    width: 300px;
-    border-radius: 20px;
-}
-
-.dosParrafos {
-    color: #00686C;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-    line-height: 25px;
-}
-
-.dosParrafos p {
-    width: 50vh;
-} */
-
-/* estadísticas laterales */
-/* .estadisticas {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-}
-
-.medallaRanking {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.medalla {
-    width: 50px;
-    margin-right: 20px;
-}
-
-.ranking {
-    color: #00686C;
-}
-
-.imgEstadisticas {
-    width: 400px;
-    margin-bottom: 30px;
-}
-
-.conclusiones {
-    color: #00686C;
-    line-height: 25px;
-    width: 80vh;
-} */
-
 /* personajes de película en detalle*/
 .tituloYBoton {
     display: flex;
@@ -464,7 +392,7 @@ h4 {
 
 .tresColumnas {
     display: grid;
-    grid-template-columns: 430px 430px 430px;
+    grid-template-columns: 470px 470px 470px;
 }
 
 .marchando {
