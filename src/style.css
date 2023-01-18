@@ -140,14 +140,32 @@ main {
   display: none;
 }
 
-#show-data {
+
+.book-card{
+  background-color: #c5a227;
+  width: 364px;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+
+}
+#show-data,
+#data-libros{
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.book-info li{
+  list-style: none;
+  font-size: medium;
+  font-family: "Purple 3";
+  margin: 5px;
 
-.character-card {
+}
+
+.character-card{
   background-color: #c5a227;
   width: 150px;
   height: auto;
