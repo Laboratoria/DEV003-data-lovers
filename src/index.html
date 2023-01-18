@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--menu de opciones-->
+  <div></div>
+  <img id="logoImg" src="img/logo.png">
+  <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="btnMenu">
+           <img  id="menuImg" src="img/menu.png">
+        </label>
+        <nav class="menu">
+      <ul>
+        <li><a href="#" id="inicioNav">HOME</a></li>
+        <li><a href="#" id="pokemonsNav">POKEMONS</a></li>
+        <li><a href="#" id="filtroNav">FILTER</a></li>
+        <li><a href="#" id="multiplicadorNav">GENERATION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <main>
+    <!--descripcion de pokemon go-->
+    <section class="introduccion" id="page1">
+      <div id="introduccionTexto">
+      <h2>What is it and how does pokemon go work?</h2>
+      <p>It is an augmented reality video game. Internet connection is required to play, it is a free game but it contains microtransactions. The game consists of finding and capturing characters from the Pokémon saga hidden in real-world locations and fighting with them, which involves physically moving through the streets of the city to progress. complete your Pokédex, strengthen yourself and battle online with other trainers during PvP Raid combat. Evolve your Pokémon to make them stronger in this game</p>
+   <!--enlace para descargar aplicacion-->
+      <p> You want to download the application follow the link <a
+          href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_CO&gl=US&pli=1">
+download the app</a></p>
+
+        </div>
+          <div id="boton">
+   <!--boton que lleva a page2 y muestra los pokemones-->
+      <button id="btnPokemones">MEET THE POKEMONS</button>
+    </div>
+    </section>
+
+    <!--pagina donde muestra todos los pokemones-->
+    <section class="pokemon" id="page2">
+      <div class="Ordenador"><label>Sort Pokemon: </label>
+      <select id="ordenarAlfabeto">
+        <option selected>Select</option>
+        <option id="aZ" value="aZ">From A-Z</option>
+        <option id="zA" value="zA">From Z - A</option>
+        <option id="ascendente" value="ascendente">Ascending</option>
+        <option id="descendente" value="descendente">Descending</option>
+      </select>
+    </div>
+    <div class="mostrarPokemons" id="mostrarPokemons"></div>
+
+    </section>
+
+    <!--filtro por tipo-->
+    <section class="filtro" id="page3">
+      <div class="selectordetipo"><label>Filter by type: </label>
+      <select id="filtroTipo">
+        <option value="selecciona">Select</option>
+        <option value="bug">Bug</option>
+        <option value="dark">Dark</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="steel">Steel</option>
+        <option value="water">Water</option>
+      </select>
+    </div>
+    <div class="pokemonesFiltrados" id="pokemonesFiltrados"></div>
+    </section>
+
+      <!--pagina del multiplicador-->
+     <section class="Multiplicador" id="page4">
+        <div id="grafica">
+          <p class="textoIntrodcutorioEstadistica"> Next you will see a graph where you can see the percentage of pokemons that you can find in each region.</p>
+        </div>
+   
+        <div id="chart_div"></div>
+       
+        <div class="pokemonesestadistica" id="pokemonesestadistica"></div>
+   
+        <div class="filtradosPoblacion" id="filtradosPoblacion">
+          <label id="filtrarpoblacion">Select the region, to validate the pokemons you can find </label>
+          <select id="ordenarRegion">
+            <option selected>select</option>
+            <option id="kanto" value="kanto">Kanto</option>
+            <option id="johto" value="johto">Johto</option>
+          </select>
+        </div>
+        <div class="mostrarRegionElemento" id="mostrarRegionElemento"></div> 
+      </section>
+    </main>
+
+  <!--links redes sociales-->
+   <footer><p><a title="Facebbok" href="https://es-la.facebook.com/PokemonGO/" target="_blank"><img src="img/facebook.png" alt="Faceboock"></a><a title="Instagram" href="https://www.instagram.com/pokemongoapp/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <a title="Twitter" href="https://twitter.com/pokemongoappla" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <a title="Youtube" href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blanck"><img src="img/youtube.png" alt="Youtube"></a></p>
+<p>Data Lovers Project by Sara Sierra and Rossanna Ariza.</p></footer> 
+
+  <script src="main.js" type="module"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+
 </html>

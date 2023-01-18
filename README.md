@@ -2,6 +2,93 @@
 
 ## Índice
 
+* [1. Definición del producto](#1-definición-del-producto)
+* [2. Historias de usuarios](#2-historias-de-usuarios)
+* [3. Diseño de la Interfaz de Usuario](#3-diseño-de-la-Interfaz-de-Usuario)
+* [4. Testeos de usabilidad](#4-testeos-de-usabilidad)
+
+***
+
+## 1. Definición del producto
+
+Se desarrolló una interfaz “Data lover” la cual va dirigida a todo público que sea usuario o esté interesado en ser usuario de la aplicación pokemon go, los cuales tienen como objetivo principal atrapar distintos Pokémon para completar su Pokédex. Entre los datos  más relevantes que se visualizan en la interfaz son: la imagen y nombre del pokémon, e información del pokémon.
+
+## 2. Historias de usuarios
+
+Con base a la data seleccionada:
+
+* [Pokémon](src/data/pokemon/pokemon.json):
+  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
+  y Johto, junto con sus respectivas estadísticas usadas en el juego
+  [Pokémon GO](http://pokemongolive.com).
+  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+
+Se generó un formulario en donde se obtuvo información de usuarios de la aplicación Pokemon Go para encontrar las necesidades y poder realizar un boceto para la maquetación orientada al usuario, las preguntas que se realizaron fueron “¿Juegas o jugaste Pokemon Go?” “¿Qué conoces de Pokemon Go?” “Si existiera una pagina que te ayude dando información sobre los pokemons ¿Qué información esperas encontrar?” “ Si pudieras filtrar 251 pokemons ¿Qué categorías prefieres?”.
+[Link formulario](https://docs.google.com/forms/d/1Y-qEd0YMQa30W48JFRQJM1flDyYRYIqmevY_kta9JaI/edit)
+
+Los resultados obtenidos fueron de 7 usuarios en donde:
+
+![Formulario1](/src/img/formulario1.jpg)
+![Formulario2](/src/img/formulario2.jpg)
+![Formulario3](/src/img/formulario3.jpg)
+![Formulario4](/src/img/formulario4.jpg)
+
+De los cuales se extrajeron 3 historias definidas, se identificó al usuario resolviendo las siguientes dudas:
+¿Quiénes son los usuarios del producto? Personas que juegan, jugaron  o están interesadas en jugar con la app Pokemon GO.
+¿Cuáles son los objetivos que debe cumplir el producto? Principal objetivo brindar un catálogo de pokemones en una interfaz de fácil uso.
+¿Cuáles son los datos que quieren ver en la interfaz? Datos generales como peso, altura, tipos, ubicación, debilidades y fortalezas; el porqué se llama pokemon go e instrucciones de uso de la app.
+¿Cuándo utilizan o utilizarían el producto? Nuevos usuarios de la app Pokemon Go, usuarios antiguos antes de atrapar sus pokemones o los que ya tengan para tener información sobre cada pokémon para alguna batalla.
+
+![HistoriaDeUsuario1](/src/img/HU1.jpg)
+![HistoriaDeUsuario2](/src/img/HU2.jpg)
+![HistoriaDeUsuario3](/src/img/HU3.jpg)
+
+
+## 3. Diseño de la Interfaz de Usuario
+
+### Prototipo de baja fidelidad
+
+El primera maqueta estaba orientada según las creencias de necesidades del usuario:
+
+![PrototipoBaja1](/src/img/Pbaja1.jpg)
+
+Sin embargo, una vez obtenida las historias de usuario se realizo un boceto orientado a sus necesidades: se buscó realizar una interfaz de uso intuitivo, que diera un primer vistazo a la app pokemon Go y redireccionará para más información, acceder a toda la información de pokemones y poder filtrar según los intereses de los usuarios.
+
+![PrototipoBaja2](/src/img/Pbaja2.jpg)
+![PrototipoBaja3](/src/img/Pbaja3.jpg)
+
+
+### Prototipo de alta fidelidad
+
+![PrototipoAlta1](/src/img/Palta1.jpg)
+![PrototipoAlta2](/src/img/Palta2.jpg)
+![PrototipoAlta3](/src/img/Palta3.jpg)
+
+
+  * [Link Figma](https://www.figma.com/file/4mFJWgPWrTPYWmuMZyt90o/Untitled?node-id=0%3A1&t=OD03J3kW2PDgPzH8-0)
+
+
+## 4. Testeos de usabilidad
+
+Testeos de usabilidad
+Se realizó test a 5 usuarios al finalizar proyecto diligenciando la siguiente información:
+
+![FormularioTestUsabilidad](/src/img/TestUsabilidad.jpg)
+
+Los resultados obtenidos fueron los siguientes:
+
+
+Lo cual permitió generar cambios en cuanto ……
+
+
+
+
+________________________________________________________________________________________________________________________
+
+# Data Lovers
+
+## Índice
+
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)

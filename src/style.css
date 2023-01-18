@@ -1,0 +1,274 @@
+body{
+    background-image: url("img/fondo4.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    height:calc(100vh-3em); /*mantiene la proporcion de la imagen para completar todo el contenedor*/
+}
+
+/*section descripcion pokemon go*/
+#introduccionTexto{
+    background-color: #8bd4e893;
+    color: #FFFFFF;
+    font-size:  150%;
+    width: 100%;
+
+}
+section.introduccion h3{
+    color: white;
+}
+
+
+/*menu de navegacion*/
+header{
+    width: 100%; /*ocupar el ancho de la pagina*/
+    background-color: #2DA4CA ;
+}
+#check{
+    display: none; /*ocultar input check*/
+}
+
+/*icono menu*/
+#menuImg{
+    height: 4em; /*tamaño icono del menu*/
+}
+header label{ 
+    display: none; /*ocultar icono menu*/
+}
+header label:hover{
+    cursor: pointer;
+    background-color: #87CEEB;
+}
+/*menu - letras - diseño de la lista*/
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /*alineará todos los elementos flexibles con el extremo derecho del contenedor */
+}
+.menu li a{
+    display: block;
+    padding: 1em 1.5em;
+    color: white;
+    text-decoration: none;
+    font-size: 180%;
+    font-family: italic;
+    font-weight: bold;
+}
+.menu li:hover{
+    background-color: #87CEEB;
+}
+
+/*media queries*/
+@media (max-width: 800px){
+    header label{
+        display: block; /*el icono del menu se muestra*/
+    }
+    .menu{  /*menu de opciones*/
+        position: absolute;
+        background-color: #2DA4CA;
+        width: 70%;
+        margin-left: -75%;
+        transition: all 0.5s;
+    }
+    .menu ul{ 
+        flex-direction: column;
+        padding-left: 1em;
+    }
+    .menu li{
+        border-top: 1px solid #87CEEB ;
+    }
+    .menu li a{
+        padding: 0.5em 1em;
+    }
+    #check:checked ~ .menu{ /*despues del input check seleccionara toda la clase menu*/
+        margin: 0; /*checked: El usuario puede activar este estado marcando/seleccionando un elemento, o desactivarlo desmarcando/deseleccionando el elemento*/
+
+    }
+    #logoImg{
+        height: 8em;
+    }
+}
+@media (max-width: 350px){
+    
+    .menu{  /*menu de opciones*/
+        width: 150%;
+        margin-left: -170%;
+        font-size: 40%;
+    }
+    #menuImg{
+        height: 2em; /*tamaño icono del menu*/
+    }
+}
+
+/*boton conoce a los pokemones*/
+#btnPokemones{
+height: 4em; /*largo del boton*/
+width: 20em; /*ancho del boton*/
+font-size: 80%; /*tamaño de la letra*/
+background-color: #2DA4CA;
+border: #2DA4CA;
+border-radius: 1.5em; /*redondear bordes*/
+font-family: italic; /*fuente de letras*/
+font-weight:900;
+color:#FFFFFF;
+margin: 4% 42%;
+}
+
+#btnPokemones:hover{
+    background-color: #87CEEB;
+}
+
+@media (max-width: 800px) {
+    #btnPokemones{
+        height: 6em; /*largo del boton*/
+        width: 17em; /*ancho del boton*/
+        font-size: 58%; /*tamaño de la letra*/
+        margin-left:  36%;
+    }
+    
+}
+/*links redes sociales*/
+footer{
+    text-align: center;
+    color: white;
+}
+
+footer a img{
+    width: 1.5em;
+    height: 1.5em;
+} 
+
+/*mostrar y ocultar*/
+.introduccion{
+    display: block;
+}
+.pokemon{
+    display: none; 
+}
+.filtro{
+    display: none;
+}
+.Multiplicador{
+    display: none;
+}
+
+/*tarjetas*/
+.TarjetasPokemon{ 
+    display: none;
+   
+    padding: 1.7em;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .tarjetas{ 
+    width: 19em; 
+    border: solid #2DA4CA 1em;
+    background: white;
+    border-radius: 0.05em;
+    height: 31em ; 
+    
+    
+  }
+  .cuerpoTarjetas{
+    padding: 0.7em;
+  }
+  .nombrePokemon{
+    text-align: center;
+  } 
+
+/*select pagina 2*/
+.Ordenador{
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+#ordenarAlfabeto{
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2DA4CA;
+    border: 2% white solid;
+    margin-top: 3%;
+   
+}
+
+/*selec pagina 3*/
+.selectordetipo{
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+#filtroTipo{
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2DA4CA;
+    border: 2% white solid;
+    margin-top: 3%;
+}
+ 
+/*tarjetas parte estadistica*/
+.textoIntrodcutorioEstadistica{
+    text-align: center;
+    border: solid #2DA4CA 0.2em;
+    background: #87cfebbc;
+    border-radius: 0.05em;
+    color: white;
+    font-size: 150%; 
+    font-weight: 600;
+    padding: 1%;
+    height: 20%;
+    width: 40%;
+    margin-left: 28%;
+
+}
+
+.tarjetasestadistica{
+    width: 40%; 
+    border: solid #2DA4CA 0.2em;
+    background: #87cfebbc;
+    border-radius: 0.05em;
+    height: 20%; 
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+    color:#FFFFFF;
+    margin-top: 3%;
+    margin-left: 28%;
+  }
+  @media (max-width: 800px) {
+    .textoIntrodcutorioEstadistica{
+        height: 30%;
+        width: 90%;
+        margin-left: 3%;
+    }
+    .tarjetasestadistica{
+        height: 30%;
+        width: 90%;
+        margin-left: 3%;
+    }
+  }
+  
+
+/*select de generacion*/
+#filtrarpoblacion{
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 25%;
+}
+#ordenarRegion{
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2DA4CA;
+    border: 2% white solid;
+    margin-top: 4%;
+    margin-left: center;
+}
