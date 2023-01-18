@@ -4,24 +4,23 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 
 ## Historias de Usuarios
 
-| Historia de usuario 1 (Personajes)   | Criterios de aceptación |
-| :------------ |:---------------:
-| Yo como usuario, .      | Tener visibles las opciones para escoger entre diferentes filtros | 
-|Quiero poder ver la información de los personajes, género y casa    | **Definición de terminado**        |
-| para que sea más fácil encontrar algún personaje. | Al seleccionar el filtro muestre los resultados deseados       |
+| Historia de usuario 1 (Personajes)                               |                      Criterios de aceptación                      |
+| :--------------------------------------------------------------- | :---------------------------------------------------------------: |
+| Yo como usuario, .                                               | Tener visibles las opciones para escoger entre diferentes filtros |
+| Quiero poder ver la información de los personajes, género y casa |                    **Definición de terminado**                    |
+| para que sea más fácil encontrar algún personaje.                |     Al seleccionar el filtro muestre los resultados deseados      |
 
-| Historia de usuario 2 (Casas)   | Criterios de aceptación |
-| :------------ |:---------------:
-| Yo como usuario,     | Que se vea cada casa y la cantidad de estudiantes de cada una | 
-| quiero saber cuantos estudiantes hay por casa     | **Definición de terminado**        |
-| Para saber cual es la más popular. | Cuando el usuario filtre por casa aparecerá el número de estudiantes de cada casa.       |
+| Historia de usuario 2 (Casas)                 |                              Criterios de aceptación                               |
+| :-------------------------------------------- | :--------------------------------------------------------------------------------: |
+| Yo como usuario,                              |           Que se vea cada casa y la cantidad de estudiantes de cada una            |
+| quiero saber cuantos estudiantes hay por casa |                            **Definición de terminado**                             |
+| Para saber cual es la más popular.            | Cuando el usuario filtre por casa aparecerá el número de estudiantes de cada casa. |
 
-| Historia de usuario 3  | Criterios de aceptación |
-| :------------ |:---------------:
-| Yo como usuario que no conoce mucho de HP     | Poder ver los libros acomodados por fecha de publicación de estudiantes de cada una | 
-| quiero poder ver cuantos y cuales son los libros que hay     | **Definición de terminado**        |
-| para poder leerlos todos en orden. | - Que aparezcan los libros en orden por fecha de publicación  -Filtrar data para mostrar solo libros  |
-
+| Historia de usuario 3                                    |                                       Criterios de aceptación                                       |
+| :------------------------------------------------------- | :-------------------------------------------------------------------------------------------------: |
+| Yo como usuario que no conoce mucho de HP                |         Poder ver los libros acomodados por fecha de publicación de estudiantes de cada una         |
+| quiero poder ver cuantos y cuales son los libros que hay |                                     **Definición de terminado**                                     |
+| para poder leerlos todos en orden.                       | - Que aparezcan los libros en orden por fecha de publicación -Filtrar data para mostrar solo libros |
 
 ## Sketches baja fidelidad
 
@@ -32,14 +31,7 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 
 ## Sketches de alta fidelidad
 
-
 [![sketch-Af1.png](https://i.postimg.cc/3RSjy9Tk/sketch-Af1.png)](https://postimg.cc/WFZqCGtV)
 [![sketch-Af2.png](https://i.postimg.cc/Hnrwb5YB/sketch-Af2.png)](https://postimg.cc/JHWHLsBk)
 
 -[Prototipo Figma](http://https://www.figma.com/file/q8FqUyrVcTlcUNNoC5GTQa/Harry-Potter?node-id=82%3A33&t=zJ9McAuQLORwlIY8-1 "Prototipo Figma")
-
-
-
-
-
-
