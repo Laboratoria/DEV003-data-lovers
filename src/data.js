@@ -30,19 +30,18 @@ export const ordenadorAZ = (titulosIndependientes) => {
     return 0;
   })};
 
-//  listar directores y usamos ...new Set para que no se repitan los elementos 
-export const listaDirectores = () => {
-
-  const directoresg = ghibli.films.map((listaCompletaDirectores) => {
-    return listaCompletaDirectores.director;
-  });
-  // eslint-disable-next-line
-  return [ ...new Set(directoresg)];
-}
-
 // DIRECTORES: Filtro de peliculas por director
 export const peliculasDirector = (director) => {
   return (titleList().filter((titulosPorDirector) => {
     return titulosPorDirector.director === director;
   }));
 }
+
+//  listar directores y usamos ...new Set para que no se repitan los elementos 
+// export const listaDirectores = () => {
+
+//   const directoresg = ghibli.films.map((listaCompletaDirectores) => {
+//     return listaCompletaDirectores.director;
+//   });
+//   return [ ...new Set(directoresg)];
+// }

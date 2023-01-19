@@ -187,7 +187,7 @@ nav.categorias li:hover {
 }
 
 /* películas destacadas */
-h3 {
+/* h3 {
     text-align: center;
     color: #00686C;
 }
@@ -230,10 +230,10 @@ h3 {
 
 h4 {
     margin-top: 15px;
-}
+} */
 
 /* películas más votadas */
-.barraMasVotadas {
+/* .barraMasVotadas {
     display: flex;
     justify-content: center;
     color: #FAD928;
@@ -241,7 +241,7 @@ h4 {
     width: 350px;
     height: 18px;
     margin: 0 auto;
-}
+} */
 
 /* titulos */
 .botonAZ {
@@ -275,20 +275,23 @@ h4 {
     color: #00686C;
     margin-left: 50px;
 }
-
 #directorSelect {
     color: #00686C;
     font-style: italic;
 }
-
 .busquedaDirector {
     width: 300px;
     border-color: #00686C;
     border-width: 2px;
 }
-
 .busquedaDirector:hover {
     border-color: #FF9915;
+}
+
+.columnaPeliculas {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .contenedorPeliculas {
@@ -296,7 +299,7 @@ h4 {
     justify-content: flex-start;
     align-items: center;
     margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 30px;  
 }
 
 .miniaturaPeliculas {
@@ -314,7 +317,7 @@ h4 {
 }
 
 /* directores y productores */
-.columnaDirPro {
+/* .columnaDirPro {
     display: flex;
     flex-direction: column;
 }
@@ -339,7 +342,7 @@ h4 {
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
-}
+} */
 
 /* info completa por película */
 .parteSuperior {
@@ -389,7 +392,7 @@ h4 {
 
 .tresColumnas {
     display: grid;
-    grid-template-columns: 430px 430px 430px;
+    grid-template-columns: 470px 470px 470px;
 }
 
 .marchando {

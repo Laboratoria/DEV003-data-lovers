@@ -10,6 +10,7 @@ let primerClick = true; // esta variable es un booleano que al cargar el DOM sie
 const numeroDeElementos = document.getElementById("nroElementos"); // variable que llama al contenedor de los elementos contados
 const porcentajeDelTotal = document.getElementById("porcentajeElementos");
 
+
 // evento del botón hacia arriba
 topButton.addEventListener("click", () => {
   document.body.scrollTop = 0; // para Safari
@@ -35,28 +36,33 @@ botonLista.addEventListener("click", () => {
 contenedorListaDirectores.addEventListener('change', (event) => {
 
   const directorSeleccionado = event.target.value;
-  titulosHTML(peliculasDirector(directorSeleccionado));
-
+  const titulosporDirectorSeleccionado = peliculasDirector(directorSeleccionado)
+  
+  if (directorSeleccionado == "" ) {
+    titulosHTML(titleListGenerado); 
+  }
+  else {
+    titulosHTML(titulosporDirectorSeleccionado);
+  }
 });
 
 // lista completa de películas
 const titulosHTML = (listaPeliculas) => {
-
+contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
   let html = ''
-
+  
   listaPeliculas.forEach((itemFilm) => {
 
     html += `
   <div class="contenedorPeliculas">
     <div>
-      <img class="miniaturaPeliculas" src="${itemFilm.poster}" alt="Castle in the Sky">
+      <img class="miniaturaPeliculas" src="${itemFilm.poster}">
     </div>
     <div class="descripcionPeliculas">
       <p> "${itemFilm.titulo}"</p>
       <p> Release Date: "${itemFilm.lanzamiento}"</p>
       <p> Director: "${itemFilm.director}"</p>
       <p> Producer: "${itemFilm.productor}"</p>
-  
     </div>
   </div>`
   })
@@ -81,10 +87,10 @@ const contador = (listaPeliculas) => {
 
 // filtro de lista de directores
 const directorsHTML = () => {
-
+  
   let html = ''
 
-  html += `
+    html += `
         <select class="busquedaDirector" id="directorSelect" name="directores">
            <option value="">— Search by Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
@@ -100,6 +106,4 @@ const directorsHTML = () => {
 
 // funciones ejecutadas
 titulosHTML(titleListGenerado);
-directorsHTML();
-
-// console.log(example, data);
+directorsHTML(); 
