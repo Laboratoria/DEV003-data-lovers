@@ -1,12 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;1,400;1,600&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  margin:0;
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+}
+
+#banner img {
+  width: 100%;
+  position: relative;  
+  object-fit: cover;
+}
+
+h3 {
+ color: #0a036e;
+ margin: 2%;
+
+}
+
+.flexbox{
+  margin: 2%;
+}
+
+
+body{
+background-image: url(./img/fondogris.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+}
+
 .flex-container{
-  border: 1px solid black;
-  background: grey;
+  float: right;
   padding: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 80%;
+  width:80%;
   margin: auto;
+  cursor: pointer;
 }
 
 .monos{
@@ -20,5 +61,112 @@
   text-align: center;
   margin: 5px;
   overflow: hidden;
+} 
 
+footer{
+  background: darkcyan;
+  text-align: center; 
+  padding: 2em 0;
+  width: 100%;
+  margin-top: auto;
 }
+
+
+
+/**
+.navbar{
+  background: #0a036e;
+  flex-direction: column;
+  position: fixed;
+  padding: 0 20px;
+  left: 0;
+  height: 100%;
+  width: calc(100% - 1400px);
+  z-index: 1;
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+/** select
+.select-container {
+  width: 400px;
+  margin: 50px;
+  flex-flow: column-reverse;
+}
+
+  .select-label {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+ 
+  .select {
+    width: 250px;
+    position: relative;  
+  }
+ 
+   .selected-option {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 3px;
+      border: .5px solid gray;
+    }
+
+      .icon,.select-value {
+       padding: 10px 15px;
+      }
+
+      .icon {
+        border-left: .5px solid gray;
+      }
+    
+    .options {
+      position: absolute;
+      background-color: white;
+      width: 100%;
+      padding: 15px 0;
+      margin-top: 5px;
+      border: .5px solid gray;
+      border-radius: 3px;
+    }
+    .options[data-toggle="collapsed"]{
+      display:none
+    }
+      .option{
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      .option:hover {
+        background-color: gainsboro;
+      }
+
+
+      
+
+
+.filterByType{
+color: white;
+}  
+  
+
+
+
+
+
+
+
+*/
+
+

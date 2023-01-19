@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <title>Pokemonpedia</title>
     <link rel="stylesheet" href="style.css" />
-   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css">
   </head>
+    <header>
+    <section id="banner">
+        <img src="img/BannerpokemonGo.png" alt="banner de pokemon">
+        <div class="conteiner"> 
+        </div>     
+     </section>
+    </header>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-<!--<i class="fa-solid fa-magnifying-glass"></i> LUPA-->
-   <form class="flexbox">
-      <p>Lista de Pokemones por tipo</p>
-      <select name="Pokemones" required>
-        <option value="acero">Acero</option>
-        <option value="agua">Agua</option>
-        <option value="bicho">Bicho</option>
+    <!--<i class="fa-solid fa-magnifying-glass"></i> LUPA-->
+     <nav id="navbar">
+       <h3>Lista de Pokemones por tipo</h3>
+    <form class="flexbox" action="">
+     <select name="Tipos de pokemones" id="filterByType" autocomplete="off">
+        <option value="type">Type</option>
+        <option value="bug">Bug</option>
+        <option value="dark">Dark</option>
         <option value="dragon">Dragon</option>
-        <option value="electrico">Eléctrico</option>
-        <option value="fuego">Fuego</option>
-        <option value="hada">Hada</option>
-        <option value="lucha">Lucha</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="ghost">Ghost</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">ice</option>
         <option value="normal">Normal</option>
-        <option value="planta">Planta</option>
-        <option value="psiquico">Psíquico</option>
-        <option value="roca">Roca</option>
-        <option value="siniestro">Siniestro</option>
-        <option value="tierra">Tierra</option>
-        <option value="veneno">Veneno</option>
-        <option value="volador">Volador</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="water">Water</option>
       </select>
     </form>
-    <section class="flex-container">
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     <div class="monos"> mono1</div>
-     </section>
+   </nav>
+
+  <main> 
+      <section class="flex-container" id='contenedor'></section> 
+  </main>
+
+  <footer>
+      <p> Pié de página</p>
+  </footer>
+
+  <!--<div class="select-container">
+      <div class="select">
+      <div class="selected-option">     
+        <span class="select-value">All</span>
+        <span class="icon fas fa-caret-down"></span>
+      </div>
+      <div data-toggle="" class="options">
+        <div class="option">All</div>
+        <div class="option">Bug</div>
+        <div class="option">Dark</div>
+        <div class="option">Dragon</div>
+        <div class="option">Electric</div>
+        <div class="option">Fairy</div>
+        <div class="option">Fighting</div>
+        <div class="option">Fire</div>
+        <div class="option">Flying</div>
+        <div class="option">Ghost</div>
+        <div class="option">Grass</div>
+        <div class="option">Ground</div>
+        <div class="option">ice</div>
+        <div class="option">Normal</div>
+        <div class="option">Poison</div>
+        <div class="option">Psychic</div>
+        <div class="option">Water</div>
+      </div>
+    </div>
+  </div>-->
+  
+    <!---->
+    <script src="main.js" type="module"></script>
+    
+ 
+
   </body>
 </html>
