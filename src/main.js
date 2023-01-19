@@ -46,7 +46,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
 
 //lista completa de películas
 const titulosHTML = (listaPeliculas) => {
-contador(listaPeliculas);
+contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
   let html = ''
   
   listaPeliculas.forEach((itemFilm) => {
@@ -70,7 +70,7 @@ contador(listaPeliculas);
 //Contador de elementos
 const contador = (listaPeliculas) => {
 let contadorElements = listaPeliculas.length
-document.getElementById("nroElementos").innerHTML = "Se encontró " + contadorElements + " elementos";
+document.getElementById("nroElementos").innerHTML = "Se encontró " + contadorElements + " pelìculas";
 }
 
 //filtro de lista de directores
@@ -79,8 +79,8 @@ const directorsHTML = () => {
   let html = ''
 
     html += `
-        <select name="directores" id="directorSelect">
-            <option value="">— Elige el Director —</option>
+        <select name="directores" id="directorSelect" class = "busquedaDirector">
+            <option value="">— Search by Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
             <option value="Isao Takahata">Isao Takahata</option>
             <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
