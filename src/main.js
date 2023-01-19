@@ -38,7 +38,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
   const directorSeleccionado = event.target.value;
   const titulosporDirectorSeleccionado = peliculasDirector(directorSeleccionado)
   
-  if (directorSeleccionado == "" ) {
+  if (directorSeleccionado === "" ) {
     titulosHTML(titleListGenerado); 
   }
   else {
@@ -48,7 +48,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
 
 // lista completa de películas
 const titulosHTML = (listaPeliculas) => {
-contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
+  contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
   let html = ''
   
   listaPeliculas.forEach((itemFilm) => {
@@ -90,7 +90,7 @@ const directorsHTML = () => {
   
   let html = ''
 
-    html += `
+  html += `
         <select class="busquedaDirector" id="directorSelect" name="directores">
            <option value="">— Search by Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>

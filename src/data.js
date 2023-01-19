@@ -1,8 +1,8 @@
 import ghibli from "./data/ghibli/ghibli.js"
 // TITULOS: creacion de nuevo obj con map, definiendo las categorías que se mostraran en el DOM
-export const titleList = () => {
+export const titleList = (data = ghibli.films) => {
 
-  return ghibli.films.map((movieObject) => {
+  return data.map((movieObject) => {
 
     return {
       titulo: movieObject.title,
