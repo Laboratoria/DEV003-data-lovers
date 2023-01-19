@@ -36,13 +36,12 @@ body {
   margin-top: 30px;
   margin-left: 400px;
   font-size: 25px;
-  text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
+  text-shadow: 1px 0 0 hsl(228, 57%, 77%);
   color: black;
-  background-color: white;
 }
 
 .descubre {
-  text-shadow: 1px 0 0 hsl(240, 23%, 61%);
+  text-shadow: 1px 0 0 hsl(0, 0%, 6%);
   background-color: rgba(270, 270, 270, 0.8);
   font-size: 20px;
 }
