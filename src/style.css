@@ -7,71 +7,144 @@
 }
 
 html {
-  height: 100%;
+  min-height: 100vh;
+}
+
+element {
+  max-width: 80%;
 }
 
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.2rem;
-  min-height: 100%;
-}
-
-.grid-container>* {
+  min-height: 100vh;
+  background-image: url(/imagenes/card.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .header {
-  grid-area: header;
-  /*background: linear-gradient(to left, #f60505, #e8a69f);*/
   background: -webkit-linear-gradient(left, rgb(0, 9, 130) 27%, rgba(29, 81, 238, 0) 160%);
   padding-top: 10px;
-}
-
-.sidebar {
-  padding: 100px;
-  grid-area: sidebar;
-  background-image: url(card.jpg);
-  background-size: cover;
-  background-position: center;
-  /*background: linear-gradient(to left, #f6ad05, #e3df21);*/
 }
 
 .text {
   margin-top: 30px;
   margin-left: 400px;
   font-size: 25px;
-  text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
-  color: black;
 }
 
-.texto {
-  margin-top: 30px;
-  margin-left: 400px;
-  font-size: 13px;
-  text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
-  color: black;
-
+.descubre {
+  text-shadow: 1px 0 0 hsl(240, 23%, 61%);
+  background-color: rgba(270, 270, 270, 0.8);
+  font-size: 20px;
 }
 
 .btn {
-  margin-left: 400px;
   border: none;
+  text-decoration: none;
 }
 
 .footer {
-  padding-left: 70px;
-  grid-area: footer;
   background-color: #302C78;
   color: white;
   font-size: 10px;
   font-style: oblique;
   padding-top: 5px;
+  max-width: auto;
+}
+
+.content {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.content_body {
+  max-width: 700px;
+  margin: 100px auto 0;
+  margin-right: 200px;
+}
+
+.content_quote {
+  max-width: 700px;
+  background-color: rgba(270, 270, 270, 0.7);
+}
+
+.text {
+  width: 70%;
+  margin-left: auto;
+}
+
+@media screen and (max-width:800px) {
+  .content_text {
+    width: 80%;
+    margin-right: auto;
+  }
+}
+
+/*HTML 2da Pagina, contenedor de Pokemones*/
+
+.grid-container>* {
+  text-align: center;
+}
+
+.header2 {
+  grid-area: header;
+  background: linear-gradient(to left, #302C78, #2FA2B7);
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #FF990B;
+  padding: 10px;
+}
+
+.main2 {
+  grid-area: main;
+  background-color: #f5f5f5;
+  padding: 10px;
+  background: linear-gradient(to top, #FFCC00, #FF990B);
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #302C78;
+  color: #f5f5f5;
+  padding: 5px;
 }
 
 .grid-container {
   display: grid;
+  gap: 0px;
   grid-template:
-    "header" 150px
-    "sidebar" auto
-    "footer" 20px;
+    "header" 80px
+    "navbar" 50px
+    "main2" auto
+    "footer" 30px;
+}
+
+@media(min-width:650px) {
+  .grid-container {
+    grid-template:
+      "header header" 100px
+      "navbar navbar" 50px
+      "main2 main2" auto
+      "footer footer" 30px /
+      100% auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+  }
 }
