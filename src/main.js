@@ -7,6 +7,8 @@ const contenedorListaDirectores = document.getElementById("directorList") // est
 const topButton = document.getElementById("topBtn") // esta variable llama al botón de scroll hacia arriba
 let titleListGenerado = titleList(); // esta variable muestra el array de películas al cargar el DOM
 let primerClick = true; // esta variable es un booleano que al cargar el DOM siempre será true
+const numeroDeElementos = document.getElementById("nroElementos"); // variable que llama al contenedor de los elementos contados
+const porcentajeDelTotal = document.getElementById("porcentajeElementos");
 
 
 // evento del botón hacia arriba
@@ -44,13 +46,13 @@ contenedorListaDirectores.addEventListener('change', (event) => {
   }
 });
 
-//lista completa de películas
+// lista completa de películas
 const titulosHTML = (listaPeliculas) => {
 contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
   let html = ''
   
   listaPeliculas.forEach((itemFilm) => {
-  //console.log(itemFilm.personajes); // crear for
+
     html += `
   <div class="contenedorPeliculas">
     <div>
@@ -65,22 +67,32 @@ contador(listaPeliculas); //ejectummos la función de contador para que actualic
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
+  contador(listaPeliculas);
+  // porcentajes(listaPeliculas);
 }
 
-//Contador de elementos
+// contador de elementos
 const contador = (listaPeliculas) => {
-let contadorElements = listaPeliculas.length
-document.getElementById("nroElementos").innerHTML = "Se encontró " + contadorElements + " pelìculas";
+  const contadorElements = listaPeliculas.length
+  numeroDeElementos.innerHTML = contadorElements + " movies found.";
+  const porcentajesDirector = (contadorElements * 100) / 20;
+  porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
 }
 
-//filtro de lista de directores
+// const porcentajes = (listaPeliculas) => {
+//   const contadorDelTotal = listaPeliculas.length
+//   const porcentajesDirector = (20 * contadorDelTotal) / 100
+//   porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
+// }
+
+// filtro de lista de directores
 const directorsHTML = () => {
   
   let html = ''
 
     html += `
-        <select name="directores" id="directorSelect" class = "busquedaDirector">
-            <option value="">— Search by Director —</option>
+        <select class="busquedaDirector" id="directorSelect" name="directores">
+           <option value="">— Search by Director —</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
             <option value="Isao Takahata">Isao Takahata</option>
             <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
@@ -91,6 +103,7 @@ const directorsHTML = () => {
 
   contenedorListaDirectores.innerHTML = html
 }
-      
+
+// funciones ejecutadas
 titulosHTML(titleListGenerado);
 directorsHTML(); 

@@ -1,23 +1,17 @@
-import { example, anotherExample } from '../src/data.js';
+import { ordenadorAZ } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
+describe("ordenadorAZ", () => {
+  
   it('returns `example`', () => {
-    expect(example()).toBe('example');
+    expect(ordenadorAZ([{ titulo: "Castle In the Sky" },
+      { titulo: "Z" },
+      { titulo: "F" }
+    ])).toEqual([{ titulo: "Castle In the Sky" },
+      { titulo: "F" },
+      { titulo: "Z" }
+    ]);
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});

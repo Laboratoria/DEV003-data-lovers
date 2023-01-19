@@ -12,7 +12,7 @@
 
 ## 1. Definición del Producto
 
-Se busca como objetivo crear un directorio en el cual la usuaria pueda encontrar un listado de las películas de Studio Ghibli existentes, con sus respectivas características: año de lanzamiento, director, productor, personajes y sus características, etc. A esta web la hemos titulado WikiGhibli.
+Se busca como objetivo crear un directorio en el cual la usuaria pueda encontrar un listado de las películas de Studio Ghibli existentes, con sus respectivas características: año de lanzamiento, director, productor, etc. A esta web la hemos titulado Wiki Ghibli.
 
 En este proyecto se creó una web con el objetivo de ordenar, categorizar, filtrar y llamar la información requirida por nuestro usuario.
 
@@ -29,23 +29,23 @@ A continuación se enumeran las historias de usuario a partir de las cuales trab
 
 * Criterios de aceptación: tener una estructura definida, ordenada e intuitiva para el usuario, que permita de forma fácil acceder a la lista completa de títulos.
 
-### Historia N°2: "Como estudiante universitaria quiero revisar el listado de películas destacadas para adentrarme en el mundo de Ghibli."
+### Historia N°2: "Como estudiante universitaria de Cine quiero revisar el listado de películas por director para conocer el trabajo de cada uno de ellos."
 
-* Definición de terminado: dedicar una sección para las películas más populares de Studio Ghibli.
+* Definición de terminado: crear un filtro que contenga el listado de directores de Ghibli, y que al seleccionarlo muestre todas sus películas.
 
-* Criterios de aceptación: sección de destacados, donde se mostrarán los 5 títulos más populares. Los títulos junto con su respectiva portada deben presentarse de forma clara y ordenada.
+* Criterios de aceptación: el filtro está ubicado en la sección de All Movies en la parte superior, con la finalidad de mantener el orden visual y que facilite el acceso para el usuario.
 
-### Historia N°3: "Como ilustradora me gustaría conocer los personajes de cada película (para dibujarlos)."
+### Historia N°3: "Como estudiante trabajando en su Tésis de Cine me gustaría conocer el porcentaje de participación de los directores de Studio Ghibli para agregarlo a mi investigación sobre el impacto de la animación japonesa en la actual industria del Cine."
 
-* Definición de terminado: dentro de la sección de Títulos se encontrará junto con los detalles de cada película un botón que desplegará el listado de personajes respectivos.
+* Definición de terminado: se incluyen tanto el porcentaje como la cantidad de películas dirigidas por director, en el encabezado de la sección de All Movies.
 
-* Criterios de aceptación: botón desplegable al momento de seleccionar Personajes. Arrojará una lista con cada personaje y sus respectivas características.
+* Criterios de aceptación: que los porcentajes varíen y se muestren de acuerdo al director seleccionado.
 
-### Historia N°4: "Como cinéfilo/a quiero revisar el listado de películas por orden alfabético/año."
+### Historia N°4: "Como cinéfilo/a quiero revisar el listado de películas por orden alfabético"
 
-* Definición de terminado: en la sección de Títulos se encontrará un selector desplegable el cual filtrará las películas por director, productor y año de lanzamiento según el usuario lo requiera.
+* Definición de terminado: en la sección de All Movies se encontrará un botón que ordenará las películas de forma ascendente y descendente.
 
-* Criterios de aceptación: selector desplegable que arroje la lista de directores, productores y año de lanzamiento. Debe tener un botón para ordenar alfabéticamente de la A a la Z y viceversa, además de contar con un botón de Limpiar búsqueda.
+* Criterios de aceptación: el botón de orden alfabético es simple pero entendible para el usuario. Además se le incluye la propiedad de que cambie de color al momento de hacer hover.
 
 
 ## 3. Diseño de la Interfaz de Usuario
@@ -72,15 +72,18 @@ Como principio fundamental del Diseño UX hemos puesto a la usuaria al centro de
 Como cambios fundamentales en nuestro prototipo de alta fidelidad podemos mencionar:
 
 * el uso de imágenes para contextualizar al usuario de qué se trata la web WikiGhibli.
-* sintetizamos las categorías para hacerlo más User Friendly e intuitivo.
+* quitamos las antiguas categorías para hacerlo más User Friendly e intuitivo.
 * quitamos la sección de películas más votadas y dejamos solo las películas destacadas.
 * agregamos un botón con posición fija en la esquina derecha inferior, que cumple la función de hacer scroll hacia el comienzo de la página, en vez de tener varios botones con esa misma funcionalidad por cada sección.
-* modificamos el diseño de las secciones de Directores y Productores por una mucho más simplificada: ahora se mostrará tan solo un selector con una lista con los nombres, los cuales al hacerles click desplegarán una lista de películas ya filtrada. 
+* modificamos el diseño de las secciones de Directores por una mucho más simplificada: ahora se mostrará tan solo un selector con una lista con los nombres, los cuales al hacerles click desplegarán una lista de películas ya filtrada. 
 
 
 ### Prototipo de baja fidelidad
 
 - [ ] **Prototipo creado en lápiz y papel**
+
+  Cada una presentó 2 propuestas hechas a mano, de las cuales surgió el primer prototipo de alta fidelidad.
+  Tomamos elementos de ambas, además de las referencias vistas anteriomente.
 
   <details><summary>Link a Miro</summary><p>
 
@@ -91,6 +94,10 @@ Como cambios fundamentales en nuestro prototipo de alta fidelidad podemos mencio
 
 - [ ] **Prototipo creado en Figma**
 
+  Nos dividimos los prototipos de alta fidelidad: una trabajó la versión de escritorio y la otra trabajó la versión mobile.
+  Después del Test de Usuario como dupla decidimos modificar algunos elementos a partir del feedback recibido.
+  Finalmente nos basamos en el prototipo ya modificado para dar paso a la estructura del HTML y CSS.
+
   <details><summary>Link a Figma</summary><p>
 
   * [link a Figma](https://www.figma.com/file/wBokzPBra2q1C5qM7OZQmR/Studio-Ghibli?node-id=0%3A1&t=xQpVGPyar71Ge23m-1)
@@ -99,6 +106,8 @@ Como cambios fundamentales en nuestro prototipo de alta fidelidad podemos mencio
 ### Testeos de usabilidad
 
 - [ ] **Test de usuarios a través de Maze**
+
+  A partir del feeback recibido por los usuarios se realizaron modificaciones, implementando un mensaje de bienvenida para contextualizar e introducir qué es lo que se mostrará en nuestra página web. Además agregamos una imagen de fondo en el landing, y utilizamos colores contrastantes para guiar visualmente al usuario.
 
   <details><summary>Link a Maze</summary><p>
 
@@ -124,6 +133,6 @@ Es responsive, se visualiza sin problemas desde distintos tamaños de pantallas:
 
 #### Listado de problemas:
 
-*
+* 
 *
 *
