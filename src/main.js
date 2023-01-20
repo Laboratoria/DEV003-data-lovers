@@ -79,12 +79,6 @@ const contador = (listaPeliculas) => {
   porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
 }
 
-// const porcentajes = (listaPeliculas) => {
-//   const contadorDelTotal = listaPeliculas.length
-//   const porcentajesDirector = (20 * contadorDelTotal) / 100
-//   porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
-// }
-
 // filtro de lista de directores
 const directorsHTML = () => {
   

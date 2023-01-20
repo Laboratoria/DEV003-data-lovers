@@ -133,6 +133,6 @@ Es responsive, se visualiza sin problemas desde distintos tamaños de pantallas:
 
 #### Listado de problemas:
 
-* 
-*
-*
+* Se tiene "==" cuando se espera "===".
+* Se tienen 4 espacios de sangría cuando se esperan 2.
+* "Personajes" dentro del array de titleList no existe, dice que es "undefined" debido a que en la lista original se hace el llamado a través de "people", no "personajes".

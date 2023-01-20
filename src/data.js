@@ -37,6 +37,7 @@ export const peliculasDirector = (director) => {
   }));
 }
 
+
 //  listar directores y usamos ...new Set para que no se repitan los elementos 
 // export const listaDirectores = () => {
 

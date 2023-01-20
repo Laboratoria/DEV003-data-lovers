@@ -1,4 +1,4 @@
-import { titleList, ordenadorAZ } from '../src/data.js';
+import { titleList, ordenadorAZ, peliculasDirector } from '../src/data.js';
 
 // test de lista completa de títulos
 describe("titleList", () => {
@@ -57,3 +57,15 @@ describe("ordenadorAZ", () => {
     ]);
   });
 });
+
+// test de filtro de directores
+// describe("filtro directores", () => {
+  
+//   it('películas por director', () => {
+//     expect(peliculasDirector()).toBe([
+//       { director1: ["película1", "película2", "película3"] },
+//       { director2: ["película1", "película2", "película3"] },
+//       { director3: ["película1", "película2", "película3"] }
+//     ]);
+//   });
+// });
