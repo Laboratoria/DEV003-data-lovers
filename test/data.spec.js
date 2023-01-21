@@ -1,17 +1,15 @@
-import { ordenadorAZ } from '../src/data.js';
+import { ordenadorAZ, titleList, peliculasDirector } from '../src/data.js';
 
 
 describe("ordenadorAZ", () => {
   
   it('returns `example`', () => {
-    expect(ordenadorAZ([{ titulo: "Castle In the Sky" },
+    expect(ordenadorAZ([{ titulo: "C" },
       { titulo: "Z" },
       { titulo: "F" }
-    ])).toEqual([{ titulo: "Castle In the Sky" },
+    ])).toEqual([{ titulo: "C" },
       { titulo: "F" },
       { titulo: "Z" }
     ]);
   });
 });
-
-
