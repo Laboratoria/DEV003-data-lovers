@@ -48,7 +48,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
 
 // lista completa de películas
 const titulosHTML = (listaPeliculas) => {
-  contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
+  
   let html = ''
   
   listaPeliculas.forEach((itemFilm) => {
@@ -67,6 +67,7 @@ const titulosHTML = (listaPeliculas) => {
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
+  contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
 }
 
 // contador de elementos
