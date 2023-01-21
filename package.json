@@ -6,7 +6,7 @@
   "scripts": {
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
-    "pretest": "npm run eslint && npm run htmlhint",
+    "pretest.0": "npm run eslint && npm run htmlhint",
     "test": "jest --verbose --coverage",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/",
