@@ -37,6 +37,15 @@ export const peliculasDirector = (director) => {
   }));
 }
 
+// contador de elementos
+export const contador = (listaPeliculas) => { // función "contador" al que se le pasa la lista completa de películas como parámetro, para contabilizar los elementos
+  return listaPeliculas.length;
+}
+
+// porcentaje de películas
+export const porcentajesDirector = (totales, porDirector) => { // función que mostrará los porcentajes por director. Se le brindan los parámetros del total de las películas y del listado por director
+  return (porDirector * 100) / totales; // se hace la operación matemárica que devolverá un número
+}
 
 //  listar directores y usamos ...new Set para que no se repitan los elementos 
 // export const listaDirectores = () => {

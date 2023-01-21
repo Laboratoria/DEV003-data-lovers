@@ -1,4 +1,4 @@
-import { titleList, ordenadorAZ, peliculasDirector } from '../src/data.js';
+import { titleList, ordenadorAZ, peliculasDirector, contador, porcentajesDirector } from '../src/data.js';
 
 // test de lista completa de títulos
 describe("titleList", () => {
@@ -58,14 +58,39 @@ describe("ordenadorAZ", () => {
   });
 });
 
+//--- de acá hacia abajo estoy probando las funciones que faltan ---
+
+
 // test de filtro de directores
-// describe("filtro directores", () => {
+describe("filtro directores", () => {
   
-//   it('películas por director', () => {
-//     expect(peliculasDirector()).toBe([
-//       { director1: ["película1", "película2", "película3"] },
-//       { director2: ["película1", "película2", "película3"] },
-//       { director3: ["película1", "película2", "película3"] }
-//     ]);
-//   });
-// });
+  it('películas por director', () => {
+    expect(peliculasDirector()).toEqual([
+      { director1: "película1" },
+      { director2: "película2"},
+      { director3: "pelicula1"}
+    ]);
+  });
+});
+
+// test contador y porcentaje
+describe("contador y porcentajes por director", () => {
+  
+  it('porcentajes por director', () => {
+    expect(contador([
+      { dir1: 'peli1'}, 
+      { dir2: 'peli2'}]
+    )).toEqual(Number.length);
+  });
+});
+
+// test de porcentajes por director
+describe("porcentajes", () => {
+  
+  it('porcentajes por director', (porDirector, totales) => {
+    expect(porcentajesDirector(
+      (porDirector * 100) /totales
+    )).toEqual(
+      (porDirector * 100) /totales
+    )});
+});
