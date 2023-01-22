@@ -67,8 +67,7 @@ const titulosHTML = (listaPeliculas) => {
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
-
-  // porcentajes(listaPeliculas);
+ //ejectummos la función de contador para que actualice cada vez que se filtre
 }
 
 // contador de elementos
