@@ -186,63 +186,6 @@ nav.categorias li:hover {
     width: 60%;
 }
 
-/* películas destacadas */
-/* h3 {
-    text-align: center;
-    color: #00686C;
-}
-
-.barraDestacados {
-    display: flex;
-    justify-content: center;
-    color: #FAD928;
-    background: #FAD928;
-    width: 300px;
-    height: 18px;
-    margin: 0 auto;
-}
-
-.destacados {
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
-.listaDestacados {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    list-style: none;
-    margin: 80px 20px 60px 20px;
-}
-
-.iconoPeliculas {
-    width: 160px;
-    border-radius: 15px;
-}
-
-.pelicula-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #00686C;
-}
-
-h4 {
-    margin-top: 15px;
-} */
-
-/* películas más votadas */
-/* .barraMasVotadas {
-    display: flex;
-    justify-content: center;
-    color: #FAD928;
-    background: #FAD928;
-    width: 350px;
-    height: 18px;
-    margin: 0 auto;
-} */
-
 /* titulos */
 .botonAZ {
     width: 20px;
@@ -298,7 +241,7 @@ h4 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 30px;  
 }
 
@@ -313,36 +256,8 @@ h4 {
     width: 50vh;
     display: block;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 15px;
 }
-
-/* directores y productores */
-/* .columnaDirPro {
-    display: flex;
-    flex-direction: column;
-}
-
-.miniaturaDescripcion {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 50px;
-    margin-bottom: 30px;
-}
-
-.miniatura {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.descripcionDirPro {
-    color: #00686C;
-    width: 60vh;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-} */
 
 /* info completa por película */
 .parteSuperior {
