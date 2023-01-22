@@ -1,4 +1,4 @@
-import { titleList, peliculasDirector, ordenadorAZ } from './data.js';
+import { titleList, peliculasDirector, ordenadorAZ, contador, porcentajesDirector } from './data.js';
 
 // declaración de variables a utilizar
 const contenedorDisplayPeliculasPorTitulos = document.getElementById("listaTitulos"); // esta variable llama a la etiqueta vacía del HTML de títulos
@@ -7,9 +7,7 @@ const contenedorListaDirectores = document.getElementById("directorList") // est
 const topButton = document.getElementById("topBtn") // esta variable llama al botón de scroll hacia arriba
 let titleListGenerado = titleList(); // esta variable muestra el array de películas al cargar el DOM
 let primerClick = true; // esta variable es un booleano que al cargar el DOM siempre será true
-const numeroDeElementos = document.getElementById("nroElementos"); // variable que llama al contenedor de los elementos contados
-const porcentajeDelTotal = document.getElementById("porcentajeElementos");
-
+const numeroDeElementos = document.getElementById("calculosDirectores"); // variable que llama al contenedor de los elementos contados
 
 // evento del botón hacia arriba
 topButton.addEventListener("click", () => {
@@ -44,6 +42,8 @@ contenedorListaDirectores.addEventListener('change', (event) => {
   else {
     titulosHTML(titulosporDirectorSeleccionado);
   }
+
+  porcentajesA(titleListGenerado, titulosporDirectorSeleccionado);
 });
 
 // lista completa de películas
@@ -67,22 +67,26 @@ const titulosHTML = (listaPeliculas) => {
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
-  contador(listaPeliculas); //ejectummos la función de contador para que actualice cada vez que se filtre
+ //ejectummos la función de contador para que actualice cada vez que se filtre
 }
 
 // contador de elementos
-const contador = (listaPeliculas) => {
-  const contadorElements = listaPeliculas.length
-  numeroDeElementos.innerHTML = contadorElements + " movies found.";
-  const porcentajesDirector = (contadorElements * 100) / 20;
-  porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
+const porcentajesA = (totales, porDirector) => { // acá se crea una función que le dará estructura a la sección de los cálculos en el DOM
+  
+  const numeroDePeliculasTotales = contador(totales);
+  const numeroDePeliculasPorDirector = contador(porDirector);
+
+  let html = ''
+
+  html += `
+        <div class="calculosDirectores">
+          <p id="nroElementos" class="resultados">${numeroDePeliculasPorDirector} movies found</p>
+          <p id="porcentajeElementos" class="resultados">${porcentajesDirector(numeroDePeliculasTotales, numeroDePeliculasPorDirector)} % of the total movies.</p>
+        </div>`
+
+  numeroDeElementos.innerHTML = html
 }
 
-// const porcentajes = (listaPeliculas) => {
-//   const contadorDelTotal = listaPeliculas.length
-//   const porcentajesDirector = (20 * contadorDelTotal) / 100
-//   porcentajeDelTotal.innerHTML = porcentajesDirector + "% of the total movies.";
-// }
 
 // filtro de lista de directores
 const directorsHTML = () => {
