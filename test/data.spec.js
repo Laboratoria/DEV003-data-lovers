@@ -74,13 +74,10 @@ describe("filtro directores", () => {
 });
 
 // test contador y porcentaje
-describe("contador y porcentajes por director", () => {
+describe("contador por director", () => {
   
-  it('porcentajes por director', () => {
-    expect(contador([
-      { dir1: 'peli1'}, 
-      { dir2: 'peli2'}]
-    )).toEqual(Number.length);
+  it('contador por director', (listaPeliculas) => {
+    expect(contador()).toEqual(listaPeliculas.length);
   });
 });
 
@@ -88,9 +85,7 @@ describe("contador y porcentajes por director", () => {
 describe("porcentajes", () => {
   
   it('porcentajes por director', (porDirector, totales) => {
-    expect(porcentajesDirector(
-      (porDirector * 100) /totales
-    )).toEqual(
-      (porDirector * 100) /totales
+    expect(porcentajesDirector()).toEqual(
+      (porDirector * 100) / totales
     )});
 });
