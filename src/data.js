@@ -31,9 +31,9 @@ export const ordenadorAZ = (titulosIndependientes) => {
   })};
 
 // DIRECTORES: Filtro de peliculas por director
-export const peliculasDirector = (director) => {
+export const peliculasDirector = (director, listaPeliculas) => {
   
-  return (titleList().filter((titulosPorDirector) => {
+  return (listaPeliculas.filter((titulosPorDirector) => {
     return titulosPorDirector.director === director;
   }));
 }
