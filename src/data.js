@@ -19,7 +19,7 @@ export const sortMovies = (opUp, opDown) => {
     //retorna opUp sort y toma la comparacion de arriba y reversa el array
     return opUp.sort(compareElement).reverse();
   }
-  //caso contrario retorna los elementos comparados
+  //caso contrario retorna upward
   else {
     return opUp.sort(compareElement);
   }
