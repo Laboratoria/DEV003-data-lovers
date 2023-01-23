@@ -1,18 +1,12 @@
-import { example } from './data.js';
+import { buscarPersonajesPorCasa } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
-
 const personajes = data.characters
 const libros = data.books
 
-
-
-if (document.getElementById("search") !== null) {
-  document.getElementById("search").addEventListener("click", buscar);
-}
+document.getElementById("search").addEventListener("click", buscar);
 
 function buscar() {
   const name = getName()
@@ -33,25 +27,47 @@ function getDivMensajeUsuario() {
 }
 
 function getName() {
+
   return document.getElementById("informationbox").value
 }
-window.addEventListener("load", books)
-function books() {
-  //ingresar las datas de los libros
+document.getElementById("ordenarDescendente").addEventListener("click", ordenarDescendente)
+
+function ordenarDescendente() {
+  const librosDescendente = libros.sort(function (a, b) {
+    if (a.id > b.id){
+      return -1;
+    }
+    if (a.id < b.id){
+      return 1;
+    }
+    return 0;
+  });
+
+  books(librosDescendente) //llamo a la función books y le paso los libros ordenados descendentemente
+}
+
+window.addEventListener("load", books) //llamo a la funcion books sin pasarle ningun parametro
+
+function books(librosDescendente) { //librosDescendente solo va a tener algo cuando se llame al boton descendente
+  let librosARecorrer = libros //librosARecorrer va a ser los libros de 1 a 8 (const libros = data.books línea 9)
+  if(librosDescendente.length) { //Pregunto si los libros descendentes tienen algun valor o contenido
+    librosARecorrer = librosDescendente //los libros a recorrer ahora serán los libros del 8 al 1 - librosDescendente
+  }
+  //ingresar la data de los libros 
   let todosLibros = ""
-  for (let i = 0; i < libros.length; i++) {
+  for (let i = 0; i < librosARecorrer.length; i++) {
     todosLibros = todosLibros + `<div class="libro">
-      <img src="${libros[i].picture}">
-      <p>${libros[i].releaseDay}</p>
-      <p>${libros[i].title}</p>
+      <img src="${librosARecorrer[i].picture}">
+      <p>${librosARecorrer[i].releaseDay}</p>
+      <p>${librosARecorrer[i].title}</p>
     </div>`
   }
 
 
   document.getElementById("root").innerHTML= `
-  <section id="ocultarLibros"> 
+  <section id="ocultarLibros">
     <div id="container" class="flex-container">
-      <div class="libro-contenedor" id="libro-contenedor"> 
+      <div class="libro-contenedor" id="libro-contenedor">
       ${todosLibros}
       </div>
     </div>
@@ -113,38 +129,32 @@ function houses() {
 
 
 
-//java busca todos los "casa link"
-document.querySelectorAll('.casalink').forEach((item) => {
-  item.addEventListener('click', function (){
+  //java busca todos los "casa link"
+  document.querySelectorAll('.casalink').forEach((item) => {
+    item.addEventListener('click', function (){
     //el banner se activa
-    const bannerCentral = document.getElementById("bannerCentral");
-    bannerCentral.classList.add("active"); 
-    //Ya tenemos que casa es
-    const searchHouse = this.getAttribute("data-house"); 
-    /*const todaLaCasa = personajes.filter(function(persona){
-      return persona.house === searchHouse;
-    }).map(function (persona){
-      return persona.name;
-    }); */
-    const activeHouse = document.getElementById("ActiveHouse");
-    activeHouse.innerHTML = "";
-    todaLaCasa.forEach(function(name){
-      activeHouse.innerHTML += "<p>" + name + "</p>";
-    });
+      const bannerCentral = document.getElementById("bannerCentral");
+      bannerCentral.classList.add("active");
+      //Ya tenemos que casa es
+      const searchHouse = this.getAttribute("data-house");
+      const todaLaCasa = buscarPersonajesPorCasa (personajes, searchHouse) //llamo a la función de data JS
+      const activeHouse = document.getElementById("ActiveHouse");
+      activeHouse.innerHTML = "";
+      todaLaCasa.forEach(function(name){
+        activeHouse.innerHTML += "<p>" + name + "</p>";
+      });
     
+    });
   });
-});
 }
 
 
 const mostrarLibros = document.getElementById('getBooks');
-  mostrarLibros.addEventListener("click", books);
+mostrarLibros.addEventListener("click", books);
 
 const mostrarCasas = document.getElementById('getHouses');
 mostrarCasas.addEventListener("click", houses);
 
 
- //const mostrarHome = document.getElementById('getHome');
- //mostrarHome.addEventListener("click",home);
-
-
+//const mostrarHome = document.getElementById('getHome');
+//mostrarHome.addEventListener("click",home);

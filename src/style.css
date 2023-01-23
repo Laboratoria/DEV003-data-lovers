@@ -47,6 +47,7 @@ input{
     width: 310px;
     font-size: 20px;
     margin: center;
+    border-radius: 5px;
 }
 
 button{
@@ -54,6 +55,7 @@ button{
     width: 100px;
     font-size: 20px;
     text-align: center;
+    border-radius: 5px;
 
 }
 #mensajeUsuario{
@@ -82,6 +84,18 @@ button{
     position: relative;
 
 }
+
+#ordenarDescendente {
+    display: flex;
+    justify-content: flex-start;
+    flex: center;
+    margin-left: 50px;
+    gap: 50px;
+    align-items: center;
+    border-radius: 5px;
+    width: auto;
+}
+
 #casas{
     display:flex;
     justify-content: center;
@@ -210,11 +224,13 @@ transition: opacity 0.4s ease-in-out;
 
 #bannerCentral.active img {
 opacity: .2;
+overflow-y: scroll;
 }
 
 #ActiveHouse {
-position: absolute;
+position: center;
 width: 100%;
+text-align: center;
 }
 
 #ActiveHouse p {
