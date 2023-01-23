@@ -1,34 +1,34 @@
 /* Versión Escritorio */
 @media (max-width: 1200px){
-    .cardDesktop{display: none !important;}
+    .welcome{display: none !important;}
 }
    
 /* Versión Tableta */
 @media (min-width: 535px) and (max-width: 824px){
-    .containerFooter{flex-wrap: wrap;}
-    .imgFooterLogo{display: none;}
-    .sectionFooter1, .sectionFooter2{
+    footer {flex-wrap: wrap;}
+    .socialfooter {display: none;}
+    .copyrighttext {
         margin-bottom: 20px;
         border-bottom: 3px dashed #91C588;
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
-    h1 {font-size: 2rem !important;}
-    .imgDesktop, .imgMovil{display: none;}
+    #fondoBienvenida h1 {font-size: 2rem !important;}
+    .titulos {display: none;}
     .imgTablet{display: block;}
 }
     
 /* Versione Movil */
 @media (min-width: 200px) and (max-width: 534px){
-    .containerFooter{flex-wrap: wrap;}
-    .imgFooterLogo{display: none;}
-    .sectionFooter1, .sectionFooter2{
+    footer {flex-wrap: wrap;}
+    .socialfooter {display: none;}
+    .copyrighttext {
         margin-bottom: 20px;
         border-bottom: 3px dashed #91C588;
         padding-right: 0px !important;
         padding-left: 0px !important;
     }
-    h1 {font-size: 1.7rem !important;}
+    #fondoBienvenida h1 {font-size: 1.7rem !important;}
     .tittlePromotion{font-size: 23px !important;}
     .imgDesktop, .imgTablet{display: none;}
     .imgMovil{display: block;}

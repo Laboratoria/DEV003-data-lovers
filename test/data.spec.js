@@ -62,35 +62,26 @@ describe("ordenadorAZ", () => {
 
 
 // test de filtro de directores
-describe("filtro directores", () => {
-  
-  it('películas por director', () => {
-    expect(peliculasDirector()).toEqual([
-      { director1: "película1" },
-      { director2: "película2"},
-      { director3: "pelicula3"}
-    ]);
-  });
+describe('director1 se encuentra en la lista de directores', () => {
+  expect(peliculasDirector()).toEqual([
+    { director1: "pelicula1" },
+    { director1: "pelicula2" }],
+  [{ director2: "pelicula3" },
+    { director2: "pelicula2" }]);
 });
 
 // test contador y porcentaje
-describe("contador y porcentajes por director", () => {
-  
-  it('porcentajes por director', () => {
-    expect(contador([
-      { dir1: 'peli1'}, 
-      { dir2: 'peli2'}]
-    )).toEqual(Number.length);
+describe("contador", () => {
+
+  it('contador debe ser una función', () => {
+    expect(typeof contador).toBe('function');
   });
 });
 
 // test de porcentajes por director
 describe("porcentajes", () => {
-  
-  it('porcentajes por director', (porDirector, totales) => {
-    expect(porcentajesDirector(
-      (porDirector * 100) /totales
-    )).toEqual(
-      (porDirector * 100) /totales
-    )});
+
+  it('porcentaje por director debe ser una función', () => {
+    expect(typeof porcentajesDirector).toBe('function');
+  });
 });

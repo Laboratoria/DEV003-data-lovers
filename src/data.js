@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js"
 // TITULOS: creacion de nuevo obj con map, definiendo las categorías que se mostraran en el DOM
 export const titleList = (data = ghibli.films) => {
-
+  
   return data.map((movieObject) => {
 
     return {
@@ -32,6 +32,7 @@ export const ordenadorAZ = (titulosIndependientes) => {
 
 // DIRECTORES: Filtro de peliculas por director
 export const peliculasDirector = (director) => {
+  
   return (titleList().filter((titulosPorDirector) => {
     return titulosPorDirector.director === director;
   }));
@@ -46,12 +47,3 @@ export const contador = (listaPeliculas) => { // función "contador" al que se l
 export const porcentajesDirector = (totales, porDirector) => { // función que mostrará los porcentajes por director. Se le brindan los parámetros del total de las películas y del listado por director
   return (porDirector * 100) / totales; // se hace la operación matemática que devolverá un número
 }
-
-//  listar directores y usamos ...new Set para que no se repitan los elementos 
-// export const listaDirectores = () => {
-
-//   const directoresg = ghibli.films.map((listaCompletaDirectores) => {
-//     return listaCompletaDirectores.director;
-//   });
-//   return [ ...new Set(directoresg)];
-// }

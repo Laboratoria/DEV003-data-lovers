@@ -42,7 +42,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
   else {
     titulosHTML(titulosporDirectorSeleccionado);
   }
-
+  
   porcentajesA(titleListGenerado, titulosporDirectorSeleccionado);
 });
 
@@ -67,7 +67,7 @@ const titulosHTML = (listaPeliculas) => {
   </div>`
   })
   contenedorDisplayPeliculasPorTitulos.innerHTML = html
- //ejectummos la función de contador para que actualice cada vez que se filtre
+  //ejectummos la función de contador para que actualice cada vez que se filtre
 }
 
 // contador de elementos
