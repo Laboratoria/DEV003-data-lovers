@@ -34,7 +34,7 @@ botonLista.addEventListener("click", () => {
 contenedorListaDirectores.addEventListener('change', (event) => {
 
   const directorSeleccionado = event.target.value;
-  const titulosporDirectorSeleccionado = peliculasDirector(directorSeleccionado)
+  const titulosporDirectorSeleccionado = peliculasDirector(directorSeleccionado, titleListGenerado);
   
   if (directorSeleccionado === "" ) {
     titulosHTML(titleListGenerado); 

@@ -136,3 +136,4 @@ Es responsive, se visualiza sin problemas desde distintos tamaños de pantallas:
 * Se tiene "==" cuando se espera "===".
 * Se tienen 4 espacios de sangría cuando se esperan 2.
 * "Personajes" dentro del array de titleList no existe, dice que es "undefined" debido a que en la lista original se hace el llamado a través de "people", no "personajes".
+* Tuvimos que reformular la función peliculasDirector que filtra las películas por director para poder testearla, ya que dentro de ésta hacía un llamado a otra función y por temas de scope no se podía utilizar en el archivo data.spec.js

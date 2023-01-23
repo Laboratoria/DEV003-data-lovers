@@ -1,4 +1,8 @@
 import { titleList, ordenadorAZ, peliculasDirector, contador, porcentajesDirector } from '../src/data.js';
+// import mockdata from './mockdata.js';
+// jest.mock("./data/ghibli/ghibli.js", () => ({
+//   ghibli: mockdata
+// }), { virtual: true });
 
 // test de lista completa de títulos
 describe("titleList", () => {
@@ -62,18 +66,41 @@ describe("ordenadorAZ", () => {
 
 
 // test de filtro de directores
-describe('director1 se encuentra en la lista de directores', () => {
-  expect(peliculasDirector()).toEqual([
-    { director1: "pelicula1" },
-    { director1: "pelicula2" }],
-  [{ director2: "pelicula1" },
-    { director2: "pelicula2" }]);
+describe("filtro directores", () => {
+  
+  it('array lista peliculas por director', () => {
+    expect(peliculasDirector("Hayao Miyazaki", [
+      {
+        title: 'title',
+        director: 'Hayao Miyazaki',
+        producer: 'producer',
+        release_date: '2022'
+      },
+      {
+        title: 'title2',
+        director: 'Juan',
+        producer: 'producer2',
+        release_date: '2011'
+      }
+    ])).toEqual([        
+      {
+        title: 'title',
+        director: 'Hayao Miyazaki',
+        producer: 'producer',
+        release_date: '2022'
+      },
+    ])
+  })
 });
+
+// describe('director1 se encuentra en la lista de directores', () => {
+//   expect(peliculasDirector("Hayao Miyazaki").length).toEqual(9)
+// });
 
 // test contador y porcentaje
 describe("contador", () => {
 
-  it('contador debe ser una función', () => {
+  it('contador de películas', () => {
     expect(typeof contador).toBe('function');
   });
 });
@@ -81,7 +108,7 @@ describe("contador", () => {
 // test de porcentajes por director
 describe("porcentajes", () => {
 
-  it('porcentaje por director debe ser una función', () => {
+  it('porcentajes de películas por director', () => {
     expect(typeof porcentajesDirector).toBe('function');
   });
 });
