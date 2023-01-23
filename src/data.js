@@ -82,7 +82,6 @@ export function calculo(characters, filterValue) {
 
 export function createBooksEl(book, dataLibros) {
   const libro = document.createElement("div");
-  console.log(libro)
   libro.setAttribute("class", "book-card");
   libro.innerHTML = `<ul class="book-info">
   <li><center><h3>${book.title}</li>
@@ -95,16 +94,13 @@ export function createBooksEl(book, dataLibros) {
 
 }
 
-// export function createPotionsEl(potion, dataPotions) {
-//   const pocion = document.createElement("div");
-//   pocion.setAttribute("class", "potion-card");
-//   pocion.innerHTML = `<ul class="potion-info">
-//   <li><center><h3> ${potion.name}</li>
-//   <li>Description: ${potion.description}</li>
-//   </ul>`;
-//   dataPotions.append(potion);
-
-  
-
-// }
+export function crearPociones(potion, dataPotions) {
+  const pocion = document.createElement("div");
+  pocion.setAttribute("class", "potion-card");
+  pocion.innerHTML = `<ul class="potion-info">
+  <li><center><h3> ${potion.name}</li>
+  <li>${potion.description}</li>
+  </ul>`;
+  dataPotions.append(pocion);
+}
 

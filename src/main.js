@@ -5,7 +5,7 @@ import {
   charFilters,
   calculo,
   createBooksEl,
-  // createPotionsEl,
+  crearPociones
 } from "./data.js";
 
 const characters = getData("characters");
@@ -21,7 +21,8 @@ const calculoPersonajes = document.getElementById("calculo");
 //MUESTRA TODOS LOS PERSONAJES
 charactersPageBtn.addEventListener("click", () => {
   charactersPageBtn.setAttribute("class", "subrayado");
-  const containerBooks = document.querySelector("#data-libros");
+  document.getElementById("filtros-data").style.display = "none";
+  const containerBooks = document.querySelector("#data-libros", "#data-Pociones");
   containerBooks.innerHTML = "";
   document.querySelector(".filtros-data").style.display = "inline-block";
   characters.map((character) => {
@@ -108,26 +109,33 @@ const books = getData("books");
 const booksPage = document.querySelector(".books");
 const dataLibros = document.querySelector("#data-libros");
 
-
 booksPage.addEventListener("click", () => {
-  booksPage.setAttribute("class", "subrayado");
+  booksPage.setAttribute("class", "subrayado"); 
   document.getElementById("filtros-data").style.display = "none";
-  books.map((book) => {
-    createBooksEl(book, dataLibros);
-  });
+  const containerCharacters = document.querySelector("#data-libros");
+  containerCharacters.innerHTML = "";
+
+  for(var i=0; i<books.length; i++){
+    createBooksEl(books[i], dataLibros)
+  }
+  
 });
 
-//MOSTRAR POTIONS
+// MOSTRAR POTIONS
 
-// const potions = getData('potions');
-// const potionsPage= document.querySelector(".potions");
-// const dataPotions= document.querySelector("#data-pociones");
+const potions = getData('potions');
+const potionsPage= document.querySelector(".potions");
+const dataPotions= document.querySelector("#data-libros");
+potionsPage.addEventListener("click", () => {
+  potionsPage.setAttribute("class", "subrayado");
+  document.getElementById("filtros-data").style.display = "none";
+  const containerCharacters = document.querySelector("#data-libros");
+  containerCharacters.innerHTML = "";
 
-// potionsPage.addEventListener("click", () => {
-//   potionsPage.setAttribute("class", "subrayado");
-//   potions.map((potion) => {
-//     createPotionsEl(potion, dataPotions);
-//   });
-// });
+
+  for(var i=0; i<potions.length; i++){
+    crearPociones(potions[i], dataPotions);
+  }
+});
 
 

@@ -1,0 +1,18 @@
+[33mcommit bfae353d4604fdbb390b9ea0cd76665c0773080e[m[33m ([m[1;36mHEAD -> [m[1;32mgh-pages[m[33m, [m[1;31morigin/gh-pages[m[33m)[m
+Merge: 2eccce7 ff96821
+Author: mariahiguera2210 <119275546+mariahiguera2210@users.noreply.github.com>
+Date:   Wed Jan 18 10:42:28 2023 -0500
+
+    Merge branch 'Laboratoria:main' into gh-pages
+
+[33mcommit 2eccce7163359d18a32b029d7270e050ab24775c[m
+Author: mariahiguera2210 <angelica.higueram92@gmail.com>
+Date:   Fri Jan 13 15:47:16 2023 -0500
+
+    Updates
+
+[33mcommit ff96821388f718196f7b059f340705a170077a5f[m
+Author: jc <juancarlosworthing@gmail.com>
+Date:   Tue Dec 6 09:41:59 2022 -0600
+
+    chore(init): Adds project files from curriculum

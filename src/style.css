@@ -84,9 +84,6 @@ main {
   justify-content: center;
 }
 
-/* .espacio {
-  margin: 70px;
-} */
 
 .navbar {
   padding: 10px 35px 10px 35px;
@@ -141,7 +138,8 @@ main {
 }
 
 
-.book-card{
+.book-card,
+.potion-card{
   background-color: #c5a227;
   width: 364px;
   height: auto;
@@ -151,13 +149,15 @@ main {
 
 }
 #show-data,
-#data-libros{
+#data-libros,
+#data-Pociones{
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.book-info li{
+.book-info li,
+.potion-info li{
   list-style: none;
   font-size: medium;
   font-family: "Purple 3";
