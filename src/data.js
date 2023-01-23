@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js"
 // TITULOS: creacion de nuevo obj con map, definiendo las categorías que se mostraran en el DOM
 export const titleList = (data = ghibli.films) => {
-
+  
   return data.map((movieObject) => {
 
     return {
@@ -32,6 +32,7 @@ export const ordenadorAZ = (titulosIndependientes) => {
 
 // DIRECTORES: Filtro de peliculas por director
 export const peliculasDirector = (director) => {
+  
   return (titleList().filter((titulosPorDirector) => {
     return titulosPorDirector.director === director;
   }));

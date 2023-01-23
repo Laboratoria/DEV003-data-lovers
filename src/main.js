@@ -42,7 +42,7 @@ contenedorListaDirectores.addEventListener('change', (event) => {
   else {
     titulosHTML(titulosporDirectorSeleccionado);
   }
-
+  
   porcentajesA(titleListGenerado, titulosporDirectorSeleccionado);
 });
 
