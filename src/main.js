@@ -1,8 +1,15 @@
-//import { example } from './data.js';
+//import { obtenerData, filtrarData, ordenarData, ... } from './data.js';   <-- cuando trabajen en los algoritmos de manejo de información se deben de trar cada función de ese archivo 
 
-import data from './data/pokemon/pokemon.js';
+const btnWelcome = document.getElementById("btn-change-view");
 
-//const pokemones = data.pokemon;
+btnWelcome.addEventListener("click", () => {
+    console.log("holamundo")
+    // buscar el elemento que tiene la clase "section-welcome y hacerlo invisible a partir de su display"
+    // .... "section-pokemones" y hacerlo visible a partir de su display 
+    const sectionWelcome = document.getElementById("section-welcome");
+    sectionWelcome.style.display = "none";
 
-console.log(data);
+    const sectionPokemons = document.getElementById("section-pokemons");
+    sectionPokemons.style.display = "inline";
+})
 

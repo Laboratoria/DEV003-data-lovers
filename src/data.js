@@ -1,9 +1,9 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
+export const filtrar  = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
+export const ordenar = () => {
   return 'OMG';
 };
