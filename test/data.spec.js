@@ -68,7 +68,7 @@ describe("filtro directores", () => {
     expect(peliculasDirector()).toEqual([
       { director1: "película1" },
       { director2: "película2"},
-      { director3: "pelicula1"}
+      { director3: "pelicula3"}
     ]);
   });
 });
