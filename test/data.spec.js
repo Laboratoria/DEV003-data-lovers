@@ -66,7 +66,7 @@ describe('director1 se encuentra en la lista de directores', () => {
   expect(peliculasDirector()).toEqual([
     { director1: "pelicula1" },
     { director1: "pelicula2" }],
-  [{ director2: "pelicula3" },
+  [{ director2: "pelicula1" },
     { director2: "pelicula2" }]);
 });
 
