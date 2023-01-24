@@ -28,7 +28,7 @@ header {
 
 .menu-dropdown {
     position: relative;
-    display: inline-block;
+    display: none;
     background-color: #00686C;
 }
 
@@ -307,7 +307,7 @@ nav.categorias li:hover {
 
 .tresColumnas {
     display: grid;
-    grid-template-columns: 440px 440px 440px;
+    grid-template-columns: 33% 33% 33%; 
 }
 
 .marchando {
