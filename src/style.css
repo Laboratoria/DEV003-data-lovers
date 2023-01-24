@@ -231,11 +231,11 @@ nav.categorias li:hover {
     border-color: #FF9915;
 }
 
-.columnaPeliculas {
+/* .columnaPeliculas {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-}
+} */
 
 .contenedorPeliculas {
     display: flex;
@@ -307,7 +307,7 @@ nav.categorias li:hover {
 
 .tresColumnas {
     display: grid;
-    grid-template-columns: 440px 440px 440px;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .marchando {
