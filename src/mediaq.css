@@ -1,46 +1,42 @@
 /* Versión Escritorio */
-@media (max-width: 1200px){
-    .welcome{display: none !important;}
-}
-   
-/* Versión Tableta */
-@media (min-width: 535px) and (max-width: 824px){
+@media (width: 1200px){
+/* .welcome{display: none !important;} */
+    .menu-dropdown {
+        display: inline-block;
+    }
     .tresColumnas {
         display: grid;
-        grid-template-columns: 200px 200px 200px !important;
+        grid-template-columns: 33% 33% 33%;
+        
+    };
+}
+
+/* @media (width: 451){
+   body{
+    width: 20px;
+   }
+} */
+   
+/* Versión Tableta */
+@media (width: 535px) and (width: 824px){
+    .tresColumnas {
+        display: grid;
+        grid-template-columns: 50% 50%;   
     };
 }
     
 /* Versione Movil */
-@media (min-width: 200px) and (max-width: 534px){
+@media (width: 200px) and (width: 534px){
     footer {flex-wrap: wrap;}
-    .socialfooter {display: none;}
+    .socialfooter {display:flex;}
     .copyrighttext {
         margin-bottom: 20px;
-        border-bottom: 3px dashed #91C588;
-        padding-right: 0px !important;
-        padding-left: 0px !important;
+        flex-direction: row;
+        justify-content: center;
     }
-    #fondoBienvenida h1 {font-size: 1.7rem !important;}
-    .tittlePromotion{font-size: 23px !important;}
-    .imgDesktop, .imgTablet{display: none;}
-    .imgMovil{display: block;}
+   
+    .tresColumnas {
+        display: grid;
+        grid-template-columns: 100%;   
+    };
 }    
-
-/* --------PERSONALIZADA NAVBAR----------------- */
-@media (max-width:690px) {
-    nav .categorias {
-        display: flex;
-        position: absolute;
-        right: 30px;
-        top: 16px;
-        align-items: center;
-    }
-    
-    .menu-dropdown {
-        display: none !important;
-        width: 100%;
-    }
-    
-    .logo {height: 70px;}
-}
