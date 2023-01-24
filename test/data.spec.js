@@ -1,6 +1,7 @@
 //import {example, anotherExample} from '../src/data/harrypotter'; //aquí llamamos a la data de Laboratoria
 import { 
   buscarPersonajesPorCasa, 
+
    
 } from '../src/data.js'; //aquí llamamos a las funciones que hicimos nosotras
 

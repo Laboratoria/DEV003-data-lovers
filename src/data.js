@@ -1,6 +1,4 @@
-// 
 
-//
 export const buscarPersonajesPorCasa = (personajes, searchHouse) => {
   //arreglo de objetos le pusimos de nombre "toda la casa" y es igual al filtro y mapeo de párametro personajes 
   const todaLaCasa = personajes.filter(function(persona){

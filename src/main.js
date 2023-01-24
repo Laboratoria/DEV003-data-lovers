@@ -1,10 +1,12 @@
 import { buscarPersonajesPorCasa } from './data.js';
+
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 const personajes = data.characters
 const libros = data.books
+
 
 document.getElementById("search").addEventListener("click", buscar);
 
@@ -72,10 +74,9 @@ function books(librosDescendente) { //librosDescendente solo va a tener algo cua
       <p>${librosARecorrer[i].title}</p>
     </div>`
   }
-
-
   document.getElementById("root").innerHTML= `
   <section id="ocultarLibros">
+
     <div id="container" class="flex-container">
       <div class="libro-contenedor" id="libro-contenedor">
       ${todosLibros}
@@ -147,13 +148,16 @@ function houses() {
       bannerCentral.classList.add("active");
       //Ya tenemos que casa es
       const searchHouse = this.getAttribute("data-house");
-      const todaLaCasa = buscarPersonajesPorCasa (personajes, searchHouse) //llamo a la función de data JS
+
+     const todaLaCasa = buscarPersonajesPorCasa(personajes, searchHouse) // llamo a la funcion de data.js
+
       const activeHouse = document.getElementById("ActiveHouse");
       activeHouse.innerHTML = "";
-      todaLaCasa.forEach(function(name){
+      todaLaCasa.forEach(function (name) {
         activeHouse.innerHTML += "<p>" + name + "</p>";
       });
-    
+
+
     });
   });
 }
@@ -167,4 +171,7 @@ mostrarCasas.addEventListener("click", houses);
 
 
 //const mostrarHome = document.getElementById('getHome');
+
 //mostrarHome.addEventListener("click",home);
+
+

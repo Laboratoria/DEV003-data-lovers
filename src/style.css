@@ -93,6 +93,20 @@ button{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+#ordenarDescendente{
+    display: flex;
+    justify-content:flex-start;
+    flex:center;
+    margin-left: 50px;
+    gap: 50px;
+    align-items: center;
+    border-radius: 5px;
+    width: auto;
+
+
+
 
 }
 
@@ -254,7 +268,6 @@ height: 100%;
 width: 100%;
 overflow-y: scroll;
 top: 0%;
-
 }
 
 #ActiveHouse p {
@@ -282,5 +295,4 @@ position: relative;
     .houseinfo {
         font-size: medium;
     }
-}
 
