@@ -23,16 +23,17 @@ function buscar() {
   }
 }
 function getDivMensajeUsuario() {
-  return document.getElementById("mensajeUsuario")
+  return document.getElementById("mensajeUsuario");
 }
 
 function getName() {
 
   return document.getElementById("informationbox").value
 }
-document.getElementById("ordenarDescendente").addEventListener("click", ordenarDescendente)
+document.getElementById("ordenarDescendente").addEventListener("click", ordenarDescendente);
 
 function ordenarDescendente() {
+  const direccion = parseInt(this.getAttribute("data-direccion"));
   const librosDescendente = libros.sort(function (a, b) {
     if (a.id > b.id){
       return -1;
@@ -43,7 +44,16 @@ function ordenarDescendente() {
     return 0;
   });
 
-  books(librosDescendente) //llamo a la función books y le paso los libros ordenados descendentemente
+  if (direccion === 1) {
+    books(librosDescendente);
+    this.setAttribute("data-direccion",-1);
+    this.innerHTML = 'A-Z';
+  }
+  else if (direccion === -1) {
+    books(librosDescendente.reverse());
+    this.setAttribute("data-direccion",1);
+    this.innerHTML = 'Z-A';
+  }
 }
 
 window.addEventListener("load", books) //llamo a la funcion books sin pasarle ningun parametro

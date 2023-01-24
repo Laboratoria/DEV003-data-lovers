@@ -1,3 +1,14 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
     display: block;
     background-image: url(https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2016/07/landscape-1433777123-hogwarts-school-of-witchcraft-and-wizardry-harry-potter-movie-hd-wallpaper-1920x1080-4707.jpg?fit=1600%2C800&quality=50&strip=all&ssl=1);
@@ -85,17 +96,20 @@ button{
 
 }
 
+#botonDescendente {
+    display: flex;
+    justify-content: center;
+}
+
 #ordenarDescendente {
     display: flex;
-    justify-content: flex-start;
-    flex: center;
-    margin-left: 50px;
+    justify-content: center;
     gap: 50px;
     align-items: center;
     border-radius: 5px;
     width: auto;
 }
-
+/* ====================================== empieza página de casas ======================================  */
 #casas{
     display:flex;
     justify-content: center;
@@ -122,18 +136,22 @@ button{
     background-color: rgba(208, 225, 237, 0.5);
  }
 
- .libro img{
+ .libro {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-items: center ;
+    padding: 30px; 
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    margin: 1rem;
+    width: calc(25% - 2rem);
+ }
+
+ .libro img{
     padding: 30px;
     max-width:200px;
     max-height:300px;
     width: auto;
     height: auto;
-    margin: 40px;
-    margin-top: 40px;
     border-radius: 15%;
  }
   /* .flex-container{
@@ -176,7 +194,7 @@ transform: rotateY(180deg);
 background-color: black;
 font-size: xx-large;
 position: absolute;
-width: calc(100% - 2rem);
+width: calc(100%);
 height: 100%;
 top: 0%;
 transform: rotateY(180deg);
@@ -218,30 +236,51 @@ left: 50%;
 transform: translate(-50%,-50%);
 }
 
+#bannerCentral {
+    min-height: 500px;
+}
+
 #bannerCentral img {
 transition: opacity 0.4s ease-in-out;
 }
 
 #bannerCentral.active img {
 opacity: .2;
-overflow-y: scroll;
 }
 
 #ActiveHouse {
-position: center;
+position: absolute;
+height: 100%;
 width: 100%;
-text-align: center;
+overflow-y: scroll;
+top: 0%;
+
 }
 
 #ActiveHouse p {
 color: white;
-text-align: column;
+text-align: center;
 font-size: x-large;
 }
 
 #bannerCentral.active {
 /* background-color: #a9a9a944; */
 position: relative;
-overflow-y: scroll;
+}
+
+@media(max-width:768px) {
+    .searchbox{
+        flex-direction: column;
+    }
+
+    .inside-wrapper {
+        width: 100%;
+    }
+    .card-wrapper {
+            margin-left: 0px;
+    }
+    .houseinfo {
+        font-size: medium;
+    }
 }
 

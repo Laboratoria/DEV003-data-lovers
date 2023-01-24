@@ -1,6 +1,6 @@
 //import {example, anotherExample} from '../src/data/harrypotter'; //aquí llamamos a la data de Laboratoria
 import { 
-  buscar, 
+  buscarPersonajesPorCasa, 
    
 } from '../src/data.js'; //aquí llamamos a las funciones que hicimos nosotras
 
@@ -14,13 +14,13 @@ describe('Buscar', () => {
  
 
   it('debe retornar un personaje', () => {
-    expect(buscar([{name:"Harry Potter",house:"Gryffindor"}],"Gryffindor")).toEqual(["Harry Potter"]);
+    expect(buscarPersonajesPorCasa([{name:"Harry Potter",house:"Gryffindor"}],"Gryffindor")).toEqual(["Harry Potter"]);
   });
   it('debe retornar un personaje', () => {
-    expect(buscar([{name:"Severus Snape",house:"Slytherin"}],"Slytherin")).toEqual(["Severus Snape"]);
+    expect(buscarPersonajesPorCasa([{name:"Severus Snape",house:"Slytherin"}],"Slytherin")).toEqual(["Severus Snape"]);
   });
   it('debe retornar un personaje', () => {
-    expect(buscar([{name:"Luna Lovegood",house:"Ravenclaw"}],"Ravenclaw")).toEqual(["Luna Lovegood"]);
+    expect(buscarPersonajesPorCasa([{name:"Luna Lovegood",house:"Ravenclaw"}],"Ravenclaw")).toEqual(["Luna Lovegood"]);
   });
 });
 
