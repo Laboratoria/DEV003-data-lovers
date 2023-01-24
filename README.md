@@ -56,4 +56,4 @@ Se utilizó Github Pages para desplegar el sitio web y se realizaron test unitar
 * [Fuentes de google](https://fonts.google.com/)
 * [Referencias GitHub y Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet.pdf)
 * [Ordenar Arrays en JS](https://desarrolloweb.com/articulos/ordenacion-arrays-javascript-sort)
-* [Menu Responsive CSS](https://flexbox.malven.co/)
+* [Menu Responsive CSS](https://www.youtube.com/watch?v=f7QujqArvIw&ab_channel=Elevaci%C3%B3nDigital)

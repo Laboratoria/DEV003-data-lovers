@@ -1,6 +1,6 @@
 //import data from './data/ghibli/ghibli.js'
-//funcion que devuelve data a main
-//const dataMovies = data.films;
+//funcion que devuelve data a main pendiente
+
 
 //funcion para ordenar años de lanzamiento asc. Toma los valores del elemento, los compara y devuelve la comparación
 export const sortMovies = (opUp, opDown) => {
@@ -16,7 +16,7 @@ export const sortMovies = (opUp, opDown) => {
   }
   //sort option downward retorna 
   if (opDown === "downward") {
-    //retorna opUp sort y toma la comparacion de arriba y reversa el array
+    //retorna opUp sort compare de arriba y reversa el array
     return opUp.sort(compareElement).reverse();
   }
   //caso contrario retorna upward
@@ -27,8 +27,7 @@ export const sortMovies = (opUp, opDown) => {
 };
 //console.log(dataMovies.title)
 
-//ordenar comparacion az
-// declaracion de funcion ordenar de la A-Z y Z-A falta llave
+// declaracion de funcion ordenar de la A-Z y Z-A 
 export function sortName(dataMovies, sortFinish) {
   const sortAz = dataMovies.sort((a, b) => {
     if (a.title.toLowerCase() < b.title.toLowerCase()) {
@@ -51,14 +50,13 @@ export function sortName(dataMovies, sortFinish) {
   });
   //Az del html
   if (sortFinish === "Az") {
-    return sortAz.reverse();
-    //retornar datamovies, incluir else if
+    return sortAz.reverse();  
   } else if (sortFinish === "Za") {
     return sortZa;
   }
 }
 
-// filtro de directo
+// filtro de director
 export const filterDirector = (dataMovies, conditionDirector) => {
   //Filter  toma el array del dataMovie
   const filterDir = dataMovies.filter((dataMovie) => {

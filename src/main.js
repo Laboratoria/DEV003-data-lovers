@@ -33,7 +33,7 @@ function printMovies(movies){
       
       </div>
   `;
-    //we now say let the inside of that div take in our htmlCode variable that holds our html codes.*/
+    
   });
   //se insertan los datos en el container de HTML
   moviesList.innerHTML= printHtml;
@@ -50,7 +50,7 @@ function MoviesSortUp(){
 }
 
 
-//funcion orden de director //
+//funcion filtro de director //
 
 filterMovies.addEventListener('change',selectFilterMovie)
 function selectFilterMovie() {
