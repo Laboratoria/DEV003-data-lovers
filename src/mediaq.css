@@ -1,5 +1,5 @@
 /* Versión Escritorio */
-@media (width: 1200px){
+@media (max-width: 1200px){
 /* .welcome{display: none !important;} */
     .menu-dropdown {
         display: inline-block;
@@ -7,18 +7,11 @@
     .tresColumnas {
         display: grid;
         grid-template-columns: 33% 33% 33%;
-        
     };
 }
-
-/* @media (width: 451){
-   body{
-    width: 20px;
-   }
-} */
    
 /* Versión Tableta */
-@media (width: 535px) and (width: 824px){
+@media (min-width: 535px) and (max-width: 824px){
     .tresColumnas {
         display: grid;
         grid-template-columns: 50% 50%;   
@@ -26,7 +19,7 @@
 }
     
 /* Versione Movil */
-@media (width: 200px) and (width: 534px){
+@media (min-width: 200px) and (max-width: 534px){
     footer {flex-wrap: wrap;}
     .socialfooter {display:flex;}
     .copyrighttext {
