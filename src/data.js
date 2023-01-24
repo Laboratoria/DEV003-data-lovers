@@ -1,9 +1,4 @@
-// estas funciones son de ejemplo
-
-export const filtrar  = () => {
-  return 'example';
+export const obtenerPokemon = (data) => {
+  return data.pokemon;
 };
 
-export const ordenar = () => {
-  return 'OMG';
-};
