@@ -28,7 +28,7 @@ header {
 
 .menu-dropdown {
     position: relative;
-    display: inline-block;
+    display: none;
     background-color: #00686C;
 }
 

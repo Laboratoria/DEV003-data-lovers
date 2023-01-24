@@ -1,23 +1,35 @@
 /* Versión Escritorio */
 @media (max-width: 1200px){
-
+/* .welcome{display: none !important;} */
+    .menu-dropdown {
+        display: inline-block;
+    }
+    .tresColumnas {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    };
 }
    
 /* Versión Tableta */
 @media (min-width: 535px) and (max-width: 824px){
     .tresColumnas div {
         display: grid;
-        grid-template-columns: 50%;
-        justify-content: center;
-    }
+        grid-template-columns: 50% 50%;   
+    };
 }
     
 /* Versione Movil */
 @media (min-width: 200px) and (max-width: 534px){
-    .tresColumnas {
-        display: grid;
-        grid-template-columns: 100%;
+    footer {flex-wrap: wrap;}
+    .socialfooter {display:flex;}
+    .copyrighttext {
+        margin-bottom: 20px;
+        flex-direction: row;
         justify-content: center;
     }
-
-}
+   
+    .tresColumnas {
+        display: grid;
+        grid-template-columns: 100%;   
+    };
+}    
