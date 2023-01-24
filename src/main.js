@@ -1,5 +1,4 @@
-// import { example } from './data.js';
- import { buscarPersonajesPorCasa } from './data.js';
+import { buscarPersonajesPorCasa } from './data.js';
 
 // import data from './data/lol/lol.js';
 import data from './data/harrypotter/data.js';
@@ -7,7 +6,6 @@ import data from './data/harrypotter/data.js';
 
 const personajes = data.characters
 const libros = data.books
-
 
 
 document.getElementById("search").addEventListener("click", buscar);
@@ -27,50 +25,60 @@ function buscar() {
   }
 }
 function getDivMensajeUsuario() {
-  return document.getElementById("mensajeUsuario")
+  return document.getElementById("mensajeUsuario");
 }
 
 function getName() {
+
   return document.getElementById("informationbox").value
 }
-
-document.getElementById("ordenarDescendente").addEventListener("click", ordenarDescendente)
+document.getElementById("ordenarDescendente").addEventListener("click", ordenarDescendente);
 
 function ordenarDescendente() {
+  const direccion = parseInt(this.getAttribute("data-direccion"));
   const librosDescendente = libros.sort(function (a, b) {
-    if (a.id > b.id) {
+    if (a.id > b.id){
       return -1;
     }
-    if (a.id < b.id) {
+    if (a.id < b.id){
       return 1;
     }
     return 0;
-  })
-  books(librosDescendente) // llamo a la funcion books y le paso los libros ordenados descendentemente
+  });
+
+  if (direccion === 1) {
+    books(librosDescendente);
+    this.setAttribute("data-direccion",-1);
+    this.innerHTML = 'A-Z';
+  }
+  else if (direccion === -1) {
+    books(librosDescendente.reverse());
+    this.setAttribute("data-direccion",1);
+    this.innerHTML = 'Z-A';
+  }
 }
 
-window.addEventListener( "load", books) // llamo a la funcion books sin pasarle ningun parametro 
+window.addEventListener("load", books) //llamo a la funcion books sin pasarle ningun parametro
 
-function books(librosDescendente) { // librosDescendente solo va a tener algo cuando se llame del boton descendete, sino es vacio
-  let librosARecorrer = libros // librosARecorrer va a ser los libros del 1 al 8 (const libros = data.books - linea 9)
-  if (librosDescendente.length) { // pregunto si los libros descendientes tienen algun valor/contenido
-    librosARecorrer = librosDescendente // los libros a recorrer ahora seran los libros del 8 al 1 - librosDescendente
+function books(librosDescendente) { //librosDescendente solo va a tener algo cuando se llame al boton descendente
+  let librosARecorrer = libros //librosARecorrer va a ser los libros de 1 a 8 (const libros = data.books línea 9)
+  if(librosDescendente.length) { //Pregunto si los libros descendentes tienen algun valor o contenido
+    librosARecorrer = librosDescendente //los libros a recorrer ahora serán los libros del 8 al 1 - librosDescendente
   }
-  //ingresar las datas de los libros
+  //ingresar la data de los libros 
   let todosLibros = ""
-  for (let i = 0; i < librosARecorrer.length; i++) { // librosARecorrer si se llama del LOAD sera del 1 al 8
+  for (let i = 0; i < librosARecorrer.length; i++) {
     todosLibros = todosLibros + `<div class="libro">
       <img src="${librosARecorrer[i].picture}">
       <p>${librosARecorrer[i].releaseDay}</p>
       <p>${librosARecorrer[i].title}</p>
     </div>`
   }
+  document.getElementById("root").innerHTML= `
+  <section id="ocultarLibros">
 
-
-  document.getElementById("root").innerHTML = `
-  <section id="ocultarLibros"> 
     <div id="container" class="flex-container">
-      <div class="libro-contenedor" id="libro-contenedor"> 
+      <div class="libro-contenedor" id="libro-contenedor">
       ${todosLibros}
       </div>
     </div>
@@ -134,8 +142,8 @@ function houses() {
 
   //java busca todos los "casa link"
   document.querySelectorAll('.casalink').forEach((item) => {
-    item.addEventListener('click', function () {
-      //el banner se activa
+    item.addEventListener('click', function (){
+    //el banner se activa
       const bannerCentral = document.getElementById("bannerCentral");
       bannerCentral.classList.add("active");
       //Ya tenemos que casa es
@@ -148,6 +156,7 @@ function houses() {
       todaLaCasa.forEach(function (name) {
         activeHouse.innerHTML += "<p>" + name + "</p>";
       });
+
 
     });
   });
@@ -162,6 +171,7 @@ mostrarCasas.addEventListener("click", houses);
 
 
 //const mostrarHome = document.getElementById('getHome');
+
 //mostrarHome.addEventListener("click",home);
 
 
