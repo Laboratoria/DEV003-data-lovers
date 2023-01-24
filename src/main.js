@@ -1,8 +1,8 @@
 import { obtenerPokemon } from './data.js';
-import data from './data/pokemon/pokemon.js';   //cuando trabajen en los algoritmos de manejo de información se deben de trar cada función de ese archivo 
+import data from './data/pokemon/pokemon.js';
 
 const btnWelcome = document.getElementById("btn-change-view");
-let card = document.getElementById("main2");
+let card = document.getElementById("gallery");
 
 btnWelcome.addEventListener("click", () => {
     console.log("holamundo")
@@ -15,15 +15,19 @@ btnWelcome.addEventListener("click", () => {
     sectionPokemons.style.display = "inline";
 });
 
-obtenerPokemon(data).map((pokemon) => {
+obtenerPokemon(data).map((pokemon, index) => {
     card.innerHTML +=
-        `<div class= "front">
+        `<div class= "pokemon">
+            <p class="pk_num"># ${pokemon.num}</p>
+            <p class="img" ><img src="${pokemon.img}" height="100"></p>
+            <button id="${index}" class="btnPoke" name="btnPoke">
             <p class="name">${pokemon.name}</p>
-            <p class="img" ><img src="${pokemon.img}"></p>
-            <p class="pk_num">${pokemon.num}</p>
-            <div><span class="name-card">Type</span><br> ${pokemon.type.map((type) =>
-            `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}</div>
-            <p><span class="name-card">Generation</span><br> ${pokemon["generation"].name}</p>
+            </button>
+            <div> ${pokemon.type.map((type) =>
+            `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
+            </div>
+             ${pokemon["generation"].name}</p>
         </div>`;
+
 });
 

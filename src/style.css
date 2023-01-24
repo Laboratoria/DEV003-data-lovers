@@ -44,12 +44,13 @@ element {
   text-shadow: 1px 0 0 hsl(0, 0%, 6%);
   background-color: rgba(270, 270, 270, 0.8);
   font-size: 20px;
+  width: 300px;
 }
 
 .btn {
   border: none;
   text-decoration: none;
-
+  background: none;
 }
 
 .footer {
@@ -108,11 +109,24 @@ element {
 
 .main2 {
   grid-area: main;
-  background-color: #f5f5f5;
-  padding: 10px;
   background: linear-gradient(to top, #FFCC00, #FF990B);
-
+  display: flex;
 }
+
+.gallery {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.pokemon {
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, rgb(241, 234, 162) 27%, rgba(247, 227, 7, 0) 160%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
 
 .footer2 {
   grid-area: footer;
@@ -137,8 +151,7 @@ element {
       "header2 header2" 100px
       "navbar navbar" 50px
       "main2 main2" auto
-      "footer2 footer2" 30px /
-      100% auto;
+      "footer2 footer2" 30px
   }
 }
 
@@ -159,4 +172,23 @@ element {
 
 .section-pokemons {
   display: none;
+}
+
+.ataqueClass {
+  background: -webkit-linear-gradient(left, rgb(252, 224, 7) 50%, rgba(240, 165, 5, 0) 100%);
+  border-radius: 10px;
+}
+
+.btnPoke {
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, rgb(114, 124, 240) 50%, rgba(142, 164, 228, 0) 100%);
+  border-radius: 10px;
+  width: 100px;
+  height: 20px;
+  border: none;
+}
+
+.pk_num {
+  color: rgb(24, 4, 68);
+  text-shadow: 0.5px 0.5px #fff;
 }
