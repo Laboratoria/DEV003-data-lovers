@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
+
+header {
     font-family: 'Italiana';
     background-color: rgb(42, 92, 99);
     padding: 15px;
@@ -15,12 +17,14 @@ header{
     color: #fff;
 }
 
-.main-options{
-font-size: 30px;
+.main-options {
+    font-size: 30px;
 }
-.mainbutton{
-    color: #fff;;
-    background-color:rgb(79, 118, 123);
+
+.mainbutton {
+    color: #fff;
+    ;
+    background-color: rgb(79, 118, 123);
     padding: 20px;
     border-radius: 15px;
     border: none;
@@ -33,19 +37,21 @@ font-size: 30px;
 }
 
 
-nav{
-display: flex;
-justify-content: space-evenly;
-background-color:  rgb(42, 92, 99);
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(42, 92, 99);
 
 
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 /* mobile responsive */
-@media (max-width:500px){
-    header{
+@media (max-width:500px) {
+    header {
         font-family: 'Italiana';
         background-color: rgb(42, 92, 99);
         padding: 10px;
@@ -55,30 +61,33 @@ a{
     }
 
 
-        .mainbutton{
-            color: #fff;;
-            background-color:rgb(79, 118, 123);
-            padding: 20px;
-            border-radius: 15px;
-            border: none;
-            margin: 10px;
-            font-family: 'Roboto';
-            margin-bottom: 15px;
-            text-align: center;
-        }
+    .mainbutton {
+        color: #fff;
+        ;
+        background-color: rgb(79, 118, 123);
+        padding: 20px;
+        border-radius: 15px;
+        border: none;
+        margin: 10px;
+        font-family: 'Roboto';
+        margin-bottom: 15px;
+        text-align: center;
+    }
 
-        nav{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            background-color:  rgb(42, 92, 99);
-            }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(42, 92, 99);
+    }
 }
+
 /* tablet responsive */
-@media (max-width:800px){
-    .mainbutton{
-        color: #fff;;
-        background-color:rgb(79, 118, 123);
+@media (max-width:800px) {
+    .mainbutton {
+        color: #fff;
+        ;
+        background-color: rgb(79, 118, 123);
         padding: 20px;
         border-radius: 15px;
         border: none;
@@ -87,26 +96,26 @@ a{
         margin-bottom: 15px;
     }
 
-    nav{
+    nav {
         width: 900px;
         display: flex;
         /* flex-direction: column; */
         justify-content: space-evenly;
-        background-color:  rgb(42, 92, 99);
-        }
+        background-color: rgb(42, 92, 99);
+    }
 
-        header{
-            width: 900px;
-            font-family: 'Italiana';
-            background-color: rgb(42, 92, 99);
-            padding: 10px;
-            font-size: 20px;
-            text-align: center;
-            color: #fff;
-        }
+    header {
+        width: 900px;
+        font-family: 'Italiana';
+        background-color: rgb(42, 92, 99);
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+    }
 }
 
-.all-movies-cards{
+.all-movies-cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -118,8 +127,9 @@ a{
     column-gap: 30px;
     column-gap: 30px;
 }
+
 /*div para ordenar las tarjetas, fondo y formato letra*/
-.show-cards{
+.show-cards {
     width: 100%;
     height: 100%;
     font-family: 'Roboto';
@@ -128,7 +138,8 @@ a{
     border-radius: 10px;
 
 }
-.tarjetas{
+
+.tarjetas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -137,14 +148,16 @@ a{
     padding: 20px;
     align-items: center;
 }
-.card-container{
+
+.card-container {
     align-items: center;
     margin-bottom: 150px;
     justify-content: center;
     width: 280px;
     height: 250px;
 }
-.caja{
+
+.caja {
     border-radius: 8px;
     background: rgba(50, 119, 129, 0.753);
     overflow: hidden;
@@ -152,27 +165,32 @@ a{
     text-align: center;
     transition: all 0.25s;
 }
-.caja:hover{
+
+.caja:hover {
     /*define el lugar del transform*/
     transform: translateY(-20px);
     /* define margenes del shadow*/
-    box-shadow: 20px 15px 20px  rgb(5, 38, 43);
+    box-shadow: 20px 15px 20px rgb(5, 38, 43);
 }
-.caja .card-container .poster-Image{
+
+.caja .card-container .poster-Image {
     width: 200px;
     height: 250px;
     margin-top: 30px;
     border-radius: 10px;
 }
-.title-card{
+
+.title-card {
     margin-top: 10px;
     font-size: 18px;
     font-weight: 10px;
 }
-.text-card{
+
+.text-card {
     font-size: 14px;
 }
-footer{
+
+footer {
     font-family: 'Italiana';
     background-color: rgb(42, 92, 99);
     padding: 40px;
