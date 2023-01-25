@@ -102,7 +102,7 @@ element {
 }
 
 .navbar2 {
-  grid-area: navbar;
+  grid-area: navbar2;
   background-color: #FF990B;
   padding: 10px;
 }
@@ -111,6 +111,7 @@ element {
   grid-area: main;
   background: linear-gradient(to top, #FFCC00, #FF990B);
   display: flex;
+  text-transform: capitalize;
 }
 
 .gallery {
@@ -119,14 +120,6 @@ element {
   flex-wrap: wrap;
   gap: 50px;
 }
-
-.pokemon {
-  font-weight: bold;
-  background: -webkit-linear-gradient(left, rgb(241, 234, 162) 27%, rgba(247, 227, 7, 0) 160%);
-  border-radius: 10px;
-  padding: 20px;
-}
-
 
 .footer2 {
   grid-area: footer;
@@ -140,7 +133,7 @@ element {
   gap: 0px;
   grid-template:
     "header2" 80px
-    "navbar" 50px
+    "navbar2" 50px
     "main2" auto
     "footer2" 30px;
 }
@@ -149,7 +142,7 @@ element {
   .grid-container {
     grid-template:
       "header2 header2" 100px
-      "navbar navbar" 50px
+      "navbar2 navbar2" 50px
       "main2 main2" auto
       "footer2 footer2" 30px
   }
@@ -174,6 +167,8 @@ element {
   display: none;
 }
 
+/*Estilos para el detalle principal de los pokemones*/
+
 .ataqueClass {
   background: -webkit-linear-gradient(left, rgb(252, 224, 7) 50%, rgba(240, 165, 5, 0) 100%);
   border-radius: 10px;
@@ -183,7 +178,7 @@ element {
   font-weight: bold;
   background: -webkit-linear-gradient(left, rgb(114, 124, 240) 50%, rgba(142, 164, 228, 0) 100%);
   border-radius: 10px;
-  width: 100px;
+  width: 110px;
   height: 20px;
   border: none;
 }
@@ -191,4 +186,67 @@ element {
 .pk_num {
   color: rgb(24, 4, 68);
   text-shadow: 0.5px 0.5px #fff;
+  background-color: #f49f5a;
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px 10px;
+  font-family: "Caveat", cursive;
+}
+
+.textPoke {
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
+  font-family: "Caveat", cursive;
+  font-size: 15px;
+}
+
+.name-card {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  align-content: center;
+}
+
+.pokemon {
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, rgb(241, 234, 162) 27%, rgba(247, 227, 7, 0) 160%);
+  border-radius: 10px;
+  box-shadow: 0 0.5px 10px rgba(53, 53, 125, 0.9);
+  border-bottom: 3.5px solid #ed7242;
+}
+
+.pokemon:hover {
+  background-color: #1808f9;
+  cursor: pointer;
+}
+
+.info {
+  padding: 20px;
+}
+
+/*Detalle del pokemon*/
+
+.detallePokemon {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 22px;
+  position: absolute;
+  display: none;
+}
+
+.equis {
+  position: relative;
+  display: flex;
+  margin-left: 1100px;
+  cursor: pointer;
+  border: none;
+  top: -15px;
+  background-color: #e80e0e;
+  border-radius: 6px;
+  padding: 9px 9px;
+  color: #fff;
+  text-shadow: 1px 1px rgb(24, 4, 68);
+  box-shadow: 0 8px 16px 0 rgba(30, 5, 128, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
