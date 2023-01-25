@@ -19,7 +19,7 @@ obtenerPokemon(data).map((pokemon, index) => {
         `<div class="pokemon" id="${pokemon.num}">
             <div class="pk_num"># ${pokemon.num}</div>
             <div class="info">
-            <p class="img" ><img src="${pokemon.img}" height="100"></p>
+            <p class="img" ><img src="${pokemon.img}" height="90"></p>
             <button id="${index}" class="btnPoke" name="btnPoke">
             <p class="textPoke">${pokemon.name}</p>
             </button>
@@ -49,21 +49,36 @@ function detallePokemon(idPoke) {
     let cardDetalle = document.getElementById("detallePokemon");
     cardDetalle.style.display = "block";
     cardDetalle.innerHTML +=
-        `<div class="pokemon" id="${pokemon.num}">
-        <div class="pk_num"># ${pokemon.num}
+        `<div class="pokemon2" id="${pokemon.num}">
+        <div class="pk_num2"># ${pokemon.num}
         <button class="equis" id="equis"> X </button>
         </div>
-        <p class="img"><img src="${pokemon.img}"></p>
-            <p class="textPoke">${pokemon.about}</p><br>
+        <div class="info2">
+        <p class="img2"><img src="${pokemon.img}" height="130"></p>
+            <p class="text-modal">${pokemon.about}</p><br>
             <div class= "modalInfo">
-            <p class="textPoke"> <span class="name-card">Height</span><br> ${pokemon["size"].height}</p>
-            <p class="textPoke"> <span class="name-card"> Weight</span><br> ${pokemon["size"].weight}</p>
-            <div class="textPoke"> <span class="name-card">Attack</span><br> ${pokemon["special-attack"].map((ataque) =>
-            `<li class="ataqueClass ${ataque}">${ataque.name}</li>`).join("")}</div>
-            <div class="textPoke"> <span class="name-card">Weaknesses</span><br> ${pokemon["weaknesses"].map((debilidad) =>
-                `<li class="ataqueClass ${debilidad}">${debilidad}</li>`).join("")}</div> 
-            <div class="textPoke"> <span class="name-card">Resistant</span><br> ${pokemon["resistant"].map((resistencia) =>
-                    `<li class="ataqueClass ${resistencia}">${resistencia}</li>`).join("")}</div> 
+            <p class="text-modal"> <span class="name-card">Height</span><br> ${pokemon["size"].height}</p>
+            <p class="text-modal"> <span class="name-card"> Weight</span><br> ${pokemon["size"].weight}</p>
+            <div class="text-modal"> <span class="name-card">Attack</span><br> ${pokemon["special-attack"].map((ataque) =>
+            `<li class="ataqueClass2 ${ataque}">${ataque.name}</li>`).join("")}</div>
+            <div class="text-modal"> <span class="name-card">Weaknesses</span><br> ${pokemon["weaknesses"].map((debilidad) =>
+                `<li class="ataqueClass2 ${debilidad}">${debilidad}</li>`).join("")}</div> 
+            <div class="text-modal"> <span class="name-card">Resistant</span><br> ${pokemon["resistant"].map((resistencia) =>
+                    `<li class="ataqueClass2 ${resistencia}">${resistencia}</li>`).join("")}</div> 
+            </div>
             </div>
     </div>`;
+
+    const close = document.getElementById("equis");
+    close.addEventListener("click", () => {
+        document.getElementById('detallePokemon').style.display = "none";
+        removeChildNodes(cardDetalle);
+    });
 }
+
+function removeChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
