@@ -43,8 +43,10 @@ element {
 .descubre {
   text-shadow: 1px 0 0 hsl(0, 0%, 6%);
   background-color: rgba(270, 270, 270, 0.8);
+  border-radius: 7px;
   font-size: 20px;
   width: 300px;
+  padding: 5px;
 }
 
 .btn {
@@ -76,6 +78,8 @@ element {
 .content_quote {
   max-width: 700px;
   background-color: rgba(270, 270, 270, 0.7);
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text {
@@ -148,17 +152,6 @@ element {
   }
 }
 
-@media screen and (max-width: 650px) {
-  .main {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
-  }
-}
-
-
 .section-welcome {
   display: flex;
 }
@@ -226,27 +219,84 @@ element {
 /*Detalle del pokemon*/
 
 .detallePokemon {
-  width: 100%;
-  height: 100%;
   font-size: 18px;
   text-align: center;
-  padding: 50px;
   border-radius: 22px;
-  position: absolute;
+  position: fixed;
   display: none;
+  padding-left: 210px;
+  top: 100px;
 }
 
 .equis {
   position: relative;
   display: flex;
-  margin-left: 1100px;
+  margin-left: 860px;
   cursor: pointer;
   border: none;
-  top: -15px;
+  top: -22px;
   background-color: #e80e0e;
   border-radius: 6px;
   padding: 9px 9px;
   color: #fff;
   text-shadow: 1px 1px rgb(24, 4, 68);
   box-shadow: 0 8px 16px 0 rgba(30, 5, 128, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pk_num2 {
+  color: rgb(24, 4, 68);
+  text-shadow: 0.5px 0.5px #fff;
+  background-color: #f49f5a;
+  border-radius: 10px 10px 0px 0px;
+  font-family: "Caveat", cursive;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 30px 0 20px;
+  margin-left: -30px;
+  margin-top: -15px;
+  margin-right: -30px;
+}
+
+.img2 {
+  text-align: center;
+}
+
+.pokemon2 {
+  background: -webkit-linear-gradient(left, rgb(228, 214, 171) 85%, rgba(217, 199, 4, 0) 180%);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px;
+  width: 900px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modalInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 50px;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.text-modal {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name-modal {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5vh;
+  font-weight: bold;
+  color: #6652C3;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0;
+  top: -15px;
+}
+
+.ataqueClass2 {
+  text-align: left;
 }
