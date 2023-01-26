@@ -32,3 +32,5 @@ export const superior = (dataList) => {
   const result = dataList.sort((a, b) => b.num - a.num);
   return result;
 }
+
+//Función para filtrar por tipos
