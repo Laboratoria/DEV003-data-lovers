@@ -43,8 +43,10 @@ element {
 .descubre {
   text-shadow: 1px 0 0 hsl(0, 0%, 6%);
   background-color: rgba(270, 270, 270, 0.8);
+  border-radius: 7px;
   font-size: 20px;
   width: 300px;
+  padding: 5px;
 }
 
 .btn {
@@ -76,6 +78,8 @@ element {
 .content_quote {
   max-width: 700px;
   background-color: rgba(270, 270, 270, 0.7);
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .text {
@@ -147,17 +151,6 @@ element {
       "footer2 footer2" 30px
   }
 }
-
-@media screen and (max-width: 650px) {
-  .main {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
-  }
-}
-
 
 .section-welcome {
   display: flex;

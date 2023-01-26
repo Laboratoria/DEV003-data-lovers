@@ -1,8 +1,9 @@
-import { obtenerPokemon } from './data.js';
+import { ordenarAz, ordenarZa, inferior, superior } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const btnWelcome = document.getElementById("btn-change-view");
 let card = document.getElementById("gallery");
+const poke = data.pokemon;
 
 btnWelcome.addEventListener("click", () => {
     // buscar el elemento que tiene la clase "section-welcome y hacerlo invisible a partir de su display"
@@ -14,13 +15,13 @@ btnWelcome.addEventListener("click", () => {
     sectionPokemons.style.display = "inline";
 });
 
-obtenerPokemon(data).map((pokemon, index) => {
+poke.map((pokemon) => {
     card.innerHTML +=
         `<div class="pokemon" id="${pokemon.num}">
             <div class="pk_num"># ${pokemon.num}</div>
             <div class="info">
             <p class="img" ><img src="${pokemon.img}" height="90"></p>
-            <button id="${index}" class="btnPoke" name="btnPoke">
+            <button class="btnPoke" name="btnPoke">
             <p class="textPoke">${pokemon.name}</p>
             </button>
             <br>
@@ -82,3 +83,39 @@ function removeChildNodes(parent) {
     }
 }
 
+const ordenar = document.getElementById("sorterPokemon");
+ordenar.addEventListener("change", () => {
+    let pokemones;
+    if (ordenar.value != "-1") {
+        if (ordenar.value == "low") {
+            pokemones = inferior(poke);
+            removeChildNodes(card);
+        } else if (ordenar.value == "top") {
+            pokemones = superior(poke);
+            removeChildNodes(card);
+        } else if (ordenar.value == "byaz") {
+            pokemones = ordenarAz(poke);
+            removeChildNodes(card);
+        } else if (ordenar.value == "byza") {
+            pokemones = ordenarZa(poke);
+            removeChildNodes(card);
+        }
+
+        for (let i = 0; i < pokemones.length; i++) {
+            card.innerHTML +=
+                `<div class="pokemon" id="${pokemones[i].num}">
+                    <div class="pk_num"># ${pokemones[i].num}</div>
+                    <div class="info">
+                    <p class="img" ><img src="${pokemones[i].img}" height="100"></p>
+                    <button class="btnPoke" name="btnPoke">
+                    <p class="textPoke">${pokemones[i].name}</p>
+                    </button>
+                    <br>
+                    <br>
+                    <div> ${pokemones[i].type.map((type) =>
+                    `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
+                    </div>
+                </div>`;
+        }
+    }
+});
