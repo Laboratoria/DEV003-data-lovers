@@ -16170,6 +16170,7 @@ export default {
   books: [
     {
       "id": 1,
+      "picture": "https://m.media-amazon.com/images/I/516dAYHDdKL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseDay": "June 26, 1997",
       "author": "J. K. Rowling",
@@ -16177,6 +16178,7 @@ export default {
     },
     {
       "id": 2,
+      "picture": "https://m.media-amazon.com/images/I/51KowpRHi-L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
       "title": "Harry Potter and the chamber of secrets",
       "releaseDay": "July 2, 1998",
       "author": "J. K. Rowling",
@@ -16184,13 +16186,15 @@ export default {
     },
     {
       "id": 3,
+      "picture": "https://m.media-amazon.com/images/I/51StPSSsneL.jpg",
       "title": "Harry Potter and the Prisoner of Azkaban",
-      "releseDay": "July 8, 1999",
+      "releaseDay": "July 8, 1999",
       "author": "J. K. Rowling",
       "description": "Harry's third year of studies at Hogwarts is threatened by Sirius Black's escape from Azkaban prison. Apparently, it is a dangerous wizard who was an accomplice of Lord Voldemort and who will try to take revenge on Harry Potter."
     },
     {
       "id": 4,
+      "picture": "https://m.media-amazon.com/images/I/513TQ4ihqqL.jpg",
       "title": "Harry Potter and the Goblet of Fire",
       "releaseDay": "July 8, 2000",
       "author": "J. K. Rowling",
@@ -16198,6 +16202,7 @@ export default {
     },
     {
       "id": 5,
+      "picture": "https://m.media-amazon.com/images/I/511+ftLvTUL.jpg",
       "title": "Harry Potter and the Order of the Phoenix",
       "releaseDay": "June 21, 2003",
       "author": "J. K. Rowling",
@@ -16205,6 +16210,7 @@ export default {
     },
     {
       "id": 6,
+      "picture": "https://m.media-amazon.com/images/I/51XgBz54o3L._SX332_BO1,204,203,200_.jpg",
       "title": "Harry Potter and the Half-Blood Prince",
       "releaseDay": "July 16, 2005",
       "author": "J. K. Rowling",
@@ -16212,6 +16218,7 @@ export default {
     },
     {
       "id": 7,
+      "picture": "https://m.media-amazon.com/images/I/51V6zvaRjkL.jpg",
       "title": "Harry Potter and the Deathly Hallows",
       "releaseDay": "July 21, 2007",
       "author": "J. K. Rowling",
@@ -16219,6 +16226,7 @@ export default {
     },
     {
       "id": 8,
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_759944-MLC49143352567_022022-O.jpg",
       "title": "Harry Potter and the Cursed Child",
       "releaseDay": "July 30, 2016",
       "author": "J. K. Rowling",
