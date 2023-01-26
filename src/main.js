@@ -17,7 +17,9 @@ btnWelcome.addEventListener("click", () => {
     sectionPokemons.style.display = "inline";
 });
 
-/*poke.map((pokemon) => {
+//Mostrar el total de pokemones en la galería.
+
+poke.map((pokemon) => {
     card.innerHTML +=
         `<div class="pokemon" id="${pokemon.num}">
             <div class="pk_num"># ${pokemon.num}</div>
@@ -33,27 +35,6 @@ btnWelcome.addEventListener("click", () => {
             </div>
         </div>`;
 });
-*/
-
-//Mostrar el total de pokemones en la galería.
-
-for (let i = 0; i < poke.length; i++) {
-    card.innerHTML +=
-        `<div class="pokemon" id="${poke[i].num}">
-            <div class="pk_num"># ${poke[i].num}</div>
-            <div class="info">
-            <p class="img" ><img src="${poke[i].img}" height="90"></p>
-            <button class="btnPoke" name="btnPoke">
-            <p class="textPoke">${poke[i].name}</p>
-            </button>
-            <br>
-            <br>
-            <div> ${poke[i].type.map((type) =>
-            `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
-            </div>
-            </div>
-        </div>`;
-}
 
 //Armar las tarjetas para cada pokemon
 const pokemon = document.querySelectorAll(".pokemon");
@@ -104,40 +85,43 @@ function removeChildNodes(parent) {
     }
 }
 
+//Ordenar A-Z, Z-A, Ascendente, Descendente.
+
 const ordenar = document.getElementById("sorterPokemon");
 ordenar.addEventListener("change", () => {
-    let pokemones;
     if (ordenar.value != "-1") {
         if (ordenar.value == "low") {
-            pokemones = inferior(poke);
+            inferior(poke);
             removeChildNodes(card);
         } else if (ordenar.value == "top") {
-            pokemones = superior(poke);
+            superior(poke);
             removeChildNodes(card);
         } else if (ordenar.value == "byaz") {
-            pokemones = ordenarAz(poke);
+            ordenarAz(poke);
             removeChildNodes(card);
         } else if (ordenar.value == "byza") {
-            pokemones = ordenarZa(poke);
+            ordenarZa(poke);
             removeChildNodes(card);
         }
 
-        for (let i = 0; i < pokemones.length; i++) {
+        poke.map((pokemon) => {
             card.innerHTML +=
-                `<div class="pokemon" id="${pokemones[i].num}">
-                    <div class="pk_num"># ${pokemones[i].num}</div>
+                `<div class="pokemon" id="${pokemon.num}">
+                    <div class="pk_num"># ${pokemon.num}</div>
                     <div class="info">
-                    <p class="img" ><img src="${pokemones[i].img}" height="100"></p>
+                    <p class="img" ><img src="${pokemon.img}" height="90"></p>
                     <button class="btnPoke" name="btnPoke">
-                    <p class="textPoke">${pokemones[i].name}</p>
+                    <p class="textPoke">${pokemon.name}</p>
                     </button>
                     <br>
                     <br>
-                    <div> ${pokemones[i].type.map((type) =>
+                    <div> ${pokemon.type.map((type) =>
                     `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
                     </div>
-                    </div>
                 </div>`;
-        }
+
+        });
     }
 });
+
+//Función que muestra el array por tipos según lo seleccionado por el usuario
