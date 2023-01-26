@@ -5,6 +5,8 @@ const btnWelcome = document.getElementById("btn-change-view");
 let card = document.getElementById("gallery");
 const poke = data.pokemon;
 
+//Para el cambio de Vista.
+
 btnWelcome.addEventListener("click", () => {
     // buscar el elemento que tiene la clase "section-welcome y hacerlo invisible a partir de su display"
     // .... "section-pokemones" y hacerlo visible a partir de su display 
@@ -15,7 +17,7 @@ btnWelcome.addEventListener("click", () => {
     sectionPokemons.style.display = "inline";
 });
 
-poke.map((pokemon) => {
+/*poke.map((pokemon) => {
     card.innerHTML +=
         `<div class="pokemon" id="${pokemon.num}">
             <div class="pk_num"># ${pokemon.num}</div>
@@ -31,9 +33,29 @@ poke.map((pokemon) => {
             </div>
         </div>`;
 });
+*/
+
+//Mostrar el total de pokemones en la galería.
+
+for (let i = 0; i < poke.length; i++) {
+    card.innerHTML +=
+        `<div class="pokemon" id="${poke[i].num}">
+            <div class="pk_num"># ${poke[i].num}</div>
+            <div class="info">
+            <p class="img" ><img src="${poke[i].img}" height="90"></p>
+            <button class="btnPoke" name="btnPoke">
+            <p class="textPoke">${poke[i].name}</p>
+            </button>
+            <br>
+            <br>
+            <div> ${poke[i].type.map((type) =>
+            `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
+            </div>
+            </div>
+        </div>`;
+}
 
 //Armar las tarjetas para cada pokemon
-
 const pokemon = document.querySelectorAll(".pokemon");
 //console.log(pokemon)
 pokemon.forEach((p) => {  //genero un evento para los 251 pokemones
@@ -45,7 +67,6 @@ pokemon.forEach((p) => {  //genero un evento para los 251 pokemones
 });
 
 function detallePokemon(idPoke) {
-
     let pokemon = data.pokemon[idPoke];
     let cardDetalle = document.getElementById("detallePokemon");
     cardDetalle.style.display = "block";
@@ -114,6 +135,7 @@ ordenar.addEventListener("change", () => {
                     <br>
                     <div> ${pokemones[i].type.map((type) =>
                     `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
+                    </div>
                     </div>
                 </div>`;
         }
