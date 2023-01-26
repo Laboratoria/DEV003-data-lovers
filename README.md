@@ -16,19 +16,19 @@ Luego de revisada la información entregada junto con el proyecto se han definid
 Quien como: persona que recién conoció estudio ghibli
 Quiere: poder ordenar películas por año de lanzamiento
 Para: ver la evolución de la animación, personajes etc.
-_Definición de terminado_: la usuaria al abrir la página web podrá visualizar y acceder a un botón que ordenara las películas según año de lanzamiento, en orden ascendente o descendente.
+* _Definición de terminado_: la usuaria al abrir la página web podrá visualizar y acceder a un botón que ordenara las películas según año de lanzamiento, en orden ascendente o descendente.
 
 2.-HU Zoe
 Quien: como adolescente entre 12-19 años busca ver películas animadas
 Quiere: poder elegir una película para ver pero ordenandolas según el nombre
 Para: facilitar la búsqueda de una película animada, según el nombre, ordenando de A-Z, Z-A
-_Definición de terminada_: la usuaria al abrir la página web podrá acceder a un botón que al ser clickeado retornara las películas de Studio Ghibli ordenadas por nombre.
+* _Definición de terminada_: la usuaria al abrir la página web podrá acceder a un botón que al ser clickeado retornara las películas de Studio Ghibli ordenadas por nombre.
 
 3.-HU Omar
 Quien: como  persona que le gusta el cine de animación
 Quiere: poder ordenar las películas por director
 Para: ver solo las animaciones del director que más me gusta
-_Definición de terminado_: el usuario al abrir la página web podrá acceder a un botón según la opción seleccionada retornara solo las películas de un director.
+* _Definición de terminado_: el usuario al abrir la página web podrá acceder a un botón según la opción seleccionada retornara solo las películas de un director.
 
 
 Finalmente para todas las historias de usuario se reflejan los datos que consideramos más importantes de las películas, su título, director y año de lanzamiento junto con la imagen del poster de cada película.
