@@ -31,7 +31,12 @@ Para nuestro proyecto escogimos el tema de Harry Potter. Nuestra página le perm
 
 ## Sketches de alta fidelidad
 
+<<<<<<< HEAD
+
+[![sketch-Af1.png](https://i.postimg.cc/Z5xxP961/sketch-Af1.png)](https://postimg.cc/fVkdDR2K)
+=======
 [![sketch-Af1.png](https://i.postimg.cc/3RSjy9Tk/sketch-Af1.png)](https://postimg.cc/WFZqCGtV)
+>>>>>>> 22a1afd2985c6dbf7d177ab95f29f40fb7265db1
 [![sketch-Af2.png](https://i.postimg.cc/Hnrwb5YB/sketch-Af2.png)](https://postimg.cc/JHWHLsBk)
 
 -[Prototipo Figma](http://https://www.figma.com/file/q8FqUyrVcTlcUNNoC5GTQa/Harry-Potter?node-id=82%3A33&t=zJ9McAuQLORwlIY8-1 "Prototipo Figma")
