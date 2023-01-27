@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+    </head>
+  
+  <body>
+
+    <div id="root">
+      
+    <header>
+<!-- SECCION MENU -->
+<nav class="navbar">
+  <button class="nav-toggle" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul class="nav-menu">
+<li class="nav-menu-item"><a href="#" class="potions" >Potions</a></li>
+<li class="nav-menu-item"><a href="#" class="funfacts" >FunFacts</a></li>
+<li class="nav-menu-item"><a href="#" class="characters" >Characters</a></li>
+<li class="nav-menu-item"><a href="#" class="spells" >Spells</a></li>
+<li class="nav-menu-item"><a href="#" class="books" >Books</a></li>
+</ul>
+</nav>
+      <img class="titulo" src="./images/toppng.com-harry-potter-logo-png-file-harry-potter-logo-558x191.png">
+      
+    </header>
+
+
+      <!-- SECCION SOMBRERITO -->
+  <div class="sombrero-globo">
+    <img src="./images/sortin hat.gif" class="sombrero">
+    <div class="globo-texto">
+      <!-- <img src="./images/globodialogo.png" class="globo"> -->
+      <span class="textoglobo"> Welcome to the Wizard World of Harry Potter, I will be with you in this journey </span>
+    </div>
+  </div>    
+    <div class="espacio"></div>
+    <main>
+      <!-- SECCION DINAMICA -->
+      <!-- FILTROS -->
+      <section class="filtros-data">
+        <div class="barra-filtros">
+          <div id="gender-house-reset">
+            <select name="genero" id="gender">
+              <option selected=" " disabled=" ">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <select name="casas" id="house">
+              <option selected disabled>House</option>
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="null">None</option>
+            </select>
+            <input type="reset" class="reset" id="limpiar">
+          </div>
+          <!-- CALCULO -->
+          <div id="calculo"></div>
+          <!-- BUSCADOR -->
+          <input type="text" id="buscador" placeholder="Search">
+        </div>
+        <!-- CONTENIDO -->
+        <div id="show-data"></div>
+      </section>
+      
+  </main>
+</div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
