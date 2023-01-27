@@ -1,22 +1,55 @@
-import { filterByType } from './data.js'
-import pokemon from './data/pokemon/pokemon.js'
+import { dataOrder2, filterByType } from './data.js'
 import data from './data/pokemon/pokemon.js'
+import { dataOrder } from './data.js'
 
-function showListPokemons(pokemonlist) {
+const dataPokemones = data.pokemon
+const selectUser = document.getElementById('filterByType')
+
+selectUser.addEventListener('change', () => {
+  const valueFilterByType = selectUser.value
+
+  showListPokemonType(filterByType(dataPokemones, valueFilterByType))
+})
+function showListPokemonType(pokemonlist) {
   const contenedor = document.getElementById('contenedor')
   contenedor.innerHTML = ''
   pokemonlist.forEach((pokemon) => {
-    contenedor.innerHTML += `<div class="monos"> ${pokemon.type}</div>`
-  })
-
-  //console.log(filterByType);
-
-  const selectype = document.getElementById('filterByType')
-  //console.log("linea8",clickValidation);
-  selectype.addEventListener('change', () => {
-    const valueFilterByType = document.getElementById('filterByType').value
-    //console.log(valueFilterByType);
-    console.log(filterByType(Pokemones, valueFilterByType))
+    contenedor.innerHTML += `<div class="tarjeta-pokemon"> 
+    <h4>${pokemon.type}</h4> 
+    <img class="imagenpokemon" src="${pokemon.img}">
+    <p class="nombre pokemon">${pokemon.name}</p>
+    </div>
+    `
   })
 }
-showListPokemons(data.pokemon)
+//HISTORIA DE USUARIO 2
+
+const selectUser2 = document.getElementById('ordenarPorNombre')
+selectUser2.addEventListener('change', () => {
+  const valueOrdenar = selectUser2.value
+  if (valueOrdenar === 'ascendente') {
+    showListPokemonOrder(dataOrder(dataPokemones, valueOrdenar))
+  } else {
+    showListPokemonOrder(dataOrder2(dataPokemones, valueOrdenar))
+  }
+})
+function showListPokemonOrder(pokemonlist) {
+  const contenedor = document.getElementById('contenedor')
+  contenedor.innerHTML = ''
+  pokemonlist.forEach((pokemon) => {
+    contenedor.innerHTML += `<div class="tarjeta-pokemon"> 
+        
+        <img class="imagenpokemon" src="${pokemon.img}">
+        <p class="nombre pokemon">${pokemon.name}</p>
+        </div>`
+  })
+}
+
+showListPokemonOrder(data.pokemon)
+
+/**const orderCharacthersEl = document.querySelector('#order')
+
+orderCharacthersEl.addEventListener('change', function () {
+  insertAllResult.innerHTML = ''
+  orden(oderAZ(dataResult, orderCharacthersEl.value))
+})*/

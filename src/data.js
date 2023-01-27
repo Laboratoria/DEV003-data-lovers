@@ -1,7 +1,4 @@
-/*import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js'
-
-const arrayPokemones = data.pokemon*/
 
 export function filterByType(data, condition) {
   const pokemonesByType = []
@@ -10,23 +7,34 @@ export function filterByType(data, condition) {
       pokemonesByType.push(data[i])
     }
   }
-
   return pokemonesByType
 }
+const listadopokemon = data.pokemon
 
-/*export function filterByType(data, typeSelection) {
-  for (let i = 0; i < arrayPokemones.length; i++) {
-    const pokemonesByType = [''];
-    if (data.type === typeSelection) {
-      pokemonesByType += pokemonesByType;
-
+export function dataOrder(data, ascendente) {
+  return listadopokemon.sort((p1, p2) => {
+    if (p1.name < p2.name) {
+      return -1
+    } else if (p1.name > p2.name) {
+      return 1
+    } else {
+      return 0
     }
-    console.log(pokemonesByType);
-  }
+  })
 }
+console.log(listadopokemon)
 
-
-export const anotherExample = () => {
-  return 'OMG'
-      const element = array[i];
-}*/
+// Descendente
+const listadopokemon2 = data.pokemon
+export function dataOrder2(data, descendente) {
+  return listadopokemon2.sort((p1, p2) => {
+    if (p1.name > p2.name) {
+      return -1
+    } else if (p1.name < p2.name) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+}
+console.log(listadopokemon2)
