@@ -1,3 +1,4 @@
+// creando función para ordenar alfabeticamente de forma ascendente A-Z
 export const ordenarAz = (dataList) => {
   //creamos otra constante para guardar el resultado de la función
   const result = dataList.sort((a, b) => {
@@ -19,14 +20,14 @@ export const ordenarZa = (dataList) => {
   return result;
 }
 
-// creando función para Ordenar por numero de ID numero inferior 
+// creando función para Ordenar por numero de ID para que se muestre de forma ascendente 
 export const inferior = (dataList) => {
   //creamos otra constante para guardar el resultado de la función
   const result = dataList.sort((a, b) => a.num - b.num);
   return result;
 }
 
-// creando función para ordenar por numero de ID numero superior
+// creando función para ordenar por numero de ID para que se muestre de forma descendente 
 export const superior = (dataList) => {
   //creamos otra constante para guardar el resultado de la función
   const result = dataList.sort((a, b) => b.num - a.num);
@@ -34,3 +35,10 @@ export const superior = (dataList) => {
 }
 
 //Función para filtrar por tipos
+
+export const filtraTipos = (type, dataList) => {
+  const filterType = dataList.filter((element) =>
+    element.type.includes(type))
+  return filterType;
+};
+

@@ -1,9 +1,9 @@
-import { ordenarAz, ordenarZa, inferior, superior } from './data.js';
+import { ordenarAz, ordenarZa, inferior, superior, filtraTipos } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const btnWelcome = document.getElementById("btn-change-view");
-let card = document.getElementById("gallery");
-const poke = data.pokemon;
+const card = document.getElementById("gallery");
+let poke = data.pokemon;
 
 //Para el cambio de Vista.
 
@@ -79,32 +79,114 @@ function detallePokemon(idPoke) {
     });
 }
 
+//Función para remover las cartas 
 function removeChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
 
+//Función que muestra el array por tipos según lo seleccionado por el usuario
+
+const filtrar = document.getElementById("tipoPokemon");
+const ordenar = document.getElementById("sorterPokemon");
+
+filtrar.addEventListener("change", () => {
+    if (filtrar.value != "-1") {
+        removeChildNodes(card);
+        let pokes;
+        pokes = filtraTipos(filtrar.value, poke);
+
+        if (ordenar.value != "-1") {
+            if (ordenar.value == "low") {
+                pokes = inferior(pokes);
+            } else if (ordenar.value == "top") {
+                pokes = superior(pokes);
+            } else if (ordenar.value == "byaz") {
+                pokes = ordenarAz(pokes);
+            } else if (ordenar.value == "byza") {
+                pokes = ordenarZa(pokes);
+            }
+        }
+        //console.log(filtraTipos(filtrar.value, pokes));
+
+        pokes.map((pokemon) => {
+            card.innerHTML +=
+                `<div class="pokemon" id="${pokemon.num}">
+                      <div class="pk_num"># ${pokemon.num}</div>
+                      <div class="info">
+                      <p class="img" ><img src="${pokemon.img}" height="90"></p>
+                      <button class="btnPoke" name="btnPoke">
+                      <p class="textPoke">${pokemon.name}</p>
+                      </button>
+                      <br>
+                      <br>
+                      <div> ${pokemon.type.map((type) =>
+                    `<span class="ataqueClass ${type}">${type}</span>`).join(" / ")}
+                      </div>
+                  </div>`;
+
+        });
+
+        const pokemon = document.querySelectorAll(".pokemon");
+        //console.log(pokemon)
+        pokemon.forEach((p) => {  //genero un evento para los 251 pokemones
+            p.addEventListener("click", (e) => {
+                //console.log(data.pokemon[parseInt(e.currentTarget.id) - 1]);
+                let idPoke = parseInt(e.currentTarget.id) - 1;
+                detallePokemon(idPoke);
+            });
+        });
+
+    }
+});
+
+
 //Ordenar A-Z, Z-A, Ascendente, Descendente.
 
-const ordenar = document.getElementById("sorterPokemon");
 ordenar.addEventListener("change", () => {
     if (ordenar.value != "-1") {
+        let pokes;
+        removeChildNodes(card);
+
         if (ordenar.value == "low") {
-            inferior(poke);
-            removeChildNodes(card);
+            if (filtrar.value != "-1") {
+                pokes = filtraTipos(filtrar.value, poke);
+                pokes = inferior(pokes);
+                console.log(pokes);
+            } else {
+                pokes = inferior(poke);
+            }
         } else if (ordenar.value == "top") {
-            superior(poke);
-            removeChildNodes(card);
+            if (filtrar.value != "-1") {
+                pokes = filtraTipos(filtrar.value, poke);
+                pokes = superior(pokes);
+                console.log(pokes);
+
+            } else {
+                pokes = superior(poke);
+            }
         } else if (ordenar.value == "byaz") {
-            ordenarAz(poke);
-            removeChildNodes(card);
+            if (filtrar.value != "-1") {
+                pokes = filtraTipos(filtrar.value, poke);
+                pokes = ordenarAz(pokes);
+                console.log(pokes);
+
+            } else {
+                pokes = ordenarAz(poke);
+            }
         } else if (ordenar.value == "byza") {
-            ordenarZa(poke);
-            removeChildNodes(card);
+            if (filtrar.value != "-1") {
+                pokes = filtraTipos(filtrar.value, poke);
+                pokes = ordenarZa(pokes);
+                console.log(pokes);
+
+            } else {
+                pokes = ordenarZa(poke);
+            }
         }
 
-        poke.map((pokemon) => {
+        pokes.map((pokemon) => {
             card.innerHTML +=
                 `<div class="pokemon" id="${pokemon.num}">
                     <div class="pk_num"># ${pokemon.num}</div>
@@ -121,7 +203,16 @@ ordenar.addEventListener("change", () => {
                 </div>`;
 
         });
+
+        const pokemon = document.querySelectorAll(".pokemon");
+        //console.log(pokemon)
+        pokemon.forEach((p) => {  //genero un evento para los 251 pokemones
+            p.addEventListener("click", (e) => {
+                //console.log(data.pokemon[parseInt(e.currentTarget.id) - 1]);
+                let idPoke = parseInt(e.currentTarget.id) - 1;
+                detallePokemon(idPoke);
+            });
+        });
+
     }
 });
-
-//Función que muestra el array por tipos según lo seleccionado por el usuario
