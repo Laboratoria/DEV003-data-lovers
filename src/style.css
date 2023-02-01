@@ -67,11 +67,14 @@ padding: 1%;
 select {
    margin-left: 50px;
    background: #0321b8;
-   display: flex;
-   padding: 0.5em;
+   padding: 0.6em;
    color:white;
    cursor:pointer;
-   font-size: 1vw;     
+   font-size: 1vw;
+   border-radius: 10px;
+   box-shadow: 3px 3px 5px gray;
+  
+
 }
 
 footer{
