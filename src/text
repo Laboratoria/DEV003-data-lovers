@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <img src="/imagenes/logo.png" width="350" style="max-width: 80%;">
+  </header>
+  <main class="content">
+    <div class="content_body">
+      <div class="text">
+        <blockquote class="content_quote">
+          ¡El hombre tiene mucho que aprender
+          <br>
+          de la naturaleza y de Pokémon!
+        </blockquote>
+
+        <br>
+        <br>
+
+        <a href="https://www.google.com/?hl=es" target="_blank" class="btn">
+          <img src="/imagenes/togepi.gif" width="130" height="130">
+          <br>
+          <p class="descubre">Descubre de pokémon aquí</p>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p> &copy; Pokémon por Kelly Rivas & Natalia Jopia</p>
+  </footer>
+</body>
+
+</html>
+
+
+css
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+min-height: 100vh;
+}
+
+element {
+max-width: 80%;
+}
+
+body {
+font-family: "Public Sans", sans-serif;
+font-size: 1.2rem;
+min-height: 100vh;
+background-image: url(/imagenes/card.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.header {
+background: -webkit-linear-gradient(left, rgb(0, 9, 130) 27%, rgba(29, 81, 238, 0) 160%);
+padding-top: 10px;
+}
+
+.text {
+margin-top: 30px;
+margin-left: 400px;
+font-size: 25px;
+text-shadow: -0.5px 0 0 hsl(228, 57%, 77%);
+color: black;
+background-color: white;
+}
+
+.descubre {
+text-shadow: 1px 0 0 hsl(240, 23%, 61%);
+background-color: rgba(270, 270, 270, 0.8);
+font-size: 20px;
+}
+
+.btn {
+border: none;
+text-decoration: none;
+}
+
+.footer {
+background-color: #302C78;
+color: white;
+font-size: 10px;
+font-style: oblique;
+padding-top: 5px;
+max-width: auto;
+}
+
+.content {
+flex-grow: 1;
+align-items: center;
+}
+
+.content_body {
+max-width: 700px;
+margin: 100px auto 0;
+margin-right: 200px;
+}
+
+.content_quote {
+max-width: 700px;
+background-color: rgba(270, 270, 270, 0.7);
+}
+
+.text {
+width: 70%;
+margin-left: auto;
+}
+
+@media screen and (max-width:800px) {
+.content_text {
+width: 80%;
+margin-right: auto;
+}
+}
+
+/*HTML 2da Pagina, contenedor de Pokemones*/
+
+.grid-container>* {
+text-align: center;
+}
+
+.header2 {
+grid-area: header;
+background: linear-gradient(to left, #302C78, #2FA2B7);
+}
+
+.navbar {
+grid-area: navbar;
+background-color: #FF990B;
+padding: 10px;
+}
+
+.main2 {
+grid-area: main;
+background-color: #f5f5f5;
+padding: 10px;
+background: linear-gradient(to top, #FFCC00, #FF990B);
+
+}
+
+.footer {
+grid-area: footer;
+background-color: #302C78;
+color: #f5f5f5;
+padding: 5px;
+}
+
+.grid-container {
+display: grid;
+gap: 0px;
+grid-template:
+"header2" 80px
+"navbar" 50px
+"main2" auto
+"footer2" 30px;
+}
+
+@media(min-width:650px) {
+.grid-container {
+grid-template:
+"header2 header2" 100px
+"navbar navbar" 50px
+"main2 main2" auto
+"footer2 footer2" 30px /
+100% auto;
+}
+}
+
+@media screen and (max-width: 650px) {
+.main {
+display: none;
+position: absolute;
+height: 100%;
+width: 100%;
+
+}
+}
