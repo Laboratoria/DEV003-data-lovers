@@ -1,18 +1,22 @@
-// estas funciones son de ejemplo
-// import { data } from './data/pokemon/pokemon.js'
+// export const example = () => {
+//   return 'example';
+// };
 
-
-// console.log(data.desarrollador);
-// /// gameFreak
-// console.log(data.lanzamiento);
-// //1996
-// console.log(data.pokemon);
-// // [.....]
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
+// export const example = () => {
+//  return 'example';
+// };
+//crear una funcion
+// Función de filtrado por tipos de pokemon y debilidades
+export const filter = (arr, property, condition) => {
+  const element = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    for (let index = 0; index < arr[i][property].length; index += 1) {
+      if (arr[i][property][index] === condition) {
+        element.push(arr[i]);
+      }
+      // console.log(condition)
+      
+     
+    }
+  } return element;
 };
