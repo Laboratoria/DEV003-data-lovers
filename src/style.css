@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{background-color:  rgba(36, 87, 138, 0.979);
+}
+
+main{
+    background-color: rgb(6,20,66);
+}
+.containImg{
+    display: flex;
+}
+
+nav{
+    margin-bottom: 2rem;
+}
+header .classImg1{
+    background-color: rgb(3, 25, 45);
+    width: 10%;
+    height:200px;
+    background-image:url(https://ichef.bbci.co.uk/news/800/cpsprodpb/5BC3/production/_90319432_poke5.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}
+
+header .classImg2{
+    width: 50%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 0px 0px;
+}
+
+
+.centrado{
+    text-align:center;
+    font-family: 'Cooper Black';
+    background-color: yellow;
+  }
+  
+  h1{
+    color: yellow;
+    font-family:cursive;
+    text-align: center;
+    height: 50px;
+}
+
+  section{
+    text-align: center;
+}
+
+#elemento{
+    background-color: aliceblue;
+    text-align: center;
+    font-family:cursive;
+    color: #010b10c2;
+    border-color: rgb(129, 194, 128); 
+    border: 5px solid rgba(250, 238, 3, 0.955);
+    height: 50px;
+    width: 150px 
+
+   
+}
+
+#frecuencia{
+    background-color: aliceblue;
+    text-align: center;
+    font-family:cursive;
+    color: #010b10c2;
+    border-color: rgb(129, 194, 128); 
+    border: 5px solid rgba(250, 238, 3, 0.955);
+    height: 50px;
+    width: 150px 
+
+    
+}
+
+#evolucion{
+    background-color: aliceblue;
+    text-align: center;
+    font-family:cursive;
+    color: #010b10c2;
+    border-color: rgb(129, 194, 128); 
+    border: 5px solid rgba(250, 238, 3, 0.955);
+    height: 50px;
+    width: 150px 
+
+}
+
+#alimentacion{
+    background-color: aliceblue;
+    text-align: center;
+    font-family:cursive;
+    color: #010b10c2;
+    border-color: rgb(129, 194, 128); 
+    border: 5px solid rgba(250, 238, 3, 0.955);
+    height: 50px;
+    width: 150px 
+
+
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(6, 20, 66);
+}
+
+
+.cardPokemon div{
+    width: 180px;
+    height: 30px;
+    color: rgb(14, 13, 13);
+    font-family: 'Cooper Black';
+    background-color: rgb(234, 234, 241);
+    text-align: center;
+    border-radius: 20px;
+   
+}
+
+.cardPokemon img {
+    height: 180px;
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border: 6px ridge rgb(231, 229, 70);
+    border-radius: 20px;
+    font-family: 'Cooper Black';
+    background-color: rgba(255, 255, 255, 0.986);
+    -webkit-border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 15px 15px #eede4c;
+
+
+}
+
+.contain_select{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
