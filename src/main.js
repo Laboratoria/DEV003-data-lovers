@@ -1,6 +1,7 @@
-import { dataOrder2, filterByType } from './data.js'
+import { dataOrderZA, filterByType } from './data.js'
 import data from './data/pokemon/pokemon.js'
-import { dataOrder } from './data.js'
+import { dataOrderAZ } from './data.js'
+
 
 const dataPokemones = data.pokemon
 const selectUser = document.getElementById('filterByType')
@@ -27,10 +28,10 @@ function showListPokemonType(pokemonlist) {
 const selectUser2 = document.getElementById('ordenarPorNombre')
 selectUser2.addEventListener('change', () => {
   const valueOrdenar = selectUser2.value
-  if (valueOrdenar === 'ascendente') {
-    showListPokemonOrder(dataOrder(dataPokemones, valueOrdenar))
+  if (valueOrdenar === 'ascending') {
+    showListPokemonOrder(dataOrderAZ(dataPokemones, valueOrdenar))
   } else {
-    showListPokemonOrder(dataOrder2(dataPokemones, valueOrdenar))
+    showListPokemonOrder(dataOrderZA(dataPokemones, valueOrdenar))
   }
 })
 function showListPokemonOrder(pokemonlist) {
@@ -47,9 +48,4 @@ function showListPokemonOrder(pokemonlist) {
 
 showListPokemonOrder(data.pokemon)
 
-/**const orderCharacthersEl = document.querySelector('#order')
 
-orderCharacthersEl.addEventListener('change', function () {
-  insertAllResult.innerHTML = ''
-  orden(oderAZ(dataResult, orderCharacthersEl.value))
-})*/

@@ -6,6 +6,7 @@
     <title>Pokemonpedia</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
     <header>
     <section id="banner">
@@ -16,7 +17,7 @@
     
     <!--<i class="fa-solid fa-magnifying-glass"></i> LUPA-->
   
-    <h3>Lista de Pokemones por tipo</h3>
+    <h3>Order by type</h3>
     <nav class="select" action="">
       <select name="Tipos de pokemones" id="filterByType" autocomplete="off">
         <option value="all">All</option>
@@ -39,16 +40,18 @@
       </select>   
     </nav>
   <br>
-   <h3>Ordenar por Nombres</h3>
-        <div id="ordenar" class="ordenar">
-          <select name="ordenarBy" id="ordenarPorNombre" class="ordenarBy">
-            <option value="ordenar">Ordenar</option>
-            <option value="ascendente">Ascendente</option>
-            <option value="descendente">Descendente</option>
+   <h3>Order by name</h3>
+        <div id="order by name" class="order by name">
+          <select name="ordenarByName" id="ordenarPorNombre" class="ordenarByName">
+            <option value="order">Order</option>
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
           </select>  
-        </div>                 
+        </div> 
+  <br>  
+        
   <main> 
-       <section class="flex-container" id='contenedor'></section>
+       <section class="flex-container" id="contenedor"></section>
   </main>
 
   <footer>

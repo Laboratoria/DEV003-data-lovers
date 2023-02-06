@@ -18,8 +18,6 @@ background-image: url(./img/fondogris.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
-display: flex;
-flex-direction: column;
 min-height: 100vh;
 font-family:'Roboto', sans-serif;
 min-height: 100%; 
@@ -64,17 +62,16 @@ margin-left: 1%;
 padding: 1%;
 }
 
-select {
-   margin-left: 50px;
+select{
+   margin-left: 5%;
    background: #0321b8;
    padding: 0.6em;
    color:white;
-   cursor:pointer;
    font-size: 1vw;
    border-radius: 10px;
    box-shadow: 3px 3px 5px gray;
-  
-
+   cursor:pointer;
+   object-fit: contain;
 }
 
 footer{
@@ -86,8 +83,7 @@ footer{
   margin-right: 30px;
   font-size: 1vw;
   text-shadow: 5px 5px 5px #0a036e;
-  color: white;
-  
+  color: white; 
 }
 
 
