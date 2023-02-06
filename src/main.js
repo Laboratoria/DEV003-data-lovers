@@ -10,6 +10,10 @@ function showListPokemons(pokemonlist) {
   })
 
   //console.log(filterByType);
+  import { filterByType } from './data.js'
+  // import data from './data/lol/lol.js';
+  import data from './data/pokemon/pokemon.js'
+  // import data from './data/rickandmorty/rickandmorty.js';
 
   const selectype = document.getElementById('filterByType')
   //console.log("linea8",clickValidation);
@@ -20,3 +24,4 @@ function showListPokemons(pokemonlist) {
   })
 }
 showListPokemons(data.pokemon)
+console.log(filterByType, data)
