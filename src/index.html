@@ -2,24 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Pokemonpedia</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css">
   </head>
     <header>
     <section id="banner">
-        <img src="img/BannerpokemonGo.png" alt="banner de pokemon">
-        <div class="conteiner"> 
-        </div>     
+        <img src="img/BannerpokemonGo.png" alt="banner de pokemon">     
      </section>
     </header>
   <body>
-    <!--<i class="fa-solid fa-magnifying-glass"></i> LUPA-->
-     <nav id="navbar">
-       <h3>Lista de Pokemones por tipo</h3>
-    <form class="flexbox" action="">
-     <select name="Tipos de pokemones" id="filterByType" autocomplete="off">
-        <option value="type">Type</option>
+  
+    <h3>Order by type</h3>
+    <nav class="select" action="">
+      <select name="PokemonType" id="filterByType" autocomplete="off">
+        <option value="type">All</option>
         <option value="bug">Bug</option>
         <option value="dark">Dark</option>
         <option value="dragon">Dragon</option>
@@ -36,50 +34,27 @@
         <option value="poison">Poison</option>
         <option value="psychic">Psychic</option>
         <option value="water">Water</option>
-      </select>
-    </form>
-   </nav>
-
+      </select>   
+    </nav>
+  <br>
+   <h3>Order by Name</h3>
+        <div id="ordenar" class="ordenar">
+          <select name="ordenarBy" id="ordenarPorNombre" class="ordenarBy">
+            <option value="ordenar">Order</option>
+            <option value="ascendente">Ascending</option>
+            <option value="descendente">Descending</option>
+          </select>  
+        </div>                 
   <main> 
-      <section class="flex-container" id='contenedor'></section> 
+       <section class="flex-container" id="contenedor"></section>
   </main>
 
   <footer>
-      <p> Pié de página</p>
+      <p>By Karen Bollás y Pamela Viveros</p>
   </footer>
-
-  <!--<div class="select-container">
-      <div class="select">
-      <div class="selected-option">     
-        <span class="select-value">All</span>
-        <span class="icon fas fa-caret-down"></span>
-      </div>
-      <div data-toggle="" class="options">
-        <div class="option">All</div>
-        <div class="option">Bug</div>
-        <div class="option">Dark</div>
-        <div class="option">Dragon</div>
-        <div class="option">Electric</div>
-        <div class="option">Fairy</div>
-        <div class="option">Fighting</div>
-        <div class="option">Fire</div>
-        <div class="option">Flying</div>
-        <div class="option">Ghost</div>
-        <div class="option">Grass</div>
-        <div class="option">Ground</div>
-        <div class="option">ice</div>
-        <div class="option">Normal</div>
-        <div class="option">Poison</div>
-        <div class="option">Psychic</div>
-        <div class="option">Water</div>
-      </div>
-    </div>
-  </div>-->
-  
-    <!---->
-    <script src="main.js" type="module"></script>
-    
  
-
-  </body>
+    <script src="main.js" type="module"></script>
+     
+</body>
+ 
 </html>
