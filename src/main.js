@@ -1,5 +1,6 @@
-import { dataOrderAZ, filterByType, dataOrderZA } from './data.js'
+import { dataOrderAZ, filterByType, dataOrderZA  } from './data.js'
 import data from './data/pokemon/pokemon.js'
+
 
 const dataPokemones = data.pokemon
 const selectUser = document.getElementById('filterByType')
@@ -45,3 +46,4 @@ function showListPokemonOrder(pokemonlist) {
 }
 
 showListPokemonOrder(data.pokemon)
+
