@@ -2,7 +2,6 @@ import { filterByType } from '../src/data.js'
 import { dataOrderAZ } from '../src/data.js'
 import { dataOrderZA } from '../src/data.js'
 
-
 const mockdata = [
   {
     num: '001',

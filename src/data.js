@@ -24,7 +24,6 @@ export function dataOrderAZ(listadopokemon) {
 }
 console.log(listadopokemon)
 
-
 const listadopokemon2 = data.pokemon
 export function dataOrderZA(listadopokemon2) {
   return listadopokemon2.sort((p1, p2) => {
