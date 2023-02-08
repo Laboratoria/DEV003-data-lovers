@@ -1,8 +1,5 @@
 import data from "./data/pokemon/pokemon.js";
-import { filter } from "./data.js";
-
-
-
+import { filter,filtroFrecuencia} from "./data.js";
 
 
 const plantillaPokemon = (arrayPokemon) => {
@@ -21,33 +18,47 @@ const plantillaPokemon = (arrayPokemon) => {
     //nombre del pokemon
     const nombre = document.createElement("div");
     nombre.innerHTML = pokemon.name;
+    const boton = document.createElement("button")
+    boton.innerHTML = pokemon.name
     //contener los datos dentro de la caja
     menuPrincipal.appendChild(imagen);
     menuPrincipal.appendChild(nombre);
+    menuPrincipal.appendChild(boton);
     //cajaPrincipal.appendChild(tipo)//
     //agregarlo al root
     container.appendChild(menuPrincipal);
+
   });
 };
 plantillaPokemon(data.pokemon);
 console.log(data.pokemon);
 
+// document.getElementById("elemento").addEventListener("change",()=>{console.log(filter(data.pokemon))})
+const elementos = document.getElementById("elemento");
+elementos.addEventListener("change", () => {
+  const select = elementos.value;
+  const filtroPoke = filter(data.pokemon, "type", select);
 
+  plantillaPokemon(filtroPoke);
+  // console.log(filtroPoke);
 
+ 
+});
 
+// -----------------------------------
 
 const listaFrecuencias=[];
 for(let i=0;i<data.pokemon.length;i++){
   listaFrecuencias[i]=data.pokemon[i]["spawn-chance"]
 }
 
-console.log(listaFrecuencias);
-// $metodo de temple
+// console.log(listaFrecuencias);
+// $metodo de temple, es platilla de cadena forma de mostrar textos variables interpolar informacion
 const $select = document.getElementById("frecuencia");
 
 for(let j=0;j<data.pokemon.length;j++){
   const $valor=listaFrecuencias[j];
-
+  // aqui le damos una condicion para eliminar la aparicion de null en la lista
   if($valor!==null){
     const $option = document.createElement('option');
 
@@ -57,65 +68,12 @@ for(let j=0;j<data.pokemon.length;j++){
   }
 }
 
+ 
+const frecuencias = document.getElementById("frecuencia");
+frecuencias.addEventListener("change", () => {
+  const select = frecuencias.value;
+  const filtroFrec = filtroFrecuencia(data.pokemon,"spawn-chance", select);
 
-
-
-// document.getElementById("elemento").addEventListener("change",()=>{console.log(filter(data.pokemon))})
-const elementos = document.getElementById("elemento");
-elementos.addEventListener("change", () => {
-  const select = elementos.value;
-  const filtroPoke = filter(data.pokemon, "type", select);
-
-  plantillaPokemon(filtroPoke);
-  console.log(filtroPoke);
-
-  plantillaPokemon(filtroPoke);
-  console.log(filtroPoke);
+  plantillaPokemon(filtroFrec);
+  // console.log(filtroFrec);
 });
-
-
-
-
-
-
-
-
-// const plantillaFrecuencia = (frePokemon) => {
-//   const frecu = document.getElementById('frecuencia');
-//   frePokemon.forEach((pokemon) => {
-//   const listaFrecuencia =document.createElement("frecuencia");
-//   li.innerHTML=pokemon.move-duration-seg
-//   listaFrecuencia.appendChild(li);
-//   })
-// }
-// const elementos = document.getElementById('frecuencia');
-// elementos.addEventListener('change', () => {
-//  const select = elementos.value;
-//   const filtroPoke = (filter((data.pokemon), 'type', select))
-// })
-
-
-// document.getElementById("elemento").addEventListener("change",()=>{console.log(filter(data.pokemon))})
-// const elementos = document.getElementById('elemento');
-// elementos.addEventListener('change', () => {
-//  const select = elementos.value;
-//   const filtroPoke = (filter((data.pokemon), 'type', select))
- 
-// plantillaPokemon(filtroPoke)
-//   console.log(filtroPoke)
-//   // for(let i=0 ;i<filtroPoke.lenght;i++){aqui va todo desde menu principal}
- 
- 
-//   });
-  
-//   const frecuencia = document.getElementById('frecuencia');
-//  frecuencia.addEventListener('change', () => {
-//    const select = ata.move-duration-seg .value;
-//     const filtroPoke = (filter((data.move-duration-seg), 'move-duration-seg', select))
-   
-//   plantillaPokemon(filtroPoke)
-//     console.log(filtroPoke)
-//     // for(let i=0 ;i<filtroPoke.lenght;i++){aqui va todo desde menu principal}
-   
-   
-//     });
