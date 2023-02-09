@@ -115,7 +115,7 @@ booksPage.addEventListener("click", () => {
   const containerCharacters = document.querySelector("#data-libros");
   containerCharacters.innerHTML = "";
 
-  for(var i=0; i<books.length; i++){
+  for(let i=0; i<books.length; i++){
     createBooksEl(books[i], dataLibros)
   }
   
@@ -133,7 +133,7 @@ potionsPage.addEventListener("click", () => {
   containerCharacters.innerHTML = "";
 
 
-  for(var i=0; i<potions.length; i++){
+  for(let i=0; i<potions.length; i++){
     crearPociones(potions[i], dataPotions);
   }
 });
