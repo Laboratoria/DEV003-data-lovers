@@ -34,6 +34,21 @@ export function charFilters(charArr, genderFilter, houseFilter) {
   return filtered;
 }
 
+// let arr = [15,59,35,15]
+//console.log(arr[1]) == 59
+
+// arr.sort()
+// [15,15,35,59]
+//console.log(arr[1]) == 15
+
+// let x = {harry, ron, hermione, snape}
+// console.log(x) == [harry, her...]
+
+// valor  = 2
+// ref = #6589FxZ
+//x = ref
+//console.log(x) == #6589FxZ
+
 export function sortMe(items) {
   items.sort((a, b) => {
     const nameA = a.name.toUpperCase();
@@ -78,29 +93,3 @@ export function calculo(characters, filterValue) {
   }
   return `Hay ${totalFilter} ${gender} ${house} de ${total} personajes`;
 }
-
-
-export function createBooksEl(book, dataLibros) {
-  const libro = document.createElement("div");
-  libro.setAttribute("class", "book-card");
-  libro.innerHTML = `<ul class="book-info">
-  <li><center><h3>${book.title}</li>
-  <li><center><img src=${book.imagen} width="120" height="200px"></li>
-  <li>Release Day: ${book.releaseDay}</li>
-  <li>author: ${book.author}</li>
-  <li>Description: ${book.description}</li>
-  </ul>`;
-  dataLibros.append(libro);
-
-}
-
-export function crearPociones(potion, dataPotions) {
-  const pocion = document.createElement("div");
-  pocion.setAttribute("class", "potion-card");
-  pocion.innerHTML = `<ul class="potion-info">
-  <li><center><h3> ${potion.name}</li>
-  <li>${potion.description}</li>
-  </ul>`;
-  dataPotions.append(pocion);
-}
-

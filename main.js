@@ -1,12 +1,4 @@
-import {
-  getData,
-  sortMe,
-  createCharEl,
-  charFilters,
-  calculo,
-  createBooksEl,
-  crearPociones
-} from "./data.js";
+import { getData, sortMe, createCharEl, charFilters, calculo } from "./data.js";
 
 const characters = getData("characters");
 sortMe(characters);
@@ -21,9 +13,6 @@ const calculoPersonajes = document.getElementById("calculo");
 //MUESTRA TODOS LOS PERSONAJES
 charactersPageBtn.addEventListener("click", () => {
   charactersPageBtn.setAttribute("class", "subrayado");
-  document.getElementById("filtros-data").style.display = "none";
-  const containerBooks = document.querySelector("#data-libros", "#data-Pociones");
-  containerBooks.innerHTML = "";
   document.querySelector(".filtros-data").style.display = "inline-block";
   characters.map((character) => {
     createCharEl(character, dataSection);
@@ -78,7 +67,7 @@ clearFilter.addEventListener("click", () => {
   calculoPersonajes.innerHTML = "Hay 707 personajes";
 });
 
-//BUSCADOR PERSONAJES
+//BUSCADOR
 document.addEventListener("keyup", (e) => {
   if (e.target.matches("#buscador")) {
     if (e.key === "Escape") e.target.value = "";
@@ -103,39 +92,3 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-label", "Abrir menú");
   }
 });
-
-// MOSTRAR LIBROS
-const books = getData("books");
-const booksPage = document.querySelector(".books");
-const dataLibros = document.querySelector("#data-libros");
-
-booksPage.addEventListener("click", () => {
-  booksPage.setAttribute("class", "subrayado"); 
-  document.getElementById("filtros-data").style.display = "none";
-  const containerCharacters = document.querySelector("#data-libros");
-  containerCharacters.innerHTML = "";
-
-  for(let i=0; i<books.length; i++){
-    createBooksEl(books[i], dataLibros)
-  }
-  
-});
-
-// MOSTRAR POTIONS
-
-const potions = getData('potions');
-const potionsPage= document.querySelector(".potions");
-const dataPotions= document.querySelector("#data-libros");
-potionsPage.addEventListener("click", () => {
-  potionsPage.setAttribute("class", "subrayado");
-  document.getElementById("filtros-data").style.display = "none";
-  const containerCharacters = document.querySelector("#data-libros");
-  containerCharacters.innerHTML = "";
-
-
-  for(let i=0; i<potions.length; i++){
-    crearPociones(potions[i], dataPotions);
-  }
-});
-
-
