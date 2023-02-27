@@ -5,8 +5,133 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
+<header>
+  <img id="headerImg" class="headerImg" src="./img/header.PNG" width="100%" alt="">
+</header>
+<div class="buscador">
+  <input type="text" placeholder="Buscar por categoría, ej. 'Alive'" class="search" id="searchInp">
+  
+  <select name="filterMain" id="filtMain">
+    <option value="name" selected>Name</option>
+    <option value="species">Species</option>
+    <option value="type">Type</option>
+    <option value="gender">Gender</option>
+    <option value="status">Status</option>
+    <option value="origin">Origin</option>
+    <option value="location">Last known location</option>
+    <option value="episode">Episodes</option>
+  </select>
+  <button type="button" id="searchBtn"><img src="./img/lupa.png" alt="" class="btnLupa" id="lupa"></button>
+  <button type="button" id="allCharacts" class="btnHeader">Show all characters</button>
+  <select name="orderAlf" id="order">
+    <option value="relevance" selected>Ordenar:</option>
+    <option value="alphabetic">A-Z</option>
+    <option value="reverse">Z-A</option>
+  </select>
+  <button type="button" id="clear" class="btnHeader">Clear</button>
+</div>
+  <body class="containerPrinc" width="100%">
+    <main>
+    <div class="cards">
+      <div class="cardsDesign">
+        <h1 class="cardsTittle"> Personajes </h1>
+        <img src="./img/RM_characters.webp" alt="R&M characters" class="cardsImgs" width="100%">
+        <div class="cardsTxt">
+          <p>En esta categoría puedes buscar a los personajes por: </p>
+          <p>Status</p>
+          <li>
+            Alive (Vivo)
+          </li>
+          <li>
+            Dead (Fallecido)
+          </li>
+          <li>
+            Unknown (Desconocido)
+          </li>
+
+          <p>Especie:</p>
+          <li>
+            Human (humano)
+          </li>
+          <li>
+            Alien
+          </li>
+
+          <p>Género:</p>
+          <li>
+            Female (Mujer)
+          </li>
+          <li>
+            Male (Hombre)
+          </li>
+          <li>
+            Genderless (Sin género)
+          </li>
+        </div>
+      </div>
+
+      <div class="cardsDesign">
+        <h1 class="cardsTittle"> Locaciones </h1>
+        <img src="./img/RM_location.jpeg" alt="R&M locations" class="cardsImgs" width="100%"> 
+        <div class="cardsTxt">
+          <p> En esta categoría puedes filtrar por: </p>
+          <li>
+            Origen
+          </li>
+          <li>
+            Última ubicación
+          </li>
+        
+        </div>
+      </div>
+
+      <div class="cardsDesign">
+        <h1 class="cardsTittle"> Episodios </h1>
+        <img src="./img/RM_episode1.jpeg" alt="R&M episodes" class="cardsImgs" width="100%">
+        <div class="cardsTxt">
+          <p> En esta categoría puedes buscar el número del episodio para saber qué personajes aparecieron en él: </p>
+          <li>
+            Episodes 1 to 11
+          </li>
+          <li>
+            Episodes 12 to 21
+          </li>
+          <li>
+            Episodes 22 to 31
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="noSearch">
+      <div class="cardsDesign">
+        <h1 class="cardsTittle">ERROR</h1>
+        <img src="./img/noSearch.png" alt="noSearch" class="cardsImgs" width="100%"> 
+        <div class="cardsTxt">
+          <p>Please, put a category in the search box</p>
+          <br>
+          <li>
+            Episodes: 1, 2, 3...
+          </li>
+          <li>
+            Status: Alive, Dead, Unknown
+          </li>
+          <li>
+            Gender: Female, Male, Genderless
+          </li>
+          <li>
+            Species: Human, Alien
+          </li>
+        </div>
+      </div>
+      </div>
+
+
+    </main>
+    
+    <div id="root">
+      <div id="cards"></div>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

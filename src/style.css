@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.search{
+    background-color: transparent;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 350px;
+    color: #9bf525;
+}
+.btnLupa{
+    height: 30px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+#searchBtn{
+    border-radius: 6px;
+}
+.btnHeader{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.btnHeader:hover{
+    background: #c6ed93;
+}
+
+.buscador{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2px;
+    height: auto;
+    min-height: auto;
+}
+select{
+    background-color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.containerPrinc{
+    background-color: #6D7078;
+    margin: 0;
+}
+
+.cardsTittle{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#9bf525;
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 10px;
+    text-shadow: white; 
+}
+.noSearch{
+    display: none;
+    padding-top: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px; 
+    align-content:flex-start;
+    gap: 35px;
+}
+
+.cards{
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px; 
+    align-content:flex-start;
+    gap: 35px;
+}
+
+.cardsDesign{
+    background-color: black;
+    color: #9bf525;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: justify;
+    text-shadow: 10px;
+    text-shadow: #ffffff;
+    border-radius: 6px;
+    width: 300px;
+    height: 580px;
+}
+.cardsImgs{
+    width: 300px;
+    height: 200px;
+}
+.cardsTxt{
+    padding: 10px;
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    justify-content: center;
+    gap: 35px;
+}
+
+#root{
+    display: none;
+}
+.cardMold{
+    width: 350px;
+    height: 680px;
+    background-color:#000000;
+    border-radius: 4px;
+}
+.container h1{
+    color: #9bf525;
+    font-size: 28px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.card-img img{
+    width: 350px;
+}
+h2{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #c6ed93;
+}
+.episodes{
+    word-break: break-all;
+}
