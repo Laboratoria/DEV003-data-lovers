@@ -2,10 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <!--tag para responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1>Universo Ghibli</h1>
+    </header>
+    <nav class="caja-opciones">
+      <a class="button-inicio mainbutton" href="http://127.0.0.1:5500/src/index.html"  id="main"> Menú principal</a> 
+      <!--<input class="button-inicio mainbutton" type="button" value="Elige al Azar" id="randomBtn"> -->
+      <!--div para generar nav, definir id -->
+      <select id="orderYear" class="select-year mainbutton">
+        <option value="allYear" class="mainbutton">Ordenar por año de emisión</option>
+        <option value="upward">Ascendente</option>
+        <option value="downward">Descendente</option>
+      </select>
+
+      <select id="directorMovie" class="select-director mainbutton">
+        <!--error en la funcion era por el value,  debe estar igual al elemento del array-->
+        <option value="allDirector" >Ordenar por Director</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondo</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        
+      </select>
+
+      <select id="orderNameMovies" class="select-character mainbutton">
+        <option value="allCharacter">Ordenar Albabeticamente</option>
+        <option value="Az">A-Z</option>
+        <option value="Za">Z-A<b></b></option>
+      </select>
+
+      <a class="button-inicio mainbutton" type="button" href="https://i.postimg.cc/2ymLJsYL/Dise-o-sin-t-tulo.png">¡ Haz tu Checklist Universo Ghibli !</a>
+    </nav>
+
+    <div class="all-movies-cards" id=""> 
+      <div class="show-cards">
+        <!--div donde se mostrara el output del innerHtml-->
+      <div id="showMovies"  class="tarjetas"> Aqui insertar tarjetas </div>
+    </div>
+    </div>
+    <footer>Laboratoria 2022. DEV003</footer>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
