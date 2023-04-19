@@ -1,11 +1,4 @@
-// export const example = () => {
-//   return 'example';
-// };
 
-// export const example = () => {
-//  return 'example';
-// };
-//crear una funcion
 // Función de filtrado por tipos de pokemon y debilidades
 export const filter = (arr, property, condition) => {
   const element = [];
@@ -16,7 +9,7 @@ export const filter = (arr, property, condition) => {
       }
       // console.log(condition)
     }
-  }
+  } 
   return element;
 };
 // Función de filtrado por frecuencia de pokemon y debilidades
@@ -34,27 +27,3 @@ export const filtroFrecuencia = (frec, propiedad, condicion) => {
 
 // ------------------------------------
 
-
-// export const filtroGeneracion = (generation,data) => {
-//   const generateCanto= [];
-//   const generateJhoto= [];
- 
-//   for (let i = 0; i < data.length; i++) {
-//     console.log(data['generation']['name'])
-//     // console.log(gener[i], "gener")
-//     // console.log(propie, "propie")
-//     // console.log(condicio, "condicio")
-
-//     if (generation.name==="kanto") {
-//       // generateCanto.push(generacion[i]);
-     
-//     } else{ 
-      
-//       generateJhoto.push(generation[i]);
-//   }
- 
-//   // return generate;
-// }
-// console.log(generateCanto);
-// console.log(generateJhoto)
-// };

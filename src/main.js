@@ -18,12 +18,12 @@ const plantillaPokemon = (arrayPokemon) => {
     //nombre del pokemon
     const nombre = document.createElement("div");
     nombre.innerHTML = pokemon.name;
-    const boton = document.createElement("button")
-    boton.innerHTML = pokemon.name
+    // const boton = document.createElement("button")
+    // boton.innerHTML = pokemon.name
     //contener los datos dentro de la caja
     menuPrincipal.appendChild(imagen);
     menuPrincipal.appendChild(nombre);
-    menuPrincipal.appendChild(boton);
+    // menuPrincipal.appendChild(boton);
     //cajaPrincipal.appendChild(tipo)//
     //agregarlo al root
     container.appendChild(menuPrincipal);
